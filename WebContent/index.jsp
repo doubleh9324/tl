@@ -17,7 +17,7 @@
 <c:if test="${center==null }">
 	<c:set var="center" value="main.jsp"/>
 </c:if>
-		<jsp:include page="top.jsp"></jsp:include>
+		<jsp:include page="top2.jsp"></jsp:include>
 		
 <center>	 
 		<jsp:include page="${center}"/>

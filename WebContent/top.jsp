@@ -69,17 +69,19 @@ $(document).ready(function(){
       <div id="member_menu_2">
          <ul>
        <%if(id==null){ %>
-           <li><a href="./MemberLogin.me">로그인</a></li>  
-           <li><a href="./MemberJoin.me">회원가입</a></li>
-           <li><a href="./MemberModify.me">마이페이지</a></li>
-           <li><a href="#">예매확인/취소</a></li>
             <li><a href="#">고객센터</a></li>  
+             <li><a href="#">예매확인/취소</a></li>
+            <li><a href="./MemberModify.me">마이페이지</a></li>
+            <li><a href="./MemberJoin.me">회원가입</a></li>
+             <li><a href="./MemberLogin.me">로그인</a></li>  
+              <li><a href="./MemberLogin.me">로그인</a></li>  
        <%}else{%>
-             <li><a><%=id %>님 환영합니다!</a></li>
-             <li><a href="./MemberLogout.me">로그아웃</a></li> 
-           <li><a href="./MemberModify.me">마이페이지</a></li>
-           <li><a href="#">예매확인/취소</a></li>
+            
             <li><a href="#">고객센터</a></li> 
+            <li><a href="#">예매확인/취소</a></li>
+                 <li><a href="./MemberModify.me">마이페이지</a></li>
+             <li><a href="./MemberLogout.me">로그아웃</a></li> 
+              <li><a><%=id %>님 환영합니다!</a></li>
                  
        <% }%>
          </ul>

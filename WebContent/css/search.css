@@ -143,3 +143,10 @@ span#title_subject, span#all_count{
 img#star{
 	margin: 3px;
 }
+
+dt#subject:HOVER, div#info_wrap img:HOVER {
+	cursor:pointer;
+}
+dt#subject:HOVER{
+	text-decoration: underline;
+}

@@ -45,8 +45,8 @@ function getGanreResultFunction(cate,g_code){
 						 }else if(age=="all"){age="전체이용가"
 					     }else if(age=="18"){age="청소년관람불가"}
 						 
-						var appned_code='<tr id="search_tr"><td id="long_td"><div id="info_wrap"><img src="MovieImage/'+value.image+'">'
-										+'<dl><dt><a id="subject">'+value.name+'</a></dt>'
+						var appned_code='<tr id="search_tr"><td id="long_td"><div id="info_wrap"><img src="MovieImage/'+value.image+'" onclick="location.href='+"'"+'./'+'MovieContentAction.mo?num='+value.movie_num+"'"+'"'+'>'
+										+'<dl><dt id="subject"><a id="subject" onclick="location.href='+"'"+'./'+'MovieContentAction.mo?num='+value.movie_num+"'"+'"'+'>'+value.name+'</a></dt>'
 										+'<dd><ul><li>장르 : '+value.ganre+'</li><li>등급 : '+age+'</li><li>감독 : '+value.director+'</li>'
 										+'</ul></dd></dl></div></td>'
 										+'<td id="short_td">'+value.open_day+'</td>'
@@ -60,8 +60,8 @@ function getGanreResultFunction(cate,g_code){
 					});
 				}else{
 					$.each(data.ganreResult, function(key,value){
-						var appned_code='<tr id="search_tr"><td id="long_td"><div id="info_wrap"><img src="MusicalImage/'+value.image+'">'
-										+'<dl><dt><a id="subject">'+value.name+'</a></dt>'
+						var appned_code='<tr id="search_tr"><td id="long_td"><div id="info_wrap"><img src="MusicalImage/'+value.image+'" onclick="location.href='+"'"+'./'+'MusicalContentAction.mu?num='+value.musical_num+"'"+'"'+'>'
+										+'<dl><dt id="subject"><a id="subject" onclick="location.href='+"'"+'./'+'MusicalContentAction.mu?num='+value.musical_num+"'"+'"'+'>'+value.name+'</a></dt>'
 										+'<dd><ul><li>장르 : '+value.ganre+'</li><li>등급 : '+value.age+'</li><li>감독 : '+value.director+'</li>'
 										+'</ul></dd></dl></div></td>'
 										+'<td id="short_td">'+value.open_day+'<br>~'+value.close_day+'</td>'

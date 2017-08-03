@@ -332,9 +332,6 @@ function popularMusicalFunction(){
 <div class="clear" ></div>
 </div>
 
-<div id="pop_up">
-
-</div>
 <!--------------------------------------------------------- -->
 <div id="mid">
  <div id="category">
