@@ -87,6 +87,7 @@ li#rank_li span{
 }
 li#rank_li:HOVER{
 	border: 3px solid orange;
+	box-sizing:border-box;
 }
 li#rank_li a{
 	text-decoration: none;
