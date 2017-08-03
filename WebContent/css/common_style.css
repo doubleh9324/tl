@@ -1,0 +1,1171 @@
+@import "goods_sorting.css";
+body {  }
+/* h1, div { text-align:left; } */
+ul, ol, dl, li, dd, h3, h2{margin:0; padding:0;}
+ul, ol		{list-style:none;}
+img			{}
+input		{}
+div	{}
+.bg_swf1	{background-image:url(http://openimage.interpark.com/_nip_mgt/_welcome/m060915/bg_swf.gif);background-repeat: no-repeat;background-position: left top;}
+.bg_swf2	{background-image:url(http://openimage.interpark.com/_nip_mgt/_welcome/m060915/bg_swf.gif);background-repeat: no-repeat;background-position: left top;}
+body,td,p	{ text-decoration:none; }
+center  center  A:link			{ text-decoration:none; }
+center  A:visited	{  text-decoration:none; }
+center  A:active		{   color:#666666; text-decoration:none; }
+center  A:hover		{  text-decoration:underline; }
+img { }
+.b { font-weight: bold; }
+select	{}
+.input_size	 {width:14px;height:14px}
+.pointer { cursor:pointer; }
+
+.bg_lefttop  {background-repeat: no-repeat;	background-position: left top;}
+.bg_lefttopx {background-repeat: repeat-x;	background-position: left top;}
+.bg_lefttopy {background-repeat: repeat-y;	background-position: left top;}
+
+.bg_leftbot  {background-repeat: no-repeat;	background-position: left bottom;}
+.bg_leftbotx {background-repeat: repeat-x;	background-position: left bottom;}
+.bg_leftboty {background-repeat: repeat-y;	background-position: left bottom;}
+
+.bg_righttop {background-repeat: no-repeat;	background-position: right top;}
+.bg_righttopx{background-repeat: repeat-x;	background-position: right top;}
+.bg_righttopy{background-repeat: repeat-y;	background-position: right top;}
+
+.bg_rightbot {background-repeat: no-repeat;	background-position: right bottom;}
+.bg_rightbotx{background-repeat: repeat-x;	background-position: right bottom;}
+.bg_rightboty{background-repeat: repeat-y;	background-position: right bottom;}
+
+.bg_centertop  {background-repeat: no-repeat;	background-position: center top;}
+.bg_leftcenter  {background-repeat: no-repeat;	background-position: left center;}
+
+.div_global	{width:980px;margin:0px}
+* html .div_global{height:581px;}
+
+.box_search, a.box_search:link, a.box_search:visited, a.box_search:hover, a.box_search:active{ border:1px solid #CCCCCC; font-family:�룍��; font-size:12px; color:#666666; padding:2px; height:20px;}
+.link_tiker, a.link_tiker:link, a.link_tiker:visited, a.link_tiker:hover, a.link_tiker:active{ font-size:11px; color:#2C8222; }
+.link_tiker2, a.link_tiker2:link, a.link_tiker2:visited, a.link_tiker2:hover, a.link_tiker2:active{ padding-left: 6px; background:url("http://openimage.interpark.com/_nip/bl/bl_arrow_gray10.gif") no-repeat 0 2px; color:#bbb9bb; font: 11px solid dotum }
+.link_kword, a.link_kword:link, a.link_kword:visited, a.link_kword:hover, a.link_kword:active{ font-size:11px; color:#008E45; }
+.link_kword_cos, a.link_kword_cos:link, a.link_kword_cos:visited, a.link_kword_cos:hover, a.link_kword_cos:active{ font-size:11px; color:#CF115D;}
+.link_kword_funi, a.link_kword_funi:link, a.link_kword_funi:visited, a.link_kword_funi:hover, a.link_kword_funi:active{ font-size:11px; color:#C53912;}
+.link_kword_fash, a.link_kword_fash:link, a.link_kword_fash:visited, a.link_kword_fash:hover, a.link_kword_fash:active{ font-size:11px; color:#6C39BA;}
+
+.txt_green	{color:#159226}
+.txt_orange	{color:#FF6000}
+.txt_violet	{color:#7656D0}
+
+/* 媛쒖씤�솕�꽌鍮꾩뒪 */
+.link_pstoday, a.link_pstoday:link, a.link_pstoday:visited, a.link_pstoday:hover, a.link_pstoday:active{ font-size:11px; color:#ffffff; font-weight:bold; }
+.font_psall, a.font_psall:link, a.font_psall:visited, a.font_psall:hover, a.font_psall:active{ font-size:11px; color:#159226; }
+.font_pscart, a.font_pscart:link, a.font_pscart:visited, a.font_pscart:hover, a.font_pscart:active{ font-size:11px; color:#FFF799; }
+.font_pswish, a.font_pswish:link, a.font_pswish:visited, a.font_pswish:hover, a.font_pswish:active{ font-size:11px; color:#FFF799; }
+.border_psproduct { border:1px solid #E1E1E1; }
+.link_psrecom, a.link_psrecom:link, a.link_psrecom:visited, a.link_psrecom:hover, a.link_psrecom:active{ font-size:11px; color:#ffffff; font-weight:bold; }
+.font_ps, a.font_ps:link, a.font_ps:visited, a.font_ps:hover, a.font_ps:active{ font-size:11px; line-height:13px; }
+
+/* �긽�뭹 */
+.link_name, a.link_name:link, a.link_name:visited, a.link_name:hover, a.link_name:active{ color:#666666; line-height:17px; }
+.link_exbef	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:17px; line-height:17px; cursor:hand; }
+.link_exaft	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:17px; line-height:17px; cursor:hand; }
+.link_price, a.link_price:link, a.link_price:visited, a.link_price:hover, a.link_price:active{ color:#159226; font-weight:bold; }
+.link_price_p, a.link_price_p:link, a.link_price_p:visited, a.link_price_p:hover, a.link_price_p:active{ color:#349BC3; font-weight:bold; }
+.link_price_pd, a.link_price_pd:link, a.link_price_pd:visited, a.link_price_pd:hover, a.link_price_pd:active{ color:#999999; font-weight:bold; }
+.link_price_s, a.link_price_s:link, a.link_price_s:visited, a.link_price_s:hover, a.link_price_s:active{ text-decoration:line-through; font-weight:bold; color:#999999}
+.link_price_n, a.link_price_n:link, a.link_price_n:visited, a.link_price_n:hover, a.link_price_n:active{  }
+.font_wing, a.font_wing:link, a.font_wing:visited, a.font_wing:hover, a.font_wing:active{ font-size:11px; line-height:13px;width:100%;overflow:hidden; text-overflow:ellipsis; }
+
+/* 移댄뀒怨좊━ */
+.link_cateli_tm, a.link_cateli_tm:link, a.link_cateli_tm:visited, a.link_cateli_tm:hover, a.link_cateli_tm:active{ color:#287F2B; line-height:14px; font-weight:bold; border-bottom:1px solid #75BD2D; text-decoration:none;padding-bottom:1px; }
+.link_cateli_tm_off, a.link_cateli_tm_off:link, a.link_cateli_tm_off:visited, a.link_cateli_tm_off:hover, a.link_cateli_tm_off:active{ color:#287F2B; line-height:14px; font-weight:bold;border-bottom:1px solid #75BD2D; text-decoration:none;padding-bottom:1px; }
+.link_cateli_ts, a.link_cateli_ts:link, a.link_cateli_ts:visited, a.link_cateli_ts:hover, a.link_cateli_ts:active{ color:#434343; line-height:18px; }
+.link_cateli_tson, a.link_cateli_tson:link, a.link_cateli_tson:visited, a.link_cateli_tson:hover, a.link_cateli_tson:active{ color:#434343;margin-top:2px;line-height:18px; background-color:#D2EFCF; }
+.link_cateli, a.link_cateli:link, a.link_cateli:active, a.link_cateli:visited{ font-size:12px; color:#434343; line-height:18px; text-decoration:none; }
+a.link_cateli:hover{ font-size:12px; color:#1EAE0F; line-height:18px; text-decoration:underline; }
+.link_catelion, a.link_catelion:link, a.link_catelion:visited, a.link_catelion:hover, a.link_catelion:active{ color:#434343; line-height:18px; background-color:#D2EFCF; }
+.link_catelion2, a.link_catelion2:link, a.link_catelion2:visited, a.link_catelion2:hover, a.link_catelion2:active{ font-size:12px; color:#1EAE0F; line-height:18px; text-decoration:underline; }
+
+.icon_style	{height:13px;border:0px;align:absmiddle;vertical-align:middle;margin-top:1px;margin-bottom:4px;line-height:14px}
+.list_cate	{text-indent:-8px;margin-left:8px;margin-bottom:2px}
+
+/* 寃��깋 */
+.font_search, a.font_search:link, a.font_search:visited, a.font_search:hover, a.font_search:active{ color:#434343; }
+.font_searchtm, a.font_searchtm:link, a.font_searchtm:visited, a.font_searchtm:hover, a.font_searchtm:active{ color:#287F2B; font-weight:bold; }
+.link_cor_tiker, a.link_cor_tiker:link, a.link_cor_tiker:visited, a.link_cor_tiker:hover, a.link_cor_tiker:active{ font-size:11px; }
+.link_cor_kword, a.link_cor_kword:link, a.link_cor_kword:visited, a.link_cor_kword:hover, a.link_cor_kword:active{ font-size:11px; color:#008E45; }
+
+/* �엯�젰�뤌 */
+.box_board_write{ 
+border:1px solid #D8D8D8; font-family:�룍��; font-size:12px; padding:2px; background-color:#F6F6F6;
+scrollbar-face-color:#D7D7D7;
+scrollbar-shadow-color:#D7D7D7;
+scrollbar-highlight-color:#D7D7D7;
+scrollbar-3dlight-color:#D7D7D7;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F5F5F5;
+scrollbar-arrow-color:#999999;
+}
+
+/* 理쒖쥌 �긽�뭹 �럹�씠吏�  */
+#goods_infoarea{width:500px;argin:0;padding:0;}
+#goods_infoarea ul{list-style:none;margin:0;padding:0;}
+#goods_infoarea ul.uptxt_st{list-style:none;margin:0;padding:0;line-height:1.5em;}
+#goods_infoarea li{float:left;margin:0;padding:0 4px 0 0;}
+#goods_infoarea li.uptxt_st{float:left;margin:0;padding:1px 0 7px 0;}
+#goods_infoarea h2{clear:both;margin:0;padding:3px 0 6px 0;font-size:14px;color:#159226;word-break:break-all;font-weight:bold;letter-spacing:-1px;}
+#goods_infoarea li.downtxt_st{float:left;margin:0;padding:1px 4px 7px 0;}
+#basic_goods_info01 table{clear:both;background-color:#FDFFF5;}
+#basic_goods_info01 table th{font-size:12px;font-weight:normal;text-align:left;padding:1px 0 0 18px;background-image:url('http://openimage.interpark.com/_nip/bl/bl_arrow_green.gif');background-repeat:no-repeat;background-position:10px 4px;color:#159226;}
+#basic_goods_info01 .price01{background-image:url('http://openimage.interpark.com/_nip/icon/icon_won01.gif');background-repeat:no-repeat;background-position:left top;padding:1px 0 0 18px;font-weight:bold;color:#999999;}
+#basic_goods_info01 .price02{background-image:url('http://openimage.interpark.com/_nip/icon/icon_won.gif');background-repeat:no-repeat;background-position:left top;padding:1px 0 0 18px;}
+#basic_goods_info01 .price03{background-image:url('http://openimage.interpark.com/_nip/icon/icon_smoney.gif');background-repeat:no-repeat;background-position:left top;padding:1px 0 0 18px;}
+#basic_goods_info01 .price04{background-image:url('http://openimage.interpark.com/_nip/icon/icon_coupon_00.gif');background-repeat:no-repeat;background-position:left top;padding:1px 0 0 18px;}
+#basic_goods_info01 .price05{background-image:url('http://openimage.interpark.com/_nip/icon/icon_won02.gif');background-repeat:no-repeat;background-position:left top;padding:1px 0 0 18px;}
+#basic_goods_info01 .ipoint01{background-image:url('http://openimage.interpark.com/_nip/icon/icon_ipoint03.gif');background-repeat:no-repeat;background-position:left top;float:left;padding:1px 0 0 20px;}
+#basic_goods_info02 table th{font-size:12px;font-weight:normal;text-align:left;padding:1px 0 0 18px;background-image:url('http://openimage.interpark.com/_nip/bl/bl_arrow_gray01.gif');background-repeat:no-repeat;background-position:10px 4px;}
+#basic_goods_info03{background-color:#F8F8F8;}
+#basic_goods_info03 table th{font-size:12px;font-weight:normal;text-align:left;padding:4px 0 0 18px;background-image:url('http://openimage.interpark.com/_nip/bl/bl_arrow_gray01.gif');background-repeat:no-repeat;background-position:10px 9px;}
+
+.box_board_comment{ border:1px solid #CCCCCC; font-family:�룍��; font-size:12px; color:#666666; padding:2px; }
+
+/* 寃��깋 �옄�룞�셿�꽦 */
+.div_autosch { position:absolute;top:1px;left:5px;z-index:10;visibility:visible; }
+* html .div_autosch{top:0px;}
+.div_autosch_sch { position:absolute;top:1px;left:119px;z-index:10;visibility:visible; }
+* html .div_autosch_sch{ top:0px;}
+.div_autosch_schcd { position:absolute;top:1px;left:201px;z-index:10;visibility:visible; }
+* html .div_autosch_schcd{ top:0px;}
+.div_autosch_schlife { position:absolute;top:1px;left:114px;z-index:10;visibility:visible; }
+* html .div_autosch_schlife{ top:0px;}
+.div_autosch_schmedieval { position:absolute;top:1px;left:145px;z-index:10;visibility:visible; }
+* html .div_autosch_schmedieval{ top:0px;}
+.div_autosch_schnodata { position:absolute;top:1px;left:114px;z-index:10;visibility:visible; }
+* html .div_autosch_schnodata{ top:0px;}
+.div_autosch_schticket { position:absolute;top:1px;left:114px;z-index:10;visibility:visible; }
+* html .div_autosch_schticket{ top:0px;}
+.div_autosch_schtravel { position:absolute;top:1px;left:119px;z-index:10;visibility:visible; }
+* html .div_autosch_schtravel{ top:0px;}
+.border_autosch { background-color:#ffffff; border:1px solid #CCCCCC; padding:8px 5px 5px 5px; }
+.font_autosch_tm { color:#434343; font-weight:bold; }
+.font_autosch { color:#434343; padding:5px 0 2px 10px; cursor:hand; }
+.font_autosch_w { color:#FF6000; }
+.box_autosch {
+border:1px solid #DEDEDE;height:113px;overflow:auto;padding:3px 0 3px 0;
+scrollbar-face-color:#D7D7D7;
+scrollbar-shadow-color:#D7D7D7;
+scrollbar-highlight-color:#D7D7D7;
+scrollbar-3dlight-color:#D7D7D7;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F5F5F5;
+scrollbar-arrow-color:#999999;
+}
+.box_autosch_sch {
+border:1px solid #DEDEDE;height:218px;overflow:auto;padding:3px 0 3px 0;
+scrollbar-face-color:#D7D7D7;
+scrollbar-shadow-color:#D7D7D7;
+scrollbar-highlight-color:#D7D7D7;
+scrollbar-3dlight-color:#D7D7D7;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F5F5F5;
+scrollbar-arrow-color:#999999;
+}
+
+/********** �쎇而� **********/
+.font_wel09, a.font_wel09:link, a.font_wel09:visited, a.font_wel09:hover, a.font_wel09:active{ font-size:11px; line-height:13px; }
+.border_wel09 { border:1px solid #E1E1E1; }
+
+.font_wellow, a.font_wellow:link, a.font_wellow:visited, a.font_wellow:hover, a.font_wellow:active{ font-size:11px; line-height:13px; color:#159226; font-weight:bold; }
+
+.font_welrank, a.font_welrank:link, a.font_welrank:visited, a.font_welrank:hover, a.font_welrank:active{ font-size:11px; line-height:12px; }
+.font_welrank_r, a.font_welrank_r:link, a.font_welrank_r:visited, a.font_welrank_r:hover, a.font_welrank_r:active{ font-size:11px; color:#FF6600; font-weight:bold; }
+.border_welrank { border:3px solid #D6D5C0; }
+
+.font_welseller, a.font_welseller:link, a.font_welseller:visited, a.font_welseller:hover, a.font_welseller:active{ font-size:11px; line-height:13px; }
+.border_welseller { border:3px solid #E1E1E1; }
+
+.font_welbuy_ts, a.font_welbuy_ts:link, a.font_welbuy_ts:visited, a.font_welbuy_ts:hover, a.font_welbuy_ts:active{ font-size:11px; line-height:13px; font-weight:bold; }
+.font_welbuy, a.font_welbuy:link, a.font_welbuy:visited, a.font_welbuy:hover, a.font_welbuy:active{ font-size:11px; line-height:13px; }
+.border_welbuy { border:1px solid #E1E1E1; }
+
+.font_welmhappy, a.font_welmhappy:link, a.font_welmhappy:visited, a.font_welmhappy:hover, a.font_welmhappy:active{ font-size:11px; line-height:13px; }
+.border_welmhappy { border:1px solid #E1E1E1; }
+
+.font_welhilow, a.font_welhilow:link, a.font_welhilow:visited, a.font_welhilow:hover, a.font_welhilow:active{ font-size:11px; line-height:13px; }
+.font_welhilow_cnt, a.font_welhilow_cnt:link, a.font_welhilow_cnt:visited, a.font_welhilow_cnt:hover, a.font_welhilow_cnt:active{ font-size:11px; line-height:13px; color:#159226; font-weight:bold; }
+
+.font_welscor, a.font_welscor:link, a.font_welscor:visited, a.font_welscor:hover, a.font_welscor:active{ font-size:11px; line-height:13px; }
+.border_welcor { border:3px solid #E1E1E1; }
+.div_welcor { width:72px; height:26px; overflow:hidden; }
+
+.font_welmini, a.font_welmini:link, a.font_welmini:visited, a.font_welmini:hover, a.font_welmini:active{ font-size:11px; line-height:13px; }
+.border_welmini { border:3px solid #E1E1E1; }
+
+.link_welnotice, a.link_welnotice:link, a.link_welnotice:visited, a.link_welnotice:hover, a.link_welnotice:active{ color:#858585; line-height:18px; }
+
+/* Golbal Navigation */
+.link_gn, a.link_gn:link, a.link_gn:visited, a.link_gn:hover, a.link_gn:active{ color:#666666; text-decoration:none; }
+.link_gnon, a.link_gnon:link, a.link_gnon:visited, a.link_gnon:hover, a.link_gnon:active{ color:#159226; font-weight:bold; text-decoration:none; }
+.border_gnca { height:20px; border:1px solid #CCCCCC; padding:4px 2px 2px 6px; }
+* html .border_gnca{ padding:2px 2px 0 6px;}
+.div_gnsub { position:absolute;top:1px; left:12px; z-index:0;visibility:hidden; }
+* html .div_gnsub{ top:0px;}
+
+.font_subln, a.font_subln:link, a.font_subln:visited, a.font_subln:hover, a.font_subln:active{ font-size:11px; color:#9B9B9B; line-height:17px; }
+.link_subtm, a.link_subtm:link, a.link_subtm:visited, a.link_subtm:hover, a.link_subtm:active{ font-size:12px; color:#287F2B; line-height:17px; font-weight:bold; background-color:#D2EFCF; }
+.link_sub, a.link_sub:link, a.link_sub:active, a.link_sub:visited{ font-size:12px; color:#434343; line-height:17px; text-decoration:none; }
+a.link_sub:hover{ font-size:12px; color:#1EAE0F; line-height:17px; text-decoration:underline; }
+
+/* 肄붾꼫 */
+.font_catesort, a.font_catesort:link, a.font_catesort:visited, a.font_catesort:hover, a.font_catesort:active{ color:#287F2B; font-weight:bold; }
+
+.border_cormain { border:3px solid #E1E1E1; }
+.div_cormain { width:116px; height:34px; overflow:hidden; text-overflow:ellipsis; }
+
+.font_tab{ color:#686868; font-weight:bold; text-align:center;}
+.font_tab_on{ color:#BD4141; font-weight:bold; text-align:center;}
+.font_tab02{ color:#686868; font-weight:bold; text-align:center;}
+.font_tab02_on{ color:#14870A; font-weight:bold; text-align:center;}
+
+.bit_tabbox01_on{width:86px;height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0102_on.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left}
+.bit_tabbox02_on{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0101_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabbox03_on{height:35px;padding:14px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0103_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+
+.bit_tabbox01{width:86px;height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0102.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left}
+.bit_tabbox02{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0101.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabbox03{height:35px;padding:14px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0103.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+
+.font_tab_low{ color:#686868; font-weight:bold; text-align:center;}
+.font_tab_low_on{ color:#FF6132; font-weight:bold; text-align:center;}
+
+.bit_tabbox01_low_on{width:86px;height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0602_on.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left}
+.bit_tabbox02_low_on{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0601_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabbox03_low_on{height:35px;padding:14px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0603_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+
+.bit_tabbox01_low{width:86px;height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0602.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left}
+.bit_tabbox02_low{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0601.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabbox03_low{height:35px;padding:14px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0603.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+
+.bit_tabdetailbox01_on{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0102_on.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left}
+.bit_tabdetailbox02_on{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0101_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabdetailbox03_on{height:35px;padding:14px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0103_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabdetailbox01_on{ width:140px;}
+
+.bit_tabdetailbox01{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0102.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left}
+.bit_tabdetailbox02{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0101.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabdetailbox03{height:35px;padding:14px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0103.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabdetailbox01{ width:140px;}
+
+.bit_tabdetailboxd01_on{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0202_on.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left}
+.bit_tabdetailboxd02_on{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0201_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabdetailboxd03_on{height:35px;padding:10px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0203_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabdetailboxd01_on{ width:140px;}
+
+.bit_tabdetailboxd01{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0202.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left}
+.bit_tabdetailboxd02{height:35px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0201.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabdetailboxd03{height:35px;padding:10px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0203.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabdetailboxd01{ width:140px;}
+
+.txt_ovr { width:100%; height:13px; overflow:hidden; text-overflow:ellipsis; }
+
+.link_pricesort, a.link_pricesort:link, a.link_pricesort:visited, a.link_pricesort:hover, a.link_pricesort:active{ color:#434343; margin:0 3px 0 3px; padding-top:7px; }
+.link_pricesort_on, a.link_pricesort_on:link, a.link_pricesort_on:visited, a.link_pricesort_on:hover, a.link_pricesort_on:active{ color:#159226; font-weight:bold; }
+
+.font_listcolum, a.font_listcolum:link, a.font_listcolum:visited, a.font_listcolum:hover, a.font_listcolum:active{ color:#434343; }
+
+.border_list { border:1px solid #E1E1E1; }
+.font_list_point, a.font_list_point:link, a.font_list_point:visited, a.font_list_point:hover, a.font_list_point:active{ color:#9FBD00; }
+
+.paging_tot	 {color:#434343;margin:0}
+.link_paging_mall {color:#FFFFFF;letter-spacing:-1px}
+.link_paging_mall a:link,.link_paging_mall a:visited,.link_paging_mall a:hover,.link_paging_mall a:active{ color:#434343;}
+.link_paging, a.link_paging:link, a.link_paging:visited, a.link_paging:hover, a.link_paging:active{ color:#434343; margin:0 2px 0 2px; }
+
+.font_rankstan, a.font_rankstan:link, a.font_rankstan:visited, a.font_rankstan:hover, a.font_rankstan:active{ color:#159226; line-height:18px; }
+.font_rankstan01, a.font_rankstan01:link, a.font_rankstan01:visited, a.font_rankstan01:hover, a.font_rankstan01:active{ color:#555555; font-weight:bold; line-height:18px; }
+
+.font_rankts, a.font_rankts:link, a.font_rankts:visited, a.font_rankts:hover, a.font_rankts:active{ color:#159226; font-weight:bold; }
+.font_rankup, a.font_rankup:link, a.font_rankup:visited, a.font_rankup:hover, a.font_rankup:active{ font-size:11px;color:#DC124B; font-weight:bold; }
+.font_rankdown, a.font_rankdown:link, a.font_rankdown:visited, a.font_rankdown:hover, a.font_rankdown:active{ font-size:11px;color:#0004FF; font-weight:bold; }
+.font_ranknew, a.font_ranknew:link, a.font_ranknew:visited, a.font_ranknew:hover, a.font_ranknew:active{ font-size:11px;color:#FF720A; font-weight:bold; }
+.font_ranksame, a.font_ranksame:link, a.font_ranksame:visited, a.font_ranksame:hover, a.font_ranksame:active{ font-size:11px;color:#0D9700; font-weight:bold; }
+.border_ranklist { border:1px solid #E1E1E1; }
+
+.border_thumbnail { border:1px solid #E1E1E1; }
+.font_title, a.font_title:link, a.font_title:visited, a.font_title:hover, a.font_title:active{ font-size:14px; color:#159226; font-weight:bold; }
+.font_cnt, a.font_cnt:link, a.font_cnt:visited, a.font_cnt:hover, a.font_cnt:active{ color:#159226; font-weight:bold; }
+
+.font_basic_ts, a.font_basic_ts:link, a.font_basic_ts:visited, a.font_basic_ts:hover, a.font_basic_ts:active{ color:#159226; }
+.font_basic_b, a.font_basic_b:link, a.font_basic_b:visited, a.font_basic_b:hover, a.font_basic_b:active{ color:#ff6000; font-weight:bold; }
+.font_tip_ts, a.font_tip_ts:link, a.font_tip_ts:visited, a.font_tip_ts:hover, a.font_tip_ts:active{ margin-left:7px; }
+.font_tip, a.font_tip:link, a.font_tip:visited, a.font_tip:hover, a.font_tip:active{ line-height:23px; }
+.font_tip_cp, a.font_tip_cp:link, a.font_tip_cp:visited, a.font_tip_cp:hover, a.font_tip_cp:active{ color:#FF6000; text-decoration:underline; }
+.box_cnt, a.box_cnt:link, a.box_cnt:visited, a.box_cnt:hover, a.box_cnt:active{ border:1px solid #CCCCCC; font-family:�룍��; font-size:12px; color:#666666; padding:2px; }
+.box_spec, a.box_spec:link, a.box_spec:visited, a.box_spec:hover, a.box_spec:active{ border:0px; background-color:#EDEDED; font-family:�룍��; font-size:12px; color:#666666; padding:2px; text-align:right; }
+
+.box_help { border:3px solid #13C900;padding:10px 10px 5px 10px; }
+.font_help_ts, a.font_help_ts:link, a.font_help_ts:visited, a.font_help_ts:hover, a.font_help_ts:active{ color:#1EAE0F; font-weight:bold; text-decoration:underline; }
+.font_help, a.font_help:link, a.font_help:visited, a.font_help:hover, a.font_help:active{ line-height:20px; }
+.font_help01, a.font_help01:link, a.font_help01:visited, a.font_help01:hover, a.font_help01:active{ line-height:17px; }
+
+.font_minis_b, a.font_minis_b:link, a.font_minis_b:visited, a.font_minis_b:hover, a.font_minis_b:active{ color:#FF6000; }
+.link_minis, a.link_minis:link, a.link_minis:visited, a.link_minis:hover, a.link_minis:active{ text-decoration:underline;margin-left:30px; }
+
+.border_gift { border:3px solid #E1E1E1; }
+
+.font_ep_cnt, a.font_ep_cnt:link, a.font_ep_cnt:visited, a.font_ep_cnt:hover, a.font_ep_cnt:active{ color:#159226; font-weight:bold; }
+.font_ep, a.font_ep:link, a.font_ep:visited, a.font_ep:hover, a.font_ep:active{ line-height:18px; }
+.font_ep_b, a.font_ep_b:link, a.font_ep_b:visited, a.font_ep_b:hover, a.font_ep_b:active{ color:#FF6000; }
+.font_ep_p, a.font_ep_p:link, a.font_ep_p:visited, a.font_ep_p:hover, a.font_ep_p:active{ color:#159226; }
+.link_ep, a.link_ep:link, a.link_ep:visited, a.link_ep:hover, a.link_ep:active{ color:#159226; text-decoration:underline; }
+
+.pop_tm	{font-size:14px;color:#159226; font-weight:bold;}
+
+.font_popep_tm, a.font_popep_tm:link, a.font_popep_tm:visited, a.font_popep_tm:hover, a.font_popep_tm:active{ font-size:14px;color:#159226; font-weight:bold; padding-top:20px; }
+.border_popep{ 
+border:1px solid #D8D8D8; font-family:�룍��; font-size:12px; padding:2px; background-color:#F6F6F6;
+scrollbar-face-color:#D7D7D7;
+scrollbar-shadow-color:#D7D7D7;
+scrollbar-highlight-color:#D7D7D7;
+scrollbar-3dlight-color:#D7D7D7;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F5F5F5;
+scrollbar-arrow-color:#999999;
+}
+
+.font_qa, a.font_qa:link, a.font_qa:visited, a.font_qa:hover, a.font_qa:active{ line-height:18px; }
+.font_qa_ts, a.font_qa_ts:link, a.font_qa_ts:visited, a.font_qa_ts:hover, a.font_qa_ts:active{ color:#434343; }
+.font_qa_seller, a.font_qa_seller:link, a.font_qa_seller:visited, a.font_qa_seller:hover, a.font_qa_seller:active{ color:#159226; }
+
+.goods_icon{float:left}
+.price_icon{float:left;padding:0 4px 0 0}
+.price_icon2{float:left;padding:0 6px 0 0}
+
+.font_bigshow, a.font_bigshow:link, a.font_bigshow:visited, a.font_bigshow:hover, a.font_bigshow:active{ color:#159226; font-weight:bold; }
+.border_bigshow { border:1px solid #E1E1E1; }
+.div_bigshow {
+overflow:auto; width:107px; height:550px;
+scrollbar-face-color:#D7D7D7;
+scrollbar-shadow-color:#D7D7D7;
+scrollbar-highlight-color:#D7D7D7;
+scrollbar-3dlight-color:#D7D7D7;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F5F5F5;
+scrollbar-arrow-color:#999999;
+}
+
+.border_mini_b { border:2px solid #E1E1E1; }
+.link_minipro, a.link_minipro:link, a.link_minipro:visited, a.link_minipro:hover, a.link_minipro:active{ color:#FF6000; }
+.link_mininame, a.link_mininame:link, a.link_mininame:visited, a.link_mininame:hover, a.link_mininame:active{ font-weight:bold; line-height:15px; }
+.link_mini_ps, a.link_mini_ps:link, a.link_mini_ps:visited, a.link_mini_ps:hover, a.link_mini_ps:active{ color:#005F91; }
+.link_mini_ph, a.link_mini_ph:link, a.link_mini_ph:visited, a.link_mini_ph:hover, a.link_mini_ph:active{ color:#159700; }
+.link_mini, a.link_mini:link, a.link_mini:visited, a.link_mini:hover, a.link_mini:active{ line-height:16px; }
+.div_miniex { line-height:15px; height:31px; overflow-y:hidden }
+.div_mini { width:145px; height:48px; overflow:hidden; text-overflow:ellipsis; }
+
+.border_buynot_top { border:1px solid #E1E1E1; }
+.link_buynot_cateview, a.link_buynot_cateview:link, a.link_buynot_cateview:visited, a.link_buynot_cateview:hover, a.link_buynot_cateview:active{ color:#008A92; font-weight:bold; }
+.link_byunotm { overflow: hidden; text-overflow:ellipsis; width:100%; height:17px; line-height:17px; cursor:hand; font-weight:bold; }
+.div_buynot { width:100%; height:34px; overflow:hidden; word-break:break-all; }
+
+.link_buynot_cateli, a.link_buynot_cateli:link, a.link_buynot_cateli:active, a.link_buynot_cateli:visited{ font-size:12px; color:#434343; line-height:18px; text-decoration:none; }
+a.link_buynot_cateli:hover{ font-size:12px; color:#018291; line-height:18px; text-decoration:underline; }
+.link_buynot_catelion, a.link_buynot_catelion:link, a.link_buynot_catelion:visited, a.link_buynot_catelion:hover, a.link_buynot_catelion:active{  color:#018291; line-height:18px; font-weight:bold; background-color:#D1F0ED; }
+
+.font_buynotts, a.font_buynotts:link, a.font_buynotts:visited, a.font_buynotts:hover, a.font_buynotts:active{ color:#018291; font-weight:bold; }
+.font_buynot, a.font_buynot:link, a.font_buynot:visited, a.font_buynot:hover, a.font_buynot:active{ line-height:17px; }
+.font_buynot_cnt, a.font_buynot_cnt:link, a.font_buynot_cnt:visited, a.font_buynot_cnt:hover, a.font_buynot_cnt:active{ color:#169226; font-weight:bold; }
+
+.link_fashion_cateli, a.link_fashion_cateli:link, a.link_fashion_cateli:active, a.link_fashion_cateli:visited{ color:#434343; line-height:18px; text-decoration:none; width:92px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_fashion_cateli:hover{ color:#BC62FF; line-height:18px; text-decoration:underline; }
+.link_fashion_catets, a.link_fashion_catets:link, a.link_fashion_catets:active, a.link_fashion_catets:visited{ color:#BC62FF; line-height:18px; text-decoration:none; font-weight:bold; }
+a.link_fashion_catets:hover{ color:#BC62FF; line-height:18px; text-decoration:underline; font-weight:bold; }
+.link_fashion_catetson, a.link_fashion_catetson:link, a.link_fashion_catetson:visited, a.link_fashion_catetson:hover, a.link_fashion_catetson:active{ color:#9825ED; line-height:18px; font-weight:bold; background-color:#F2E1FF; }
+.link_fashion_catetm, a.link_fashion_catetm:link, a.link_fashion_catetm:visited, a.link_fashion_catetm:hover, a.link_fashion_catetm:active{ color:#551AB4; line-height:18px; font-weight:bold; }
+.font_fashion_searchtm { color:#6C39BA; font-weight:bold; }
+.font_fashionts { color:#551AB4; font-weight:bold; }
+.border_brandbest { border:1px solid #E1E1E1; }
+.border_brandbest01 { border:4px solid #E1E1E1; }
+.ts_fashion	{color:#6C39BA; font-weight:bold;letter-spacing:-1px;padding:8px 0 0 9px;background-image:url(http://openimage.interpark.com/_nip/bg_ts_fashion.gif);cursor:hand}
+
+.font_tab03{ color:#686868; font-weight:bold; text-align:center;}
+.font_tab03_on{ color:#6C39BA; font-weight:bold; text-align:center;}
+
+.bit_tabfashionbox01_on{height:29px;background-color:#ffffff; cursor:hand;float:left;margin-right:1px;}
+.bit_tabfashionbox02_on{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0301_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabfashionbox03_on{height:29px;padding:9px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0303_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabfashionbox01_on{ width:40px;}
+
+.bit_tabfashionbox01{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0302.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left;margin-right:1px;}
+.bit_tabfashionbox02{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0301.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabfashionbox03{height:29px;padding:9px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0303.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabfashionbox01{ width:40px;}
+
+.bit_tabfasbrandbox01_on{height:29px;background-color:#ffffff; cursor:hand;float:left;margin-right:1px;}
+.bit_tabfasbrandbox02_on{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0301_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabfasbrandbox03_on{height:29px;padding:9px 10px 0 10px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0303_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabfasbrandbox01_on{ width:112px;}
+
+.bit_tabfasbrandbox01{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0302.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left;margin-right:1px;}
+.bit_tabfasbrandbox02{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0301.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabfasbrandbox03{height:29px;padding:9px 10px 0 10px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0303.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabfasbrandbox01{ width:112px;}
+
+/* 3D */
+.link_fashion_brandtm, a.link_fashion_brandtm:link, a.link_fashion_brandtm:visited, a.link_fashion_brandtm:hover, a.link_fashion_brandtm:active{ color:#551AB4; font-size:18px; font-weight:bold; }
+.font_fashion_cnt, a.font_fashion_cnt:link, a.font_fashion_cnt:visited, a.font_fashion_cnt:hover, a.font_fashion_cnt:active{ color:#BC62FF; font-weight:bold; }
+.div_fashioncate {
+overflow:auto; width:170px; height:155px; padding-right:2px;
+scrollbar-face-color:#E7D7F4;
+scrollbar-shadow-color:#DEC9F0;
+scrollbar-highlight-color:#E7D7F4;
+scrollbar-3dlight-color:#DEC9F0;
+scrollbar-darkshadow-color:#ffffff;
+scrollbar-track-color:#ffffff;
+scrollbar-arrow-color:#C39DE3;
+}
+.link_fashion_cater, a.link_fashion_cater:link, a.link_fashion_cater:active, a.link_fashion_cater:visited{ color:#434343; line-height:18px; text-decoration:none; width:130px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_fashion_cater:hover{ color:#BC62FF; line-height:18px; text-decoration:underline; }
+.link_fashion_cateron, a.link_fashion_cateron:link, a.link_fashion_cateron:active, a.link_fashion_cateron:visited{ color:#BC62FF; line-height:18px; font-weight:bold; text-decoration:none; width:130px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_fashion_cateron:hover{ color:#BC62FF; line-height:18px; font-weight:bold; text-decoration:underline; }
+.link_fashion_caterts, a.link_fashion_caterts:link, a.link_fashion_caterts:active, a.link_fashion_caterts:visited{ color:#6C39BA; line-height:18px; font-weight:bold; text-decoration:none; width:137px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_fashion_caterts:hover{ color:#6C39BA; line-height:18px; font-weight:bold; text-decoration:underline; }
+
+.font_brboard_today, a.font_brboard_today:link, a.font_brboard_today:visited, a.font_brboard_today:hover, a.font_brboard_today:active{ font-family:Arial; color:#005BB6; }
+.font_brboard_total, a.font_brboard_total:link, a.font_brboard_total:visited, a.font_brboard_total:hover, a.font_brboard_total:active{ font-family:Arial; color:#005BB6; }
+.font_brboard_fame, a.font_brboard_fame:link, a.font_brboard_fame:visited, a.font_brboard_fame:hover, a.font_brboard_fame:active{ color:#0050A0; font-size:18px; font-weight:bold; }
+
+.border_fashionnew { border:1px solid #E1E1E1; }
+.div_fashionnew { width:120px; height:48px; overflow:hidden; text-overflow:ellipsis; }
+.link_fashionnew, a.link_fashionnew:link, a.link_fashionnew:visited, a.link_fashionnew:hover, a.link_fashionnew:active{ line-height:16px; }
+.link_fashionnew_b	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:16px; line-height:16px; cursor:hand; }
+
+.link_funiture_cateli, a.link_funiture_cateli:link, a.link_funiture_cateli:active, a.link_funiture_cateli:visited{ color:#434343; line-height:18px; text-decoration:none; width:110px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_funiture_cateli:hover{ color:#F08A53; line-height:18px; text-decoration:underline; }
+.link_funiture_catets, a.link_funiture_catets:link, a.link_funiture_catets:active, a.link_funiture_catets:visited{ color:#F08A53; line-height:18px; text-decoration:none; font-weight:bold; }
+a.link_funiture_catets:hover{ color:#F08A53; line-height:18px; text-decoration:underline; font-weight:bold; }
+.link_funiture_catetson, a.link_funiture_catetson:link, a.link_funiture_catetson:visited, a.link_funiture_catetson:hover, a.link_funiture_catetson:active{ color:#9825ED; line-height:18px; font-weight:bold; background-color:#F2E1FF; }
+.link_funiture_catetm, a.link_funiture_catetm:link, a.link_funiture_catetm:visited, a.link_funiture_catetm:hover, a.link_funiture_catetm:active{ color:#DF7136; line-height:18px; font-weight:bold; }
+.font_funiture_searchtm { color:#D7542F; font-weight:bold; }
+.font_funiturets { color:#DF7136; font-weight:bold; }
+.border_brandbest { border:1px solid #E1E1E1; }
+.border_brandbest01 { border:4px solid #E1E1E1; }
+
+.ts_funiture	{color:#D7542F; font-weight:bold;letter-spacing:-1px;padding:3px 0 0 0;}
+
+.font_tab_funi{ color:#686868; font-weight:bold; text-align:center;}
+.font_tab_funi_on{ color:#D7542F; font-weight:bold; text-align:center;}
+
+.bit_tabfuniturebox01_on{height:29px;background-color:#ffffff; cursor:hand;float:left;margin-right:1px;}
+.bit_tabfuniturebox02_on{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab_funi01_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabfuniturebox03_on{height:29px;padding:9px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab_funi03_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabfuniturebox01_on{ width:40px;}
+
+.bit_tabfuniturebox01{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab_funi02.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left;margin-right:1px;}
+.bit_tabfuniturebox02{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab_funi01.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabfuniturebox03{height:29px;padding:9px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab_funi03.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabfuniturebox01{ width:40px;}
+
+.link_funiture_brandtm, a.link_funiture_brandtm:link, a.link_funiture_brandtm:visited, a.link_funiture_brandtm:hover, a.link_funiture_brandtm:active{ color:#DF7136; font-size:18px; font-weight:bold; }
+.font_funiture_cnt, a.font_funiture_cnt:link, a.font_funiture_cnt:visited, a.font_funiture_cnt:hover, a.font_funiture_cnt:active{ color:#DF7136; font-weight:bold; }
+.div_funiturecate {
+overflow:auto; width:170px; height:155px; padding-right:2px;
+scrollbar-face-color:#FAD9C3;
+scrollbar-shadow-color:#F8CCB1;
+scrollbar-highlight-color:#FAD9C3;
+scrollbar-3dlight-color:#F8CCB1;
+scrollbar-darkshadow-color:#ffffff;
+scrollbar-track-color:#ffffff;
+scrollbar-arrow-color:#F2A574;
+}
+.link_funiture_cater, a.link_funiture_cater:link, a.link_funiture_cater:active, a.link_funiture_cater:visited{ color:#434343; line-height:18px; text-decoration:none; width:130px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_funiture_cater:hover{ color:#DF7136; line-height:18px; text-decoration:underline; }
+.link_funiture_cateron, a.link_funiture_cateron:link, a.link_funiture_cateron:active, a.link_funiture_cateron:visited{ color:#DF7136; line-height:18px; font-weight:bold; text-decoration:none; width:130px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_funiture_cateron:hover{ color:#DF7136; line-height:18px; font-weight:bold; text-decoration:underline; }
+.link_funiture_caterts, a.link_funiture_caterts:link, a.link_funiture_caterts:active, a.link_funiture_caterts:visited{ color:#C53912; line-height:18px; font-weight:bold; text-decoration:none; width:137px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_funiture_caterts:hover{ color:#C53912; line-height:18px; font-weight:bold; text-decoration:underline; }
+
+.font_brboard_today, a.font_brboard_today:link, a.font_brboard_today:visited, a.font_brboard_today:hover, a.font_brboard_today:active{ font-family:Arial; color:#005BB6; }
+.font_brboard_total, a.font_brboard_total:link, a.font_brboard_total:visited, a.font_brboard_total:hover, a.font_brboard_total:active{ font-family:Arial; color:#005BB6; }
+.font_brboard_fame, a.font_brboard_fame:link, a.font_brboard_fame:visited, a.font_brboard_fame:hover, a.font_brboard_fame:active{ color:#0050A0; font-size:18px; font-weight:bold; }
+
+.border_funiturenew { border:1px solid #E1E1E1; }
+.div_funiturenew { width:120px; height:48px; overflow:hidden; text-overflow:ellipsis; }
+.link_funiturenew, a.link_funiturenew:link, a.link_funiturenew:visited, a.link_funiturenew:hover, a.link_funiturenew:active{ line-height:16px; }
+.link_funiturenew_b	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:16px; line-height:16px; cursor:hand; }
+
+.border_pw09 { border:3px solid #E1E1E1; }
+.border_pw0901 { border:1px solid #E1E1E1; }
+.font_pw09_cnt, a.font_pw09_cnt:link, a.font_pw09_cnt:visited, a.font_pw09_cnt:hover, a.font_pw09_cnt:active{ line-height:17px; }
+.font_pw09_total, a.font_pw09_total:link, a.font_pw09_total:visited, a.font_pw09_total:hover, a.font_pw09_total:active{ cursor:hand; padding-bottom:7px; color:#ffffff; font-weight:bold; }
+.font_pw09_ts, a.font_pw09_ts:link, a.font_pw09_ts:visited, a.font_pw09_ts:hover, a.font_pw09_ts:active{ color:#159226; font-weight:bold; }
+
+.font_pw09_usetm, a.font_pw09_usetm:link, a.font_pw09_usetm:visited, a.font_pw09_usetm:hover, a.font_pw09_usetm:active{ color:#159226; font-weight:bold; line-height:18px; }
+.font_pw09_usets, a.font_pw09_usets:link, a.font_pw09_usets:visited, a.font_pw09_usets:hover, a.font_pw09_usets:active{ color:#159226; line-height:18px; }
+.font_pw09_use, a.font_pw09_use:link, a.font_pw09_use:visited, a.font_pw09_use:hover, a.font_pw09_use:active{ line-height:18px; }
+.link_pw09_use, a.link_pw09_use:link, a.link_pw09_use:visited, a.link_pw09_use:hover, a.link_pw09_use:active{ color:#159226; line-height:18px; text-decoration:underline; margin-left:15px; }
+
+.font_pw09_board, a.font_pw09_board:link, a.font_pw09_board:visited, a.font_pw09_board:hover, a.font_pw09_board:active{ color:#434343; }
+.font_pw09_cont, a.font_pw09_cont:link, a.font_pw09_cont:visited, a.font_pw09_cont:hover, a.font_pw09_cont:active{ padding:15px 15px 10px 15px; line-height:18px; }
+.font_pw09_comt, a.font_pw09_comt:link, a.font_pw09_comt:visited, a.font_pw09_comt:hover, a.font_pw09_comt:active{ color:#159226; }
+
+.border_cate_stsel { border:1px solid #E1E1E1; }
+.link_cate_stsel, a.link_cate_stsel:link, a.link_cate_stsel:visited, a.link_cate_stsel:hover, a.link_cate_stsel:active{ line-height:15px; width:100%; height:30px; overflow:hidden; text-overflow:ellipsis;  }
+.link_cate_stsel_name, a.link_cate_stsel_name:link, a.link_cate_stsel_name:visited, a.link_cate_stsel_name:hover, a.link_cate_stsel_name:active{ color:#159226; line-height:15px; font-weight:bold; width:100%; height:15px; overflow:hidden; text-overflow:ellipsis; }
+
+.border_cate_newreg { border:3px solid #E1E1E1; }
+.div_cate_newreg{ width:100%; height:34px; overflow:hidden; text-overflow:ellipsis;  }
+
+.div_cate_newsel { width:100%; height:17px; overflow:hidden; text-overflow:ellipsis;  }
+.font_cate_newsel, a.font_cate_newsel:link, a.font_cate_newsel:visited, a.font_cate_newsel:hover, a.font_cate_newsel:active{ line-height:20px; }
+.font_cate_search { color:159226; font-weight:bold; }
+
+.font_brandlist, a.font_brandlist:link, a.font_brandlist:visited, a.font_brandlist:hover, a.font_brandlist:active{ color:#14870A; font-weight:bold; }
+.font_brandlist_ts, a.font_brandlist_ts:link, a.font_brandlist_ts:visited, a.font_brandlist_ts:hover, a.font_brandlist_ts:active{ color:#159226; font-weight:bold; }
+
+.border_lowp { border:1px solid #E1E1E1; }
+.font_lowp_b, a.font_lowp_b:link, a.font_lowp_b:visited, a.font_lowp_b:hover, a.font_lowp_b:active{ color:#FF6000;line-height:17px; }
+.font_lowp_p, a.font_lowp_p:link, a.font_lowp_p:visited, a.font_lowp_p:hover, a.font_lowp_p:active{ font-size:16px; }
+
+.link_lowp_pricesort, a.link_lowp_pricesort:link, a.link_lowp_pricesort:visited, a.link_lowp_pricesort:hover, a.link_lowp_pricesort:active{ color:#434343; margin:0 3px 0 3px; padding-top:7px; }
+.link_lowp_pricesort_on, a.link_lowp_pricesort_on:link, a.link_lowp_pricesort_on:visited, a.link_lowp_pricesort_on:hover, a.link_lowp_pricesort_on:active{ color:#FF684D; font-weight:bold; }
+
+.border_cusch { border:1px solid #E1E1E1; }
+.font_cusch_ave, a.font_cusch_ave:link, a.font_cusch_ave:visited, a.font_cusch_ave:hover, a.font_cusch_ave:active{ color:#8EAA00; font-weight:bold; padding-top:4px; }
+.font_cusch_p, a.font_cusch_p:link, a.font_cusch_p:visited, a.font_cusch_p:hover, a.font_cusch_p:active{ line-height:17px; }
+
+.link_sld_nav_on, a.link_sld_nav_on:link, a.link_sld_nav_on:visited, a.link_sld_nav_on:hover, a.link_sld_nav_on:active{ color:#2c8222; font-weight:bold; }
+.font_sld_tm, a.font_sld_tm:link, a.font_sld_tm:visited, a.font_sld_tm:hover, a.font_sld_tm:active{ color:#159226; font-weight:bold; line-height:18px; }
+.font_sld_ts, a.font_sld_ts:link, a.font_sld_ts:visited, a.font_sld_ts:hover, a.font_sld_ts:active{ line-height:18px; }
+.border_sld { border:1px solid #E1E1E1; }
+.div_sld {
+width:243px;height:81px;overflow:auto;line-height:20px;
+scrollbar-face-color:#ffffff;
+scrollbar-shadow-color:#7f7f7f;
+scrollbar-highlight-color:#ffffff;
+scrollbar-3dlight-color:#f2f2f2;
+scrollbar-darkshadow-color:#f8f8f8;
+scrollbar-track-color:#f8f8f8;
+scrollbar-arrow-color:#666666;
+}
+
+.font_comp_name, a.font_comp_name:link, a.font_comp_name:visited, a.font_comp_name:hover, a.font_comp_name:active{ color:#159226; font-weight:bold; line-height:17px; }
+.font_comp_exbef { overflow: hidden; text-overflow:ellipsis; width:100%; height:17px; line-height:17px; }
+.font_comp_exaft { overflow: hidden; text-overflow:ellipsis; width:100%; height:17px; line-height:17px; }
+.font_comp_grade_ts { color:#159226; font-weight:bold; margin-right:10px; }
+.font_comp_grade { color:#9FBD00; margin:0 10px 0 5px; }
+.border_comp { border:1px solid #E1E1E1; }
+.border_comp01 { border:1px solid #E1E1E1;margin-top:2px; }
+.div_comp {
+width:100%;height:615px;overflow:auto;margin-top:10px;
+scrollbar-face-color:#D9D9D9;
+scrollbar-shadow-color:#C8C8C8;
+scrollbar-highlight-color:#D9D9D9;
+scrollbar-3dlight-color:#C8C8C8;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F6F6F6;
+scrollbar-arrow-color:#FAFAFA;
+}
+.div_comp_sale {
+width:286px;height:130px;overflow:auto;margin:2px 0 2px 0;
+scrollbar-face-color:#ffffff;
+scrollbar-shadow-color:#7f7f7f;
+scrollbar-highlight-color:#ffffff;
+scrollbar-3dlight-color:#f2f2f2;
+scrollbar-darkshadow-color:#f8f8f8;
+scrollbar-track-color:#f8f8f8;
+scrollbar-arrow-color:#666666;
+}
+.font_comp_minishop { color:#FF6000; }
+.link_comp_minishop, a.link_comp_minishop:link, a.link_comp_minishop:visited, a.link_comp_minishop:hover, a.link_comp_minishop:active{ text-decoration:underline; margin-left:18px; }
+
+.font_hl_bidtime { font-size:11px;padding-top:3px; }
+.font_hl_bidnum { font-size:11px;color:#005BB6; padding-top:3px; }
+
+.border_hl { border:4px solid #E1E1E1; }
+.border_hl_list { border:1px solid #E1E1E1; }
+.border_hl_pop { border:1px solid #E1E1E1; }
+
+.link_hi_name, a.link_hi_name:link, a.link_hi_name:visited, a.link_hi_name:hover, a.link_hi_name:active{ color:#007BB0; line-height:17px; }
+.link_hi_name_r, a.link_hi_name_r:link, a.link_hi_name_r:visited, a.link_hi_name_r:hover, a.link_hi_name_r:active{ line-height:16px; }
+.link_hi_name_b	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:16px; line-height:16px; cursor:hand; }
+.link_hi_name_sr, a.link_hi_name_sr:link, a.link_hi_name_sr:visited, a.link_hi_name_sr:hover, a.link_hi_name_sr:active{ line-height:15px; }
+.link_hl_name_t, a.link_hl_name_t:link, a.link_hl_name_t:visited, a.link_hl_name_t:hover, a.link_hl_name_t:active{ color:#FF6000; line-height:17px; }
+.box_hl_bid { font-size:16px; font-weight:bold; color:#159226; border:0px; text-align:right; }
+
+.link_hi_cate, a.link_hi_cate:link, a.link_hi_cate:visited, a.link_hi_cate:active{ color:#666666; }
+a.link_hi_cate:hover	 {color:#005BB6;}
+
+.font_hl { color:#005BB6; }
+.font_hl_s { font-size:11px; }
+.font_hl_p { font-size:16px; }
+.font_hl_l { line-height:17px; }
+.font_hl_bidnow { font-size:16px; font-weight:bold; }
+.font_hl_nexttime { font-size:11px; }
+
+.font_hl_exbef { color:#FF6000; overflow: hidden; text-overflow:ellipsis; width:100%; height:18px; line-height:18px; cursor:hand; }
+.font_hl_exaft { overflow: hidden; text-overflow:ellipsis; width:100%; height:18px; line-height:20px; cursor:hand; }
+.font_hl_name { font-size:14px; color:#007BB0; font-weight:bold; line-height:20px; }
+
+.font_hl_infots { color:#007BB0; }
+.font_hl_info { line-height:18px; }
+.font_hl_method { font-size:11px; color:#005CAA; }
+
+.font_hl_mybid { font-size:14px; color:#002C76; font-weight:bold; }
+.box_hl_search{ border:0; font-family:�룍��; font-size:12px; color:#159226; font-weight:bold; width:85px; height:18px; text-align:right; background-color:#F1F5FA; padding-top:2px;  }
+.div_hl_searchli { 
+width:419px; height:335px; overflow:auto;
+scrollbar-face-color:#D9D9D9;
+scrollbar-shadow-color:#C8C8C8;
+scrollbar-highlight-color:#D9D9D9;
+scrollbar-3dlight-color:#C8C8C8;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F6F6F6;
+scrollbar-arrow-color:#FAFAFA;
+}
+.font_hl_bidprice { color:#159226; }
+.font_hl_pop { color:#2259B6; font-weight:bold; }
+
+.font_hl_one { color:#6B6B6B; font-size:16px; font-weight:bold; margin-left:234px; }
+.font_hl_one_h { color:#ffffff; font-size:16px; font-weight:bold; padding-left:270px; }
+.font_hl_one_l { color:#ffffff; font-size:16px; font-weight:bold; margin-left:270px; }
+
+.font_hl_two { color:#6B6B6B; font-size:16px; font-weight:bold; margin-left:234px; }
+.font_hl_two_h { color:#ffffff; font-size:16px; font-weight:bold; padding-left:101px; }
+.font_hl_two_l { color:#ffffff; font-size:16px; font-weight:bold; margin-left:96px; }
+
+.font_hl_bidticket { color:#0F7B9B; font-size:16px; font-weight:bold; padding:17px 69px 0 0; text-align:right; vertical-align:top; }
+.font_hl_bidticket_s { color:#FF6000; text-align:center; }
+.font_hl_bidticket01 { color:#0099DD; font-size:18px; font-weight:bold; padding:18px 0 0 120px; text-align:center; vertical-align:top; }
+.font_hl_bidticket02 { color:#005BB6; font-weight:bold; padding:4px 50px 0 0; text-align:right; vertical-align:top; }
+.font_hl_bidticket_ts { color:#2259B6; font-weight:bold; }
+
+.box_hl_filling{ border:1px solid #CCCCCC; font-family:�룍��; font-size:12px; color:#666666; padding-top:2px;  }
+
+.font_hl_high { color:#3956C4; }
+.font_hl_low { color:#6E3BED; }
+
+.div_hl_popps { 
+width:419px; height:299px; overflow:auto;
+scrollbar-face-color:#D9D9D9;
+scrollbar-shadow-color:#C8C8C8;
+scrollbar-highlight-color:#D9D9D9;
+scrollbar-3dlight-color:#C8C8C8;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F6F6F6;
+scrollbar-arrow-color:#FAFAFA;
+}
+
+.box_hl{ 
+border:1px solid #E0E0E0; font-family:�룍��; font-size:12px; color:#A0A0A0; padding-top:2px; background-color:#F8F8F8;
+scrollbar-face-color:#D9D9D9;
+scrollbar-shadow-color:#C8C8C8;
+scrollbar-highlight-color:#D9D9D9;
+scrollbar-3dlight-color:#C8C8C8;
+scrollbar-darkshadow-color:#F6F6F6;
+scrollbar-track-color:#F6F6F6;
+scrollbar-arrow-color:#FAFAFA;
+}
+
+.font_hl_gift { line-height:18px; padding:20px 30px 35px 30px; }
+.font_hl_help { color:#386bc1; font-weight:bold; }
+.link_hl_help, a.link_hl_help:link, a.link_hl_help:visited, a.link_hl_help:active{ color:#666666; text-decoration:none; }
+a.link_hl_help:hover { color:#386bc1; text-decoration:underline; }
+.font_hl_help_on { color:#386bc1; text-decoration:underline; }
+.font_hl_help_cont { line-height:18px; padding:8px 10px 15px 10px; }
+.font_hl_help_cate { color:#386bc1; }
+
+.link_cosmetic_cateli, a.link_cosmetic_cateli:link, a.link_cosmetic_cateli:active, a.link_cosmetic_cateli:visited{ color:#434343; line-height:18px; text-decoration:none; width:92px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_cosmetic_cateli:hover{ color:#F96EA7; line-height:18px; text-decoration:underline; }
+.link_cosmetic_catets, a.link_cosmetic_catets:link, a.link_cosmetic_catets:active, a.link_cosmetic_catets:visited{ color:#F96EA7; line-height:18px; text-decoration:none; font-weight:bold; }
+a.link_cosmetic_catets:hover{ color:#F96EA7; line-height:18px; text-decoration:underline; font-weight:bold; }
+.link_cosmetic_catetson, a.link_cosmetic_catetson:link, a.link_cosmetic_catetson:visited, a.link_cosmetic_catetson:hover, a.link_cosmetic_catetson:active{ color:#9825ED; line-height:18px; font-weight:bold; background-color:#F2E1FF; }
+.link_cosmetic_catetm, a.link_cosmetic_catetm:link, a.link_cosmetic_catetm:visited, a.link_cosmetic_catetm:hover, a.link_cosmetic_catetm:active{ color:#D4065D; line-height:18px; font-weight:bold; }
+.font_cosmetic_searchtm { color:#D8266E; font-weight:bold; }
+.font_cosmeticts { color:#CF115D; font-weight:bold; }
+.border_brandbest { border:1px solid #E1E1E1; }
+.border_cosmetic_top { border:1px solid #E1E1E1; }
+.border_brandbest01 { border:4px solid #E1E1E1; }
+
+.ts_cosmetic	{color:#D8266E; font-weight:bold;letter-spacing:-1px;padding:8px 0 0 9px;background-image:url(http://openimage.interpark.com/_nip/bg_ts_cosmetic.gif);cursor:hand}
+.ts_cosmetic_02	{color:#D8266E;font-weight:bold;letter-spacing:-1px;padding:3px 0 0 0;}
+
+.font_tab04{ color:#686868; font-weight:bold; text-align:center;}
+.font_tab04_on{ color:#D8266E; font-weight:bold; text-align:center;}
+
+.bit_tabcosmeticbox01_on{height:29px;background-color:#ffffff; cursor:hand;float:left;margin-right:1px;}
+.bit_tabcosmeticbox02_on{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0401_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabcosmeticbox03_on{height:29px;padding:9px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0403_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabcosmeticbox01_on{ width:40px;}
+
+.bit_tabcosmeticbox01{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0402.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left;margin-right:1px;}
+.bit_tabcosmeticbox02{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0401.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabcosmeticbox03{height:29px;padding:9px 6px 0 6px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0403.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabcosmeticbox01{ width:40px;}
+
+.link_cosmetic_brandtm, a.link_cosmetic_brandtm:link, a.link_cosmetic_brandtm:visited, a.link_cosmetic_brandtm:hover, a.link_cosmetic_brandtm:active{ color:#E2176D; font-size:18px; font-weight:bold; }
+.font_cosmetic_cnt, a.font_cosmetic_cnt:link, a.font_cosmetic_cnt:visited, a.font_cosmetic_cnt:hover, a.font_cosmetic_cnt:active{ color:#EF59A3; font-weight:bold; }
+.div_cosmeticcate {
+overflow:auto; width:170px; height:155px; padding-right:2px;
+scrollbar-face-color:#F8D1DB;
+scrollbar-shadow-color:#F5C2D0;
+scrollbar-highlight-color:#F8D1DB;
+scrollbar-3dlight-color:#F5C2D0;
+scrollbar-darkshadow-color:#ffffff;
+scrollbar-track-color:#ffffff;
+scrollbar-arrow-color:#EE92A9;
+}
+.link_cosmetic_cater, a.link_cosmetic_cater:link, a.link_cosmetic_cater:active, a.link_cosmetic_cater:visited{ color:#434343; line-height:18px; text-decoration:none; width:130px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_cosmetic_cater:hover{ color:#EF59A3; line-height:18px; text-decoration:underline; }
+.link_cosmetic_cateron, a.link_cosmetic_cateron:link, a.link_cosmetic_cateron:active, a.link_cosmetic_cateron:visited{ color:#EF59A3; line-height:18px; font-weight:bold; text-decoration:none; width:130px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_cosmetic_cateron:hover{ color:#EF59A3; line-height:18px; font-weight:bold; text-decoration:underline; }
+.link_cosmetic_caterts, a.link_cosmetic_caterts:link, a.link_cosmetic_caterts:active, a.link_cosmetic_caterts:visited{ color:#D8266E; line-height:18px; font-weight:bold; text-decoration:none; width:137px; height:18px; overflow:hidden; text-overflow:ellipsis; }
+a.link_cosmetic_caterts:hover{ color:#D8266E; line-height:18px; font-weight:bold; text-decoration:underline; }
+
+.font_cos_brboard_today, a.font_cos_brboard_today:link, a.font_cos_brboard_today:visited, a.font_cos_brboard_today:hover, a.font_cos_brboard_today:active{ font-family:Arial; color:#BF068D; }
+.font_cos_brboard_total, a.font_cos_brboard_total:link, a.font_cos_brboard_total:visited, a.font_cos_brboard_total:hover, a.font_cos_brboard_total:active{ font-family:Arial; color:#BF068D; }
+.font_cos_brboard_fame, a.font_cos_brboard_fame:link, a.font_cos_brboard_fame:visited, a.font_cos_brboard_fame:hover, a.font_cos_brboard_fame:active{ color:#BF068D; font-size:18px; font-weight:bold; }
+
+.border_cosmeticnew { border:1px solid #E1E1E1; }
+.div_cosmeticnew { width:120px; height:48px; overflow:hidden; text-overflow:ellipsis; }
+.link_cosmeticnew, a.link_cosmeticnew:link, a.link_cosmeticnew:visited, a.link_cosmeticnew:hover, a.link_cosmeticnew:active{ line-height:16px; }
+.link_cosmeticnew_b	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:16px; line-height:16px; cursor:hand; }
+
+.font_ms, a.font_ms:link, a.font_ms:visited, a.font_ms:hover, a.font_ms:active{ font-size:11px;letter-spacing:-2px;color:#434343; margin:0 3px 0 3px; padding-top:7px; }
+
+.font_search_gn { color:#287F2B; font-weight:bold; }
+.link_search_gnhelp, a.link_search_gnhelp:link, a.link_search_gnhelp:visited, a.link_search_gnhelp:hover, a.link_search_gnhelp:active{ color:#434343; font-weight:bold; }
+.link_search_gnsos, a.link_search_gnsos:link, a.link_search_gnsos:visited, a.link_search_gnsos:hover, a.link_search_gnsos:active{ color:#FF6000; }
+
+.font_tab05{ color:#686868; font-weight:bold; text-align:center;}
+.font_tab05_on{ color:#287F2B; font-weight:bold; text-align:center;}
+
+.bit_tabsearchbox01_on{height:29px;background-color:#ffffff; cursor:hand;float:left;margin-right:1px;}
+.bit_tabsearchbox02_on{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0501_on.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabsearchbox03_on{height:29px;padding:9px 23px 0 23px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0503_on.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabsearchbox01_on{ width:81px;}
+
+.bit_tabsearchbox01{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0502.gif);background-repeat:repeat-x;background-position: left top; cursor:hand;float:left;margin-right:1px;}
+.bit_tabsearchbox02{height:29px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0501.gif);background-repeat:no-repeat;background-position: left top;}
+.bit_tabsearchbox03{height:29px;padding:9px 23px 0 23px;background-image:url(http://openimage.interpark.com/_nip/bit_tab0503.gif);background-repeat:no-repeat;background-position: right top;font-weight:bold; text-align:center;}
+* html .bit_tabsearchbox01{ width:81px;}
+
+.font_sch_tm { color:#159226; font-weight:bold; }
+.font_sch_ts { color:#434343; font-weight:bold; }
+.font_sch_cnt { color:#159226; font-weight:bold; }
+
+.link_sch	{ overflow: hidden; text-overflow:ellipsis; width:100%;}
+.link_sch_b	{ font-weight:bold; overflow: hidden; text-overflow:ellipsis; width:100%;}
+.font_schkey_tm { color:#159226; font-weight:bold; line-height:18px; }
+
+.link_sch_name, a.link_sch_name:link, a.link_sch_name:visited, a.link_sch_name:hover, a.link_sch_name:active{ color:#E7567C; line-height:15px; }
+.link_sch_sub, a.link_sch_sub:link, a.link_sch_sub:visited, a.link_sch_sub:hover, a.link_sch_sub:active{ color:#7656D0; line-height:15px; }
+.link_sch_ex { line-height:15px; }
+.link_sch_blk, a.link_sch_blk:link, a.link_sch_blk:visited, a.link_sch_blk:hover, a.link_sch_blk:active{ color:#159226; line-height:15px; }
+.font_sch_cs { color:#FF6000; }
+
+.link_sch_name01, a.link_sch_name01:link, a.link_sch_name01:visited, a.link_sch_name01:hover, a.link_sch_name01:active{ color:#666666; line-height:15px; }
+.link_sch_exbef01	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:15px; line-height:15px; cursor:hand; }
+.link_sch_exaft01	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:15px; line-height:15px; cursor:hand; }
+
+.font_sch_key_ts { color:#666666; font-weight:bold; margin:0 7px 0 4px; }
+.link_sch_key, a.link_sch_key:link, a.link_sch_key:visited, a.link_sch_key:hover, a.link_sch_key:active{ color:#159226; }
+
+.font_sch_dtl { color:#159226; }
+.box_sch_dtl { border:1px solid #CCCCCC; font-family:�룍��; font-size:12px; color:#666666; padding:2px; height:19px;  }
+
+.font_sch_ps { line-height:20px; }
+
+.font_sch_rslt { line-height:18px; }
+.font_sch_word { color:#159226; font-weight:bold; }
+.font_sch_info { color:#159226; }
+
+.box_shop_sch { border:1px solid #CCCCCC; font-family:�룍��; font-size:12px; color:#666666; padding:2px; height:19px; }
+.font_shop_sch { color:#d3ff06; font-weight:bold; }
+.font_shop_ts { color:#159226; font-weight:bold; }
+.font_shop_key { color:#FF6600; }
+
+.link_shop { line-height:20px; }
+.box_shop_link { overflow:hidden; text-overflow:ellipsis; width:100%; height:20px; line-height:20px; background-color:#00000; }
+
+.link_shop_name, a.link_shop_name:link, a.link_shop_name:visited, a.link_shop_name:hover, a.link_shop_name:active{ font-size:16px; font-weight:bold; color:#666666; line-height:20px; }
+.link_shop_exbef	{ font-size:14px; font-weight:normal; overflow: hidden; text-overflow:ellipsis; width:100%; height:17px; line-height:20px; cursor:hand; }
+.link_shop_exaft	{ font-size:14px; font-weight:normal; overflow: hidden; text-overflow:ellipsis; width:100%; height:17px; line-height:20px; cursor:hand; }
+.link_shop_price, a.link_shop_price:link, a.link_shop_price:visited, a.link_shop_price:hover, a.link_shop_price:active{ color:#159226; font-weight:bold; }
+
+.link_shop_name01, a.link_shop_name01:link, a.link_shop_name01:visited, a.link_shop_name01:hover, a.link_shop_name01:active{ color:#666666; line-height:15px; }
+.link_shop_exbef01	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:15px; line-height:15px; cursor:hand; }
+.link_shop_exaft01	{ overflow: hidden; text-overflow:ellipsis; width:100%; height:15px; line-height:15px; cursor:hand; }
+
+.link_shop_name02, a.link_shop_name02:link, a.link_shop_name02:visited, a.link_shop_name02:hover, a.link_shop_name02:active{ font-weight:bold; color:#666666; line-height:16px; }
+.link_shop_exbef02	{ font-weight:normal; overflow: hidden; text-overflow:ellipsis; width:100%; height:16px; line-height:16px; cursor:hand; }
+.link_shop_exaft02	{ font-weight:normal; overflow: hidden; text-overflow:ellipsis; width:100%; height:16px; line-height:16px; cursor:hand; }
+
+.border_shop { border:5px solid #E1E1E1; }
+.border_shop01 { border:4px solid #E1E1E1; }
+
+.font_lowprice, a.font_lowprice:link, a.font_lowprice:visited, a.font_lowprice:hover, a.font_lowprice:active{ font-size:11px; line-height:13px; }
+.border_lowprice { border:1px solid #E1E1E1; }
+
+.font_grtselr, a.font_grtselr:link, a.font_grtselr:visited, a.font_grtselr:hover, a.font_grtselr:active{ font-size:11px; line-height:13px; }
+.border_grtselr { border:1px solid #E1E1E1; }
+
+.font_mhappy, a.font_mhappy:link, a.font_mhappy:visited, a.font_mhappy:hover, a.font_mhappy:active{ font-size:11px; line-height:13px; }
+.border_mhappy { border:1px solid #E1E1E1; }
+
+.font_mdrecom, a.font_mdrecom:link, a.font_mdrecom:visited, a.font_mdrecom:hover, a.font_mdrecom:active{ font-size:11px; line-height:13px; }
+.border_mdrecom { border:1px solid #E1E1E1; }
+
+.border_login { background-color:#F6F6F6; border:1px solid #D8D8D8; height:20px; }
+.font_login { color:#159226; }
+
+.search_color	 { background-color:#CDFEA1}
+
+.font_adult { line-height:18px; }
+.font_adult_b { color:#159226; line-height:18px; }
+
+.font_error { color:#434343; line-height:18px; }
+.font_error_b { color:#159226; line-height:18px; font-weight:bold; }
+
+.div_schhelp{width:780px;height:580px;overflow:auto;}
+.font_schhelp_loc { color:#2C8222; font-weight:bold; }
+.font_schhelp_ts { color:#159226; font-weight:bold; line-height:18px; }
+.font_schhelp { line-height:18px; }
+
+#goods_list_st_big{margin:0;padding:0;}
+#goods_list_st_big a{margin:0;padding:0;}
+#goods_list_st_big dl{margin:0;padding:0;}
+#goods_list_st_big dt{clear:both;margin:0;padding:0;}
+#goods_list_st_big dd{clear:both;margin:0;padding:0;}
+#goods_list_st_big dd.icon_st01{margin:0;padding:10px 0 0 0;}
+#goods_list_st_big dd.icon_st01 ul{margin:0;padding:0;}
+#goods_list_st_big dd.icon_st01 li{float:left;padding:0 2px 0 0;list-style:none;}
+#goods_list_st_big dd.icon_st02{margin:0;padding:0;}
+#goods_list_st_big dd.icon_st02 ul{margin:0;padding:0;}
+#goods_list_st_big dd.icon_st02 li{float:left;padding:0 2px 0 0;list-style:none;}
+#goods_list_st_big dd.icon_st02 li img{margin:1px 1px 2px 0;}
+#goods_list_st_big dd.blank_area{margin:5px 0 0 0;padding:0;}
+#goods_list_st_big dd.price_basic{margin:6px 0 0 0;padding:1px 0 0 18px;background-image:url('http://openimage.interpark.com/_nip/icon/icon_won.gif');background-repeat:no-repeat;background-position:left top;}
+#goods_list_st_big dd.price_sale{margin:0;padding:0;}
+#goods_list_st_big #price_sale_zone ul{margin:0;padding:0;list-style:none;}
+#goods_list_st_big #price_sale_zone li{margin:0;padding:0;list-style:none;}
+#goods_list_st_big #price_sale_zone .price_sale01{margin:2px 0 0 0;padding:1px 0 0 18px;background-image:url('http://openimage.interpark.com/_nip/icon/icon_won01.gif');background-repeat:no-repeat;background-position:left top;}
+#goods_list_st_big #price_sale_zone .price_sale02{margin:2px 0 0 0;padding:1px 0 0 18px;background-image:url('http://openimage.interpark.com/_nip/icon/icon_coupon_00.gif');background-repeat:no-repeat;background-position:left top;}
+
+#big_goods_area{width:241px;float:left;position:relative;}
+#big_goods_area .trans_img{position:absolute;left:0;top:0;z-index:100;}
+#big_goods_area .icon{position:absolute;left:0;top:0;width:59px;height:59px;z-index:50;background-image:url(http://openimage.interpark.com/_nip/icon/icon_best.png);_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/_nip/icon/icon_best.png');}
+#big_goods_area .img img{border:solid 3px #E1E1E1;}
+#big_goods_area ul{margin:0;padding:0;list-style:none;float:left}
+#big_goods_area li{margin:0;padding:0;list-style:none;}
+#big_goods_area li{margin:10px 0 0 0;padding:0;line-height:140%;}
+#big_goods_area li.txt{width:216px;height:34px;overflow:hidden;word-break:break-all;}
+#big_goods_area li.price01{background-image:url(http://openimage.interpark.com/_nip/icon/icon_won01.gif);background-repeat:no-repeat;background-position:left top;padding:0 0 0 18px;font-weight:bold;color:#999999;text-decoration:line-through;}
+#nor_goods_area{width:260px;height:163px;float:left;margin:0 0 0 13px;}
+#nor_goods_area .img{float:left;width:130px;margin:0 10px 0 0;}
+#nor_goods_area .img img{border:solid 1px #E1E1E1;}
+#nor_goods_area ul{margin:0;padding:0;list-style:none;width:118px;float:left;}
+#nor_goods_area li{margin:0;padding:0;list-style:none;}
+#nor_goods_area li.txt{height:63px;overflow:hidden;word-break:break-all;margin:10px 0 10px 0;line-height:130%;}
+
+.titArea_015 { position:relative; width:800px; height:24px; margin-top: 15px; }
+.titArea_015 h3.tit { display:inline; float:left; height:16px; padding:0 0 0 0; }
+.titArea_015 h3.btn { display:inline; float:right; height:16px; padding: 1px 0 0 0; }
+.evtFesList_015	 { width:800px; height:121px; background:url(http://openimage.interpark.com/_cip/bg_ec_fes_2.gif) no-repeat; }
+.evtFesList_015	 li { float:left; display:inline; margin-left:44px; padding-top:11px; }
+.evtFesList_015	 li.first { margin-left:24px; }
+
+input.rad		{ vertical-align:top; width:12px; height:12px; border:0px; }
+input.ch		{ vertical-align:top; width:13px; height:13px; border:0px; }
+input.iTxt		{ padding:4px 0 0 11px; color:#4E4E4E; font-size:11px; border:1px solid #CCCCCC;  font-family:Dotum; }
+.mgb_1	 { margin-bottom:1px; } 
+.wScroll{
+scrollbar-face-color: #FFFFFF; 
+scrollbar-shadow-color: #DADADA; 
+scrollbar-highlight-color: #FFFFFF; 
+scrollbar-3dlight-color: #DADADA; 
+scrollbar-darkshadow-color: #FFFFFF; 
+scrollbar-track-color: #FFFFFF; 
+scrollbar-arrow-color: #DADADA;
+}
+
+.tm_gds		{ height:49px; padding-left:23px; background:url("http://openimage.interpark.com/_nip/bg_gds_valu_50.gif") repeat-x; }
+.tm_gds02	{ height:40px; padding-left:23px; background:url("http://openimage.interpark.com/_nip/bg_gds_valu_50.gif") repeat-x; }
+.gds_box02	{ padding:2px; border:8px solid #EBEBEB; }
+.gds_box10	{ padding:10px; border:8px solid #EBEBEB; }
+.gds_box15	{ padding:15px; border:8px solid #EBEBEB; }
+.gds_btn		{ margin-top:8px; text-align:center; }
+.gds_btn img { margin:0 3px; }
+
+.gds_detail	{ height:62px; margin:0 0 8px 5px; }
+.gds_detail .simg	{ float:left; width:62px; height:62px; border:1px solid #E1E1E1; }
+.gds_detail .stit	{ float:left; width:612px; height:62px; margin:-1px 0 0 9px; color:#7C7C7C; font-weight:bold; line-height:140%; }
+.gds_detail .stit a:link, .gds_detail .stit a:visited, .gds_detail .stit a:active	{ text-decoration:none; color:#7C7C7C; font-weight:bold; }
+.gds_detail .stit a:hover	{ text-decoration:underline; color:#7C7C7C; font-weight:bold; }
+
+.gv_box	{ width:100%; overflow:auto; }
+.gv_left		{ float:left; width:188px; margin-right:10px; }
+.gv_right	{ float:left; width:491px; }
+.gv_info	{ clear:both; overflow:auto; margin:4px 0 6px 12px;  } :root .gv_info	{ padding-top:12px; }
+
+.gv_left_In	{ width:188px; background:url("http://openimage.interpark.com/_nip/bg_gv_left_box.gif") repeat-y; }
+.gv_left_In .goods_valu		{ clear:both; margin-bottom:4px; }	 :root .gv_left_In .goods_valu		{ clear:both; overflow:auto; padding-bottom:1px; }	
+.gv_left_In .goods_valu dt	{ padding-bottom:9px; } 
+.gv_left_In .goods_valu dd	{ clear:both; float:left; width:188px; margin-bottom:5px; } 
+.gv_left_In .goods_valu dd .ch_input { float:left; width:32px; margin-top:1px; text-align:right; } :root .gv_left_In .goods_valu dd .ch_input	{ margin-top:-2px; }
+.gv_left_In .goods_valu dd .star		 { float:left; width:65px; margin-left:2px; }
+.gv_left_In .goods_valu dd .txt			 { float:left; margin-top:2px; color:#828282; font-size:11px; }
+
+.gv_left_In .goods_tip		{ clear:both; margin-bottom:4px; } :root .gv_left_In .goods_tip		{ margin-bottom:0px; }
+.gv_left_In .goods_tip dt	{ padding-bottom:9px; }	
+.gv_left_In .goods_tip dd	{ margin-left:18px; padding-left:6px; background:url("http://openimage.interpark.com/_nip/bl/bl_arrow_g.gif") no-repeat left 3px; color:#828282; font-weight:bold; }
+.gv_left_In .goods_tip ul	{ margin-top:2px; }
+.gv_left_In .goods_tip li	{ font-size:11px;  font-weight:normal; line-height:160%; }
+.gv_left_In .goods_tip li span	{ color:#F14D27; font-weight:bold; }
+
+.gv_left_InBot	{ width:188px; height:6px; background:url("http://openimage.interpark.com/_nip/bg_gv_left_box_bot.gif") no-repeat; font-size:0px; line-height:0px;  }
+
+.ts_gv		{ margin:4px 0 5px; padding:9px 0 0 4px; background:url("http://openimage.interpark.com/_nip/bg_gv_dot.gif") repeat-x; font-size:0px; line-height:0px;  }
+.gv_right .gv_inTxt	{ margin-bottom:3px; }
+.gv_right .editTxt		{ width:491px; height:255px; margin-bottom:8px; padding:2px 0 0 4px; background:#EAEAEA; }
+.gv_right .editImg	{ overflow:auto; float:left; padding-bottom:9px; background:url("http://openimage.interpark.com/_nip/bg_gv_dot.gif") repeat-x left bottom; }
+.gv_right .editImg .addImg	{ float:left; margin:4px 6px 0 4px; display:inline; }
+.gv_right .editImg .addFile 	{ float:left; }
+.gv_right .editImg .addFile input	{ width:319px; height:18px; padding-top:3px; border:1px solid #D8D8D8; color:#B6B6B6; font-size:11px; background:#F6F6F6; }
+.gds_preview	{ width:580px; height:597px; padding:12px; color:#7D7D7D; line-height:130%; overflow-y:auto; } :root .gds_preview	 { width:556px; }
+.gds_preview p { margin:0px; padding:0px; color:#7D7D7D;} 
+
+.img_upload			{ margin-bottom:6px; }
+.img_upload	 img { margin-right:5px; }
+.img_addBox		{ width:404px; height:114px; margin-bottom:7px; padding-top:2px; border:4px solid #EAEAEA; overflow-y:auto; overflow-x:hidden; }
+.img_addBox li		{ width:398px; margin-bottom:-3px; } 
+.img_addBox dl	{ float:left; width:360px; } :root .img_addBox dl		{ width:360px; margin-bottom:-3px;  } 
+.img_addBox dd	{ float:left; } 
+.img_addBox dd.inCh		{ margin:3px 8px 0 10px; display:inline; }	:root .img_addBox dd.inCh		{ margin:3px 6px 0 6px; display:inline; }
+.img_addBox dd.inImg		{ margin:1px 0 0 0; } :root .img_addBox dd.inImg		{ padding:3px 0 0 0; }
+.img_addBox dd.inTxt		{ width:310px;  margin:3px 0 0 0; } :root .img_addBox dd.inTxt		{ padding:1px 0 0 1px; }
+.ch_checked	 { background:#316AC5; color:#FFFFFF; } :root .ch_checked		 { background:#316AC5; color:#000000; }
+.ch_none		 { background:#FFFFFF; color:#000000; } 
+.flist_82 { color:#828282; font-size:11px; line-height:140%; }
+
+.gv_info02 img	{ margin-top:3px; } :root .gv_info02 img	{ padding-top:8px; }
+.gv_photo { padding:23px 0 0 0;}
+.gv_photo img { float:left; }
+.gv_photo input { float:left; margin:-1px 0 0 -2px } :root .gv_photo input { margin:3px 0 0 2px }
+.gv_photo .txt { margin:3px 6px 0 1px; } :root .gv_photo .txt { margin:3px 9px 0 4px; }
+
+/* 091211 �븷�씤荑좏룿 */
+.discount_coupon { margin:10px 10px 0 10px; text-align:left; }
+.discount_coupon h1 { display:none; }
+.discount_coupon dl.tab { height:44px; background:url("http://openimage.interpark.com/_nip/bg_tabCoupon.gif") repeat; }
+.discount_coupon dl.tab dt { float:left; margin:10px 0 0 10px; font-size:0; line-height:0; display:inline; }
+.discount_coupon dl.tab dt img { float:left; margin-right:4px; }
+.discount_coupon dl.tab dd { float:right; width:368px; height:44px; background:url("http://openimage.interpark.com/_nip/logo_tree.gif") no-repeat right top; text-align:right; }
+.discount_coupon dl.tab dd .ad_txt { margin:18px 47px 0 0; }
+.discount_coupon .couponDetail { width:100%; background:url("http://openimage.interpark.com/_nip/bg_coupon_content.gif") repeat-y 372px top #FFFFFF; }
+.discount_coupon .close { margin-top:9px; text-align:right; } 
+.couponDetail { padding:21px 20px 0 20px; } :root .couponDetail  { padding:0px; }
+.couponDetL { float:left; width:347px; } :root .couponDetL { margin:21px 41px 0 20px; }
+.couponDetR { float:right; width:348px; } :root .couponDetR { margin:21px 20px 0 0; }
+.couponDetL .heart { position:absolute; width:208px; height:120px; margin:192px 0 0 148px; background:url("http://openimage.interpark.com/_nip/bg_heart.gif") no-repeat; }
+
+.distLayerA { position:absolute; margin:191px 0 0 40px; z-index:30; }
+.distLayerB { position:absolute; margin:226px 0 0 40px; z-index:30; }
+.distLayerC { position:absolute; margin:226px 0 0 40px; z-index:30; }
+.distLayerD { position:absolute; margin:-11px 0 0 316px; z-index:40; }
+.distLayerE { position:absolute; margin:280px 0 0 40px; z-index:30; }
+
+.cpnTit { height:16px; margin-bottom:13px; background:url("http://openimage.interpark.com/_nip/bg_h2coupon.gif") repeat-x left top; }
+.cpnTit h2 { height:16px; float:left;  padding-right:10px; background:#FFFFFF; border-right:1px solid #E8E8E8;font-size:0px; line-height:0; }
+.cpnTit h2 img { float:left; margin:1px 0 0 0; }
+.cpnTit .count { float:left; margin:2px -1px 0 2px; font-size:12px; color:#DF4C52; font-weight:normal;  }
+
+/* rolling */
+.ssCoupon .MainB_EZ1					{ position:relative; width:100%; height: 250px; }
+.ssCoupon .MainB_EZ1_Sub			{ position:absolute; width: 100%; height: 250px; left:0px; top:0px; overflow:hidden;  }
+.ssCoupon .MainB_EZ1_Sub_Pic	{ position:relative; }
+.ssCoupon .MainB_EZ1_Sub_Pic	ul.ssCoupon_roll	 { position:absolute; left:0px; width: 100%; }
+
+.ssCoupon { width:340px; margin:0 0 0 3px; position:relative; z-index:20}
+.ssCoupon	.sb_table	{ float:left; width:272px;}
+.ssCoupon	.naviL		{ float:left; vertical-align: top; width:34px; margin-top: 44px; text-align:left; }
+.ssCoupon	.naviR		{ float:right; vertical-align: top; width:34px; margin-top: 44px; text-align:right }
+.ssCoupon	#ssCoupon_roll	{ width: 100%; height: 328px; }
+.ssCoupon	#ssCoupon_roll	li.roll	{ float:left; width: 272px; height:100%; background:url("http://openimage.interpark.com/_nip/bg_discountCoupon.jpg") no-repeat; text-align:right; } 
+.ssCoupon	#ssCoupon_roll	li.roll	.freeCoupon { float:left; width: 272px; height:100%; background:url("http://openimage.interpark.com/_nip/bg_freeCoupon.jpg") no-repeat; text-align:right; }
+.ssCoupon .freeCoupon .sale { height:50px; margin:33px 44px 0 0; }
+.ssCoupon .sale { height:45px; margin:38px 17px 0 0; }
+.ssCoupon .txt { height:16px; margin-right:16px; font-weight:bold; color:#636363; }
+.ssCoupon .date { margin-right:16px; color:#898989; }
+
+dl.discountCouponInfo { clear:both; height:128px; margin:29px 0 0 2px; }
+dl.discountCouponInfo dt { height:23px; margin-left:1px; }
+dl.discountCouponInfo dt div { float:left; margin-right:5px; }
+dl.discountCouponInfo dt span { float:left; margin-top:3px; font-weight:bold; color:#C10000; letter-spacing:-1; }
+dl.discountCouponInfo dd { clear:both; height:32px; } 
+dl.discountCouponInfo dd span{ color:#DE4D52; }
+dl.discountCouponInfo dd .help { position:absolute; margin:-1px 0 0 2px; }
+dl.discountCouponInfo dd.btn { float:left; margin-top:9px; }
+dl.discountCouponInfo .disType { margin-bottom:2px; padding-left:12px; background:url("http://openimage.interpark.com/_nip/bl/bl_arrow_gray05.gif") no-repeat 3px 3px; text-align:left; }
+
+.couponOk { padding:7px; background:#595959; }
+.couponOk .close { position:absolute; top:7px; right:14px; }
+.couponOk dl.couponOkDl { width:374px; margin:0px;  }
+.couponOk dl.couponOkDl dt { height:auto; height:45px; margin:0px; background:url("http://openimage.interpark.com/_nip/bg_discountCoupon_ts.gif") repeat-x left bottom #FFFFFF; }
+.couponOk dl.couponOkDl dt img { margin:17px 0 0 21px;}
+.couponOk dl.couponOkDl dd { float:left; width:100%; background:#FFFFFF; }
+.couponOk dl.couponOkDl dd .bg_coupon { float:left; width:137px; height:69px; margin:23px 11px 0 20px; background:url("http://openimage.interpark.com/_nip/bg_discountCoupon2.jpg") no-repeat; text-align:right; display:inline; }
+.couponOk dl.couponOkDl dd .bg_coupon .price { margin:26px 11px 0 0; }
+.couponOk dl.couponOkDl dd .bg_couponImg { float:left; width:137px; height:69px; margin:23px 11px 0 20px; display:inline; }
+.couponOk dl.couponOkDl dd.cpn { height:112px; }
+.couponOk dl.couponOkDl dd table { margin:21px 0 0 0; height:76px; vertical-align:middle; }
+.couponOk dl.couponOkDl dd td {vertical-align:middle; }
+.couponOk dl.couponOkDl dd td p { margin:0px; padding:0 0 4px 8px; background:url("http://openimage.interpark.com/_nip/bl/bl_gray03.gif") no-repeat left 5px;  }
+.couponOk dl.couponOkDl dd td p span { color:#DE4D52; }
+.couponOk dl.couponOkDl dd .cpnTit { width:334px; margin:0 0 12px 20px; }
+.couponOk dl.couponOkDl dd .cpnTit img { margin-top:1px; }
+
+dl.discountPriceInfo { position:absolute; margin-top:30px; z-index:0; } :root dl.discountPriceInfo { margin-top:280px;  }
+dl.discountPriceInfo dd { margin-top:10px; }
+.discountInfoImg { float:left; position:relative; width:150px; height:130px; }
+.discountInfoImg span { position:absolute;left:0;top:0;width:130px;height:130px;z-index:1;background-image:url("http://openimage.interpark.com/_nip/layer_130.png");_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src="http://openimage.interpark.com/_nip/layer_130.png"); }
+
+dl.discountInfo { float:left; margin-top:18px; }
+dl.discountInfo dt { width:198px; height:79px; background:url("http://openimage.interpark.com/_nip/bg_discountLine.gif") repeat-x left bottom; }
+dl.discountInfo dt div { width:180px; line-height:140%; letter-spacing:-1; }
+dl.discountInfo dd { clear:both;  float:right; }
+dl.discountInfo dd div { float:left; font-size:11px; }
+dl.discountInfo dd .txt { margin:17px 6px 0 0; color:#949494; letter-spacing:-1; }
+dl.discountInfo dd .num { width:47px; height:23px; margin:10px 0 0 0; border:1px solid #DCDCDC; } :root dl.discountInfo dd .num { width:45px; height:21px; }
+dl.discountInfo dd .num input { width:45px; margin-top:3px; height:16px; border:none; text-align:center; color:#8E8E8E; font-size:11px;  }
+dl.discountInfo dd .btn { position:relative; margin:20px 13px 0 2px; }
+dl.discountInfo dd .btn .up { position:absolute; top:-10px; }
+dl.discountInfo dd .btn .down { position:absolute; top:2px; }
+dl.discountInfo dd .piece { margin:17px 15px 0 0; color:#8E8E8E; display:inline; }
+
+.discountList { clear:both; margin:15px 0 8px; }
+.discountList .disTxt { height:20px; padding-left:1px; background:url("http://openimage.interpark.com/_nip/bg_discountList.gif") repeat-x left bottom; color:#949494; font-size:11px; letter-spacing:-1; } :root .discountList .disTxt  { padding-top:14px; }
+.discountList dl { clear:both; height:36px; border-bottom:1px solid #E8E8E8; } :root .discountList dl { height:35px; }
+.discountList dt { float:left; margin:12px 0 0 7px; display:inline; }
+.discountList dt .disCoupon { position:absolute; margin:-5px 0 0 7px;  }
+.discountList dd{ float:right; margin:12px 15px 0 0; display:inline; }
+.discountListNone { height:1px; margin-top:-1px; background:#FFFFFF; line-height:0; font-size:0; } 
+
+dl.discountApply { width:348px; height:48px; background:url("http://openimage.interpark.com/_nip/bg_discountApply.gif") no-repeat; }
+dl.discountApply dt { float:left; margin:17px 0 0 16px; display:inline; }
+dl.discountApply dd { float:right; margin:15px 17px 0 0; text-align:right; display:inline; }
+
+ 
+/* 091218異붽�(濡쒓렇�씤) */
+.logout_warp	{ width: 980px; margin: 30px auto 0; text-align: center; }
+	/*:root	.logout_warp	{ padding-top: 30px; }*/
+.login_warp		{ width: 980px; margin: 30px auto; text-align: center; }
+	/*:root	.login_warp	{ padding-top: 30px; }*/
+.login_warp		img	{ border: 0px; vertical-align: top; }
+.login_warp		input.rdo	{ width: 13px; height: 13px; }
+.login_warp		input.chk	{ width: 13px; height: 13px; }
+.login_warp		input.input_text			{ border: 1px solid #EAEAEA; background: #FAFAFA; font: bold 14px �룍��; color: #353535; padding: 6px 0 0 10px }
+.login_warp		.rdo_txt		span	{ padding-right: 10px; }
+.login_warp		.login_msg_no	 		{ vertical-align: top; width: 100%; height: 15px; margin-top: 0px; border-bottom: 1px solid #D8D8D8; }
+.login_warp		.login_msg_img		{ vertical-align: top; width: 100%;  padding-bottom: 5px; border-bottom: 1px solid #D8D8D8; line-height:0 } /* 20120523 �닔�젙 */
+.login_warp		.login_msg_img		img	{ margin: 0 0 13px 0px; } /* 20130913 �닔�젙 */
+.login_warp		table	{ table-layout: fixed; }
+.login_warp		td		{ font: normal 11px �룍��; color: #828282; }
+.login_warp		td.rdo_txt {padding-left:54px} /* 20130913 �닔�젙 */
+
+ul.loginAd_list	 { float: right; width: 280px; overflow: auto; overflow: hidden; margin-top: -10px; } 
+ul.loginAd_list	 li	{ margin-top: 10px; }
+
+ul.loginAd_list3line	 { width: 100%; overflow: auto; overflow: hidden; margin-top: -5px; } 
+ul.loginAd_list3line	 li	{ padding-top: 5px; }
+
+
+ul.info_msg	 { width: 100%; overflow: auto; overflow: hidden; margin: 10px 0 9px; } /* 20120523 */
+ul.info_msg	 li	{ padding: 0 0 0 6px; line-height: 18px; background: url("http://openimage.interpark.com/_nip_ui/login/bl_gray_arrow.gif") no-repeat 0 6px; letter-spacing: -1; }  /* 20120523 */
+ul.info_msg	 li	span	{ color: #C10000; }
+
+ul.info_msg2	 { width: 100%; overflow: auto; overflow: hidden; margin: 10px 0 7px 10px; }
+ul.info_msg2	 li	{ padding: 0 0 0 6px; line-height: 18px; background: url("http://openimage.interpark.com/_nip_ui/login/bl_gray_arrow.gif") no-repeat 0 4px; letter-spacing: -1; } 
+ul.info_msg2	 li	span	{ color: #C10000; }
+
+.bg_msgbox_top	{ width: 308px; background: url("http://openimage.interpark.com/_nip_ui/login/bg_msgbox_top.gif") no-repeat 0 0; letter-spacing: -1; }
+.bg_msgbox_btm	{ width: 308px; background: url("http://openimage.interpark.com/_nip_ui/login/bg_msgbox_btm.gif") no-repeat bottom 0; margin-top: 0px; }
+.bt_noMember_order	 { width: 100%; text-align: center; margin: 10px 0 0 0; }
+	:root	.bt_noMember_order		{ padding-top: 10px; }
+
+
+.login_warp_popup		{ width: 280px; margin: 10px auto; text-align: center; }
+	:root	.login_warp_popup	{ padding-top: 30px; }
+.login_warp_popup		img	{ border: 0px; vertical-align: top; }
+.login_warp_popup		input.rdo	{ width: 13px; height: 13px; }
+.login_warp_popup		input.chk	{ width: 13px; height: 13px; }
+.login_warp_popup		input.input_text			{ border: 1px solid #EAEAEA; background: #FAFAFA; font: bold 14px �룍��; color: #353535; padding: 6px 0 0 10px }
+.login_warp_popup		.rdo_txt		span	{ padding-right: 10px; }
+.login_warp_popup		.login_msg_no	 		{ vertical-align: top; width: 100%; height: 15px; margin-top: 0px; border-bottom: 1px solid #D8D8D8; }
+.login_warp_popup		.login_msg_img		{ vertical-align: top; width: 100%; margin-top: 9px; border-bottom: 1px solid #D8D8D8; }
+.login_warp_popup		.login_msg_img		img	{ margin: 0 0 13px 0; }
+.login_warp_popup		table	{ table-layout: fixed; }
+.login_warp_popup		td		{ font: normal 11px �룍��; color: #828282; }
+
+dl.login_form	{ width: 694px; height: 300px; margin: 0 auto; padding: 0px;  }
+dl.login_form	dt.login_input		{ float: left; width: 377px; height: 280px; padding: 20px 0 0 23px; text-align: left; background: url("https://sslimage.interpark.com/_nip_ui/login/bg_login_input.gif") no-repeat 0 0; } /* 20130913 */
+*html dl.login_form	dt.login_input	{ width: 400px; height: 300px; } /* 20130913 */
+dl.login_form	dt.login_banner	{ float: right; width: 280px; overflow: auto; overflow: hidden; }
+
+ul.loginAd_list	 { float: right; width: 280px; overflow: auto; overflow: hidden; margin-top: -10px; } 
+ul.loginAd_list	 li	{ margin-top: 10px; }
+
+ul.loginAd_list3line	 { width: 100%; overflow: auto; overflow: hidden; margin-top: -5px; } 
+ul.loginAd_list3line	 li	{ padding-top: 5px; }
+
+ul.loginMenu	 { width: 100%; overflow: auto; overflow: hidden; margin-top: 1px; letter-spacing: -1; }
+ul.loginMenu	 li	{ float: right; padding: 0 15px 0 6px; background: url("http://openimage.interpark.com/_nip_ui/login/bl_gray_arrow.gif") no-repeat 0 3px; } 
+ul.loginMenu	 li.last	 	{ padding-right: 0px; }
+ul.loginMenu	 li	a:link, ul.loginMenu	 li	a:active, ul.loginMenu	 li	 a:visited {font: normal 11px �룍��;color: #454545;text-decoration: none}
+ul.loginMenu	 li	a:hover {font: normal 11px �룍��;color: #C10000;text-decoration: underline}
+
+ul.info_msg	 { width: 100%; overflow: auto; overflow: hidden; margin: 10px 0 18px; }
+ul.info_msg	 li	{ padding: 0 0 0 6px; line-height: 18px; background: url("http://openimage.interpark.com/_nip_ui/login/bl_gray_arrow.gif") no-repeat 0 4px; letter-spacing: -1; } 
+ul.info_msg	 li	span	{ color: #C10000; }
+
+ul.info_msg2	 { width: 100%; overflow: auto; overflow: hidden; margin: 10px 0 7px 10px; }
+ul.info_msg2	 li	{ padding: 0 0 0 6px; line-height: 18px; background: url("http://openimage.interpark.com/_nip_ui/login/bl_gray_arrow.gif") no-repeat 0 4px; letter-spacing: -1; } 
+ul.info_msg2	 li	span	{ color: #C10000; }
+
+.bg_msgbox_top	{ width: 308px; background: url("http://openimage.interpark.com/_nip_ui/login/bg_msgbox_top.gif") no-repeat 0 0; letter-spacing: -1; }
+.bg_msgbox_btm	{ width: 308px; background: url("http://openimage.interpark.com/_nip_ui/login/bg_msgbox_btm.gif") no-repeat bottom 0; margin-top: 0px; }
+.bt_noMember_order	 { width: 100%; text-align: center; margin: 10px 0 0 0; }
+	:root	.bt_noMember_order		{ padding-top: 10px; }
+
+
+
+/* 091218異붽�(濡쒓렇�씤�뙘�뾽) */
+dl.login_form_pop	{ position:relative; width: 410px; height: 310px; margin: 0 auto; text-align: center; }
+dl.login_form_pop	dt.login_input		{ width: 410px; height: 310px; padding: 32px 0 0 51px; text-align: left; background: url("http://openimage.interpark.com/_nip_ui/login/bg_login_input_pop.gif") no-repeat 0 0; }
+	:root	dl.login_form_pop	dt.login_input	{ width: 359px; height: 278px; }
+dl.login_form_pop	.bt_pop_close	{ position:absolute; top: 13px; left: 379px; }
+
+/* 20120113 異붽� */
+.txt_pink	 { color: #EE5870; font-size: 11px; }
+.table_box		{ width: 100%; overflow: auto; overflow: hidden; border-top: 1px solid #bbb9bb; border-bottom: 1px solid #bbb9bb; margin:3px 0 10px; }
+.table_box		table	{ border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
+.table_box		th		{ color: #5F5F5F; font-weight:normal; vertical-align:top; padding:15px 0 12px 9px; text-align:left; }
+.table_box		td.pl10	{ padding-left: 10px; }
+.table_box		.in	{ margin-left: 14px; }
+.table_box		.in input { float:left; width:13px; height:13px; margin:0px; padding:0px; }
+.table_box		.in span { float:left; margin:1px 0 0 4px; }
+.table_box		.in td { vertical-align:top; padding-top:2px; }
+
+/* 20120523 */
+.login_input.posR { position:relative; }
+.login_input .last_stConnect_wrap { position:absolute; top:21px; right:26px; }
+
+.login_input .login_notice { position:absolute; top:20px; left:179px; padding-left:10px; color:#a7a7a7; letter-spacing:-1; font:normal 11px dotum; line-height:15px; background:url("https://sslimage.interpark.com/_nip_ui/login/bar.gif") no-repeat 0 3px }/*2013-11-14*/
+
+.msg_notice { height: 19px; }
+.msg_notice .txt { color:#a7a7a7; font:normal 11px dotum; letter-spacing:-1px; line-height:0; }
+.msg_notice .txt a { padding-right:5px; background:url("https://sslimage.interpark.com/_nip_ui/login/bl_arrow2.gif") no-repeat right 2px; color:#a7a7a7; font:normal 11px dotum; letter-spacing:-1px;}
+.msg_notice .txt a:link, .msg_notice .txt a:visited, .msg_notice .txt a:active {color:#a7a7a7; font:normal 11px dotum; letter-spacing:-1px; text-decoration: none; }
+.msg_notice .txt a:hover {color:#a7a7a7; font:normal 11px dotum; letter-spacing:-1px; text-decoration: underline; }
+
+.msg_txt { height:31px; } :root .msg_txt { margin-top: -10px; }
+.msg_txt p { padding-left:16px; background: url('https://sslimage.interpark.com/_nip_ui/login/bl_mark2.gif') no-repeat 0 1px; color:#da6464; font:normal 11px dotum; line-height:15px; letter-spacing:-1px; }
+
+.character{ position:absolute; width:47px; height:145px; margin-top:41px; background:url("https://sslimage.interpark.com/_nip_ui/login/character.png") no-repeat; display:inline-block }

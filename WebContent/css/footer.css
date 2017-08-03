@@ -1,0 +1,31 @@
+.footer_wrap {background-color: #e2e6eb; display: inline-block; width: 100%; margin-top:20px; _text-align:center;}
+.footer_wrap.mainFooter {margin-top:0px;}
+.footer_wrap .contentWrap {width:960px; margin:0 auto;}
+.footer_wrap .link {border-bottom: 1px solid #ced2d6; display: inline-block; width: 100%; text-align: left;}
+.footer_wrap .footLinks {display: inline-block; float: left;}
+.footer_wrap .footLinks li {font-weight: bold; float: left; margin-right: 25px; padding: 16px 0;}
+.footer_wrap .footLinks li a, 
+.footer_wrap .footLinks li a:hover,
+.footer_wrap .footLinks li a:visited{font-family:"Nanum Gothic","Malgun Gothic";color: #000; font-weight:normal;}
+.footer_wrap .footLinks li.personalLow a {font-weight:bold;}
+.footer_wrap .language {z-index: 1; cursor: pointer; width: 160px; height:30px; display: inline-block; position: relative; margin: 8px; float: right;}
+.footer_wrap .language div {position:absolute; top:0; right: 0; width: 152px; height: 23px; _height:28px; border: 1px solid #e6e6e6; color: #808080; padding: 5px 0 0 6px; text-align: left; background:#fff url("../img/footer/selectArrow.png") 95% 10px no-repeat;}
+.footer_wrap .language div.open {background-position:95% -7px;}
+.footer_wrap .options {position: absolute; top: -105px; left: 0; border: 1px solid #e6e6e6; background-color: #fff; width: 158px; _width: 152px; _left: 8px; display:none; }
+.footer_wrap .options li {padding: 7px 0 7px 6px; height:12px; _height:26px; display:block; vertical-align:top;line-height:12px;}
+.footer_wrap .options li a {color: #808080;vertical-align:top; }
+.footer_wrap .options li a:hover {font-weight: bold; text-decoration: none;color: #808080;}
+.footer_wrap .options li a:visited {color: #808080;}
+
+.footer_wrap .company {display: inline-block; color: #999; text-align: left; width: 100%; padding: 15px 0 20px 0; letter-spacing: -0.3px; }
+.footer_wrap .company dt {float: left; margin-right: 36px;}
+.footer_wrap .company dd {font-size: 13px;font-family:"Nanum Gothic","Malgun Gothic";line-height: 20px; height: 20px;color: #999;}
+.footer_wrap .company dd span.name {font-family:"Nanum Gothic","Malgun Gothic";vertical-align: top; font-weight: bold; letter-spacing: 0; _height: 20px;}
+.footer_wrap .company dd a.companyBtn {display: inline-block; width: 86px; height: 17px; background: url("../img/footer/footer_txt.jpg") 0 0 no-repeat; margin-left: 10px; }
+.footer_wrap .company dd a.companyBtn span {display: block; overflow: hidden; visibility: hidden; position: absolute; top: -1000em; left: 0;}
+
+ul.footLinks li{
+	word-spacing:2px;
+	text-decoration: none;
+	list-style: none;
+}

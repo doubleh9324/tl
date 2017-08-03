@@ -1,0 +1,431 @@
+body {  }
+body, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4 { margin:0; padding:0; font-size:12px; }
+img { border:0; }
+ul,ol,li { list-style:none; }
+body, td, th, div, dt, dd, li, input, select { font-size:12px; font-family:돋움,Dotum,Arial; }
+input { outline-style:none; } /* 20120710 chrome input 라인 삭제 */
+.none { display:none; }
+ul, li { list-style:none; }
+a { color:#666; }a:link { color:#666; text-decoration:none; }	 a:visited { color:#666; text-decoration:none; }a:active { color:#666; text-decoration:none; }a:hover { color:#666; text-decoration:underline; }
+.fl { float:left; } .fr { float:right; }
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; } .clearfix { display:inline-block; }/* Hides from IE-mac \*/ *html .clearfix {height: 1%;} .clearfix {display: block;}/* End hide from IE-mac */
+html { filter: expression(document.execCommand("BackgroundImageCache", false, true)); }
+.png24 {tmp:expression(setPng24(this))}
+
+a.btn_on img.on {display:inline;} 
+a.btn_on img.off {display:none;} 
+a.btn_off img.on {display:none} 
+a.btn_off img.off {display:inline}
+
+/* GNB S */
+.icon_wel_n { margin: 2px 0 0 4px; }
+
+#wrapBody_sp	 img	{ vertical-align: top; }
+#wrapBody_sp	 { text-align: center; }
+#wrapBody_wel	{ height: 82px; }
+#wrapBody_wel2		{ height: 80px; background:url("https://sslimage.interpark.com/_nip/bg-gnb.gif") repeat}	/* 20130716 기존 72px */
+#wrapBody_wel3		{ height: 87px; }	/* 20120814 */
+
+#topnav_new	 {text-align:left;width:980px;margin:0 auto;position:relative;z-index:202}
+#topnav_newBtm	 {text-align:left;width:980px;margin:0 auto;position:relative;z-index:201}
+#topnav_new.wide { width:1044px; } /* 20110926 슬림형 귀배너 */
+#topnav_newBtm.wide { width:1044px; } /* 20110926 슬림형 귀배너 */
+#topnav_new .gnbArea_left	{ float:left;width:490px;margin-top:9px;font:11px Dotum normal;color:#7F7F7F;text-align:left;letter-spacing: -1; position:relative; z-index: 100; } /* 101117 */
+#topnav_new .gnbArea_left	ul { float: left; }
+#topnav_new .gnbArea_left	li { float:left; padding-left: 6px;padding-right: 6px;background: url("https://sslimage.interpark.com/_nip/bl/bl_gray.gif") no-repeat right 1px;font:11px Dotum normal;color:#696969; letter-spacing: -1; }
+#topnav_new .gnbArea_left	li.first { padding-left: 3px}
+#topnav_new .gnbArea_left	li.last { background:none;padding-right: 0px}
+#topnav_new .gnbArea_left	li.last_stConnect { background:none;padding-right: 0px;position:relative; top: 0px; left: 0px; }	 /* 101117 */
+#topnav_new .gnbArea_left	img.stConnect { margin: 0px 8px 0 2px; }	 /* 101117 */
+#topnav_new .gnbArea_left	.layer_stConnect	{ position:absolute; top: 10px; left: 8px; padding-top: 4px; }	 /* 딜레이수정(110208) */
+#topnav_new .gnbArea_left	ul.stConnect_box	{ clear: both; display: inline; margin: 0px; border: 2px solid #F0A6A6; background: #FFFFFF; }	 /* 딜레이수정(110208) */
+#topnav_new .gnbArea_left	ul.stConnect_box	li	{ width: 100%; margin: 0px; padding: 0px; background: none; text-align: center; }	 /* 101117 */
+#topnav_new .gnbArea_left	ul.stConnect_box	img	{ margin: 0px; padding: 0px; }	 /* 101117 */
+#topnav_new .gnbArea_left	ul.stConnect_box	li.btn	img	{ margin: 5px 0 22px 0; }	 /* 101117 */
+
+#topnav_new .gnbArea_left a:link, #topnav_new .gnbArea_left a:visited, #topnav_new .gnbArea_left a:active { text-decoration:none;font:11px Dotum normal;color:#7F7F7F}
+#topnav_new .gnbArea_left a:hover { text-decoration:underline;font:11px Dotum normal;color:#7F7F7F}
+#topnav_new .gnbArea_left img { margin:3px 8px 0 2px}
+.gnbArea_gateSpace	{clear:both; width: 100%; height: 13px; overflow: auto; overflow: hidden; }	/* 120227 */
+.gnbArea_center	{clear:both}
+.gnbArea_center.wide { width:1044px; } /* 20110926 슬림형 귀배너 */
+#topnav_new .gnbArea_right	{ float:right;width:490px;text-align:right; }
+.gnbArea_right	.banner_line {position:absolute;background:url(https://sslimage.interpark.com/_nip/banner_line.gif) no-repeat 0 11px; width: 2px;height:40px;top: 32px;left:865px;}
+.gnbArea_right	.topBanner	 { position: absolute; top: 26px; right: 0px; width: 268px; height: 56px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/bg_topBanner.gif) no-repeat right 0; }
+
+#gnbArea_link ul { float: right;}
+#gnbArea_link li { float:left;margin-top: 5px; margin-left: 6px;padding-right: 6px;background: url("https://sslimage.interpark.com/_nip/bl/bl_gray.gif") no-repeat right 1px;font:11px Dotum normal;color:#696969;letter-spacing:-1}
+#gnbArea_link li.last { background:none;padding-right: 0px}
+#gnbArea_link li.last_btn { background:none;margin-top: 0px;padding-right: 0px; position: relative; z-index: 11 }
+#gnbArea_link li a:link, #gnbArea_link li a:visited, #gnbArea_link li a:active { text-decoration:none;font:11px Dotum normal;color:#696969}
+#gnbArea_link li a:hover { text-decoration:underline;font:11px Dotum normal;color:#696969}
+#gnbArea_link li.mypg { position:relative;padding:0px 20px 0 0px;background: url("https://sslimage.interpark.com/_nip/bl/bl_mypage.gif") no-repeat right top;color:#696969;cursor: pointer;z-index:100}
+#gnbArea_link li.mypg a	 {color:#696969}
+#gnbArea_link li.mypg a:hover {color:#696969;text-decoration:none}
+#gnbArea_link .mypgsub {position:absolute;top:0px;left:0px;margin:13px 0 0 -18px}
+*html #gnbArea_link .mypgsub {w\idth:90px;he\ight:63px}
+#gnbArea_link .mypgsub	.top	 {width:90px;height:5px;background:url(https://sslimage.interpark.com/_nip/bg_wel_layerRed_top.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://sslimage.interpark.com/_nip/bg_wel_layerRed_top.png');font-size:0px;line-height:0px}
+#gnbArea_link .mypgsub	.mid	 {width:90px;background:url(https://sslimage.interpark.com/_nip/bg_wel_layerRed_mid.png) repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://sslimage.interpark.com/_nip/bg_wel_layerRed_mid.png');font-size:0px;line-height:0px;padding:0 7px 0 6px}
+#gnbArea_link .mypgsub	.btm	 {width:90px;height:7px;background:url(https://sslimage.interpark.com/_nip/bg_wel_layerRed_btm.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://sslimage.interpark.com/_nip/bg_wel_layerRed_btm.png');font-size:0px;line-height:0px}
+#gnbArea_link .mypgsub	.mid a:hover {color:#BD4141;text-decoration:underline}
+#gnbArea_link .mypgsub dl	{position:relative;z-index:100}
+#gnbArea_link .mypgsub dd {padding:3px 0 0 5px;width:76px;height:14px;background:url(https://sslimage.interpark.com/_cip/bl/bl_square_dot.gif) no-repeat left 7px;text-align:left;letter-spacing:-1}
+#gnbArea_link .mypgsub dd a:link, #gnbArea_link .mypgsub dd a:visited, #gnbArea_link .mypgsub dd a:active {font:11px dotum;color:#7F7F7F}
+#gnbArea_link .mypgsub dd a:hover {font:11px dotum;color:#BD4141}
+
+/* 20140904 수정 start */
+.gnbArea_center h1 { float:left;width:255px;height:30px;margin:13px 0 0 0;background:url("https://sslimage.interpark.com/_nip/logo_140828.png") no-repeat 0 0;}
+.gnbArea_center h1 .logo_1 {float:left;width:145px;height:30px;}
+.gnbArea_center h1 .logo_2 {float:left;width:54px;height:30px;margin:0 0 0 7px;} 
+/* 20140904 수정 end */
+.gnbArea_center h1	img.family_gubun	{ margin-top: 11px; }
+.gnbArea_center h1 .logo { margin-top:4px;:}  /* 20120814 추가 */
+.gnbArea_center .search { position:relative;float:left;margin-top:13px}
+.gnbArea_center .search .box { float:left;width:325px;height:32px;background:#FEF9E6;border:2px solid #d73838} :root .gnbArea_center .search .box { width:321px; height:28px} /* 20130618 */
+.gnbArea_center .search .box input { float:left;width:280px;height:20px;margin:3px 2px 0 8px;color:#e45049;font: bold 14px 돋움;letter-spacing: 0;border:0px;background:#FEF9E6} /* 20130618 */
+*html .gnbArea_center .search .box input {margin:5px 2px 0 8px; } /* 20130618 */
+.gnbArea_center .search .box div { float:left;width:27px;height:24px;margin:2px 0 0 0px}
+.gnbArea_center .search .box img { position:absolute;margin:10px 0 0 10px}
+ /* 20120814 추가 start */
+.gnbArea_center .search .search_word { clear: both; float:left; width:100%; height: 22px; margin-top: 7px; color: #666; font: normal 11px 돋움; overflow:auto; overflow:hidden; }
+.gnbArea_center .search .search_word .number { float: left; margin-right: 10px; padding-right:9px; background: url("https://sslimage.interpark.com/_nip_ui/search/bl/line_gray3.gif") no-repeat right 0; }
+.gnbArea_center .search .search_word img { float: left; margin-right: 5px; }
+*html .gnbArea_center .search .search_word span { float: left; margin-top: 1px; font-size: 11px; color: #666; letter-spacing: -1px; }
+.gnbArea_center .search .search_word span { float: left; margin-top: 0px; font-size: 11px; color: #666; letter-spacing: -1px; }
+/* 20120814 추가 */
+.gnbArea_center .search .btn { float:left;} /* 20130618 */
+.gnbArea_center .search .btn a { width:62px;height:32px;background:url("https://sslimage.interpark.com/_nip/btn/bt_newSearch13.gif") no-repeat;display:inline-block;cursor:pointer} /* 20130618 */
+.gnbArea_center .search .searchList { position:absolute;left:0px;margin:31px 0 0 1px;background:#FFFFFF;border-left:1px solid #989898;border-right:1px solid #989898;border-bottom:1px solid #989898}
+.gnbArea_center .search .srchBox { width:321px} :root .gnbArea_center .search  srchBox { width:321px}	 /* 100812수정 */
+.gnbArea_center .search .srchBox	.srchBox_banner  div.kewword_list { width:320px;margin:3px 0px 0 0px;overflow-x:hidden}	/* 20111017 수정 */
+.gnbArea_center .search .srchBoxAd { width:321px} :root .gnbArea_center .search .srchBoxAd { width:321px}	 /* 100812수정 */
+.gnbArea_center .search .srchBoxAd .srchBox_banner { clear: both; width: 321px; text-align: left; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/bg_srchBox_banner.gif') repeat-y 0 0 }
+.gnbArea_center .search .srchBoxAd .srchBox_banner div.kewword_list { width:173px;margin:3px 2px 0 1px;overflow-x:hidden;}	/* 100812수정 */
+.gnbArea_center .search .searchList .srchBoxNone { margin:14px 0 12px 12px}
+.gnbArea_center .search .searchList li { width:309px; height:14px; margin-right:1px;padding:5px 0 2px 10px;text-align:left; color:#999; position:relative} /* 20130618 */
+*html .gnbArea_center .search .searchList li { width:319px; height:21px; } /* 20130618 */
+.gnbArea_center .search .searchList li.on { background:#f2f2f2} /* 20130618 */
+.gnbArea_center .search .searchList li span { color:#da6464} /* 20130618 */
+.gnbArea_center .search .searchList li .close {width:11px;height:11px;background:url("https://sslimage.interpark.com/_nip_ui/category_search/search201301/close.gif") no-repeat; display:block;position:absolute;right:11px;top:5px;} /* 20130618 */
+.gnbArea_center .search .searchList a li { text-decoration:none;cursor: pointer; color:#999} /* 20130618 */
+.gnbArea_center .search .searchList li a:link, .gnbArea_center .search .searchList li a:visited, .gnbArea_center .search .searchList li a:active, .gnbArea_center .search .searchList li a:hover {color:#999;text-decoration:none} /* 20130618 */
+.gnbArea_center .search .searchList .actWord { clear:both; width:321px; height:23px;margin-top:2px;border-top:1px solid #E2E2E2;background:#F3F3F3}
+.gnbArea_center .search .searchList .actWord span { color:#858586;font-size:11px}
+.gnbArea_center .search .searchList .actWord span.first { float:left;display:inline;margin:6px 0 0 11px}
+.gnbArea_center .search .searchList .actWord span.last { float:right;display:inline;margin:6px 10px 0 0; position:relative }	 /* 091112수정 */
+.gnbArea_center .search .searchList .actWord span.last	.help_layer { position:absolute; top: -24px; left: -160px; display: none; }	 /* 091112추가 */
+.gnbArea_center	ul.community_link { position:relative;float:right;top:31px;margin-right:-9px}
+.gnbArea_center	ul.community_link li { float:left;padding:0 9px 0 0 ;background:url(https://sslimage.interpark.com/_nip/bl/bl_wBar.gif) no-repeat right 4px}
+.gnbArea_center	ul.community_link li.menu1 { top:-1px;position:relative}
+.gnbArea_center	ul.community_link li.menu2 { top:-3px;padding:0 8px 0 8px;position:relative}
+.gnbArea_center	ul.community_link li.menu3 { top:-3px;padding-left:8px;position:relative}
+.gnbArea_center	ul.community_link li.menu4 { top:-3px;padding-left:8px;position:relative;background:none}
+.srchScroll{scrollbar-3dlight-color: E0E0E0;scrollbar-arrow-color: 7A7A7A;scrollbar-base-color: E0E0E0;scrollbar-darkshadow-color: FFFFFF;scrollbar-face-color: FFFFFF;scrollbar-highlight-color: FFFF;scrollbar-shadow-color: E0E0E0}
+.gnbArea_center .search .searchList ul.srchScroll_End	{ clear:both; border-top: 1px solid #E2E2E2; padding-top: 2px; } /* 20111017 수정 */
+
+.gnbArea_center .search .searchList .banner {display:block; background-image:url("https://sslimage.interpark.com/_nip_ui/gnb10/hash_img.png"); background-repeat:no-repeat; } /* 130314수정 */
+.gnbArea_center .search .searchList .banner { clear:both; width:321px; height:37px; background-position: 0 -77px; } /* 130314수정 */
+.gnbArea_center .search .searchList.itemBox .banner { clear:both; width:383px; height:37px; margin-top:6px; background-position: 0 -114px; } /* 20130618 */
+	/* 100812수정(추가) Start */
+
+	.gnbArea_center .search .searchList	ul.srchScroll_new	{ margin: 0 0 5px 1px; width: 100%;}
+	.gnbArea_center .search .searchList ul.srchScroll_End	{ margin: 0 0 0 2px; width: 100%;}
+
+	.gnbArea_center .search	 .banner_warp	{ float: left; display: inline; width: 130px; overflow: auto; overflow: hidden; margin-left: 9px; }
+	.gnbArea_center .search	 .banner_warp		.banner_dotline	{ width: 100%; height: 1px; line-height: 0px; font-size: 0px; margin: 0px; padding: 0px; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/banner_dotline.gif') repeat-x 0 0 }
+
+	.gnbArea_center .search	 .banner_warp		dl.banner_coupon	{ width: 130px; overflow: auto; overflow: hidden; margin-top: 8px; }
+	.gnbArea_center .search	 .banner_warp		dl.banner_coupon	dt		{ width: 100%; height: 13px; color: #DA6464; font: bold 11px 돋움; padding-left: 7px; letter-spacing: -1; text-decoration: none; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/bl/bl_adList_on.gif') no-repeat 1px 2px; }
+	.gnbArea_center .search	 .banner_warp		dl.banner_coupon	dd		{ margin-top: 4px; text-align: center; }
+	.gnbArea_center .search	 .banner_warp		dl.banner_coupon	dd		.coupon_img		{ width: 114px; height:57px; background:url("https://sslimage.interpark.com/_nip_ui/gnb10/bg_coupon_01.gif") no-repeat 0 0; display:inline; text-align: right; }
+	.gnbArea_center .search	 .banner_warp		dl.banner_coupon	dd		.coupon_img		.price { margin:23px 9px 0 0; position:relative; z-index:10; }
+	.gnbArea_center .search	 .banner_warp		dl.banner_coupon	dd		.coupon_btn		{ text-align: center; margin: 3px 0 6px 0; }
+
+	.gnbArea_center .search	 .banner_warp	ul.banner_adList	{ width: 130px; overflow: auto; overflow: hidden; margin-bottom: 5px; }
+	.gnbArea_center .search	 .banner_warp	ul.banner_adList	li	{ padding-left: 0px; }
+	.gnbArea_center .search	 .banner_warp	ul.banner_adList	li	a	{ text-decoration: none; cursor: pointer; width: 100%; color: #818181; font: normal 11px 돋움; letter-spacing: -1; padding-left: 6px; padding-top: 0px; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/bl/bl_adList.gif') no-repeat 0 2px; }
+	.gnbArea_center .search	 .banner_warp	ul.banner_adList	li	a:hover	{ width: 100%; color: #DA6464; font: normal 11px 돋움; padding-left: 6px; letter-spacing: -1; text-decoration: underline; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/bl/bl_adList_on.gif') no-repeat 0 2px; }
+	/* 100812수정(추가) End */
+
+
+	/* 20111017 추가 START */
+	.gnbArea_center .search .itemBox { border-top:1px solid #989898; } :root .gnbArea_center .search .itemBox { border-top:2px solid #989898; }
+	.gnbArea_center .search .itemBox .banner_dotline	{ clear:both; width: 100%; height: 1px; line-height: 0px; font-size: 0px; margin: 0 4px 0 6px; padding: 0px; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/dotline.gif') no-repeat }  /* 20130618 */
+	.gnbArea_center .search .itemBox { width:383px} /* 20130618 */
+	.gnbArea_center .search .itemBox .srchBox_banner { clear: both; width: 383px; float:left; text-align: left; margin-top:-1px; } /* 20130618 */
+	.gnbArea_center .search .itemBox .srchBox_banner div.kewword_list { width:152px;margin:3px 0 0 0;overflow-x:hidden;}  /* 20130618 */
+	.gnbArea_center .search .itemBox .actWord { width:383px} /* 20130618 */
+	.gnbArea_center .search .itemBox li { width:142px; height:14px; padding:6px 0 3px 10px; } /* 20130618 */
+	*html .gnbArea_center .search .itemBox li { width:152px; height:23px; } /* 20130618 */
+	.gnbArea_center .search .itemBox .srchItem	{ width: 223px; margin:1px 0 6px 1px; padding-bottom:1px; float: left; display: inline-block; overflow: auto; overflow: hidden; background:url('https://sslimage.interpark.com/_nip_ui/category_search/search201301/gnb/bg_srchBox_banner.gif') no-repeat 0 bottom;}  /* 20130618 */
+	.gnbArea_center .search .itemBox .srchItem p.tit { margin-bottom:1px; padding:12px 0 2px; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/bg_srchBox_tit.gif') repeat-y 0 top #FFF; font:bold 11px Dotum; color:#da6464; text-align:center; border-bottom:1px solid #e8e8e8; letter-spacing:-1; }
+	.gnbArea_center .search .itemBox .srchItem p.tit span { font:bold 11px Dotum; color:#da6464; } /* 20120921 */
+	.gnbArea_center .search .itemBox .srchItem dl { clear:both; float:left;  height:91px; margin:10px 0 0 12px; display:inline; } /* 20130618 */
+	.gnbArea_center .search .itemBox .srchItem dd { float:left; width:78px; height:78px; }
+	.gnbArea_center .search .itemBox .srchItem dd a { width:78px; height:78px; border:1px solid #e8e8e8; display:block; }
+	.gnbArea_center .search .itemBox .srchItem dd a:hover { border:1px solid #ad395a; }
+	.gnbArea_center .search .itemBox .srchItem dd img { width:78px; height:78px; }
+	.gnbArea_center .search .itemBox .srchItem dt { float:left; margin:0 0 0 10px; }
+	.gnbArea_center .search .itemBox .srchItem dt p { width:115px; height:46px; margin-top:1px; font:normal 11px Dotum; color:#818181; text-align:left;}
+	.gnbArea_center .search .itemBox .srchItem dt p a { word-break:break-all; }
+	.gnbArea_center .search .itemBox .srchItem dt p a:link, .gnbArea_center .search .itemBox .srchItem dt p a:visited, .gnbArea_center .search .itemBox .srchItem dt p a:active { font:normal 11px Dotum; color:#818181; text-align:left; line-height:130%; text-decoration:none; }
+	.gnbArea_center .search .itemBox .srchItem dt p a:hover { font:normal 11px Dotum; color:#818181; text-align:left; line-height:130%; text-decoration:underline; }
+	.gnbArea_center .search .itemBox .srchItem dt strong { height:16px; font-size:11px; display:block; color:#da6464; }
+	.gnbArea_center .search .itemBox .srchItem dt span img { margin-left:1px; }
+	.gnbArea_center .search .itemBox  ul.srchScroll_End	{ clear:both; width:158px; margin: 0 0 0 2px; }
+	/* 20111017 추가 END */
+
+/* 20130618 추가 start */
+.gnbArea_center .search .searchList .sub-line {padding:2px 0 5px;background:url("https://sslimage.interpark.com/_nip_ui/category_search/search201301/line2.gif") no-repeat 0 0 #fbfbfb}
+.gnbArea_center .search .itemBox .sub-line { width:383px; float:left;background:url("https://sslimage.interpark.com/_nip_ui/category_search/search201301/line2.gif") no-repeat 0 0 #fbfbfb}
+.gnbArea_center .search .searchList .sub-line a {color:#6a98d8}
+.gnbArea_center .search .searchList .sub-line a:link, .gnbArea_center .search .searchList .sub-line a:visited, .gnbArea_center .search .searchList .sub-line a:active, .gnbArea_center .search .searchList .sub-line a:hover {color:#6a98d8}
+.gnbArea_center .search .searchList .sub-line span {color:#e25147}
+.gnbArea_center .search .searchList .best {width:25px;height:13px;background:url("https://sslimage.interpark.com/_nip_ui/category_search/search201301/best.gif") no-repeat;display:inline-block;position:absolute;top:4px;margin-left:3px;}
+.gnbArea_center .search .searchList .sub-line li {margin-left:1px}
+.gnbArea_center .search .itemBox .sub-line li {width:381px}
+
+.search_hash .search .box {border:2px solid #6a98d8}
+.search_hash .search .btn a { float:left;width:62px;height:32px;background:url("https://sslimage.interpark.com/_nip/btn/bt_newSearch13_hash.gif") no-repeat;display:inline-block;cursor:pointer}
+.search_hash .search .searchList li a:link, .search_hash .search .searchList li a:visited, .search_hash .search .searchList li a:active, .search_hash .search .searchList li a:hover{color:#6a98d8}
+
+.gnbArea_center .search .searchList .srch_tab {width:307px;height:26px;margin:4px 0 6px 7px}
+.gnbArea_center .search .searchList .srch_tab a {float:left;width:153px;height:19px;padding-top:7px;background:url("https://sslimage.interpark.com/_nip/srch_tab.gif") no-repeat -154px 0;text-align:center;color:#aaa;font:normal 11px dotum;letter-spacing:-1px;cursor:pointer}
+*html .gnbArea_center .search .searchList .srch_tab a {height:26px;}
+.gnbArea_center .search .searchList .srch_tab .on {width:154px;background-position: 0 0;font:bold 11px dotum}
+/* 20130618 추가 end */
+
+/* GNB E */
+
+/* 푸터 S */
+.footer_warp	{ clear: both;width: 100%;overflow: auto;overflow: hidden;padding: 30px 0 25px 0;background:url(https://sslimage.interpark.com/_nip/bg_newGnb09.gif) repeat-x center 30px}	:root	.footer_warp	{ padding-top: 30px}
+.footer_con		{ text-align:left;width:980px;margin:0 auto;padding-top: 10px}
+.footer_con	ul.link	{float:left; width: auto;overflow: auto;overflow: hidden;margin-left: 0px; margin-bottom:0px;padding:0;margin-top: 10px; }
+.footer_con	ul.link	li	{ float: left;display: inline;padding: 0 11px 0 10px;letter-spacing: -1px;background:url(https://sslimage.interpark.com/_nip/bl/bl_sitelink2.gif) no-repeat right 1px}
+.footer_con	ul.link	li.first	{ padding-left: 0px; }
+.footer_con	ul.link	li.end	{ background: none}
+.footer_con	ul.link	li	a:link, .footer_con	ul.link	li	a:active, .footer_con	ul.link	li a:visited {font: normal 11px 돋움;color: #999;text-decoration:none}
+.footer_con	ul.link	li	a:hover {font: normal 11px 돋움;color: #999;text-decoration:underline}
+.footer_con	ul.link	li.first	a:link, .footer_con	ul.link	li.first	a:active, .footer_con	ul.link	li.first a:visited {font: normal 11px 돋움;color: #1d1d1d;text-decoration:none}
+.footer_con	ul.link	li.first	a:hover {font: normal 11px 돋움;color: #1d1d1d;text-decoration:underline}
+.footer_con	.footer_txt	 { clear:both; width: 100%;overflow:auto; overflow:hidden;margin: 17px 0 18px; padding-top:15px; padding-bottom:50px; text-align:left; overflow:hidden; }
+*html .footer_con	.footer_txt	 {padding-top:0px;}
+
+#family {float:left;position:relative;top:6px;z-index:1;float:left;margin-right:4px;font:normal 11px/18px Dotum,'돋음',sans-serif;letter-spacing:0;color:#666;cursor:pointer;text-align:left}
+#family.active {z-index:2;}
+#family select {visibility:hidden;}
+#family .newSelect {position:absolute;top:0;right:0;bottom:0;left:0;width:112px;height:14px;padding:4px 6px 0;border:1px solid #ddd;background:#fafafa url(https://sslimage.interpark.com/welcome_2013/selectArrow.png) no-repeat 100% 6px;font-size:11px;line-height:normal;color:#636363;}
+*html #family .newSelect {width:124px;height:20px;}
+#family.active .newSelect {background-position:100% -15px;}
+#family .newSelect span {float:right;margin-right:24px;font-family:Tahoma, sans-serif;}
+#family .options {display:none;position:absolute;top:21px;right:0;left:0;z-index:999;width:124px;max-height:250px;overflow-x:hidden;overflow-y:auto;margin-top:-2px;padding:7px 0;border:1px solid #ddd;background-color:#fff;}
+#family.active .options {display:block;}
+#family .options li {padding:0 6px;font-size:11px;line-height:16px;color:#999;}
+#family .options li:hover {color:#777;}
+#family .options li span {float:right;font-family:Tahoma, sans-serif;}
+/* 푸터 E */
+
+/* 롤오버 */
+a.rollover img			{display:inline;}
+a.rollover img.over	{display:none;}
+a.on img				{display:none}
+a.on img.over			{display:inline}
+a.rollover img.on		{display:none;}
+a.rollover:hover		{border:0 none; cursor:pointer}
+a.rollover:hover img	{display:none}
+a.rollover:hover img.over	{display:inline}
+a.rollover:hover img.on		{display:none;}
+
+.dpGnb { position:relative; width:980px; height:30px; margin:0 auto; text-align:left; }
+.dpGnb .whereis { float:left; width:194px; background:url(https://sslimage.interpark.com/_cip/bl/bl_dp_2dtit.gif) no-repeat left 11px; text-align:left; }
+.dpGnb .whereis div { padding:8px 0 0 15px; }
+.dpGnb .dpNavi { float:left; padding-left:8px; background:url(https://sslimage.interpark.com/_cip/bl/bl_dp_gnb.gif) no-repeat 0 15px; }
+.dpGnb .dpNavi li { float:left; padding:11px 5px 0 9px; background:url(https://sslimage.interpark.com/_cip/bl/bl_dp_gnbnext.gif) no-repeat 0 14px; }
+.dpGnb .dpNavi li a:hover { text-decoration:underline; }
+.dpGnb .dpNavi li.home { background:none; padding-left:0; color: #666666; }
+.dpGnb .dpNavi li.home a { background:none; padding-left:0; color: #666666; }
+.dpGnb .dpNavi li.first { padding-left:0; background:none; }
+.dpGnb .dpNavi li.def { color:#686868; }
+.dpGnb .dpNavi li.cur { float:left; }
+.dpGnb .dpNavi li.cur a { color:#7F3431; }
+.dpGnb .dpNavi li.cur { color:#7F3431; }
+.dpGnb .dpNavi li.nor { background:none; padding-left:3px; }
+/* 귀배너 */
+#float-wrap .wrap-rightfloatlayer { position:absolute; width:76px; top:169px; z-index:1; overflow:visible !important; }
+#float-wrap .wrap-rightfloatlayer #interpark-rightfloatlayer { padding-top:0px; }
+
+.IP_wing .today, .IP_wing .wingbn { margin-top:5px; }
+
+/* 110428(대분류네비게이션) S */
+.categoryNew_box	{ width: 891px; z-index: 100; position:absolute; left: 0px; top: 29px; }	:root	.category_box	 { width: 180px; }
+.categoryNew_box	.categoryNew_box_iframe	{ width: 891px; height: 320px; z-index: -1; position:absolute; left: 0px; top: 0px; background: transparent; filter:alpha(opacity=0) }
+/*
+.categoryNew_box	.top		{width: 891px; height:2px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_top2.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_top2.png');font-size:0px;line-height:0px; }
+.categoryNew_box	.mid	 {width: 891px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_mid.png) repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_mid.png');font-size:0px;line-height:0px; padding-bottom: 0px; overflow: auto; overflow: hidden; }
+.categoryNew_box	.btm	 {width: 891px; height:3px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_btm.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_btm.png');font-size:0px;line-height:0px}
+*/
+.categoryNew_box	.top		{width: 889px; height:2px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_top2.gif) no-repeat left top;font-size:0px;line-height:0px; }
+.categoryNew_box	.mid	 {width: 889px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_mid.gif) repeat-y left top;font-size:0px;line-height:0px; padding-bottom: 0px; overflow: auto; overflow: hidden; }
+.categoryNew_box	.btm	 {width: 889px; height:1px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/categoryNewBox_btm.gif) no-repeat left top;font-size:0px;line-height:0px}
+
+ul.shopping_cateNew	{ clear: both; width: 100%; overflow: auto; overflow: hidden; margin: 0 0 0 1px; }
+ul.shopping_cateNew	li.cate		{ float: left; width: 147px; margin-right: 1px; }
+ul.shopping_cateNew	li.cateLast		{ float: left; width: 147px; margin-right: 0px; }
+
+dl.categoryNewSub		{ clear: both; width: 147px; margin: 0 0 7px 0; }
+dl.categoryNewSub		dt		{ width: 100%; height: 30px; padding: 9px 0 0 0; margin-bottom: 11px; font: bold 12px 돋움; color: #696969; letter-spacing: -1; text-align: center; border-bottom: 1px solid #EFEFEF; background: #F9F9F9; }
+	:root	dl.categoryNewSub		dt		{ height: 21px; }
+dl.categoryNewSub		dt.last		{ width: 100%; height: 32px; padding: 10px 0 0 0; margin: 15px 0 11px 0; font: bold 12px 돋움; color: #696969; letter-spacing: -1; text-align: center; border-bottom: 1px solid #EFEFEF; border-top: 1px solid #EFEFEF; background: #F9F9F9; }
+	:root	dl.categoryNewSub		dt.last	{ height: 22px; }
+dl.categoryNewSub		dd	{ font: normal 11px 돋움; color: #626262; padding: 1px 0 0 14px; line-height: 18px; background:url(https://sslimage.interpark.com/_cip/bl/bl_dp_catebox.gif) no-repeat 8px 7px; }
+	:root	dl.categoryNewSub		dd	{ font: normal 11px 돋움; color: #626262; padding: 1px 0 0 14px; line-height: 18px; background:url(https://sslimage.interpark.com/_cip/bl/bl_dp_catebox.gif) no-repeat 8px 8px; }
+dl.categoryNewSub		dt		a:link, dl.categoryNewSub		dt	 	a:active, dl.categoryNewSub		dt	 	a:visited { font: bold 12px 돋움; color: #696969; letter-spacing: -1; }
+dl.categoryNewSub		dt		a:hover { font: bold 12px 돋움; color: #696969; letter-spacing: -1; text-decoration: underline; }
+dl.categoryNewSub		dd	a:link, dl.categoryNewSub		dd	a:active, dl.categoryNewSub		dd	a:visited { font: normal 11px 돋움; color: #626262; line-height: 18px;}
+dl.categoryNewSub		dd	a:hover { font: normal 11px 돋움; color: #DA6464; text-decoration: underline; line-height: 18px;}
+
+dl.categoryNewPlan		{ clear: both; width: 131px; padding-top: 6px; margin: 0 0 1px 8px; border-top: 1px solid #EFEFEF; }
+dl.categoryNewPlan		dd	{ height: 19px; overflow: hidden; font: normal 11px 돋움; color: #DA6464; padding: 1px 0 0 7px; line-height: 18px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/bl/bl_dp_catebox2.gif) no-repeat 0 7px; }
+	:root	dl.categoryNewPlan		dd	{ font: normal 11px 돋움; color: #DA6464; padding: 1px 0 0 7px; line-height: 18px; background:url(https://sslimage.interpark.com/_nip_ui/gnb10/bl/bl_dp_catebox2.gif) no-repeat 0 8px; }
+dl.categoryNewPlan		dd	a:link, dl.categoryNewPlan		dd	a:active, dl.categoryNewPlan		dd	a:visited { font: normal 11px 돋움; color: #DA6464; letter-spacing: -1; line-height: 18px; }
+dl.categoryNewPlan		dd	a:hover { font: normal 11px 돋움; color: #DA6464; text-decoration: underline; letter-spacing: -1; line-height: 18px; }
+
+table.shopping_cateNew		{ clear: both; width: 740px; table-layout: fixed; margin: 0 0 0 1px; }
+table.shopping_cateNew		td	 { vertical-align: top; }
+table.shopping_cateNew2	{ table-layout: fixed; margin: 0 0 0 0; }
+table.shopping_cateNew2	td	 { vertical-align: top; }
+
+dl.cateNew_Table		{ clear: both; width: 892px; overflow: auto; overflow: hidden; }
+dl.cateNew_Table		dt.table_dt		{ float: left; display: inline; width: 741px; }
+dl.cateNew_Table		dd.table_dd	{ float: left; display: inline; width: 147px;  }
+/* 110428(대분류네비게이션) E */
+
+/* 110725 */
+#wrapCategory	{ height:2px; background-color:#e56057;font-size:0px;line-height:0px;} /* 20130716 */
+/* GNB S */
+.gnbCategory_list_wrap { width:980px; } /* 20110926 슬림형 귀배너 */
+.gnbCategory_list_box	{ float: left; display: inline; width: 711px; height: 36px; padding-left: 1px; }
+.gnbCategory_list_box	.btn_more	{ float: right; width: px; }
+.gnbCategory_list_box	.btn_more	img	{ margin: 8px 6px 0 0; }
+
+ul.gnbCategory_list		{ float: left; display: inline; width: 670px; margin: 0 0 0 0; }
+ul.gnbCategory_list	 	li.gnb	{ float: left; display: inline; padding: 0 0 0 0; height: 36px; cursor: pointer; }
+ul.gnbCategory_list	 	li.gnbInpark	{ float: left; display: inline; padding: 0 0 0 0; height: 36px; cursor: pointer; }
+ul.gnbCategory_list		li.menu0	 { width: 133px; }
+ul.gnbCategory_list		li.menu1	 { width: 134px; }
+ul.gnbCategory_list		li.menu2	 { width: 134px; }
+ul.gnbCategory_list		li.menu3	 { width: 134px; }
+ul.gnbCategory_list		li.menu4	 { width: 126px; }
+ul.gnbCategory_list		li.menu0		.over { width: 135px; }
+ul.gnbCategory_list		li.menu1		.over	 { width: 135px; }
+ul.gnbCategory_list		li.menu2		.over	 { width: 135px; }
+ul.gnbCategory_list		li.menu3		.over	 { width: 135px; }
+ul.gnbCategory_list		li.menu4		.over	 { width: 128px; }
+ul.gnbCategory_list	 	li.on	{ position: relative; left: 0px; top: 0px; }
+ul.gnbCategory_list	 	li.on	.over	{ display: block; }
+ul.gnbCategory_list		.over		{ display: none; position: absolute; z-index: 10; top: 0px; margin-left: -1px; cursor: default; }
+
+/* 카테고리레이어 S */
+/* .gnbCategory_lay0		{ position: absolute; z-index: 8; top: 0px; left: -1px; width: 328px; overflow: auto; overflow: hidden; display: none; } */
+
+.box_gnbCategory_layer	 	{ position: absolute; z-index: 9; top: 35px; left: -1px; width: 328px; overflow: auto; overflow: hidden; text-align: left; display: none; border-bottom: 1px solid #B10000; background: url('https://sslimage.interpark.com/_nip_ui/welcome2011/bg_gnbLayer_01.gif') no-repeat 0 0; }
+.box_gnbCategory_layer	 	table	{ table-layout: fixed; margin: 7px 7px 6px 6px; }
+.box_gnbCategory_layer	 	td		{ vertical-align: top; }
+.box_gnbCategory_layer	 	td.box_special		{ border: 1px solid #DFDFDF }
+.box_gnbCategory_layer	 	dl.cateList	{ clear: both; width: 166px; overflow: auto; overflow: hidden; }
+.box_gnbCategory_layer	 	dl.cateList	img.icon	{ margin: 1px 0 0 3px; }
+.box_gnbCategory_layer	 	dl.cateList	dd	{ width: 100%; border-bottom: 0px solid #ECECEC; margin-bottom: 1px; }
+.box_gnbCategory_layer	 	dl.cateList	dd.last	{ border-bottom: 0px; }
+.box_gnbCategory_layer	 	dl.cateList	dd	 	a:link, .box_gnbCategory_layer	dl.cateList	dd	  a:visited, .box_gnbCategory_layer	dl.cateList	dd a:active { width: 100%; height: 21px; font: normal 12px dotum; color: #3E3E3E; padding: 5px 0 0 10px; background: url('https://sslimage.interpark.com/_nip_ui/welcome2011/bl/bl_category01.gif') no-repeat 4px 9px; text-decoration: none; }
+	:root	.box_gnbCategory_layer	 	dl.cateList	dd	 	a:link, :root	.box_gnbCategory_layer	dl.cateList	dd	  a:visited, :root	.box_gnbCategory_layer	dl.cateList	dd a:active	{ display: inline-block; width: 156px; height: 16px; padding: 5px 0 0 10px; }
+.box_gnbCategory_layer	 	dl.cateList	dd	 	a:hover { width: 100%; height: 21px; font: normal 12px dotum; color: #3E3E3E; padding: 5px 0 0 10px; background: #EEEEEE url('https://sslimage.interpark.com/_nip_ui/welcome2011/bl/bl_category01.gif') no-repeat 4px 9px; text-decoration: none; }
+	:root	.box_gnbCategory_layer	 	dl.cateList	dd	 	a:hover	{ display: inline-block; width: 156px; height: 16px; padding: 5px 0 0 10px; }
+
+.box_gnbCategory_layer	 	dl.theme		{ clear: both; width: 142px; margin: 0 0 0 5px; }
+.box_gnbCategory_layer	 	dl.theme		img.icon	{ margin: 0px 0 0 2px; }
+.box_gnbCategory_layer	 	dl.theme		dt	{ width: 100%; height: 25px; font: bold 10px Tahoma; color: #999999; padding: 4px 0 0 3px; letter-spacing: 0; background: url('https://sslimage.interpark.com/_nip_ui/welcome2011/bl/bl_category_dt.gif') no-repeat 0 0; cursor: default; text-transform: uppercase; }		:root	.box_gnbCategory_layer	 	dl.theme		dt	{ width: 139px; height: 20px; }
+.box_gnbCategory_layer	 	dl.theme		dd	 { width: 100%; height: 17px; margin-bottom: 4px; }
+.box_gnbCategory_layer	 	dl.theme		dd.plan	{ }
+.box_gnbCategory_layer	 	dl.theme		dd.last	{ margin-bottom: 3px; }
+.box_gnbCategory_layer	 	dl.theme		dd		a:link, .box_gnbCategory_layer	 dl.theme	dd	  a:visited, .box_gnbCategory_layer	 dl.theme	dd	  a:active { width: 100%; height: 17px; padding: 4px 0 0 4px; font: normal 11px dotum; color: #777777; }
+	:root	.box_gnbCategory_layer	 	dl.theme		dd		a:link, :root	.box_gnbCategory_layer	 dl.theme	dd	  a:visited, :root	.box_gnbCategory_layer	 dl.theme	dd	  a:active	{ display: inline-block; width: 138px; height: 14px; padding: 3px 0 0 4px; }
+.box_gnbCategory_layer	 	dl.theme		dd		a:hover { font: normal 11px dotum; color: #777777; background: #EEEEEE; text-decoration: none; }
+	:root	.box_gnbCategory_layer	 	dl.theme		dd		a:hover { display: inline-block; width: 138px; height: 14px; padding: 3px 0 0 4px;  }
+
+.box_gnbCategory_layer	 	dl.theme		dd.plan		a:link, .box_gnbCategory_layer	 dl.theme	dd.plan	  a:visited, .box_gnbCategory_layer	 dl.theme	dd.plan	  a:active { width: 100%; height: 17px; padding: 4px 0 0 4px; font: normal 11px dotum; color: #A77A5C; }
+	:root	.box_gnbCategory_layer	 	dl.theme		dd.plan		a:link, :root	.box_gnbCategory_layer	 dl.theme	dd.plan	  a:visited, :root	.box_gnbCategory_layer	 dl.theme	dd.plan	  a:active	{ width: 138px; height: 14px; padding: 3px 0 0 4px; }
+.box_gnbCategory_layer	  	dl.theme		dd.plan		a:hover { font: normal 11px dotum; color: #A77A5C; background: #EEEEEE; text-decoration: none; }
+	:root	.box_gnbCategory_layer	  	dl.theme		dd.plan		a:hover	{ display: inline-block; width: 138px; height: 14px; padding: 3px 0 0 4px; }
+/* 카테고리레이어 E */
+
+/* 스폐셜레이어 S */
+.box_gnbSpecial_layer	 	{ position: absolute; z-index: 9; top: 35px; right: 0px; width: 601px; overflow: auto; overflow: hidden; text-align: left; display: none; padding-left: 6px; border-bottom: 1px solid #474747; background: url('https://sslimage.interpark.com/_nip_ui/welcome2011/bg_gnbSpecialLayer_02.gif') no-repeat 0 0; }
+	:root	.box_gnbSpecial_layer	{ width: 595px; }
+
+.box_gnbSpecial_layer	 	dl		{ float: left; width: 240px; overflow: auto; overflow: hidden; margin: 7px 0 0 0; }
+.box_gnbSpecial_layer	 	dt		{ display: none; width: 100%; height: 30px; font: bold 11px 돋움; color: #777777; padding: 8px 0 0 3px; letter-spacing: -1; }		
+	:root	.box_gnbSpecial_layer	 	dt	{ width: 237px; height: 22px; }
+.box_gnbSpecial_layer	 	dd	 { float: left; width: 109px; margin: 0 11px 2px 0; }  /* 110816수정 */
+.box_gnbSpecial_layer	 	dd.last	{ margin-bottom: 5px; }
+.box_gnbSpecial_layer	 	dd		a:link, .box_gnbSpecial_layer	 dd	  a:visited, .box_gnbSpecial_layer	 dd	  a:active { width: 100%; height: 16px; padding: 3px 0 0 3px; font: normal 11px dotum; color: #A77A5C; }
+	:root	.box_gnbSpecial_layer	 	dd		a:link, :root	.box_gnbSpecial_layer	 dd	  a:visited, :root	.box_gnbSpecial_layer	 dd	  a:active	{ display: inline-block; width: 106px; height: 13px; padding: 3px 0 0 3px; }
+.box_gnbSpecial_layer	 	dd		a:hover { font: normal 11px dotum; color: #A77A5C; background: #EEEEEE; text-decoration: none; }
+	:root	.box_gnbSpecial_layer	 	dd		a:hover { display: inline-block; width: 106px; height: 13px; padding: 3px 0 0 3px;  }
+.box_gnbSpecial_layer	 	dd p { margin-bottom:2px; } /* 110816수정 */
+.box_gnbSpecial_layer	 	dl.brand		{ width: 109px; }
+/* 스폐셜레이어 E */
+
+/* 서비스 더보기 S */
+.service_box	{ float: right; display: inline; width: 268px; height: 38px; }
+ul.service_list	{ float: right; margin: 0 0 0 0; }
+ul.service_list	li	{ float: left; display: inline; padding-left: 0px; }
+ul.service_list	li.on	{ position: relative; left: 0px; top: 0px; }
+ul.service_list	li.on	.over	{ display: block; }
+ul.service_list	.over		{ display: none; position: absolute; z-index: 10; top: 0px; margin-right: -1px; cursor: pointer; }
+/* 서비스 더보기 E */
+/* =========================================================================================== */
+
+/* 카테고리 전체보기 S */
+.box_categoryAll		{ clear: both; width: 980px; overflow: auto; overflow: hidden; margin: 0 auto; text-align: left; display: none; position: absolute; z-index: 11; top: 29px; left: 0px; border-bottom: 1px solid #B10000; background: url('https://sslimage.interpark.com/_nip_ui/welcome2011/dot_categoryAll_subT.gif') no-repeat 0 0; }
+.box_categoryAll		dl		{ clear: both; width: 980px; overflow: auto; overflow: hidden; margin-top: 16px; padding: 0 0 9px 6px; background: url('https://sslimage.interpark.com/_nip_ui/welcome2011/dot_categoryAll_subB.gif') no-repeat 0 bottom; }
+.box_categoryAll		dt		{ float: right; }
+.box_categoryAll		dt		img	{ width: 278px; height: 149px; margin-right: 10px; }
+.box_categoryAll		dd		{ float: left; width: 135px; }
+.box_categoryAll		dd.first	{ float: left; width: 130px; }
+.box_categoryAll		dd.last		{ float: left; width: 133px; }
+.box_categoryAll		dd.last		ul		{ width: 133px; }
+
+.box_categoryAll		ul		{ clear: both; width: 126px; overflow: auto; overflow: hidden; margin-left: 4px; }
+.box_categoryAll		ul.first		{ clear: both; width: 125px; overflow: auto; overflow: hidden; margin-left: 0px; }
+.box_categoryAll		li	{ width: 100%; height: 16px; margin-bottom: 3px; }	:root	.box_categoryAll		li	{ padding-bottom: 0px; }
+.box_categoryAll		li.last	{ width: 100%; margin-bottom: 0px; }
+.box_categoryAll		li	a:link, .box_categoryAll		li	 a:visited, .box_categoryAll		li	  a:active { display: inline-block; width: 100%; height: 16px; padding: 3px 0 0 3px; font: normal 11px dotum; color: #555555; }
+.box_categoryAll		li	a:hover { display: inline-block; width: 100%; height: 16px; padding: 3px 0 0 3px; font: normal 11px dotum; color: #555555; background: #EEEEEE; text-decoration: none; }
+	:root	.box_categoryAll		li	a:link, :root	.box_categoryAll		li	 a:visited, :root		.box_categoryAll		li	  a:active { display: inline-block; width: 100%; height: 14px; padding: 2px 0 0 3px; font: normal 11px dotum; color: #555555; }
+	:root	.box_categoryAll		li	a:hover { display: inline-block; width: 100%; height: 14px; padding: 2px 0 0 3px; font: normal 11px dotum; color: #555555; background: #EEEEEE; text-decoration: none; }
+/* 카테고리 전체보기 E */
+
+/* 120206(쇼핑 전체보기) S */
+.categoryNew12_box		{ clear: both; width: 960px; z-index: 11; position: absolute; left: 0px; top: 35px; margin: 0 auto; border-bottom: 1px solid #666666; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/bg_categoryNew12_box.gif') no-repeat 0 0; }
+.categoryNew12_box		.categoryNew_box_iframe	{ width: 960px; height: 260px; z-index: -1; position:absolute; left: 0px; top: 0px; background: transparent; filter:alpha(opacity=0) }
+.categoryNew12_box		img	 { vertical-align: top; margin: 0px; }
+.categoryNew12_box		.tb_categoryNew12		{ width: 958px; table-layout: fixed; margin: 10px 0 7px 1px; }
+.categoryNew12_box		.tb_categoryNew12		td				{ vertical-align: top; padding-top: 3px; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/bg_tb_categoryNew12.gif') no-repeat right 0; }
+.categoryNew12_box		.tb_categoryNew12		td.first		{ background: none; }
+.categoryNew12_box		.tb_categoryNew12		td.last		{ background: none; }
+.categoryNew12_box		.tb_categoryNew12		dl	 	{ clear: both; width: 159px; overflow: auto; overflow: hidden; }
+.categoryNew12_box		.tb_categoryNew12		dl.last		{ clear: both; width: 158px; overflow: auto; overflow: hidden; }
+.categoryNew12_box		.tb_categoryNew12		dt	 	{ width: 100%; height: px; }
+.categoryNew12_box		.tb_categoryNew12		dd	{ width: 100%; font: normal 11px dotum; color: #555555; height: 20px; }
+.categoryNew12_box		.tb_categoryNew12		dd.space	 	{ margin-top: 10px; }
+.categoryNew12_box		.tb_categoryNew12		dt		a:link, .categoryNew12_box		.tb_categoryNew12		dt	 	 a:visited, .categoryNew12_box		.tb_categoryNew12		dt	  a:active { display: inline-block; width: 100%; height: 17px; padding: 0px 0 0 8px; font: bold 11px dotum; color: #C10001; letter-spacing: -1; }
+.categoryNew12_box		.tb_categoryNew12		dt	 	a:hover { display: inline-block; width: 100%; height: 17px; padding: 0px 0 0 8px; font: bold 11px dotum; color: #C10001; letter-spacing: -1; text-decoration: none; }
+.categoryNew12_box		.tb_categoryNew12		dd	a:link, .categoryNew12_box		.tb_categoryNew12		dd	 a:visited, .categoryNew12_box		.tb_categoryNew12		dd	  a:active { display: inline-block; width: 100%; height: 20px; padding: 5px 0 0 8px; font: normal 11px dotum; color: #555555; }
+	:root	.categoryNew12_box		.tb_categoryNew12		dd	a:link, .categoryNew12_box		.tb_categoryNew12		dd	 a:visited, .categoryNew12_box		.tb_categoryNew12		dd	  a:active	{ height: 16px; padding-top: 4px; }
+.categoryNew12_box		.tb_categoryNew12		dd	a:hover { display: inline-block; width: 100%; height: 20px; padding: 5px 0 0 8px; font: normal 11px dotum; color: #FFFFFF; background: #DA6464; text-decoration: none; }
+	:root	.categoryNew12_box		.tb_categoryNew12		dd	a:hover	{ height: 16px; padding-top: 4px; }
+
+.categoryNew12_box		.categoryBn_btm		{ clear: both; width: 958px; overflow: auto; overflow: hidden; border-top: 0px solid #DFDFDF; margin: 0 0 0 1px; }
+.categoryNew12_box		.categoryBn_btm		p.bn				{ float: left; width: 192px; margin: 0px; padding: 0px; background:url('https://sslimage.interpark.com/_nip_ui/gnb10/bl/bl_gnb12_bn.gif') no-repeat right 0;  }
+.categoryNew12_box		.categoryBn_btm		p.bn_last		{ float: left; width: 190px; margin: 0px; padding: 0px; background: none; }
+/* 120206(쇼핑 전체보기) E */

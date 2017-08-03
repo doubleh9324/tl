@@ -1,0 +1,19 @@
+@charset "utf-8";
+/*! reset */
+center fieldset,center img{border:0}
+center body,center legend{color:#28313d}
+center html{background:#fff;color:#000;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+center article,center aside,center audio,center blockquote,center body,center canvas,center code,center dd,center details,center div,center dl,center dt,center fieldset,
+center figcaption,center figure,center footer,center form,center h1,center h2,center h3,center h4,center h5,center h6,center header,center hgroup,center input,center legend,center li,
+center mark,center menu,center nav,center ol,center p,center pre,center section,center summary,
+center td,center textarea,center th,center time,center ul,center video{margin:0;padding:0}
+center body{background-color:#fff;}
+img{}
+center button,center input,center select,center textarea{margin:0;font-size:100%;vertical-align:middle}
+center table{border-spacing:0;border-collapse:collapse}
+center address,center caption,center cite,center code,center dfn,center em,center strong,center th,center var{font-weight:400;font-style:normal}
+center ol,center ul{list-style:none}
+center caption,center th{text-align:left}
+center h1,center h2,center h3,center h4,h5,h6{}
+center caption,center hr,center legend{width:0;height:0;font-size:1px;text-indent:-9999em;line-height:0}
+center a,center a:active,center a:focus,center a:hover,center a:link,center a:visited{color:#28313d;font-size:100%;text-decoration:none}

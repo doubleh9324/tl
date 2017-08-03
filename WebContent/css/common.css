@@ -1,0 +1,1522 @@
+center  A:link {
+	COLOR: #4F4F4F; TEXT-DECORATION: none
+}
+center  A:active {
+	COLOR: #4F4F4F; TEXT-DECORATION: none
+} 
+center A:visited {
+	COLOR: #4F4F4F; TEXT-DECORATION: none
+}
+center  A:hover {
+	COLOR: #00AA66; TEXT-DECORATION: underline
+}
+
+td {
+	font-family: "짹쩌쨍짼", "쨉쨍쩔챵", "Verdana", "Arial";
+	font-size: 12px;
+	color: #636363;
+}
+
+/*BG 째챈쩔챙�횉 쩌철*/
+.bg_lefttop  {background-repeat: no-repeat;	background-position: left top;}
+.bg_leftcenter  {background-repeat: no-repeat;	background-position: left center;}
+.bg_lefttopx {background-repeat: repeat-x;	background-position: left top;}
+.bg_lefttopy {background-repeat: repeat-y;	background-position: left top;}
+.bg_leftbot  {background-repeat: no-repeat;	background-position: left bottom;}
+.bg_leftbotx {background-repeat: repeat-x;	background-position: left bottom;}
+.bg_leftbotp {padding-bottom:2px;}
+
+.bg_leftboty {background-repeat: repeat-y;	background-position: left bottom;}
+.bg_righttop {background-repeat: no-repeat;	background-position: right top;}
+.bg_righttopx{background-repeat: repeat-x;	background-position: right top;}
+.bg_righttopy{background-repeat: repeat-y;	background-position: right top;}
+.bg_rightbot {background-repeat: no-repeat;	background-position: right bottom;}
+.bg_rightbotx{background-repeat: repeat-x;	background-position: right bottom;}
+.bg_rightboty{background-repeat: repeat-y;	background-position: right bottom;}
+
+
+/*Input Box_login*/
+.input_box { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; border-top: 1px solid #FFFFFF;	border-right: 1px solid #FFFFFF;	border-bottom: 1px solid #FFFFFF;	border-left: 1px solid #FFFFFF; background-color:#FFFFFF;height:17px;scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959}
+.input_box2 { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; border-top: 1px solid #CACACA;	border-right: 1px solid #CACACA;	border-bottom: 1px solid #CACACA;	border-left: 1px solid #CACACA; background-color:#FFFFFF;height:17px;scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959}
+.input_box3 { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959;background-color:#F6F6F6;}
+.input_chat { font-family: "짹쩌쨍짼", "Arial", "Verdana";	color:#00834F; border-top: 1px solid #F6F6F6;	border-right: 1px solid #F6F6F6;	border-bottom: 1px solid #CACACA;	border-left: 1px solid #F6F6F6; background-color:#F6F6F6;height:17px;padding-top:5}
+
+.text_box { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; border-top: 1px solid #FFFFFF;	border-right: 1px solid #FFFFFF;	border-bottom: 1px solid #FFFFFF;	border-left: 1px solid #FFFFFF; background-color:#FFFFFF;scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959}
+.text_box2 { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; border-top: 1px solid #9C9A9C;	border-right: 1px solid #9C9A9C;	border-bottom: 1px solid #9C9A9C;	border-left: 1px solid #9C9A9C; background-color:#FFFFFF;scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959}
+
+/*select box*/
+
+.green {color: #00AA66;}
+.green_b {color: #00AA66;font-size:13px;font-weight:bold;}
+.orange {color: #F7941C;}
+.blue {color: #4399FE;}
+.yellow {color: #B9A901;}
+.red {color: #CE0000;}
+.black {color:#000000;}
+.no {color: #0088BB;}
+.coupon {color: #8F198D;}
+.sale {color: #2C8D39;}
+.fund {color: #C07316;}
+
+/* 횆횆횉쨩횇횒 */
+
+.computer a:link   { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.computer a:visited{ COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.computer a:active { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.computer a:hover  { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+
+/* 째횏쨩철 */
+
+.search a:link   { COLOR: #008C44; TEXT-DECORATION: none; font-weight:bold}
+.search a:visited{ COLOR: #008C44; TEXT-DECORATION: none; font-weight:bold}
+.search a:active { COLOR: #008C44; TEXT-DECORATION: none; font-weight:bold}
+.search a:hover  { COLOR: #008C44; TEXT-DECORATION: none; font-weight:bold}
+
+/*쨍쨉횇짤 쨩철*/
+.link  			{ COLOR: #4F4F4F;}
+.link a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:normal}
+.link a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:normal}
+.link a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:normal}
+.link a:hover  { COLOR: #00AA66; TEXT-DECORATION: underline; font-weight:normal}
+
+/*쨩처쨈횥째챈쨌횓 쨩철*/
+.path  			{ COLOR: #FFFFFF;}
+.path a:link   { COLOR: #FFFFFF; TEXT-DECORATION: none; font-weight:normal}
+.path a:visited{ COLOR: #FFFFFF; TEXT-DECORATION: none; font-weight:normal}
+.path a:active { COLOR: #FFFFFF; TEXT-DECORATION: none; font-weight:normal}
+.path a:hover  { COLOR: #FFFFFF; TEXT-DECORATION: underline; font-weight:normal}
+
+
+/* input padding */
+.input1 {padding:0 0 0 1;}
+.input3 {padding:0 0 0 3;}
+
+/* order padding */
+.order_pro {padding:6 0 0 0;line-height:17px;}
+.order_top {padding:10 0 0 0;}
+.order_top2 {padding:12 0 0 0;}
+.order_rig {padding:0 20 0 0;}
+.order_lef {padding:0 0 0 20;}
+.order_cen {padding:5 0 5 0;}
+.order_8 {padding:8 0 8 20;}
+.order_10 {padding:10 0 10 10;}
+.order_11 {padding:11 0 11 20;}
+.order_16 {padding:8 0 8 16;}
+.order_17 {padding:11 0 17 10;COLOR: #4F4F4F;}
+.order_18 {padding:18 0 8 0;}
+.order_mon {line-height:17px;padding:0 10 0 0;}
+.order_mon2 {line-height:17px;padding:0 20 0 0;}
+
+/*쨩처횉횕쨈횥 째짙째횦*/
+.preview {padding:7 0 7 0;}
+
+/*째횚쩍횄횈횉 �짠쩐횈쨌징째짙째횦 6 0 0 0*/
+.bo_pad {padding: 6 0 0 0; vertical-align:top;}
+
+/*째횚쩍횄횈횉 횉횞쨍챰 쨩철*/
+.bo_title {color:#858585; font-weight:bold; padding: 9 0 0 0; vertical-align:top;}
+.bo_title_a {color:#858585; font-weight:bold; text-align:center; padding-top:8px; padding-bottom:6px; BACKGROUND-color:F3F2F2;}
+
+/*째횚쩍횄횈횉쨀횗쨔철 횈횖쨉첫*/
+.bo_num_pad {padding:2 0 0 0;}
+
+/*횁첩횉횗횄횎쨌횕*/
+.deep_green {color:#00834F;}
+.skyblue {color: #00AEEF;}
+.light_red {color: #FF0000;}
+
+/*횁횢째짙째횦*/
+.txt_line {line-height:16px;}
+.txt_line2 {line-height:17px;}
+.txt_line3 {line-height:15px;}
+.txt_line4 {line-height:20px;}
+
+/*쩌쩌짹횦째챔쨩챗쩌짯-쨩챌쩐첨�횣쨔첩횊짙 input_box 째짙째횦*/
+.worknum_pad {padding: 3 0 0 0;}
+
+/*my page 쨩처쨈횥쨍횧쨈쨘 횇횠쩍쨘횈짰*/
+.my_txt			{ COLOR: #949494;}
+.my_txt a:link   { COLOR: #949494; TEXT-DECORATION: none; font-weight:normal}
+.my_txt a:visited{ COLOR: #949494; TEXT-DECORATION: none; font-weight:normal}
+.my_txt a:active { COLOR: #949494; TEXT-DECORATION: none; font-weight:normal}
+.my_txt a:hover  { COLOR: #949494; TEXT-DECORATION: underline; font-weight:normal}
+
+/*째첩쨉쩔짹쨍쨍횇 횇짬 �횑쨔횑횁철 횇횠쩍쨘횈짰*/
+.group_big_txt			{ COLOR: #000000; font-size:14px; line-height:20px; font-weight:bold}
+.group_big_txt a:link   { COLOR: #000000; TEXT-DECORATION: none; font-weight:bold}
+.group_big_txt a:visited{ COLOR: #000000; TEXT-DECORATION: none; font-weight:bold}
+.group_big_txt a:active { COLOR: #000000; TEXT-DECORATION: none; font-weight:bold}
+.group_big_txt a:hover  { COLOR: #000000; TEXT-DECORATION: underline; font-weight:bold}
+
+/*횆짬횇횞째챠쨍짰쨘째 째첩쨉쩔짹쨍쨍횇쨘쨍짹창 횇횠쩍쨘횈짰�짠횆징*/
+.group_cate_pad {padding-right:46px; padding-top:16px;}
+
+
+/*째첩쨉쩔짹쨍쨍횇 째횚쩍횄횈횉쨘쨍짹창 횇쨍�횑횈짼*/
+.bo_gr_title_pad {padding-top:9px; vertical-align:top;}
+
+/*째첩쨉쩔짹쨍쨍횇 째횚쩍횄횈횉쨘쨍짹창 쨘쨩쨔짰 째짙째횦*/
+.bo_gr_par_pad {padding-top:20px; padding-bottom:30px; padding-left:30px; padding-right:30px; vertical-align:top; border-left:1px solid #EAE6E6; border-right:1px solid #EAE6E6; line-height:17px;}
+
+.input_comment {padding-left:3px;background-repeat: no-repeat;	background-position: left top;}
+
+/*째첩쨉쩔짹쨍쨍횇 횆횣쨍횪횈짰 횇횠쩍쨘횈짰*/
+.group_comment_txt			{ COLOR: #949494; line-height:17px;}
+
+/*째첩쨉쩔짹쨍쨍횇 짹횤쩐짼짹창 쨘쨩쨔짰 째짙째횦*/
+.group_wr_pad {padding-top:15px;}
+
+/*째첩쨉쩔짹쨍쨍횇 �횑쩔챘쩐횊쨀쨩 횇횞쨉횓쨍짰*/
+.group_info_border {border: 1px solid #DFDFDF;}
+
+/*째첩쨉쩔짹쨍쨍횇 �횑쩔챘쩐횊쨀쨩 횇횠쩍쨘횈짰*/
+.group_info_txt01 {color:#333333; line-height:25px;}
+.group_info_line {line-height:24px;}
+.group_info_txt02 {color:#88BB00; font-weight:bold;}
+
+/*째첩쨉쩔짹쨍쨍횇 째횚쩍횄횈횉쨘쨍짹창 쩐챌쩔쨌 횇횞쨉횓쨍짰*/
+.bo_gr_view_border {border-left:1px solid #EAE6E6; border-right:1px solid #EAE6E6;}
+
+/*째첩쨉쩔짹쨍쨍횇 째횚쩍횄횈횉쨘쨍짹창 �횑�체짹횤 횈횖쨉첫*/
+.bo_gr_view_pre_pad {padding-top:12px; vertical-align:top;}
+
+/*쨔횑쨈횕쨍짰쩍쨘횈짰 횈횏쩐첨 횇횠쩍쨘횈짰*/
+.pop_mini_txt			{ COLOR: #636363; font-size:12px;}
+.pop_mini_txt a:link   { COLOR: #636363; TEXT-DECORATION: none; font-weight:normal}
+.pop_mini_txt a:visited{ COLOR: #636363; TEXT-DECORATION: none; font-weight:normal}
+.pop_mini_txt a:active { COLOR: #636363; TEXT-DECORATION: none; font-weight:normal}
+.pop_mini_txt a:hover  { COLOR: #000000; TEXT-DECORATION: underline; font-weight:normal}
+
+/*쩐횈�횑횉횁쨌쨔�횙 쩍쨘횇짤쨌횗쨔횢*/
+.mini_scroll{scrollbar-3dlight-color: 595959;
+scrollbar-arrow-color: ffffff; 
+scrollbar-base-color: CFCFCF; 
+scrollbar-darkshadow-color: FFFFFF;
+scrollbar-face-color: CFCFCF; 
+scrollbar-highlight-color: FFFFF;
+crollbar-shadow-color: 595959}
+
+/*쨔횑쨈횕쨍짰쩍쨘횈짰 횈횏쩐첨 쩔�쨍짜횂횎 횇횠쩍쨘횈짰 횇짬쨩챌�횑횁챤*/
+.pop_mini_right_big {COLOR: #747474; font-weight:bold; font-size:22px;}
+
+/*쨔횑쨈횕쨍짰쩍쨘횈짰 횈횏쩐첨 쩔�쨍짜횂횎 쨩처횉째쨍챠 횇횠쩍쨘횈짰*/
+.pop_mini_right_name {COLOR: #393939; font-weight:bold; font-size:13px;}
+
+/*쨔횑쨈횕쨍짰쩍쨘횈짰 횈횏쩐첨 쩔�쨍짜횂횎 횇횞쨉횓쨍짰*/
+.pop_mini_right_border {border:1px solid #C5C5C5;}
+
+/*쨩징쨍짰횄짙짹창 횈횏쩐첨 쩔횧횂횎 쨩징쨍짰횄짙짹창 횇횠쩍쨘횈짰*/
+.pop_quick_left_txt {COLOR: #949494; font-size:11px;}
+
+/*쨩징쨍짰횄짙짹창 횈횏쩐첨 쩔�쨍짜횂횎 횇쨍�횑횈짼 횇횠쩍쨘횈짰*/
+.pop_quick_right_title {COLOR: #898989;}
+
+/*째챠째쨈횄횩횄쨉10 쩔�쨍짜횂횎 쨩처횉째쨍챠 횇짬 횇횠쩍쨘횈짰*/
+.ubest_pro_big {COLOR: #393939; font-weight:bold; font-size:16px;}
+
+/*째챠째쨈횄횩횄쨉10 쨩처횉째쨍챠 �횤�쨘 횇횠쩍쨘횈짰*/
+.ubest_pro_s {COLOR: #393939; font-weight:bold; font-size:12px;}
+
+/*째챠째쨈횄횩횄쨉10 쩔�쨍짜횂횎 쨩처횉째횈챵 횁짝쨍챰*/
+.ubest_deep_green {color:#00834F; font-size:14px;}
+
+/*째챠째쨈횄횩횄쨉10 쨩처횉째횈챵 �횤�쨘 횁짝쨍챰*/
+.ubest_deep_green_s {color:#00834F; font-size:13px;}
+
+/*짹챔횆징 쨀횄�책째챠 횁짚쨘쨍 째짙째횦*/
+.kimchi_info_pad { padding-left:6px;}
+
+/*짹챔횆징 쨀횄�책째챠 횁짚쨘쨍 횇횠쩍쨘횈짰 째짙째횦*/
+.kimchi_info_pad_txt { padding-top:2px;}
+
+/*짹챔횆징 쨀횄�책째챠 횁짚쨘쨍 횇횠쩍쨘횈짰 횇짤짹창*/
+.kimchi_info_txt { color:#000000; font-size:13px; font-weight:bold;}
+
+/*짹챔횆징 쨀횄�책째챠 횁짚쨘쨍 쨩철*/
+.kimchi_info_txt  			{ COLOR: #636363;}
+.kimchi_info_txt a:link   { COLOR: #636363; TEXT-DECORATION: none; font-weight:normal}
+.kimchi_info_txt a:visited{ COLOR: #636363; TEXT-DECORATION: none; font-weight:normal}
+.kimchi_info_txt a:active { COLOR: #FFFFFF; TEXT-DECORATION: none; font-weight:bold}
+.kimchi_info_txt a:hover  { COLOR: #FFFFFF; TEXT-DECORATION: none; font-weight:bold}
+
+/*쨘챗쨌짙쨉책쩌짜*/
+.brand_t {color:#000000;font-size:14px;font-weight:bold;font-family:쨉쨍쩔챵;}
+.brand_g {color:#02AB68;font-size:14px;font-weight:bold;font-family:쨉쨍쩔챵;}
+
+/*�횚짹횦쩐횊쨀쨩 횈횏쩐첨 횈횖쨉첫*/
+.pop_bank_kook { padding-top:82px;}
+.pop_bank_keb { padding-top:71px;}
+.pop_bank_woori { padding-top:79px;}
+.pop_bank_kiup { padding-top:52px;}
+.pop_bank_hana { padding-top:122px;}
+
+/*�횚짹횦쩐횊쨀쨩 횈횏쩐첨 짹횦쩐횞*/
+.pop_bank_money {color: #00AA66; font-size:14px;}
+
+.locationnav {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "Verdana", "Arial";
+	font-size: 12px;
+	line-height: 18px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.3dcategory {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	line-height: 18px;
+	color: #333333;
+	text-decoration: none;
+}
+.news {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	line-height: 18px;
+	color: #666666;
+	text-decoration: none;
+}
+.price {
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #218A3F;
+}
+.order {
+	font-family: "arial";
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+	text-decoration: none;
+}
+.orderselect {
+	font-family: "arial";
+	font-size: 12px;
+	font-weight: bold;
+	color: #006699;
+	text-decoration: none;
+}
+.title01 {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	font-weight: bolder;
+	color: #CC3333;
+	text-decoration: none;
+}
+.title02 {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 16px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+}
+.text {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	line-height: 25px;
+}
+.form {
+	height: 20px;
+	width: 120px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+
+}
+.goodsection {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 11px;
+	color: #666666;
+	text-decoration: none;
+
+}
+.textpoint {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	color: #009999;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+.textgoods {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+}
+.textopinion {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	color: #189352;
+	text-decoration: none;
+	line-height: 25px;
+	font-weight: bold;
+
+}
+.goodsname {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	line-height: 18px;
+	color: #555588;
+	text-decoration: none;
+}
+.goodsnamepoint {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	line-height: 20px;
+	color: #517C8C;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+.cybercash {
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #666666;
+}
+.globalnav {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 30px;
+	font-weight: normal;
+}
+.biggreen {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 15px;
+	font-weight: bold;
+	color: #189352;
+}
+.backgrey {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	color: #333333;
+	background-color: #D9D9D9;
+	line-height: 25px;
+}
+.textsmall {
+	font-family: "쨉쨍쩔챵";
+	font-size: 11px;
+	color: #666666;
+	text-decoration: none;
+}
+.formcart1 {
+	height: 20px;
+	width: 30px;
+	border: 1px solid #999999;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.pricetotal {
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #336699;
+}
+.pricecybercash {
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #996633;
+}
+.form200 {
+	height: 20px;
+	width: 200px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.form50 {
+	height: 20px;
+	width: 50px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.form350 {
+	height: 20px;
+	width: 350px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.form30 {
+	height: 20px;
+	width: 30px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.form150 {
+	height: 20px;
+	width: 150px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.form100 {
+	height: 20px;
+	width: 100px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.textred {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	color: #FF6666;
+	text-decoration: none;
+	line-height: 25px;
+	font-weight: bold;
+}
+.form80 {
+	height: 20px;
+	width: 80px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.textarea500 {
+	height: 250px;
+	width: 500px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+}
+.textlblue {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	color: #223C6A;
+	text-decoration: none;
+	line-height: 25px;
+}
+.bestsellersection {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.texts {
+	font-family: "쨉쨍쩔챵";
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	line-height: 18px;
+}
+.texts2 {
+	font-family: "쨉쨍쩔챵";
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	line-height: 17px;	
+}
+.title03 {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+}
+.OFF {
+	font-family: "arial";
+	font-size: 18px;
+	font-weight: bold;
+	color: #FF6633;
+}
+.textm {
+	font-family: "쨉쨍쩔챵";
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	line-height: 22px;
+}
+.enlgishplain {
+	font-family: "arial";
+	font-size: 12px;
+}
+.form80p {
+	height: 250px;
+	width: 80%;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.form450 {
+	height: 20px;
+	width: 450px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.luxurymenu {
+	font-family: "arial";
+	font-size: 13px;
+	font-weight: normal;
+	font-style: normal;
+}
+.luxurytitle {
+	font-family: "Geneva";
+	font-size: 14px;
+	font-weight: bolder;
+	font-style: normal;
+	color: #666666;
+}
+.form450forregist {
+	height: 250px;
+	width: 480px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.form250 {
+	width: 250px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+}
+.textareacyber {
+	height: 50px;
+	width: 450px;
+	border: 1px solid #333333;
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;
+	background-color: #F5F5F5;
+	}
+.logintext1 {
+	font-family: "쨉쨍쩔챵";
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.logintexte1 {
+	font-family: "Helvetica";
+	font-size: 9px;
+	color: #FFFFFF;
+}
+.logintext2 {
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-style: normal;
+	font-weight: bold;
+	color: #646464;
+}
+.logintextn1 {
+	font-family: "Geneva";
+	font-size: 25px;
+	color: #999999;
+	font-weight: bold;
+}
+.ordertext1 {
+	font-family: "쨉쨍쩔챵";
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+	font-weight: bolder;
+}
+.price2 {  
+      font-family: "쨉쨍쩔챵"; 
+	  font-size: 12px; 
+	  font-style: normal; 
+	  color: #CB0000; 
+	  text-decoration: none; 
+	  font-weight: normal
+}
+.tex1 {  font-family: "짹쩌쨍짼"; 
+	font-size: 12px; 
+	line-height: 1.4; 
+	color: #FFFFFF; 
+	letter-spacing:0px; 
+	word-spacing:0px;}
+}
+.title04 {
+	font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 11px;
+	font-weight: normal;
+	color: #34548F;
+	text-decoration: underline;
+}
+.title {
+	line-height: 25px;
+}
+
+/*째챠째쨈쩌쩐횇횒 �횑쨘짜횈짰 쨈챌횄쨌�횣 쨔횩횉짜*/
+.cus_event			{ COLOR: #00AA66;}
+.cus_eventk a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:normal}
+.cus_event a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:normal}
+.cus_event a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:normal}
+.cus_event a:hover  { COLOR: #00AA66; TEXT-DECORATION: underline; font-weight:normal}
+
+.electronics {color:#0066CC;}
+.pc {color:#0066CC;}
+.game {color:#0066CC;}
+.leisure {color:#0066CC;}
+.living {color:#0066CC;}
+.fashion {color:#0066CC;}
+.beauty {color:#0066CC;}
+.kids {color:#0066CC;}
+.food {color:#0066CC;}
+.book {color:#0066CC;}
+.cd {color:#0066CC;}
+.ticket {color:#0066CC;}
+.tour {color:#0066CC;}
+.knowhow {color:#0066CC;}
+.faq {color:#0066CC;}
+.search {color:#00AA66;}
+
+
+/* 횆짬횇횞째챠쨍짰쨘째 */
+.ca_electronics a:link   { COLOR: #0066CC; TEXT-DECORATION: none; font-weight:bold}
+.ca_electronics a:visited{ COLOR: #0066CC; TEXT-DECORATION: none; font-weight:bold}
+.ca_electronics a:active { COLOR: #0066CC; TEXT-DECORATION: none; font-weight:bold}
+.ca_electronics a:hover  { COLOR: #0066CC; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_leisure a:link   { COLOR: #0D88A1; TEXT-DECORATION: none; font-weight:bold}
+.ca_leisure a:visited{ COLOR: #0D88A1; TEXT-DECORATION: none; font-weight:bold}
+.ca_leisure a:active { COLOR: #0D88A1; TEXT-DECORATION: none; font-weight:bold}
+.ca_leisure a:hover  { COLOR: #0D88A1; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_plan a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_plan a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_plan a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_plan a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_news a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_news a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_news a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_news a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_mypage a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_mypage a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_mypage a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_mypage a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_members a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_members a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_members a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_members a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_login a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_login a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_login a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_login a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_living a:link   { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_living a:visited{ COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_living a:active { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_living a:hover  { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_kids a:link   { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_kids a:visited{ COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_kids a:active { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_kids a:hover  { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_ir a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_ir a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_ir a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_ir a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_ipp a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_ipp a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_ipp a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_ipp a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_info a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_info a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_info a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_info a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_group a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_group a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_group a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_group a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_gift a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_gift a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_gift a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_gift a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_game a:link   { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.ca_game a:visited{ COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.ca_game a:active { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.ca_game a:hover  { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_food a:link   { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_food a:visited{ COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_food a:active { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+.ca_food a:hover  { COLOR: #CD4D00; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_fashion a:link   { COLOR: #F40067; TEXT-DECORATION: none; font-weight:bold} 
+.ca_fashion a:visited{ COLOR: #F40067; TEXT-DECORATION: none; font-weight:bold}
+.ca_fashion a:active { COLOR: #F40067; TEXT-DECORATION: none; font-weight:bold}
+.ca_fashion a:hover  { COLOR: #F40067; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_event a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_event a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_event a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_event a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_best a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_best a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_best a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_best a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_beauty a:link   { COLOR: #F40067; TEXT-DECORATION: none; font-weight:bold}
+.ca_beauty a:visited{ COLOR: #F40067; TEXT-DECORATION: none; font-weight:bold}
+.ca_beauty a:active { COLOR: #F40067; TEXT-DECORATION: none; font-weight:bold}
+.ca_beauty a:hover  { COLOR: #F40067; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_coo a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_coo a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_coo a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_coo a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_pc a:link   { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.ca_pc a:visited{ COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.ca_pc a:active { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+.ca_pc a:hover  { COLOR: #0071BC; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_company a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_company a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_company a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_company a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_card a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_card a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_card a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_card a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_brand a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_brand a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_brand a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_brand a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_cs a:link   { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_cs a:visited{ COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_cs a:active { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+.ca_cs a:hover  { COLOR: #00AA66; TEXT-DECORATION: none; font-weight:bold}
+
+.ca_black a:link   { COLOR: black; TEXT-DECORATION: none; font-weight:bold}
+.ca_black a:visited{ COLOR: black; TEXT-DECORATION: none; font-weight:bold}
+.ca_black a:active { COLOR: black; TEXT-DECORATION: none; font-weight:bold}
+.ca_black a:hover  { COLOR: black; TEXT-DECORATION: none; font-weight:bold}
+
+
+/*�책쨔횢짹쨍쨈횕 째징째횦횉횎쨉책*/
+.cartpricetotal{
+	line-height:17px;
+	width: 65px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	color: #00AA66;
+	text-align:right;
+	padding:0 0 0 0;
+}
+
+.cartpricesum{
+	line-height:17px;
+	width: 100px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #00AA66;
+	text-align:right;
+	background-color:#F2F2F2;
+	padding:0 0 0 0;
+}
+
+.cartmileagesum{
+	line-height:17px;
+	width: 50px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	text-align:left;
+	background-color:#F2F2F2;
+	padding:0 0 0 0;
+}
+
+.cartpricesum{
+	line-height:17px;
+	width: 100px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #00AA66;
+	text-align:right;
+	background-color:#F2F2F2;
+	padding:0 0 0 0;
+}
+
+/*횁횜쨔짰쩌짯�횤쩌쨘*/
+.priceright{
+	line-height:17px;
+	width: 100px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	text-align:right;	
+	padding:0 0 0 0;
+}
+
+.pricegreenright{
+	line-height:17px;
+	width: 100px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #00AA66;
+	text-align:right;
+	padding:0 0 0 0;
+}
+
+.pricegreenleft{
+	line-height:17px;
+	width: 100px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #00AA66;
+	text-align:left;
+	padding:0 0 0 0;
+}
+
+.pricegrayright{
+	line-height:17px;
+	width: 100px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #00AA66;
+	background-color:#F3F2F2;
+	text-align:right;
+	padding:0 0 0 0;
+}
+
+.pricegreenright2{
+	line-height:17px;
+	width: 100px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #00AA66;
+	background-color:#FAF9F9;
+	text-align:right;
+	padding:0 0 0 0;
+}
+
+.pricesumgreen{
+	line-height:17px;
+	width: 100px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bold;
+	color: #00AA66;
+	text-align:left;
+	padding:0 0 0 20;
+}
+
+.pricegreenright3{
+	line-height:17px;
+	width: 170px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	color: #00AA66;
+	text-align:left;
+	padding:0 0 0 0;
+}
+
+/*횉횠쩔횥쨔챔쩌횤*/
+.foreigndelv1{
+	line-height:17px;
+	width: 180px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	font-weight: bolder;
+	text-align:left;
+	background-color:#FFFFFF;
+	padding:0 0 0 0;
+}
+
+.foreigndelv2{
+	line-height:17px;
+	width: 60px;
+	border: 0;
+	font-family: "쨉쨍쩔챵";
+	font-size: 13px;
+	text-align:left;
+	background-color:#FFFFFF;
+	padding:0 0 0 0;
+}
+
+/*횁짝횉째쨩처쩌쩌쨘쨍짹창 짹척횂짝횉횘�횓*/
+.sales_m {font-size:11px;font-family:쨉쨍쩔챵;letter-spacing:-1px;padding:2 0 0 0;}
+
+/*째쨀횈챠쩌철횁짚*/
+.goods_header {color:#0064E8;}
+.goods_tail {color:#000000;}
+
+/*SAVE 횆짬쨉책쩐횊쨀쨩*/
+.save1 {color: #319a63}
+.save2 {color: #000000}
+
+
+/*짹창횊쨔�체 �횑쨘짜횈짰�횣쨉쩔횊짯 째체쨌횄*/
+.topevent_head_01 {
+	font-family: "쨉쨍쩔챵";
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 37px;
+	text-decoration: underline;
+	letter-spacing: -5px;
+	color: #FFF000;
+}
+.topevent_head_02 {
+	font-family: "쨉쨍쩔챵";
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 23px;
+	text-decoration: none;
+	letter-spacing: -1px;
+	color: #FFC0A4;
+}
+.topevent_sub {
+	font-family: "쨉쨍쩔챵";
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+}
+.topevent_default {
+	font-family: "쨉쨍쩔챵";
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0px;
+	color: #666666;
+	padding-top: 2px;
+}
+.topevent_default A:link {COLOR: #666666; TEXT-DECORATION: none;}
+.topevent_default A:visited {COLOR: #666666; TEXT-DECORATION: none}
+.topevent_default A:active {COLOR: #666666; TEXT-DECORATION: underline}
+.topevent_default A:hover {COLOR: #666666; TEXT-DECORATION: underline}
+
+.topevent_giftbox{
+	font-family: "쨉쨍쩔챵";
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0px;
+	color: #666666;
+	padding-left: 8px;
+}
+.topevent_giftbox A:link {COLOR: #666666; TEXT-DECORATION: none;}
+.topevent_giftbox A:visited {COLOR: #666666; TEXT-DECORATION: none}
+.topevent_giftbox A:active {COLOR: #666666; TEXT-DECORATION: underline}
+.topevent_giftbox A:hover {COLOR: #666666; TEXT-DECORATION: underline}
+
+.topevent_categ {
+	font-family: "쨉쨍쩔챵";
+	font-size: 12px;
+	line-height: 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.topevent_categ A:link {COLOR: #FFFFFF; TEXT-DECORATION: none}
+.topevent_categ A:visited {COLOR: #FFFFFF; TEXT-DECORATION: none}
+.topevent_categ A:active {COLOR: #FFFFFF; TEXT-DECORATION: underline}
+.topevent_categ A:hover {COLOR: #FFFFFF; TEXT-DECORATION: underline}
+
+/* 짹짚째챠쨩처횉째쨍챠 */
+.goods_ad {background-color:#E1F6D7;}.search2 {  font-family: "짹쩌쨍짼"; font-size: 12px; color: #FFFF00}
+.open_shop {  font-family: "쨉쨍쩔챵"; font-size: 12px; color: 007B8B}
+
+/* �짙횆횆쩍쨘횇쨍쩌쩔쨌짱 */
+.openshop A:link {font-family: "쨉쨍쩔챵"; COLOR: #007B8B; TEXT-DECORATION: none}
+.openshop A:visited {font-family: "쨉쨍쩔챵"; COLOR: #007B8B; TEXT-DECORATION: none}
+.openshop A:active {font-family: "쨉쨍쩔챵"; COLOR: #007B8B; TEXT-DECORATION: underline}
+.openshop A:hover {font-family: "쨉쨍쩔챵"; COLOR: #007B8B; TEXT-DECORATION: underline}
+
+/* 20050818�횑횊횆 횄횩째징 횇횠쩍쨘횈짰 */
+.s_big_text {font-family: "쨉쨍쩔챵"; color:#00AA66; font-size:14px;font-weight:bold}
+.s_big_text_01 {font-family: "쨉쨍쩔챵"; font-size:13px;}
+.fwb1 {font-weight:bold;}
+
+/* 20050818�횑횊횆 횄횩째징 padding*/
+.lpd1 {padding-left:10px;}
+.lpd2 {padding-left:5px;}
+.lpd3 {padding-left:3px;}
+.lpd4 {padding-left:15px;}
+.rpd1 {padding-right:10px;}
+.rpd2 {padding-right:3px;}
+.rpd3 {padding-right:5px;}
+.tpd1 {padding-top:3px;}
+.tpd2 {padding-top:10px;}
+.bcpd1{padding:5 5 3 5px;line-height:150%;}
+.bcpd2{padding:9 0 0 34px;line-height:150%;}
+.bcpd3{padding:7 0 6 0px;line-height:150%;}
+.bcpd4{padding:5 0 3 30px;line-height:150%;}
+
+/* 20050818�횑횊횆 횄횩째징 margin*/
+.mgt1 {margin-top:2px;}
+.mgb1 {margin-bottom:2px;}
+
+/* 20050818�횑횊횆 �횑쨔횑횁철 쨘쨍쨈천째짧 0*/
+img {border:0;}
+
+/* 20050818�횑횊횆 ALIGN STYLE */
+.val1 {vertical-align:bottom;}
+.val2 {vertical-align:top;}
+
+/* 20050818�횑횊횆 쨍쨉횇짤 STYLE*/
+.help_tex {COLOR: #00834F;}
+.help_txt a:link   { COLOR: #00834F; TEXT-DECORATION: none; font-weight:normal}
+.help_txt a:visited{ COLOR: #00834F; TEXT-DECORATION: none; font-weight:normal}
+.help_txt a:active { COLOR: #00834F; TEXT-DECORATION: none; font-weight:normal}
+.help_txt a:hover  { COLOR: #00834F; TEXT-DECORATION: underline; font-weight:normal}
+
+/* S-Money */
+.smoney_detail_tx	{ line-height: 20px; }
+.smoney_detail_tx2   { font-weight:bold; text-align:center; padding-top:8px; padding-bottom:8px;}
+.smoney_detail_tx3   { padding-left:30px; padding-top:6px; padding-bottom:6px; padding-right:15px; }
+
+
+/* 횁횜쨔짰횈횏쩐첨 */
+.or_p_li {padding:5 2 0 0;}
+
+
+/* �짹횁횠횊짬 횄횩째징 */
+
+.select_v1	{ behavior: url('/gate/js/selectbox.htc');}
+.select_img	{ behavior: url('/gate/js/selectbox_img.htc');}
+
+/* 째첩횇챘 */
+.tit_font_14 {font-family: "쨉쨍쩔챵"; font-size: 14px; color: #393939; padding-top:3px; padding-bottom:0px; padding-left:5px;}
+.tit_font_S {font-family: "쨉쨍쩔챵"; font-size: 12px; color: #3763D2; padding-top:2px; padding-bottom:0px; padding-left:5px;}
+
+/* 횄횜횁쩐쨩처횉째 */
+.txt_tip_1	{color: #4C4C4C; font-family: "쨉쨍쩔챵"; font-size:11px;}
+.txt_tip_2  {color: #8E8E8E; font-family: "쨉쨍쩔챵"; font-size:11px; line-height:130%}
+.txt_green 	{color: #03945A; font-family: "쨉쨍쩔챵"; font-size:12px;}
+.txt_green2 {font-family: "쨉쨍쩔챵"; font-size: 12px; color: #008040;}
+.txt_green3 {color: #33AA36;}
+
+
+.txt_red {font-family: "쨉쨍쩔챵"; font-size: 12px; color: #FF2501;}
+.txt_blue2 {font-family: "쨉쨍쩔챵"; font-size: 12px; color: #618C2F;}
+
+.txt_01 {font-family: "쨉쨍쩔챵"; font-size: 12px; color: #8E8E8E;}
+
+/* 쨍횧�횑횈채�횑횁철 쨍횧�횓 top:1px */
+.padd_t1 	{ padding-top:1px;}
+
+
+/* 횁횜쨔짰 */
+
+.txt_r_2 	{color: #636363;    padding : 0 5 0 0;}
+.table_r_10 {color: #00AA66; padding : 0 10 0 0;Font-weight: bold;}
+.table_r_5 	{color: #00AA66;   padding : 0 5 0 0;}
+.table_l_5px	{padding:0px 0px 0px 5px;}
+.table_l_25px 	{padding:0px 0px 0px 25px;}
+.table_r_5px 	{color: #00AA66; padding:0px 10px 0px 0px;}
+.table_r_10px 	{color: #00AA66; padding:0px 10px 0px 0px;}
+.table_r_10p 	{padding:0px 10px 0px 0px;}
+.table_r_25px 	{padding:0px 25px 0px 0px;}
+.table_donw_3px {padding:0px 0px 3px 0px; vertical-align:bottom;}
+
+.txt_02 {	color: #00AA66;	font-weight: bold;	font-size: 12px;}
+
+.txt_05 {color: #618C2F}
+.txt_06 {color: #618C2F; font-weight: bold;}
+.txt_07 {color: #1993AB; font-weight: bold;}
+.txt_08 {color: #4C4C4C; font-family: "쨉쨍쩔챵";}
+.txt_09 {color: #00AA66}
+.txt_10 {color: #00AA66; font-weight: bold;}
+.txt_11 {color: #FB5A35}
+.txt_12 {color: #8F8F8F; font-weight:bold; text-ALIGN:center; BACKGROUND-image:url(https://sslimage.interpark.com/2004/gate/order/bit_box_31.gif); }
+.txt_12_01 {color: #8F8F8F; font-weight:bold; text-ALIGN:center; }
+.txt_13 {color: #BA7F4B}
+.txt_14 {color: #82A228}
+.txt_15 {color: #424141}
+.txt_16 {color: #1E95A4}
+.txt_17 {color: #B7B7B7}
+.txt_19 {color: #B9A901; font-weight: bold; font-size: 12px; }
+
+.txt_up_5px {padding:5px 0px 0px 0px;}
+.r_9px {padding-right: 9px;}
+
+	/*- 횁횜쨔짰쩌짯�횤쩌쨘*/
+.ord_bl_r10 {text-align:right; padding-right:10px; padding-top:6px; padding-bottom:4px;}
+.ord_green_r10 {text-align:right; padding-right:10px; padding-top:6px; padding-bottom:4px; color:#00AA66;}
+
+	/*- 횁횜쨔짰쩔횕쨌찼*/
+.txt_21 {color: #909090; padding-top:2px;}
+.padd_l17 {padding-left:10px; padding-top:2px;}
+.padd_top5 {padding-top:5px;}
+
+
+/* 쨔횑쨈횕쩌짜 */
+.top_padd {padding-top: 6px;}
+.top_padd_5 {padding-top: 4px;}
+.tour_re_top_pad { PADDING-TOP: 8px;}
+.shop_left_padd {padding-left: 15px;}
+.shop_sm_txt { font-size: 11px;}
+.shop_sm_txt_en {FONT-SIZE: 10px; FONT-FAMILY: Tahoma}
+.shop_notice {PADDING-RIGHT: 0px; PADDING-LEFT: 32px; PADDING-BOTTOM: 0px; PADDING-TOP: 13px; }
+.bg_lefttop {BACKGROUND-POSITION: left top; BACKGROUND-REPEAT: no-repeat;}
+.orange { COLOR: #f7941c}
+.orange2 { COLOR: #ff5a00}
+.mini_tt { PADDING-LEFT: 5px; VERTICAL-ALIGN: top; PADDING-TOP: 7px}
+.mini_admin { COLOR: #3549c7}
+.skin_orange { COLOR: #ff6600}
+.book_ins {	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 7px}
+.mini_t_blue { COLOR: #4152bb}
+
+.calendar_d { COLOR: #373e3c}
+.calendar_w { COLOR: #BC2310}
+.calendar_o { COLOR: #060606}
+
+
+
+/* maya 횄횩째징 */
+
+/* 횁횜쨔짰 */
+.ord_lt_tt {padding-left:10px; padding-right:10px; padding-top:6px; padding-bottom:4px;}
+.ord_bl_l {text-align:left;padding-left:10px; padding-top:6px; padding-bottom:4px;}
+.ord_bl_c {text-align:center; padding-top:6px; padding-bottom:4px;}
+.ord_bl_r {text-align:right; padding-right:5px; padding-top:6px; padding-bottom:4px;}
+.ord_bl_r30 {text-align:right; padding-right:30px; padding-top:6px; padding-bottom:4px;}
+.ord_green_r {text-align:right; padding-right:5px; padding-top:6px; padding-bottom:4px; color:#00AA66;}
+.ord_green_c {text-align:center; padding-top:6px; padding-bottom:4px; color:#00AA66;}
+.ord_green_l {text-align:left; padding-left:12px; padding-top:6px; padding-bottom:4px;}
+.ord_green_tt {color: #00AA66; font-weight:bold;}
+.ord_yellow_l {text-align:left; padding-left:10px; padding-top:6px; padding-bottom:4px; color:#B9A901;}
+.ord_yellow_c {text-align:center; padding-top:6px; padding-bottom:4px; color:#B9A901;}
+.ord_yellow_r {text-align:right; padding-right:10px; padding-top:6px; padding-bottom:4px; color:#B9A901;}
+.txt_19 {color: #8F8F8F; font-weight:bold; text-ALIGN:center;}
+.txt_20 {color: #A4A4A4;}
+.ord_padd_l_25 {text-align:left;padding-left:25px; padding-top:6px; padding-bottom:4px;}
+.padd_l_25 {text-align:left; padding-left:25px; padding-top:6px; padding-bottom:4px; color:#B9A901;}
+.txt_12_a {color: #8F8F8F; text-ALIGN:center; BACKGROUND-image:url(https://sslimage.interpark.com/2004/gate/order/bit_box_31.gif); }
+
+/* 횊쨍쩔첩째징�횚쩐횪째체(081014_HM) */
+.new_member		{ }
+input.text			{ border: 1px solid #CACACA; }
+.new_member		ul.top_txt	{ width: 100%; overflow: auto; overflow: hidden; }
+.new_member		ul.top_txt	li	{ background: url('https://sslimage.interpark.com/_cip/bl/bl_arrow_green.gif') no-repeat 0 6px; padding-left: 9px; line-height: 140%; color: #636363; }
+.new_member		.sub_title		{ padding: 10px 0 7px 11px; }
+.new_member		.box_agree_top		{ background: url('https://sslimage.interpark.com/2004/global/box_agree_top.gif') no-repeat 0 0; width: 727px; height: 11px; line-height: 0px; font-size: 0px; }
+.new_member		.box_agree_mid		{ background: url('https://sslimage.interpark.com/2004/global/box_agree_mid.gif') repeat-y 0 0; width: 727px; }
+.new_member		.box_agree_btm		{ background: url('https://sslimage.interpark.com/2004/global/box_agree_btm.gif') no-repeat 0 bottom; width: 727px; height: 10px; line-height: 0px; font-size: 0px; }
+.new_member		dl.tab_agree	{ width: 100%; overflow: auto; overflow: hidden; margin-left: 11px; }
+.new_member		dl.tab_agree	dt	{ float: left; width: 345px; margin-right: 15px; }
+.new_member		dl.tab_agree	dd	{ float: left; width: 345px; }
+.new_member		dl.tab_agree	dd.full	{ float: left; width: 705px; }
+.new_member		.tab_agree_01		{ background: url('https://sslimage.interpark.com/2004/global/tab_agree_01.gif') no-repeat 0 0; width: 345px; height: 27px; }
+.new_member		.tab_agree_02		{ background: url('https://sslimage.interpark.com/2004/global/tab_agree_02.gif') no-repeat 0 0; width: 345px; height: 27px; }
+.new_member		ul.tab_agree_ul		{ width: 100%; overflow: auto; overflow: hidden; margin: 0px; padding: 0px; }
+.new_member		ul.tab_agree_ul		li	{ float: left; text-align: center; padding-top: 8px; }
+.new_member		ul.tab_agree_ul		li.on		{ font-weight: bold; }
+.new_member		ul.tab_agree_ul		li.menu1	{ width: 133px; }
+.new_member		ul.tab_agree_ul		li.menu2	{ width: 138px; }
+.new_member		ul.tab_agree_ul		li.menu3	{ text-align: left; height: 26px; padding-left: 2px; }
+.new_member		ul.tab_agree_ul		li.btn	{ float: right; padding: 5px 2px 0 0; }
+.new_member		.agree_check		{ width: 100%; overflow: auto; overflow: hidden; padding-left: 11px; font-size: 12px; padding-top: 10px; }
+.new_member		.agree_check		.input	 { float: left;}
+.new_member		.agree_check		.txt	 { float: left; color: #636363; padding-left: 7px; }
+.new_member		input.chk			{ width: 13px; height: 13px; }
+.new_member		.hand		{ cursor: hand; }
+.new_member		.layer_agree1		{ background: url('https://sslimage.interpark.com/2004/global/bg_layer_agree1.gif') no-repeat 0 0; width: 725px; height: 192px; } 
+.new_member		.layer_agree1		.con	{ margin: 22px 0 0 32px; background: url('https://sslimage.interpark.com/2004/global/bg_layer_agree1_con.gif') no-repeat 0 0; width: 661px; height: 41px;  }
+
+.new_member		.layer_agree2		{ background: url('https://sslimage.interpark.com/2004/global/bg_layer_agree2.gif') no-repeat 0 0; width: 725px; height: 192px; } 
+.new_member		.layer_agree2		.con	{ margin: 48px 0 0 111px; }
+
+.txt_green	{ color: #01AC28; }
+.txt_orange	{ color: #F26522; }
+.text_box3 { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; border-top: 1px solid #BBB9BB;	border-right: 1px solid #BBB9BB;	border-bottom: 1px solid #BBB9BB;	border-left: 1px solid #BBB9BB; background-color:#FFFFFF;scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959}
+.text_box3_tab { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; border-top: 0px solid #BBB9BB;	border-right: 1px solid #BBB9BB;	border-bottom: 1px solid #BBB9BB;	border-left: 1px solid #BBB9BB; background-color:#FFFFFF;scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959}
+
+
+/* 횄횜횁쩐쨩처횉째 */
+.padd_15 {padding-left:15px;}
+.padd_top3 {padding-top:3px;}
+.padd_ss_15 {padding-left:15px; padding-right:10px;}
+
+
+A.ord_tt:link 				{color:#A4A4A4; text-decoration:none;}
+A.ord_tt:visited  			{color:#A4A4A4; text-decoration:none; }
+A.ord_tt:hover 			{color:#00AA66; text-decoration:underline;}
+
+/* 쨔횑쨈횕쩌짜 횁철쩌철 쨋처�횓 */
+.line_lgr					{BACKGROUND: #e6e6e6}
+
+/* 횈첨�횓횈짰횄쩌횉챔�횑쨘짜횈짰@071116 */
+.c_price { margin-bottom:3px; }
+.p_useDel { display:inline; }
+.p_useDel .usep { display:inline; margin:-20px 2px 0 0; background:url(https://sslimage.interpark.com/_cip/bar_evt01.gif) no-repeat 2px 5px; cursor:hand; }
+.p_useEvt { position:absolute; margin:-67px 0 0 -49px; width:145px; height:80px; }
+.p_useEvt .eventCmtBox { position:absolute; z-index:2; }
+.p_useEvt01 { position:absolute; margin:-67px 0 0 -49px; width:145px; height:80px; }
+.p_useEvt01 .eventCmtBox { position:absolute; z-index:2; }
+
+
+/* 횊쨍쩔첩째징�횚쩐횪째체(081014) */
+input.text_join		{border : 1px solid #CACACA;font-family: "쨉쨍쩔챵", "짹쩌쨍짼", "arial", "verdana";
+	font-size: 12px;color: #333333;text-decoration: none;}
+
+.txt_green	{ color: #01AC28; }
+.txt_orange	{ color: #F26522; }
+.text_box3 { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; border-top: 1px solid #BBB9BB;	border-right: 1px solid #BBB9BB;	border-bottom: 1px solid #BBB9BB;	border-left: 1px solid #BBB9BB; background-color:#FFFFFF;scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959}
+.text_box3_tab { font-family: "짹쩌쨍짼", "Arial", "Verdana";	font-size: 12px; border-top: 0px solid #BBB9BB;	border-right: 1px solid #BBB9BB;	border-bottom: 1px solid #BBB9BB;	border-left: 1px solid #BBB9BB; background-color:#FFFFFF;scrollbar-3dlight-color: 595959; scrollbar-arrow-color: ffffff; scrollbar-base-color: CFCFCF; scrollbar-darkshadow-color: FFFFFF; scrollbar-face-color: CFCFCF; scrollbar-highlight-color: FFFFF; scrollbar-shadow-color: 595959}
+
+/* 081017 */
+ul.top_txt	{ width: 100%; overflow: auto; overflow: hidden; }
+ul.top_txt	li	{ background: url('https://sslimage.interpark.com/_cip/bl/bl_arrow_green.gif') no-repeat 0 6px; padding-left: 9px; line-height: 140%; color: #636363; }
+.layer_agree1		{ background: url('https://sslimage.interpark.com/2004/global/bg_layer_agree1.gif') no-repeat 0 0; width: 725px; height: 192px; } 
+.layer_agree1		.con	{ margin: 22px 0 0 32px; background: url('https://sslimage.interpark.com/2004/global/bg_layer_agree1_con.gif') no-repeat 0 0; width: 661px; height: 41px;  }
+
+.layer_agree2		{ background: url('https://sslimage.interpark.com/2004/global/bg_layer_agree2.gif') no-repeat 0 0; width: 725px; height: 192px; } 
+.layer_agree2		.con	{ margin: 48px 0 0 111px; }
+/* 090205 횊쨍쩔첩째징�횚 */
+.regi_notice		 { font-weight:bold; text-decoration:underline; color:#00AA66; cursor:pointer; }
+ul.reg_layer	 	 { width:489px; padding:10px 0 0 16px; background:url("https://sslimage.interpark.com/imagessl//2004/global/bg_layer_top.gif") repeat-y left top;}
+ul.reg_layer	li	 { width:455px; padding-left:7px; background:url("https://sslimage.interpark.com/imagessl//2004/global/bl_gray.gif") no-repeat left 6px; font-size:11px; color:#848484; line-height:140%; }
+.reg_layer_bot	 { width:489px; height:11px; background:url("https://sslimage.interpark.com/imagessl//2004/global/bg_layer_bot.gif") repeat-y left bottom; font-size:0px; line-height:0; }
+/* 090603 횊쨍쩔첩째징�횚 */
+ul.regB_layer	 	 { width:489px; padding:10px 0 0 10px; background:url("https://sslimage.interpark.com/imagessl//2004/global/bg_layerB_top.gif") repeat-y left top;}
+ul.regB_layer	li	 { width:455px; padding-left:7px; background:url("https://sslimage.interpark.com/imagessl//2004/global/bl_gray.gif") no-repeat left 6px; font-size:11px; color:#848484; line-height:140%; }
+.regB_layer_bot	 { width:489px; height:11px; background:url("https://sslimage.interpark.com/imagessl//2004/global/bg_layerB_bot.gif") repeat-y left bottom; font-size:0px; line-height:0; }
+
+ul.regS_layer	 	 { width:305px; padding:10px 0 0 10px; background:url("https://sslimage.interpark.com/imagessl/2004/global/bg_layerS_top.gif") repeat-y left top;}
+ul.regS_layer	li	 { width:100%; font-size:11px; color:#848484; line-height:140%; }
+ul.regS_layer	li.not	{ background: none; }
+.regS_layer_bot	 { width:305px; height:11px; background:url("https://sslimage.interpark.com/imagessl/2004/global/bg_layerS_bot.gif") repeat-y left bottom; font-size:0px; line-height:0; }
+.txt_red	{ color: #F7551C }
+
+/* 150318쩌철횁짚 (쩍횇짹횚횊쨍쩔첩째징�횚) */
+.newMember_lay	td, .newMember_lay	span	{ font-family: 쨉쨍쩔챵 }
+.newMember_lay	{ width: 980px; text-align: left;}
+.newMember_lay	img.mid	{ margin-top: 2px; }
+.newMember_lay	h1	 { margin-top: 25px; text-align: center; }
+.newMember_lay	.newMember_step	{ margin-top: 0px; }
+.newMember_lay	h2	 {height:33px; margin-top:35px; background: url('https://sslimage.interpark.com/_nip/member/bl_h2.gif') no-repeat 0 2px; padding-left:20px;}
+.newMember_lay	h2.top50	 { margin-top: 50px; }
+/*.newMember_lay	h3	 { height: 20px; margin-top: 25px; background: url('https://sslimage.interpark.com/_nip/member/bl_h3.gif') no-repeat 0 6px; padding-left: 8px; }*/
+ul.member_banner	{ width: 992px; overflow: auto; overflow: hidden; margin-left: -12px; }
+ul.member_banner	li	{ float: left; padding: 3px 0 0 12px; }
+
+.newMember_lay .tit { float: left; width:455px; height: 24px; margin-top: 50px; background: url('https://sslimage.interpark.com/_nip/member/bl_h2.gif') no-repeat 5px 2px; padding-left: 25px;}
+.table_mem {width:100%; overflow:auto; overflow:hidden; border-top:2px solid #DE4D52; border-bottom:1px solid #DCDCDC; margin-bottom:10px;}
+.table_mem table { border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
+.table_mem th { vertical-align: top; background: #F9F9F9; color: #8B8B8B; font-weight: bold; text-align: left; padding: 13px 0 11px 10px;}
+.table_mem th.ntit {padding-left:20px;}
+.table_mem th.name { background: #E9E9E9; color: #575757; font-weight: bold; padding: 18px 0 16px 10px;}
+.table_mem td { color: #5F5F5F; padding-top: 3px; padding-bottom: 3px; }
+.table_mem td.pl10 { padding-left: 10px; }
+.table_mem td.pl20 { padding-left: 20px; }
+.table_mem td.info_txt { padding: 8px 0 8px 10px; line-height: 130%; }
+.table_mem td.info_txt2 { padding: 3px 0 0px 10px; line-height: 130%; }
+.table_mem td.sub_bold { color: #8B8B8B; font-weight: bold; padding: 7px 0; }
+.table_mem td.check_name_line { background: url('https://sslimage.interpark.com/_nip/member/bg_check_name_line.gif') no-repeat 0 center;}
+.table_mem td.mkt {clear:both; margin:0; padding:0;}
+.mkt_table {margin:0; padding:0; color: #5F5F5F;}
+.mkt_table .tdline1 {border-right:1px solid #dcdcdc; border-bottom:1px solid #dcdcdc;}
+.mkt_table .tdline2 {border-bottom:1px solid #dcdcdc;}
+.mkt_table .tdline3 {border-right:1px solid #dcdcdc;}
+.mkt_table .plr10 {padding:3px 10px;}
+.mkt_table .tc {text-align:center;}
+
+.input_reset { width: 100%; }
+.input_reset a:link, .input_reset a:visited, .input_reset a:active { font-size: 11px; font-weight: bold; text-decoration:none; color:#EE5870; }
+.input_reset a:hover { text-decoration:underline; color:#EE5870; }
+.aRight { text-align: right; }
+.txt_bold {font-weight:bold; font-size:12px; color:#555;}
+.txt_pink { color: #EE5870; font-size: 11px;}
+.txt_gray { color: #8B8B8B; font-size: 11px;}
+input.txt { border: 1px solid #D8D8D8; color: #696969; padding: 2px 0 0 6px; height: 20px; }
+input.rdo { width: 14px; height: 14px; }
+.member_btn { margin-top: 30px; text-align: center; }
+.fs11 { font-size: 11px; }
+
+ul.regPinkB_layer	 	 { width:474px; padding:8px 0 0 10px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkB_top.gif") repeat-y left top;}
+ul.regPinkB_layer	li	 { padding-left:7px; background:url("https://sslimage.interpark.com/imagessl//2004/global/bl_gray.gif") no-repeat left 6px; font-size:11px; color:#848484; line-height:140%; }
+.regPinkB_layer_bot	 { width:474px; height:9px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkB_bot.gif") repeat-y left bottom; font-size:0px; line-height:0; }
+
+ul.regPinkM_layer	 	 { width:292px; padding:8px 0 0 10px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkM_top.gif") repeat-y left top;}
+ul.regPinkM_layer	li	 { width:100%; font-size:11px; color:#848484; line-height:140%; }
+ul.regPinkM_layer	li.not	{ background: none; }
+.regPinkM_layer_bot	 { width:292px; height:9px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkM_bot.gif") repeat-y left bottom; font-size:0px; line-height:0; }
+
+ul.regPinkS_layer	 	 { width:222px; padding:8px 0 0 10px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkS_top.gif") repeat-y left top;}
+ul.regPinkS_layer	li	 { width:100%; font-size:11px; color:#848484; line-height:140%; }
+ul.regPinkS_layer	li.not	{ background: none; }
+.regPinkS_layer_bot	 { width:222px; height:9px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkS_bot.gif") repeat-y left bottom; font-size:0px; line-height:0; }
+
+ul.regPinkSm_layer	 	 { width:267px; padding:7px 0 0 10px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkSm_top.gif") repeat-y left top;}
+ul.regPinkSm_layer	li	 { width:100%; font-size:11px; color:#848484; line-height:120%; }
+ul.regPinkSm_layer	li.not	{ background: none; }
+.regPinkSm_layer_bot	 { width:267px; height:5px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkSm_bot.gif") repeat-y left bottom; font-size:0px; line-height:0; }
+
+.box_agree	{ background:url("https://sslimage.interpark.com/_nip/member/box_agree.gif") no-repeat 0 0; width: 980px; height: 52px; margin-top: 20px; }
+.box_red	 { width: 980px; border: 1px solid #DCDCDC; border-top: 2px solid #DE4D52; padding-bottom: 20px }
+
+.newMember_lay dl.tab_agree {width:100%; overflow:auto; overflow:hidden; margin:20px 0 0 20px; font-size:14px;}
+.newMember_lay dl.tab_agree dt { float: left; width: 449px; margin-right: 41px; }
+.newMember_lay dl.tab_agree dd { float: left; width: 449px; }
+.newMember_lay dl.tab_agree dd.full { float: left; width: 939px; }
+.newMember_lay .tab_agree_01 {background: url('https://sslimage.interpark.com/_nip/member/tab_agreeN_01.gif') no-repeat 0 0; width:449px; height:27px; }
+.newMember_lay .tab_agree_02 {background: url('https://sslimage.interpark.com/_nip/member/tab_agreeN_02.gif') no-repeat 0 0; width:449px; height:27px; }
+.newMember_lay ul.tab_agree_ul {width:100%; overflow:auto; overflow:hidden; margin:0; padding:0;}
+.newMember_lay ul.tab_agree_ul li {float:left; text-align:center;}
+.newMember_lay ul.tab_agree_ul li.on {font-weight:bold; font-size:14px;}
+.newMember_lay ul.tab_agree_ul li.menu1 {width:173px;}
+.newMember_lay ul.tab_agree_ul li.menu2 {width:171px;}
+.newMember_lay ul.tab_agree_ul li.menu3 {text-align:left; height:26px; padding-left:2px;}
+.newMember_lay ul.tab_agree_ul li.btn {float:left; margin:0 0 0 15px;}
+.newMember_lay .agree_check {width:100%; overflow:auto; overflow:hidden; padding-left:20px; font-size:12px; padding-top:10px; }
+.newMember_lay .agree_check .input {float:left;}
+.newMember_lay .agree_check .txt {float:left; color:#636363; padding-left:7px; margin-top:1px;}
+:root .newMember_lay .agree_check .txt{margin-top:3px;}
+.newMember_lay .disagree_txt{margin:5px 0 0 23px;font-size:11px;} :root .disagree_txt{margin-left:27px;}
+.newMember_lay input.chk {width:14px; height:14px; margin-right:5px;}
+.newMember_lay .hand {cursor:hand;}
+.newMember_lay .black {color:#000;}
+
+dl.service_dl	{ width: 100%; overflow: auto; overflow: hidden; }
+dl.service_dl	dt	{ float: left; }
+dl.service_dl	dd	{ float: right; }
+ul.service_banner	{ width: 1000px; overflow: auto; overflow: hidden; margin: 3px 0 0 -20px; }
+ul.service_banner	li	{ float: left; padding: 0 0 0 20px; font-size:0px; line-height:0px; list-style:none; } /* 091007 쩌철횁짚 */
+
+dl.join_member	{ width: 100%; overflow: auto; overflow: hidden; }
+dl.join_member	dt.left	 { float: left; width: 326px; height: 276px; background: url('https://sslimage.interpark.com/_nip/member/bg_memberEnd.gif') no-repeat 0 0; }
+dl.join_member	dd.right	 { float: left; }
+dl.join_member	dd.btm	 { float: left; }
+
+.member_con_lay	 { margin: 36px 0 0 30px; }
+.member_con_lay	 .txt_con	{ height: 60px; }
+.member_con_lay	 .btn_memberEnd	{ margin-top: 28px; }
+dl.member_info	{ width: 265px; overflow: auto; overflow: hidden; }
+dl.member_info	dt	{ float: left; width: 51px; padding: 5px 0 3px 6px; }
+	:root	dl.member_info	dt	{ float: left; width: 45px; padding: 5px 0 3px 6px; }
+dl.member_info	dd	{ float: left; width: 214px; padding: 5px 0 3px 0; }
+dl.member_info	dd.dotline	{ width: 100%; background: url('https://sslimage.interpark.com/_nip/member/bg_dotline.gif') repeat-x 0 0; height: 1px; line-height: 0px; font-size: 0px; padding: 0px; }
+dl.member_info	dd	 span	{ font-weight: bold }
+.top40	{ margin-top: 40px; }	/* 090612횄횩째징 */
+.mgt40 {margin-top:40px;}
+.mgt50 {margin-top:50px;}
+
+/* 150102 쩌철횁짚 */
+.check_area {position:relative; width:980px; margin:80px 0 50px 0; text-align:center;}
+.check_area .check_namearea {float:left; width:401px; height:145px; margin:0 0 0 95px; padding:0 20px 0 0; background:url('http://openimage.interpark.com/_nip/member/btn_name_check.png') no-repeat 0 0;}
+.check_area .check_namearea table {margin:64px 0 0 25px;}
+.check_area .check_namearea tr {height:20px;}
+.check_area .check_namearea .foreign_no {padding-top:10px;}
+.check_area .check_ipinarea {width:370px; float:left;}
+.btn_phone {margin:0 20px 0 0;}
+
+/* 141224 쩌철횁짚 째징�횚쩔횕쨌찼 */
+.join_box {float:left; width:733px;}
+.join_memberNew	{width:733px; height:166px; background: url('https://sslimage.interpark.com/_nip/member/bg_memberResult.gif') no-repeat 0 0; overflow:auto; overflow:hidden;}
+.join_memberNewsns {width:733px; height:166px; background: url('https://sslimage.interpark.com/_nip/member/bg_snsmemberResult.gif') no-repeat 0 0; overflow:auto; overflow:hidden;}
+ul.memberEnd_info	{width:540px; overflow:auto; overflow: hidden; margin:62px 0 0 35px;}
+ul.memberEnd_info	li	{float:left; width:260px; height:24px; padding-left:10px; background: url('https://sslimage.interpark.com/_nip/member/bl_info.gif') no-repeat 0 11px; list-style:none;}
+ul.memberEnd_info	li	span	{ display: inline; }
+ul.memberEnd_info	li	.title	{ width: 54px; }
+ul.memberEnd_info	li	.dot	{ width: 15px; }
+ul.memberEnd_info	li	.txt	{ }
+ul.memberEnd_info	li	.txt_bold	{ font-weight: bold; }
+.memberEnd_txt	{ clear: both; width: 100%; margin: 22px 0 0 32px; }
+.memberEnd_txt	img	{ vertical-align: top; }
+.memberEnd_txt	img.bt_interpark_home	{ position:relative; top: -3px; }
+.imk_join_box {float:left; width:236px; margin:0 0 0 11px;}
+
+/*20151105  횈챵쨩첵횊쨍쩔첩*/
+.imk_joinban {width:236px; padding-bottom:10px;}
+
+.planning_all { clear:both; overflow: auto; overflow: hidden; }
+.hot_trand {float:left; width:733px; margin-right: 14px;}
+.bn_mnc { float:right; width:230px; height:248px; margin:50px 0 0 0;}
+.bn_local {float:left; width:236px; height:243px; margin:50px 0 0 11px; background: url('https://sslimage.interpark.com/_nip/member/bn_local.gif') no-repeat; }
+.bn_local img { margin:93px 0 0 62px; } :root bn_local { margin-bottom:50px; }
+
+.evtFesList_plan_015a {width:733px; height:105px; background:url("http://openimage.interpark.com/_cip/bg_ec_fes733.gif") no-repeat; }
+.evtFesList_plan_015a li {float:left; display:inline; margin:7px 0 0 25px;}
+.evtFesList_plan_015a li.first {margin-left:19px;}
+.evtFesList_plan_015a.mt10 {margin-top:5px;}
+
+
+/* 110919 */
+.box_infoCheck		{ clear: both; width: 801px; overflow: auto; overflow: hidden; margin-top: 7px; }
+.box_infoCheck		dl		{ clear: both; width: 100%; overflow: auto; overflow: hidden; border: 1px solid #D8D8D8; }
+.box_infoCheck		dt		{ width: 100%; height: 49px; font: normal 12px 쨉쨍쩔챵; color: #5F5F5F; line-height: 18px; margin: 13px 0 0 14px; }
+.box_infoCheck		dd	{ width: 100%; padding: 0 0 12px 14px; margin: 0 0 0 0; }
+.box_infoCheck		dd	.box_input		{ float: left; padding-right: 40px; }
+.box_infoCheck		.txt_infoCheck		{ clear: both; width: 100%; font: normal 11px 쨉쨍쩔챵; color: #EE5870; overflow: auto; overflow: hidden; margin: -8px 0 9px 0; }
+.box_infoCheck		.txt_infoCheck	{ margin: 10px 0 9px 0; }
+
+#container {width:980px;text-align:center;}
+.pageInfo {margin-left:20px;}
+
+/* 횊쨍쩔첩째징�횚 */
+.joinIntro {width:980px;height:280px;background:url(https://sslimage.interpark.com/welcome/incorp/bg_join_step1.jpg) no-repeat;}
+.joinType ul {zoom:1;}
+.joinType ul:after {content:'';display:block;clear:both;}
+.joinType li {float:left;}
+.joinType li a {display:block;height:139px;background:url(https://sslimage.interpark.com/welcome/incorp/set_join_type.gif) no-repeat;}
+.joinType .adult a {width:202px;}
+.joinType .kid a {width:195px;background-position:-202px 0;}
+.joinType .ipss a {width:191px;background-position:-397px 0;}
+.joinType .foreigner a {width:200px;background-position:-588px 0;}
+.joinType .abIpss a {width:192px;background-position:-788px 0;}
+.memberBenefit {padding-top:60px;}
+.memberBenefit h3 {height:24px;background:url(https://sslimage.interpark.com/welcome/incorp/stit_member_benefit.gif) no-repeat;}
+.memberBenefit ul {overflow:hidden;width:991px;margin-left:-11px;}
+.memberBenefit li {float:left;padding:11px 0 0 11px;}
+.memberBenefit img {vertical-align:top;}
+.memberSafe {padding:60px 0;}
+.memberSafe h3 {height:35px;background:url(https://sslimage.interpark.com/welcome/incorp/stit_member_safe.gif) no-repeat;}
+.memberSafe .txt {width:980px;height:167px;background:url(https://sslimage.interpark.com/welcome/incorp/txt_member_safe.gif) no-repeat;}
+
+/* 20141231 쩌철횁짚 */
+.table_box		{width: 96%; overflow: auto; overflow: hidden; border-top: 1px solid #bbb9bb; border-bottom: 1px solid #bbb9bb; margin:5px 0 10px 0;}
+.table_box		table	{ border-collapse: collapse; border-spacing: 0; table-layout: fixed; }
+.table_box		th		{ color: #5F5F5F; font-weight:normal; vertical-align:top; padding:11px 0 12px 9px; text-align:left; }
+.table_box		td.pl10	{ padding-left: 10px; }
+.table_box		.in	{ margin-left: 14px; }
+.table_box		.in input { float:left; width:13px; height:13px; margin:0px; padding:0px; }
+.table_box		.in span { float:left; margin:1px 0 0 4px; }
+.table_box		.in td { vertical-align:top; }
+
+.link_tiker2, a.link_tiker2:link, a.link_tiker2:visited, a.link_tiker2:hover, a.link_tiker2:active{ padding-left: 6px; margin-bottom: -20px; background:url("http://openimage.interpark.com/_nip/bl/bl_arrow_gray10.gif") no-repeat 0 2px; color:#bbb9bb; font: 11px solid dotum }
+
+/* 130128횄횩째징 */
+.table_mem		td.info_txt3	{ padding: 3px 0 0px 10px; line-height: 130%; }
+.txt_pink2 { font: normal 11px 쨉쨍쩔챵; color: #EE5870; letter-spacing: -1px; }
+input.user_name { border: 1px solid #E0E0E0; background: #F5F5F5; font: normal 12px 쨉쨍쩔챵; color: #A6A6A6; padding: 3px 0 0 8px; }
+
+/*20131126횄횩째징*/
+.input_off { font-size:11px;font-family:쨉쨍쩔챵,Dotum,Arial;width:270px;height:20px;color:#a8a89e; border:1px solid #D8D8D8; background:#f5f5f5; padding:3px; letter-spacing:-1px;}

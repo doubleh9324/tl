@@ -1,0 +1,7 @@
+body {
+}
+
+.slideScrollControlWrap .prev, .slideScrollControlWrap .next {float:left; cursor:pointer;}
+.slideScrollContentsWrap {overflow:hidden; position:relative; float:left;}
+.slideScrollContents {position:absolute;}
+.slideScrollContent {float:left;}

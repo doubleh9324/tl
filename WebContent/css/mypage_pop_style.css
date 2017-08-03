@@ -1,0 +1,499 @@
+  body	{ margin:0 0 0 10px; padding:0; background-image:url('https://sslimage.interpark.com/_mypage/bg_pop_common.gif');background-repeat:repeat-x;background-color:#9DBBF1; text-align:left; }
+.body_gr	{ margin:0 0 0 10px; padding:0; background-image:url('https://sslimage.interpark.com/_mypage/bg_pop_common_gr.gif');background-repeat:repeat-x;background-color:#77C942; text-align:left; }
+ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6 { margin:0; padding:0; }
+ul,ol,li { list-style-type:none; }
+body, td, th, div, span, dt, dd, li, input, select, textarea { color:#898989; font-size:12px; font-family:�룍��,Dotum,Arial; }
+img { border:0;  }
+img.top	{ vertical-align: top; }
+.none { display:none; }
+
+img.mid	 { vertical-align: top; }
+.aCenter	{ text-align: center; }
+.aLeft		{ text-align: left; }
+.aRight		{ text-align: right; }
+
+
+/*popup box style S*/
+h1 { padding:7px 0 0 5px; height:31px; font-size:1px;  }
+*html h1 { he\ight:40px;  }
+
+h2	 { background: url('http://openimage.interpark.com/_mypage/bl/bl_h2_blue.gif') no-repeat 5px 2px; padding: 0 0 0 13px; font: bold 12px �룍��; color: #5C7CC1; }
+h3	 { background: url('http://openimage.interpark.com/_mypage/bl/bl_h3_blue.gif') no-repeat 6px 3px; padding: 0 0 0 14px; font: bold 12px �룍��; color: #5C7CC1; border-bottom: 2px solid #95A9D6; height: 20px; margin-bottom: 6px; }
+h4 { padding-left:15px; height:20px; background:url('http://openimage.interpark.com/_mypage/bl/bl_ts2.gif') no-repeat left 2px; }
+h4.h4_green { padding-left:7px; height:20px; background:url('http://openimage.interpark.com/_mypage/bl/bl_ts2_green.gif') no-repeat left 4px; }
+h4.h4_green2 { padding-left: 15px; height:18px; background:url('http://openimage.interpark.com/_mypage/bl/bl_ts3_green.gif') no-repeat left 0.; color: #007F3D; font: normal 12px �룍��; }
+h5 { padding-left:7px; margin-left: 6px; background:url('https://sslimage.interpark.com/_mypage/bl/bl_h5_green.gif') no-repeat left 3px; font: normal 12px �룍��; }
+h5.gn_bold { font-weight: bold; color: #159226; }
+h6.green	  { padding-left: 15px; background:url('http://openimage.interpark.com/_spOrder/bl/bl_gr_rect.gif') no-repeat left 0; font: bold 12px �룍��; color: #159226; }
+h6.green_txt  { font: bold 12px �룍��; color: #159226; }
+
+.h2_normal		{ font: normal 12px �룍��; color: #5C7CC1; }
+.h2_nor_gr		{ font: normal 12px �룍��; color: #696969; }
+.h2_bold			{ font: bold 12px �룍��; color: #5C7CC1; }
+.h2_bold2		{ font: bold 12px �룍��; color: #159226; }
+h2.h2_green	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_h2_green.gif') no-repeat 5px 2px; padding: 0 0 0 13px; font: bold 12px �룍��; color: #159226; }
+
+.box_popup { float:left; background:url('http://openimage.interpark.com/_mypage/bit_popbox02.gif') no-repeat right top #FFFFFF; }
+.box_pop_lt { background:url('http://openimage.interpark.com/_mypage/bit_popbox01.gif') no-repeat left top; }
+.box_pop_rb { background:url('http://openimage.interpark.com/_mypage/bit_popbox04.gif') no-repeat right bottom; }
+.box_pop_lb { padding:10px; background:url('http://openimage.interpark.com/_mypage/bit_popbox03.gif') no-repeat left bottom;}
+
+.box_g_popup { float:left; background:url('https://sslimage.interpark.com/_mypage/bit_g_popbox02.gif') no-repeat right top #FFFFFF; }
+.box_g_pop_lt { background:url('https://sslimage.interpark.com/_mypage/bit_g_popbox01.gif') no-repeat left top; }
+.box_g_pop_rb { background:url('https://sslimage.interpark.com/_mypage/bit_g_popbox04.gif') no-repeat right bottom; }
+.box_g_pop_lb { padding:10px; background:url('https://sslimage.interpark.com/_mypage/bit_g_popbox03.gif') no-repeat left bottom;}
+
+.div_btclose { clear:both; padding:10px 10px 0 0; text-align:right; }
+/*popup box style E*/
+
+.box_scrl
+{
+	paddign-right:10px;
+	scrollbar-3dlight-color: #C3C3C3;
+	scrollbar-arrow-color: #C3C3C3;
+	scrollbar-base-color: #F6F6F6;
+	scrollbar-darkshadow-color: #FFFFFF;
+	scrollbar-face-color: ##F6F6F6;
+	scrollbar-highlight-color: #FFFFFF;
+	crollbar-shadow-color:#C3C3C3;
+}
+
+.clear_new	{ width: 100%; overflow: auto; overflow: hidden; }
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; } .clearfix { display:inline-block; }/* Hides from IE-mac \*/ *html .clearfix {height: 1%;} .clearfix {display: block;}/* End hide from IE-mac */
+input.pop	{ border: 1px solid #D8D8D8; background: #FFFFFF; color: #666666; padding-top: 3px; }
+
+/* Font */
+.f11		{ font-size: 11px; }
+.fs			{ letter-spacing: -1; word-spacing: 3; }
+.txt_accent01 { color:#159226; }
+.txt_accent02 { color:#5ABF00; }
+.txt_accent02a { color:#5A75B1; }
+.txt_accent03 { color:#4261A7; }
+.f_gn		{ color: #00AA66; }
+.f_bold	{ font-weight: bold; }
+.normal			{ font-weight: normal; }
+.tac { text-align:center; }
+
+/* blot */
+ul.bl_blue	{  }
+ul.bl_blue	li	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_square_blue.gif') no-repeat 4px 3px; padding: 0 0 5px 10px; line-height: 120%; font-size: 11px; }
+ul.bl_blue	li.sm	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_square_blue.gif') no-repeat 4px 3px; padding: 0 0 5px 10px; line-height: 120%; font-size: 11px; letter-spacing: -1; word-spacing: 2; }
+
+/* Table */
+.pop_table	{ border-collapse: collapse; border-spacing: 0; border-top: 1px solid #EBEBEB; margin: 10px 0 15px 0; table-layout:fixed; }
+.pop_table	th, 
+.pop_table	td	 { vertical-align: top; border-bottom: 1px solid #EBEBEB; }
+.pop_table	td.noline	 { vertical-align: top; border-bottom: 0px solid #EBEBEB; }
+.pop_table	th		{ padding: 8px 0 0 0; text-align: left; }
+.pop_table	td		{ padding: 4px 0 4px 0; }
+.pop_table	li.th	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_tri_blue04.gif') no-repeat 8px 3px; padding: 0 0 0 17px; font: normal 12px �룍��; color: #636363; }
+
+.pop_table2	{ border-collapse: collapse; border-spacing: 0; border-top: 2px solid #95A9D6; border-bottom: 2px solid #95A9D6; margin: 0 0 30px 0; table-layout:fixed; background: #F8FAFF;}
+.pop_table2	th, 
+.pop_table2	td	 { border-bottom: 1px solid #B9C9E6; }
+.pop_table2	 th		{ text-align: left; background: url('http://openimage.interpark.com/_mypage/bl/bl_gr_line.gif') no-repeat right 10px; }
+.pop_table2	 td		{ color: #4261A7; padding-left: 15px; }
+.pop_table2	 li.th	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_tri_blue04.gif') no-repeat 8px 3px; padding: 0 0 0 17px; font: bold 12px �룍��; color: #6A84BD; }
+
+.pop_table3	{ border-collapse: collapse; border-spacing: 0; border-top: 2px solid #95A9D6; border-bottom: 2px solid #95A9D6; table-layout:fixed; background: #F8FAFF;}
+.pop_table3	th, 
+.pop_table3	td	 { border-bottom: 1px solid #B9C9E6; vertical-align:top; padding:9px 0 7px 0; }
+	:root .pop_table3	th, .pop_table3	td	 {  padding:8px 0 6px 0; }
+.pop_table3	 th		{ text-align: left; background: url('http://openimage.interpark.com/_mypage/bl/bl_gr_line.gif') no-repeat right 10px; }
+.pop_table3	 td		{ color: #4261A7; padding-left: 15px; }
+.pop_table3	 li.th	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_tri_blue04.gif') no-repeat 8px 3px; padding: 0 0 0 17px; font: bold 12px �룍��; color: #6A84BD; }
+.pop_table3	 td	textarea { width:262px; height:70px; border:1px solid #D8D8D8; overflow:auto; }
+.pop_mid_btn		{ width: 100%; text-align: center; margin-bottom: 20px; }
+.pop_btm_btn		{ width: 100%; text-align: center; margin-bottom: 2px; }
+.pop_table3	 li.th2	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_tri_blue04.gif') no-repeat 8px 3px; padding: 0 0 0 17px; font: normal 11px �룍��; color: #6A84BD; }
+
+/* Box */
+.box_rnd_blue_top	{ background: url('http://openimage.interpark.com/_mypage/box_rnd_blue_top.gif') no-repeat 0 top; width: 444px;  }
+.box_rnd_blue_btm	{ background: url('http://openimage.interpark.com/_mypage/box_rnd_blue_btm.gif') no-repeat 0 bottom; width: 444px; padding: 0 0 0 0; overflow:auto; overflow:hidden }
+
+.box_rnd_blueS_top	{ background: url('http://openimage.interpark.com/_mypage/box_rnd_blueS_top.gif') no-repeat 0 top; width: 417px; }
+.box_rnd_blueS_btm	{ background: url('http://openimage.interpark.com/_mypage/box_rnd_blueS_btm.gif') no-repeat 0 bottom; width: 417px; padding: 15px 10px; overflow:auto; overflow:hidden }
+
+.box_rnd_blueL_top	{ background: url('http://openimage.interpark.com/_mypage/box_rnd_blueL_top.gif') no-repeat 0 top; width: 685px; }
+.box_rnd_blueL_btm	{ background: url('http://openimage.interpark.com/_mypage/box_rnd_blueL_btm.gif') no-repeat 0 bottom; width: 685px; padding: 10px 3px; overflow:auto; overflow:hidden }
+
+.box_rnd_grayL_top	{ background: url('http://openimage.interpark.com/_mypage/box_rnd_grayL_top.gif') no-repeat 0 top; width: 685px; }
+.box_rnd_grayL_btm	{ background: url('http://openimage.interpark.com/_mypage/box_rnd_grayL_btm.gif') no-repeat 0 bottom; width: 685px; padding: 10px 3px; overflow:auto; overflow:hidden }
+
+
+/* Margin & Padding */
+.mt3	{ margin-top: 3px; }
+.mt5	{ margin-top: 5px; }
+.mt10	{ margin-top: 10px; }
+.mt15	{ margin-top: 15px; }
+.mt12	{ margin-top: 12px; }
+.mt20	{ margin-top: 20px; }
+.mt25	{ margin-top: 25px; }
+.mt40	{ margin-top: 40px; }
+
+.mr5		{ margin-right: 5px; }
+.ml6		{ margin-left: 6px; }
+.ml10		{ margin-left: 10px; }
+.ml15		{ margin-left: 15px; }
+.mb10	{ margin-bottom: 10px; }
+.mb15	{ margin-bottom: 15px; }
+.mb20	{ margin-bottom: 20px; }
+.mb25	{ margin-bottom: 25px; }
+.mb30	{ margin-bottom: 30px; }
+.pb3		{ padding-bottom: 3px; }
+.pl15		{ padding-left: 15px; }
+.pt3		{ padding-top: 3px; }
+.mgt2 { margin-top:2px; }
+.mgt10 { margin-top:10px; }
+.mgt20 { margin-top:20px; }
+.pdt5b5 { padding:5px 0 5px 0; }
+.pdt9b6 { padding:9px 0 6px 0; }
+.pdt5b5l5 { padding:5px 0 5px 5px; }
+
+/* 諛곗넚硫붿떆吏� 蹂�寃쏀븯湲� */
+ul.input_ul	{ margin: 0 0 39px 10px; }
+ul.input_ul	li.info_txt	{ margin: 6px 0 7px 0; }
+ul.input_ul	li.btn	{ margin-top: 13px; }
+
+/* �떊泥��셿猷� */
+dl.order_end	{ margin: 27px 0 36px 15px; }
+dl.order_end	dt	{ }
+dl.order_end	dd	 { margin: 20px 0 0 8px; line-height: 120%; }
+
+.order_cancel01		{ margin: 62px 0 62px 110px; }
+.order_cancel02		{ margin: 70px 0 70px 115px; }
+
+ol.ch_help	{ margin: 10px 0 5px 25px; }
+ol.ch_help	li.num	{ list-style: decimal; padding-bottom: 14px; }
+ol.ch_help_sub		li	{ padding-bottom: 3px; }
+ol.ch_help_sub2		{ margin: 2px 0 0 15px; }
+
+ul.step_img	 { margin: 15px 0 0 0; }
+ul.step_img	 li.top	{ margin-left: 283px; }
+
+ol.order_cancel	{ margin: 10px 0 35px 5px; }
+ol.order_cancel	li	{ padding-bottom: 0px; }
+
+dl.order_cancel_d	{ width: 685px; margin: 0px; }
+dl.order_cancel_d	dt	{ float: left; width: 100px; }
+dl.order_cancel_d	dd	{ float: left; width: 585px; }
+
+ul.order_cancel_d		{ margin: 20px 0 0 15px ; }
+ul.order_cancel_d		li.btn	{ padding: 5px 0 0 12px; }
+
+
+/*apply_complain*/
+.tab_receipt_info { width:685px; height:31px; margin-top: 10px; background:url(http://openimage.interpark.com/_mypage/tab_receipt_info01.gif) no-repeat left top; }
+.tab_receipt_info li { float:left; width:122px; height:31px; }
+.tab_receipt_info li.tab_01on { background:url(http://openimage.interpark.com/_mypage/tab_receipt_info02.gif) no-repeat left top; width: 123px; }
+.tab_receipt_info li.tab_02on { background:url(http://openimage.interpark.com/_mypage/tab_receipt_info02.gif) no-repeat -122px top; width: 123px; }
+.tab_receipt_info li.tab_03on { background:url(http://openimage.interpark.com/_mypage/tab_receipt_info02.gif) no-repeat -244px top; width: 123px; }
+.tab_receipt_info li a { display:block; height:31px; }
+
+
+/*box_caution*/
+.tb_myPg_brtp01 { background:url(http://openimage.interpark.com/_mypage/ln_tb03.gif) repeat-x left top #DEDEDE; table-layout:fixed; }
+.tb_myPg_brtp01 .ln { border-top:solid 1px #6F88C1; }
+
+/* blue */
+	.tb_myPg_brtp01a { background:url(http://openimage.interpark.com/_mypage/ln_tb01.gif) repeat-x left top #DEDEDE; table-layout:fixed; }
+	.tb_myPg_brtp01a .ln { border-top:solid 1px #6F88C1; }
+	.tb_myPg th.tcon_a { background-color:#F7F7F7; font:12px dotum; color:#44567D; }
+	.pdt9b6l9 { padding:9px 0 6px 9px; }
+	/* basic alert list */
+	.bsic_arlist li { float:left; margin-top:3px; padding-left:7px; width:100%; line-height:1.3; background:url(http://openimage.interpark.com/_mypage/bl/bl_square_blue.gif) no-repeat left 5px; }
+	.bsic_arlist li a { color:#497DEF; text-decoration:underline; }
+	.bsic_arlist li a:hover { color:#497DEF; text-decoration:underline; }
+
+	.box_blue { border:solid 1px #9CACD0; }
+/* blue */
+
+.tb_myPg th.tcon { background-color:#F7F7F7; font:12px dotum; color:#159226; }
+.tb_myPg td.tcon { background-color:#FFFFFF; }
+.tb_myPg td.tcon2 { background-color:#F7F7F7; }
+.tb_myPg td.tcon a { color:#696969; }
+.tb_myPg td.tcon a:hover { color:#5570AD; }
+
+.tb_myPg_brtp02 { border-top: 2px solid #1EAE0F; margin-top: 5px;}
+.tb_myPg_brtp02 table	{ table-layout:fixed; }
+.tb_myPg_brtp02	th	{ height: 24px; background: #F6F6F6; border-bottom: 1px solid #EBEBEB; font-weight: normal; color: #666666;  }
+
+.tb_myPg_brtp02a { table-layout:fixed;}
+.tb_myPg_brtp02a	td	{ height: 24px; background: #FFFFFF; border-bottom: 1px solid #EBEBEB; color: #666666;  }
+.tb_myPg_brtp02a td.tcon a { color:#666666; text-decoration:none; }
+.tb_myPg_brtp02a td.tcon a:hover { color:#666666; }
+
+.tb_myPg_brtp03 { border-top: 2px solid #1EAE0F; margin-top: 5px;}
+.tb_myPg_brtp03 table{ table-layout:fixed; border-collapse: collapse; width: 100%; border-color: #EBEBEB; }
+.tb_myPg_brtp03	th	{ height: 24px; background: #F6F6F6; border-bottom: 1px solid #EBEBEB; font-weight: normal; color: #606060;  }
+.tb_myPg_brtp03	th.rline	{ background: #F6F6F6 url('http://openimage.interpark.com/_spOrder/th_popline.gif') no-repeat right 5px; }
+.tb_myPg_brtp03	td	{ padding: 4px 0; border-bottom: 1px solid #EBEBEB; }
+.tb_myPg_brtp03	td.rline	{ background: #FFFFFF url('http://openimage.interpark.com/_spOrder/th_popline.gif') no-repeat right 8px; }
+.tb_myPg_brtp03	td.left10		{ text-align: left; padding-left: 10px; }
+.tb_myPg_brtp03	td.left15		{ text-align: left; padding-left: 15px; }
+.tb_myPg_brtp03	td.right	{ text-align: right; padding-right: 10px; }
+.tb_myPg_brtp03	td.center	{ text-align: center; }
+.tb_myPg_brtp03	td.noline	{ border-bottom: 0px }
+
+.tb_myPg_brtp03a { border: 1px solid #D9D9D9; margin-top: 5px; }
+.tb_myPg_brtp03a	table{ table-layout:fixed; border-collapse: collapse; border-color: #D9D9D9; width: 100%; }
+.tb_myPg_brtp03a	th	{ background: #F6F6F6; height: 27px; font-weight: normal; color: #666666; }
+.tb_myPg_brtp03a	td	{ height: 27px; }
+.tb_myPg_brtp03a	td.left10	{ padding-left: 10px; }
+
+.tb_myPg_brtp03b { table-layout:fixed; border-collapse: collapse; border-top: 2px solid #1EAE0F; margin-top: 5px;}
+.tb_myPg_brtp03b	th	{ height: 24px; background: #F6F6F6; border-bottom: 1px solid #EBEBEB; font-weight: normal; color: #606060;  }
+.tb_myPg_brtp03b	th.rline	{ background: #F6F6F6 url('http://openimage.interpark.com/_spOrder/th_popline.gif') no-repeat right 5px; }
+.tb_myPg_brtp03b	td	{ padding: 5px 0; border-bottom: 1px solid #EBEBEB; }
+.tb_myPg_brtp03b	td.rline	{ background: #FFFFFF url('http://openimage.interpark.com/_spOrder/th_popline.gif') no-repeat right 8px; }
+.tb_myPg_brtp03b	td.left10		{ text-align: left; padding-left: 10px; }
+.tb_myPg_brtp03b	td.left15		{ text-align: left; padding-left: 15px; }
+.tb_myPg_brtp03b	td.right	{ text-align: right; padding-right: 10px; }
+.tb_myPg_brtp03b	td.center	{ text-align: center; }
+.tb_myPg_brtp03b	td.noline	{ border-bottom: 0px }
+
+
+.box_caution dd.box { padding:6px 9px 6px 9px; border:solid 1px #D9F2C9; }
+.box_caution dd.box ul { width:665px; }
+.box_caution dd.box li { float:left; margin-top:3px; padding-left:7px; width:665px; line-height:1.3; background:url(http://openimage.interpark.com/_mypage/bl/bl_square_blue.gif) no-repeat left 5px; }
+.box_caution dd.box li strong.tit { float:left; color:#6F88C1; }
+.box_caution dd.box li span.descript { float:left; padding-left:8px; background:url(http://openimage.interpark.com/_mypage/ln_division.gif) no-repeat left 1px; }
+.box_caution dd.box li a { color:#497DEF; text-decoration:underline; }
+.box_caution dd.box li a:hover { color:#4B6AAD; text-decoration:underline; }
+
+.box_blueL	{ margin: 15px 10px 0; }
+ul.blot_blue { width:650px; margin: 5px 0 5px 15px; }
+ul.blot_blue	 li { float:left; margin-top:3px; padding-left:7px; width:650px; line-height:1.3; background:url(http://openimage.interpark.com/_mypage/bl/bl_square_blue.gif) no-repeat left 5px; }
+ul.blot_blue	 li strong.tit { float:left; color:#6F88C1; }
+ul.blot_blue	 li span.descript { float:left; padding-left:8px; background:url(http://openimage.interpark.com/_mypage/ln_division.gif) no-repeat left 1px; }
+ul.blot_blue	 li a { color:#848484; text-decoration:underline; }
+ul.blot_blue	 li a:hover { color:#848484; text-decoration:underline; }
+
+ul.blot_green { width:650px; margin: 5px 0 5px 15px; }
+ul.blot_green	 li { float:left; margin-top:3px; padding-left:7px; width:650px; line-height:1.3; background:url(http://openimage.interpark.com/_mypage/bl/bl_square_green.gif) no-repeat left 5px; }
+ul.blot_green	 li strong.tit { float:left; color:#6F88C1; }
+ul.blot_green	 li a { color:#848484; text-decoration:underline; }
+ul.blot_green	 li a:hover { color:#848484; text-decoration:underline; }
+
+/* �쟾�궗�꽭湲덇퀎�궛�꽌FAQ */
+.digital_faq		{ width: 685px; }
+.digital_faq	dl	{ width: 100%; }
+.digital_faq	dt	{ background: #F2F2F2 url('http://openimage.interpark.com/_mypage/bl/bl_faq_q.gif') no-repeat 12px 8px; padding: 13px 0 9px 49px; font: bold 12px �룍��; color: #626262; }
+.digital_faq	dd	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_faq_a.gif') no-repeat 12px 7px; margin-bottom: 27px;; padding: 10px 0 0 49px; }
+.digital_faq	dd.end	{ margin-bottom: 0px; }
+
+
+/* �긽�뭹沅� */
+.tab_ticket_info { width:480px; height:31px; margin-top: 10px; background:url(http://openimage.interpark.com/_spOrder/tab_ticket_info01.gif) no-repeat left top; }
+.tab_ticket_info li { float:left; width:131px; height:31px; }
+.tab_ticket_info li.tab_01on { background:url(http://openimage.interpark.com/_spOrder/tab_ticket_info02.gif) no-repeat left top; width: 132px; }
+.tab_ticket_info li.tab_02on { background:url(http://openimage.interpark.com/_spOrder/tab_ticket_info02.gif) no-repeat -131px top; width: 132px; }
+.tab_ticket_info li a { display:block; height:31px; }
+
+ul.org_arrow	{ width: 100%; overflow: auto; overflow: hidden; margin-left: 5px; }
+ul.org_arrow	li	{ background: url('http://openimage.interpark.com/_spOrder/bl/bl_org_arrow.gif') no-repeat 0 3px; padding-left: 7px; color: #FF8429; }
+ul.org_arrow	li.non	 { background: none; padding-left: 0px; }
+
+
+ul.bl_gn_arrow	{ width: 100%; overflow: auto; overflow: hidden; }
+ul.bl_gn_arrow	li	{ background: url('http://openimage.interpark.com/_spOrder/bl/bl_gn_arrow.gif') no-repeat 5px 3px; padding-left: 13px;  }
+ul.bl_gn_arrow	li.pb7	 { padding-bottom: 7px; }
+
+/* 荑좏룿�쟻�슜 */
+.bg_cupon_gbox	{ background: url('http://openimage.interpark.com/_spOrder/bg_cupon_gbox.gif') no-repeat 0 0; width: 721px; height: 71px; margin-top: 5px; }
+.bg_cupon_gbox	table	{ margin: 13px 0 0 14px; }
+
+/* btn */
+.mailBtn	{ width:440px; height:110px; margin-top:9px; text-align:center; }
+
+/* align */
+.align_center	{ text-align:center; }
+
+/* margin padding */
+.mgt10	{ margin-top:10px; }
+.mgl10	{ margin-left:10px; }
+.mgb6	{ margin-bottom:6px; }
+
+/* �뙋留ㅼ옄 嫄곕� �궗�쑀 */
+.popupBox	 { margin:10px 0 20px 0; border-top: 1px solid #EBEBEB; border-bottom: 1px solid #EBEBEB; }
+.popupBox ul { margin:10px 0 7px 0;}
+.popupBox li { background: url('http://openimage.interpark.com/_mypage/bl/bl_tri_blue04.gif') no-repeat 8px 3px; padding: 0 0 0 17px; font: normal 12px �룍��; color: #636363; line-height:1.3; }
+
+.pop_table4	{ border-collapse: collapse; border-spacing: 0; border-top: 2px solid #95A9D6; border-bottom: 2px solid #95A9D6; margin: 0 0 20px 0; table-layout:fixed; background: #F8FAFF;} 
+.pop_table4 th		{  text-align: left; background: url('http://openimage.interpark.com/_mypage/bl/bl_gr_line.gif') no-repeat right 11px; padding:7px 0 5px 15px; border-bottom: 1px solid #B9C9E6; font: bold 12px �룍��; color: #6A84BD; line-height:1.5; }
+.pop_table4 td		{ padding:8px 15px 5px 15px; color: #4261A7; line-height:1.5; border-bottom: 1px solid #B9C9E6; }
+.t_seller	{ color: #4261A7; font-weight:normal; letter-spacing:-1; line-height:1.3; padding-bottom:10px; }
+.sellter_add	{ padding-left:10px; color:#636363; font-weight:bold;  line-height:1.3; }
+
+/* �쟾�옄�꽭湲덇퀎�궛�꽌 諛쒓툒�떊泥� */
+.pb10  { padding-bottom:10px; }
+
+.pop_table textarea.anno		{ width: 297px; height: 119px; border:1px solid #D8D8D8; margin-bottom:5px;}
+
+.registration				{ float:left;  width:100%; margin-bottom:-10px; padding:8px 0 ; border-top:1px solid #EBEBEB; background:#F8F8F8; }
+.registration	 ul			{ float:left; }
+.registration	 li			{ float:left; }
+.registration	 li.th		{ background: url('http://openimage.interpark.com/_mypage/bl/bl_tri_blue04.gif') no-repeat 8px 8px; padding: 5px 0 0 17px; font: normal 12px �룍��; color: #636363; }
+.registration	 li.title	{ padding-right:20px; }
+.registration	 li.input_text { padding-right:5px;  }
+.registration_sm		{ background: url('http://openimage.interpark.com/_mypage/bl/bl_square_blue.gif') no-repeat 0px 5px; padding: 0 0 5px 6px; line-height: 120%; font-size: 12px; letter-spacing: -1; word-spacing: 2; }
+
+table.table_01			{ border-top:1px solid #EBEBEB; border-right:1px solid #EBEBEB;}
+table.table_01  td	{ padding:10px 0 6px 0; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB; text-align:center; }
+table.table_01  th	{ padding:10px 0 6px 0; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB; text-align:center; background:#F7F7F7; font-weight:normal; }
+table.table_01  td.detail	 { padding:10px 4px 6px 4px; text-align:left; }
+table.table_01  td.price	 { padding-right:12px; text-align:right; }
+table.table_01  td.price span { font-weight:bold; color:#497DEF;}
+
+/* 二쇰Ц踰덊샇 李얘린 (080326) */
+.mt17					{ margin-top:17px; }
+dl.find_order		{  float:left; width:414px; margin-top:7px; padding:5px 0; background:#F2F5FB; border-top:2px solid #95A9D6; border-bottom:1px solid #D9E2F2; border-left:1px solid #D9E2F2; border-right:1px solid #D9E2F2; }
+dl.find_order dt	{ float:left; width:96px; padding-top:7px; text-align:right; }
+dl.find_order dd	 { float:left; width:300px; margin:0 0 0 10px; padding:5px 0 0 0; }
+dl.find_order dd img.period	{ margin-right:4px;} 
+.t_blue		 { color:#497DEF; }
+.order_txt { clear:both; margin:10px 0 0 3px }	:root .order_txt { clear:both; padding:10px 0 0 3px }
+
+table.table_02			{ margin-top:7px;  border-top:2px solid #6F88C1; border-right:1px solid #EBEBEB;}
+table.table_02  td	{ padding:10px 0 6px 0; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB; text-align:center; color:#696969; }
+table.table_02  th	{ padding:10px 0 6px 0; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB; text-align:center; background:#F7F7F7; font-weight:normal; color:#44567D; }
+table.table_02  td.detail		{ padding:10px 4px 6px 4px; text-align:left; }
+table.table_02  td.product	{ padding-left:5px; text-align:left; }
+table.table_02  td.price		{ padding-right:5px; text-align:right; }
+table.table_02  td table		{ border:0px; margin-left:-5px; }	:root table.table_02  td table { margin-left:0px; }
+table.table_02  td table td	{ border:0px; }
+
+/* �솚遺덈컺湲� (080326) */
+.pdr8						{ padding-right:8px; }
+.return_pro			{ padding:9px 14px 6px 14px; }
+.return_company	{ padding:9px 12px 6px 12px; }
+.return_method	{ padding:9px 10px 6px 10px; text-align:left; }
+.return_method span	 { font-weight:bold; color:#497DEF; }
+
+/* �떎�슫諛쏄린�뙘�뾽 (080327) */
+.coupondown	li.gray01	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_square_gray1.gif') no-repeat 0 3px; padding-left: 10px; color: #666666; font-size: 12px; }
+.coupon_txt		{ background: url('http://openimage.interpark.com/_mypage/bg_coupon_txt.gif') no-repeat 0 0; width: 534px; height: 76px; margin-bottom: 23px; }
+.coupon_txt		dl	{ width: 100%; overflow: auto; overflow: hidden; padding: 7px 0 0 8px; }
+.coupon_txt		dt	{ float: left; width: 145px; }
+.coupon_txt		dd	{ float: left; width: 370px; padding-top: 7px; }
+.mt5			{ margin-top: 5px; }
+.f_green		{ color: #0E9724; }
+.coupon_list	{ width: 100%; overflow: auto; overflow: hidden; border-top: 2px solid #1EAE0F; border-bottom: 1px solid #1EAE0F; width: 534px; height: 229px; overflow-y: scroll; margin-bottom: 23px; }
+.coupon_list	td	{ background: url('http://openimage.interpark.com/_mypage/bg_dotline01.gif') repeat-x 0 bottom; padding: 9px 0 9px 6px; margin-top: 0px;  }
+
+/* �쉶�썝�깉�눜 (080328) */
+.memberSMoney	{ margin: 22px 0 20px 15px; }
+ul.sMoney				{ margin-top:10px; }
+ul.sMoney li			{ background: url('http://openimage.interpark.com/_mypage/bl/bl_square_blue.gif') no-repeat 4px 3px; padding: 0 0 15px 10px; line-height: 120%; font-size: 12px; }
+.mgb20	 { margin-bottom:20px; }
+.mgr10	 { margin-right:10px; }
+
+/* 080403 */
+.mailBtn02	{ width:440px; margin-top:9px; text-align:center; }
+
+/* �젙蹂대찓�씪 �븞�궡 080403 */
+.pl5				{ padding-left:5px; }
+.infoBox		{ border-top: 2px solid #95A9D6; border-bottom: 2px solid #95A9D6; margin: 0 0 20px 0; padding:9px 0 9px 3px; table-layout:fixed; background: #F8FAFF;} 
+.infoBox p		{ padding-left:13px;}
+.infoMailList		 { border-top:1px solid #ECECEC; }
+.infoMailList	 td { padding:8px 0px 7px 10px; border-bottom:1px solid #ECECEC; vertical-align:top; color:#636363; }
+.infoMailList	 th { text-align: left; border-bottom:1px solid #ECECEC;  vertical-align:top; background: url('http://openimage.interpark.com/_mypage/bl/bl_gr_line.gif') no-repeat right 8px; padding:8px 0 7px 0; }
+.infoMailList	 th li	 { background: url('http://openimage.interpark.com/_mypage/bl/bl_tri_blue04.gif') no-repeat 8px 3px; padding: 0 0 0 15px; font: normal 12px �룍��; color: #4261A7 }
+
+/* 諛곗넚�쐞移� �솗�씤 080416 */
+table.table_03			{ margin-top:7px;  border-top:2px solid #6F88C1; border-right:1px solid #EBEBEB; table-layout:fixed;}
+table.table_03  td	{ padding:10px 7px 6px 7px; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB;  color:#696969; }
+table.table_03  th	{ padding:10px 12px 6px 12px; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB; text-align:left; background:#F7F7F7; font-weight:normal; color:#44567D;  vertical-align:top; }
+table.table_02  td.price02 { padding-right:8px; text-align:right; }
+table.table_04			{ margin-top:7px;  border-top:2px solid #6F88C1; border-right:1px solid #EBEBEB;}
+table.table_04  td	{ padding:6px 0 4px 0; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB; text-align:center; color:#696969; }
+table.table_04  th	{ padding:9px 0 2px 0; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB; text-align:center; background:#F7F7F7; font-weight:normal; color:#44567D; }
+
+.delivery_info	{ overflow:auto; overflow:hidden; width:440px; margin-top:10px; background:url('http://openimage.interpark.com/_mypage/bg_hdot.gif') repeat-x; }
+.delivery_info li	{ background: url('http://openimage.interpark.com/_mypage/bl/bl_square_blue.gif') no-repeat 0px 5px; padding: 0 0 5px 6px;  font-size: 12px; letter-spacing: -1; word-spacing: 2; }
+
+
+/* �쑕���룿寃곗젣 �븞�궡 (080429) */
+ul.con_txt	{ width: 100%; overflow: auto; overflow: hidden; margin: 5px 0 0 5px; }
+ul.con_txt	li	{ color: #848484; line-height: 130%; }
+ul.con_txt	.int15	 { text-indent:-15px; margin-left:15px }
+ul.con_txt	.t_org	 { color: #E1700C; }
+ul.con_txt	a:link,		ul.con_txt	a:visited, ul.con_txt	a:active { color:#159226; text-decoration:underline; }
+ul.con_txt	a:hover { color:#159226; text-decoration:underline; }
+
+/* 鍮꾨�踰덊샇 蹂�寃� 080430 */
+.clear_both 	 { clear:both; }
+.box_gline	 { height:50px; color: #636363; border-top:1px solid #EBEBEB; border-bottom:1px solid #EBEBEB; }
+dl.certification		{ float:left; }
+dl.certification dd input	{ float:left; margin:0px 0 0 10px;}
+dl.certification dd.txt	{ float:left;  margin-top:4px; width:160px;}
+	:root		dl.certification dd.txt	{margin:0px; }
+.box_grline	 { border-top:2px solid #77C942; }
+ul.list_squ li	 { margin-left:4px; padding:7px 0 0 7px; background:url(https://sslimage.interpark.com/_ecenter/bl/bl_dot0202.gif) no-repeat left 12px; }
+
+/* �쉶�썝�깉�눜 080508 */
+.mgt25			{ margin-top:25px; }
+.mgt30			{ margin-top:30px; }
+dl.break		{ margin:10px 0; }
+dl.break dd	{ margin-left:13px; }
+.line15			{ line-height:1.5; }
+
+/* 諛곗넚�쐞移� �솗�씤 080515 */
+.goodsflow	{ position:absolute; left:367px; top:9px; }
+
+/* font 080528 */
+.f_blue				{ color:#4065B6; }
+
+
+/* 080618 異붽� (�쁺�닔利� 諛쒓툒怨듭�) */
+.bg_paper_top			{ background: url('http://openimage.interpark.com/_mypage/bg_paper_top.gif') no-repeat 0 0; width: 425px; margin-top: 10px; }
+.bg_paper_btm		{ background: url('http://openimage.interpark.com/_mypage/bg_paper_btm.gif') no-repeat 0 bottom; width: 425px; padding: 10px 0 7px 10px; }
+ul.paper					{ width: 100%; overflow: auto; overflow: hidden; }
+ul.paper	li				{ color: #3968BD; background: url('http://openimage.interpark.com/_mypage/bl/bl_paper.gif') no-repeat 4px 4px; padding-left: 10px; padding-bottom: 12px; }
+ul.paper	li.no			{ background: none; padding-left: 0px; }
+ul.paper	li.pb_no	{ padding-bottom: 3px; }
+ul.paper	li.stit			{ background: none; padding-left: 0px; padding-bottom: 9px; }
+
+
+/* 080627 */
+.box_gline2			{ height:61px; color: #636363; border-top:1px solid #EBEBEB; border-bottom:1px solid #EBEBEB; }
+:root .certMtop		{ margin-top:10px; }
+
+/* 080710 */
+.fl				{ float:left; }
+.fr				{ float:right; }
+.mr10		{ margin-right: 10px; }
+table.table_02  td.product02	{ padding:0 5px; text-align:left; }
+table.table_02  th.tit2	{ padding:10px 0 6px 0; border-bottom:1px solid #EBEBEB;  border-left:1px solid #EBEBEB; text-align:center; background:#F7F7F7; font-weight:normal; color:#696969; }
+table.table_02 td.total{ padding-right:20px; text-align:right; color:#5A75B1 }
+table.table_02 td.total span	{ color:#497DEF }
+
+.pastList				{ float:left; width:685px; margin:7px 0 30px; padding:10px 0 5px 0; background:#F2F5FB; border-top:2px solid #95A9D6; border-bottom:1px solid #D9E2F2; border-left:1px solid #D9E2F2; border-right:1px solid #D9E2F2; }
+.pastList .pleft		{ float:left; margin:4px 10px 0px 9px; }
+.pastList .pright	{ float:left; margin:0px 0 0px 0; padding-bottom:3px; }
+.plastNone			{ padding:8px 0 7px 0; color:#5C7CC1; }
+
+a.plink:link, a.plink:visited		{ text-decoration:none; color:#696969; }
+a.plink:hover, a.plink:active		{ text-decoration:underline; color:#696969; }
+
+/* paging */
+.div_boardNum						{ padding-top:12px; text-align:center; }
+.div_boardNum img.pgbt01 { margin:0px 4px 3px 0; }
+.div_boardNum img.pgbt02 { margin:0px 4px 3px 0; }
+.div_boardNum img.pgbt03 { margin:0px 4px 3px 4px; }
+.div_boardNum img.pgbt04 { margin:0px 0 3px 0; }
+.div_boardNum a					{ text-decoration:none; color:#434343; }
+.div_boardNum a:link, .div_boardNum a:visted 		{ text-decoration:none; color:#434343; }
+.div_boardNum a:hover, .div_boardNum a:active 	{ text-decoration:underline; color:#6F88C1; }
+
+/* 081205 */
+.orange		{ color:#FF9900; }
+
+.street_text11 { margin-top:4px; line-height:1.3; color:#898989; font-size:11px;letter-spacing:-1; }
+.street_Popupbox{margin: 0 10px 10px 10px ; padding: 10px; background: #FFFFFF; }
+.street_Content{ width:100%;}
+.street_redtext { margin:10px 0 0 0; padding-left:8px; line-height:1.3; color:#da6464; font-size:12px; background:url(https://sslimage.interpark.com/_mypage_n/bl/bl_arrow_red2.gif) no-repeat left 4px;letter-spacing:-1px;}
+.street_radiobox{ background:#f9f9f9; color:#696969; border:1px solid #dbdbdb; text-align:center; padding:10px; margin:10px 0 10px 0;letter-spacing:-1px; }
+.street_select{ width: 100%;  background:url("street/street_dotline.gif") repeat 0 0 ; margin-top:10px; padding-top:5px;letter-spacing:-1px; color:#898989;}
+.street_select tr{height:30px;}
+.street_btn_close	{ clear: both; overflow: auto; overflow: hidden; text-align: right; margin-right: 10px; }

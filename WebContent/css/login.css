@@ -1,0 +1,966 @@
+@charset "UTF-8";
+/* iframe용 기본 style 시작 (2012.2.1 추가) */
+center,
+ {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: #33333b;
+}
+
+table,
+tr,
+td {
+  /*border:0;*/
+  font-family: "돋움", Dotum, Arial, sans-serif;
+  font-size: 12px;
+  color: #33333b;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+select,
+textarea {
+  font-family: "돋움", Dotum, Arial, sans-serif;
+}
+
+center a {
+  color: #33333b;
+  text-decoration: none;
+}
+
+.loginMenu a:HOVER, .dpNavi a:HOVER{
+  color: #da6464;
+  text-decoration: underline;
+}
+
+/* iframe용 기본 style 끝 */
+/* 091218추가(로그인) */
+.logout_warp {
+  width: 100%;
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+.logout_warp {
+  padding-top: 30px;
+
+}
+
+.login_warp {
+  width: 100%;
+  height: 497px;
+  margin: 30px auto 70px;
+  text-align: center;
+}
+
+:root .login_warp {
+  padding-top: 30px;
+}
+
+.login_warp img {
+  border: 0;
+  vertical-align: top;
+}
+
+.login_warp input.rdo {
+  width: 13px;
+  height: 13px;
+}
+
+.login_warp input.chk {
+  width: 13px;
+  height: 13px;
+}
+
+.login_warp input.input_text {
+  border: 1px solid #eaeaea;
+  background: #fafafa;
+  font: bold 14px 돋움;
+  color: #353535;
+  padding: 6px 0 0 10px;
+}
+
+.login_warp input.input_text02 {
+  border: 1px solid #eaeaea;
+  background: #fafafa;
+  font: bold 14px 돋움;
+  color: #353535;
+  padding: 5px 0 0 10px;
+}
+
+.login_warp .rdo_txt span {
+  padding-right: 10px;
+}
+
+.login_warp .rdo_txt02 {
+  padding: 11px 40px 0 0;
+}
+
+:root .login_warp .rdo_txt02 {
+  padding: 11px 30px 0 0;
+}
+
+.login_warp .rdo_txt02 input {
+  margin-top: -1px;
+}
+
+.login_warp .rdo_txt02 span {
+  padding-right: 10px;
+  font-size: 12px;
+  color: #727272;
+}
+
+.login_warp .rdo_txt02 .pwdFind {
+  margin-bottom: 8px;
+}
+
+.login_warp .login_msg_no {
+  vertical-align: top;
+  width: 100%;
+  height: 15px;
+  margin-top: 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.login_warp .login_msg_img {
+  vertical-align: top;
+  width: 100%;
+}
+
+.login_warp .login_msg_img img {
+  margin-bottom: 5px;
+}
+
+.login_warp .login_btn {
+  vertical-align: top;
+  width: 100%;
+  margin-top: 5px;
+  padding-top: 12px;
+  border-top: 1px solid #d8d8d8;
+  text-align: center;
+}
+
+.login_warp .login_btn .txt {
+  margin-bottom: 9px;
+  color: #7e7e7e;
+  font-size: 11px;
+  text-align: left;
+  letter-spacing: -1;
+}
+
+.login_warp table {
+  table-layout: fixed;
+}
+
+.login_warp th {
+  vertical-align: top;
+  font: bold 12px 돋움;
+  color: #6b6b6b;
+  text-align: left;
+  padding: 9px 0 0 7px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_arrow.gif") no-repeat left 14px;
+  line-height: 140%;
+}
+
+.login_warp th.notice {
+  vertical-align: top;
+  font: bold 12px 돋움;
+  color: #6b6b6b;
+  text-align: left;
+  padding: 1px 0 0 17px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_mark.gif") no-repeat left top;
+}
+
+.login_warp td {
+  font: normal 11px 돋움;
+  color: #828282;
+  vertical-align: top;
+}
+
+.login_warp td.txt {
+  font: normal 12px 돋움;
+  color: #828282;
+  line-height: 150%;
+}
+
+.login_warp td.txt strong {
+  color: #c10000;
+}
+
+.login_warp td.txt strong.memid {
+  color: #6b6b6b;
+}
+
+.login_warp .hyphen {
+  padding: 0 1px 0 3px;
+  text-align: center;
+  color: #cbcbcb;
+}
+
+.login_warp .vaLine {
+  border-top: 1px solid #d8d8d8;
+  font-size: 0;
+  line-height: 0;
+}
+
+dl.login_form{
+  position: relative;
+  width: 430px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+dl.login_form dt.login_input {
+  float: left;
+  width: 415px;
+  height: 300px;
+  padding: 20px 0 0 84px;
+  text-align: left;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bg_login_input2.gif") no-repeat 0 0;
+}
+
+:root dl.login_form dt.login_input {
+  width: 331px;
+  height: 280px;
+}
+
+dl.login_form dt.login_banner {
+  float: right;
+  width: 280px;
+  overflow: auto;
+  overflow: hidden;
+}
+
+/* 2012.01.06 추가 시작 */
+dl.login_form dt.login_input iframe {
+  background: none;
+  width: 350px;
+  height: 276px;
+}
+
+.Login_iF_120106 {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.Login_iF_120106 img {
+  border: 0;
+  vertical-align: top;
+}
+
+.Login_iF_120106 input.rdo {
+  width: 13px;
+  height: 13px;
+}
+
+.Login_iF_120106 input.chk {
+  width: 13px;
+  height: 13px;
+}
+
+.Login_iF_120106 input.input_text {
+  border: 1px solid #eaeaea;
+  background: #fafafa;
+  font: bold 14px 돋움;
+  color: #353535;
+  padding: 6px 0 0 10px;
+}
+
+.Login_iF_120106 input.input_text02 {
+  border: 1px solid #eaeaea;
+  background: #fafafa;
+  font: bold 14px 돋움;
+  color: #353535;
+  padding: 5px 0 0 10px;
+}
+
+.Login_iF_120106 td.rdo_txt img {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.Login_iF_120106 td.rdo_txt span {
+  padding-right: 10px;
+  font: normal 11px 돋움;
+  color: #828282;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.Login_iF_120106 td {
+  font: normal 11px 돋움;
+  color: #828282;
+}
+
+.Login_iF_120106 table {
+  table-layout: fixed;
+}
+
+.Login_iF_120106 th {
+  vertical-align: top;
+  font: bold 12px 돋움;
+  color: #6b6b6b;
+  text-align: left;
+  padding: 9px 0 0 7px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_arrow.gif") no-repeat left 14px;
+  line-height: 140%;
+}
+
+.Login_iF_120106 th.notice {
+  vertical-align: top;
+  font: bold 12px 돋움;
+  color: #6b6b6b;
+  text-align: left;
+  padding: 1px 0 0 17px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_mark.gif") no-repeat left top;
+}
+
+.Login_iF_120106 td.txt {
+  font: normal 12px 돋움;
+  color: #828282;
+  line-height: 150%;
+}
+
+.Login_iF_120106 td.txt strong {
+  color: #c10000;
+}
+
+.Login_iF_120106 td.txt strong.memid {
+  color: #6b6b6b;
+}
+
+.Login_iF_120106 .login_msg_img {
+  vertical-align: top;
+  width: 100%;
+}
+
+.Login_iF_120106 ul.loginMenu {
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+  margin-top: 9px;
+  padding-top: 9px;
+  letter-spacing: -1;
+  border-top: 1px solid #d8d8d8;
+}
+
+/* 2012.01.06 추가 끝 */
+ul.loginAd_list {
+  float: right;
+  width: 280px;
+  overflow: auto;
+  overflow: hidden;
+  margin-top: -10px;
+}
+
+ul.loginAd_list li {
+  margin-top: 10px;
+}
+
+ul.loginAd_list3line {
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+  margin-top: -5px;
+}
+
+ul.loginAd_list3line li {
+  padding-top: 5px;
+}
+
+.loginAd_wide {
+  width: 100%;
+  margin-top: 10px;
+  display: block;
+}
+
+ul.loginMenu {
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+  margin-top: 12px;
+  letter-spacing: -1px;
+}
+
+ul.loginMenu li {
+  float: right;
+  height: 14px;
+  padding: 0 15px 0 6px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_gray_arrow.gif") no-repeat 0 3px;
+}
+
+ul.loginMenu li.last {
+  padding-right: 0;
+  line-height: 0;
+}
+
+ul.loginMenu li.last span {
+  font-size: 11px;
+  padding: 0 3px;
+}
+
+ul.loginMenu li a:link,
+ul.loginMenu li a:active,
+ul.loginMenu li a:visited {
+  font: normal 11px 돋움;
+  color: #454545;
+  text-decoration: none;
+}
+
+ul.loginMenu li a:hover {
+  font: normal 11px 돋움;
+  color: #c10000;
+  text-decoration: underline;
+}
+
+/* 2012.07.24 자동로그인 추가 */
+.login_notice {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 112px;
+  font: 11px/15px dotum;
+  color: #a7a7a7;
+  letter-spacing: -1px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bar.gif") 0 2px no-repeat;
+  padding-left: 10px;
+}
+
+.msg_notice .txt {
+  color: #a7a7a7;
+  font: normal 11px dotum;
+  letter-spacing: -1px;
+  line-height: 0;
+}
+
+.msg_notice .txt a {
+  padding-right: 13px;
+  height: 13px;
+  padding-top: 1px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_help.gif") top right no-repeat;
+  color: #777;
+  font: normal 11px dotum;
+  letter-spacing: -1px;
+}
+
+.msg_notice .txt a:link,
+.msg_notice .txt a:visited,
+.msg_notice .txt a:active {
+  color: #a7a7a7;
+  font: normal 11px dotum;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.msg_notice .txt a:hover {
+  color: #a7a7a7;
+  font: normal 11px dotum;
+  letter-spacing: -1px;
+  text-decoration: underline;
+}
+
+/* 레이어 */
+.Layer_info_LogAuto {
+  display: inline-block;
+  border-top: 2px solid #777;
+  border-bottom: 2px solid #ddd;
+  background: #fff;
+  width: 310px;
+  position: relative;
+  text-align: left;
+  *zoom: 1;
+}
+
+.Layer_info_LogAuto .Close {
+  position: absolute;
+  right: 7px;
+  top: 10px;
+  display: inline-block;
+  width: 57px;
+  height: 12px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/layer_common.png") -450px -135px no-repeat;
+}
+
+.Layer_info_LogAuto .Close a {
+  display: inline-block;
+  width: 57px;
+  height: 12px;
+}
+
+.Layer_info_LogAuto .Close span {
+  display: none;
+}
+
+.Layer_info_LogAuto .Text {
+  display: inline-block;
+  font-family: dotum;
+  word-breall: break-all;
+  font-size: 11px;
+  letter-spacing: -1px;
+  line-height: 130%;
+  color: #787878;
+  padding: 10px 10px 5px 10px;
+  border-bottom: 1px solid #777;
+}
+
+.Layer_info_LogAuto .Text strong {
+  color: #5e5e5e;
+  font-size: 11px;
+  display: block;
+  *zoom: 1;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  margin-bottom: 3px;
+}
+
+/* 2012.07.24 자동로그인 추가 끝 */
+/* ul.loginMenu {
+    width: 100%;
+    overflow: auto;
+    overflow: hidden;
+    margin-top: 12px;
+    letter-spacing: -1;
+}
+
+ul.loginMenu li {
+    float: right;
+    padding: 0 15px 0 6px;
+    background: url("http://ticketimage.interpark.com/TicketImage/main/100506_main/login/bl_gray_arrow.gif") no-repeat 0 3px;
+}
+
+ul.loginMenu li.last {
+    padding-right: 0px;
+}
+
+ul.loginMenu li a:link,
+ul.loginMenu li a:active,
+ul.loginMenu li a:visited {
+    font: normal 11px 돋움;
+    color: #454545;
+    text-decoration: none
+}
+
+ul.loginMenu li a:hover {
+    font: normal 11px 돋움;
+    color: #C10000;
+    text-decoration: underline
+}*/
+ul.info_msg {
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+  margin: 10px 0 18px;
+}
+
+ul.info_msg li {
+  padding: 0 0 0 6px;
+  line-height: 18px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/bl_gray_arrow.gif") no-repeat 0 4px;
+  letter-spacing: -1;
+}
+
+ul.info_msg li span {
+  color: #c10000;
+}
+
+ul.info_msg2 {
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+  margin: 10px 0 7px 10px;
+}
+
+ul.info_msg2 li {
+  padding: 0 0 0 6px;
+  line-height: 18px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_gray_arrow.gif") no-repeat 0 4px;
+  letter-spacing: -1;
+}
+
+ul.info_msg2 li span {
+  color: #c10000;
+}
+
+.bg_msgbox_top {
+  width: 308px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bg_msgbox_top.gif") no-repeat 0 0;
+  letter-spacing: -1;
+}
+
+.bg_msgbox_btm {
+  width: 308px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bg_msgbox_btm.gif") no-repeat bottom 0;
+  margin-top: 0;
+}
+
+.bt_noMember_order {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+:root .bt_noMember_order {
+  padding-top: 10px;
+}
+
+.login_warp_popup {
+  width: 280px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+:root .login_warp_popup {
+  padding-top: 30px;
+}
+
+.login_warp_popup img {
+  border: 0;
+  vertical-align: top;
+}
+
+.login_warp_popup input.rdo {
+  width: 13px;
+  height: 13px;
+}
+
+.login_warp_popup input.chk {
+  width: 13px;
+  height: 13px;
+}
+
+.login_warp_popup input.input_text {
+  border: 1px solid #eaeaea;
+  background: #fafafa;
+  font: bold 14px 돋움;
+  color: #353535;
+  padding: 6px 0 0 10px;
+}
+
+.login_warp_popup .rdo_txt span {
+  padding-right: 10px;
+}
+
+.login_warp_popup .login_msg_no {
+  vertical-align: top;
+  width: 100%;
+  height: 15px;
+  margin-top: 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.login_warp_popup .login_msg_img {
+  vertical-align: top;
+  width: 100%;
+  margin-top: 9px;
+}
+
+/* 삭제 2013-05-07 border-bottom: 1px solid #d8d8d8; */
+.login_warp_popup .login_msg_img img {
+  margin: 0 0 13px 0;
+}
+
+.login_warp_popup table {
+  table-layout: fixed;
+}
+
+.login_warp_popup td {
+  font: normal 11px 돋움;
+  color: #828282;
+}
+
+ul.loginAd_list {
+  float: right;
+  width: 266px;
+  overflow: auto;
+  overflow: hidden;
+  margin-top: -10px;
+}
+
+ul.loginAd_list li {
+  margin-top: 10px;
+}
+
+ul.loginAd_list3line {
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+  margin-top: -5px;
+}
+
+ul.loginAd_list3line li {
+  padding-top: 5px;
+}
+
+ul.info_msg {
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+  margin: 10px 0 18px;
+}
+
+ul.info_msg li {
+  padding: 0 0 0 6px;
+  line-height: 18px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_gray_arrow.gif") no-repeat 0 4px;
+  letter-spacing: -1;
+}
+
+ul.info_msg li span {
+  color: #c10000;
+}
+
+ul.info_msg2 {
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+  margin: 10px 0 7px 10px;
+}
+
+ul.info_msg2 li {
+  padding: 0 0 0 6px;
+  line-height: 18px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_gray_arrow.gif") no-repeat 0 4px;
+  letter-spacing: -1;
+}
+
+ul.info_msg2 li span {
+  color: #c10000;
+}
+
+.bg_msgbox_top {
+  width: 308px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bg_msgbox_top.gif") no-repeat 0 0;
+  letter-spacing: -1;
+}
+
+.bg_msgbox_btm {
+  width: 308px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bg_msgbox_btm.gif") no-repeat bottom 0;
+  margin-top: 0;
+}
+
+.bt_noMember_order {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+:root .bt_noMember_order {
+  padding-top: 10px;
+}
+
+dl.login_form_pop {
+  position: relative;
+  width: 410 px;
+  height: 310 px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+dl.login_form_pop dt.login_input {
+  width: 410 px;
+  height: 310 px;
+  padding: 32 px 0 0 51 px;
+  text-align: left;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bg_login_input_pop.gif") no-repeat 0 0;
+}
+
+:root dl.login_form_pop dt.login_input {
+  width: 359 px;
+  height: 278 px;
+}
+
+dl.login_form_pop.bt_pop_close {
+  position: absolute;
+  top: 13 px;
+  left: 379 px;
+}
+
+dl.login_form_pop ul.infoBox {
+  padding: 10 px 0 6 px;
+  background: #f7f7f7;
+  border-bottom: 1 px solid #e4e4e4;
+}
+
+dl.login_form_pop ul.infoBox li {
+  padding-left: 14 px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_arrow.gif") no-repeat 8 px 5 px;
+  color: #808080;
+  font: normal 12px 돋움;
+  line-height: 140%;
+  letter-spacing: -1;
+}
+
+dl.login_form_pop ul.infoBox li .info {
+  color: #c10000;
+}
+
+dl.login_form_pop ul.infoBox02 {
+  background: #f7f7f7;
+}
+
+dl.login_form_pop ul.infoBox02 li {
+  color: #808080;
+  font: normal 12px 돋움;
+  line-height: 140%;
+}
+
+dl.login_form_pop ul.infoBox02 li .mail {
+  color: #616161;
+}
+
+dl.login_form_pop ul.infoBox03 {
+  padding: 11px 0 9px;
+  background: #f7f7f7;
+}
+
+dl.login_form_pop ul.infoBox03 li {
+  padding: 0 0 8px 15px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_gray.gif") no-repeat 10 px 5 px;
+  color: #7e7e7e;
+  font: normal 11px 돋움;
+  line-height: 140%;
+}
+
+dl.login_form_pop ul.infoBox03 li.last {
+  padding: 0 0 0 15px;
+}
+
+dl.login_form_pop ul.infoBox03 li a {
+  text-decoration: none;
+  color: #7e7e7e;
+  font: normal 11 px 돋움;
+}
+
+dl.login_form_pop ul.infoBox04 {
+  padding: 13 px 0 7 px;
+  background: #f7f7f7;
+}
+
+dl.login_form_pop ul.infoBox04 li {
+  padding: 0 0 5 px 13 px;
+  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bl_gray.gif") no-repeat 8 px 7 px;
+  color: #7e7e7e;
+  font: normal 12px 돋움;
+  line-height: 140%;
+}
+
+dl.login_form_pop ul.infoBox04 li .go {
+  position: absolute;
+  margin: 1px 0 0 4px;
+}
+
+dl.login_form_pop ul.infoBox04 li a:link,
+dl.login_form_pop ul.infoBox04 li a:visited,
+dl.login_form_pop ul.infoBox04 li a:active {
+  text-decoration: none;
+  color: #7e7e7e;
+  font: normal 12 px 돋움;
+}
+
+dl.login_form_pop ul.infoBox04 li a:hover {
+  text-decoration: underline;
+  color: #7e7e7e;
+  font: normal 12px 돋움;
+}
+
+/*캡챠 추가 */
+.login_capcha_area iframe {
+  width: 150px !important;
+  height: 35px !important;
+}
+
+.login_capcha_area {
+  margin-top: 5px;
+}
+
+.login_capcha_txt {
+  position: relative;
+  display: block;
+  margin: -3px 0 -17px 0;
+  padding: 10px 0 5px 5px;
+  line-height: 1.2;
+  font-size: 11px;
+  color: #777;
+  letter-spacing: -1px;
+  word-spacing: 1px;
+  border-top: 1px solid #d8d8d8;
+  background: #fff;
+  z-index: 2;
+}
+
+.login_capcha_txt strong,
+.login_capcha_txt em {
+  font-size: 11px;
+  color: #f00;
+}
+
+dl.login_form dt.login_input .capchaWrap {
+  padding-top: 2px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+dl.login_form dt.login_input .capchaWrap .capchaCode {
+  float: left;
+  font-size: 0;
+  margin-right: 9px;
+}
+
+dl.login_form dt.login_input .capchaWrap .capchaCode iframe {
+  width: 150px;
+  height: 35px;
+}
+
+dl.login_form dt.login_input .capchaWrap .capchaCode button {
+  width: 45px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #eaeaea;
+  background: #fff url("http://ticketimage.interpark.com/TicketImage/main/100506_main/login/btn_refresh.png") 50% 50%;
+  vertical-align: top;
+  font-size: 0;
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+dl.login_form dt.login_input .capchaWrap .codeInput {
+  float: left;
+  vertical-align: top;
+}
+
+dl.login_form dt.login_input .capchaWrap .codeInput input {
+  width: 104px;
+  height: 35px;
+  padding: 8px;
+  border: 1px solid #eaeaea;
+  background-color: #fafafa;
+}
+
+dl.login_form dt.login_input .loginCheck {
+  padding: 10px 0;
+}
+
+div.dpGnb{
+	width: 960px;
+	height: 14px;
+	text-align: left;
+	margin: 15px auto 0 auto;
+	
+}
+
+div.dpGnb ul.dpNavi li.home{
+	float: left;
+}
+
+

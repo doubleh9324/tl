@@ -1,0 +1,67 @@
+body{margin: 0px;}
+#gateway_warp ul,
+#gateway_warp li,
+#gateway_warp dl,
+#gateway_warp dt,
+#gateway_warp dd { margin:0; padding:0; font-size:12px; list-style: none; }
+
+#gateway_warp { text-align: center; height: 32px; border-bottom: 1px solid #c1c1c1; background: #fff;}
+#gateway_warp.welcome {height: 33px; border-bottom: 0;}
+#gateway_warp #gateway_con {width:980px !important; margin:0 auto;}
+#gateway_warp.toy #gateway_con {width: 1045px !important;}
+.gnbArea_left {position:relative;z-index:200;float:left;}
+.gnbArea_left ul {width: 282px; *zoom: 1;}
+.gnbArea_left ul:after {display: block; content: ""; clear: both;}
+.gnbArea_left li {float: left; width: 42px; height: 32px; border-left: 1px solid #c3c3c3;}
+.gnbArea_left li a {display: block; text-indent: -9999em; height: 32px; background: url(https://sslimage.interpark.com/welcome_2015/common/txt_gatewayNavigation.png) no-repeat;}
+.gnbArea_left li.current {position: relative;}
+.gnbArea_left li.current a {background-color: #f4f4f4; height: 32px; top: 0; left: 0;}
+.gnbArea_left li.welcome a {background-position: 15px 10px}
+.gnbArea_left li.shopping a {background-position: -28px 10px}
+.gnbArea_left li.book a {background-position: -71px 10px}
+.gnbArea_left li.ticket a {background-position: -114px 10px}
+.gnbArea_left li.tour a {background-position: -159px 10px}
+.gnbArea_left li.imarket {width: 66px;}
+.gnbArea_left li.imarket a {background-position: -201px 10px;}
+
+#gateway_con .gnbArea_right {float:right;height:31px;}
+#gateway_con .gnbArea_right #gnbArea_link {padding-top: 11px;}
+#gateway_con .gnbArea_right * {font-family: dotum, verdana, sans-serif !important;}
+#gateway_warp #gateway_con .gnbArea_right a {display:block;padding-bottom:5px;_padding-bottom: 0;font-size:11px;color:#777;letter-spacing:-1px;}
+#gateway_warp.toy #gateway_con .gnbArea_right a {line-height: 1;}
+#gateway_con .gnbArea_right li {float:left;padding-right:7px;margin: 0 6px 0 0;background:url(https://sslimage.interpark.com/welcome_2015/common/img_divide.gif) right 1px no-repeat;}
+#gateway_con .gnbArea_right li.logout a {font-weight: bold;}
+#gateway_con .gnbArea_right li.last {background:none;padding-right:0;margin-right:0;}
+#gateway_con .gnbArea_right li.mypage { position:relative; margin-top:0; z-index: 500; cursor: pointer;}
+#gateway_con .gnbArea_right	li.mypage a {color:#666; padding:0px 12px 0 0px;background:url("https://sslimage.interpark.com/_nip/bl/bl_mypage2.png") no-repeat right 1px;}
+#gateway_con .gnbArea_right	li.mypage a:hover {color:#da6464;text-decoration:none}
+#gateway_con .lay_mypgsub {position:absolute;top:0px;left:0px; margin:13px 0 0 -12px; width:88px; padding: 2px 0 3px; background: #FFFFFF; z-index:250; border: 2px solid #e38989; }
+
+#gateway_con .lay_mypgsub a {padding: 0; margin: 0; _background: none !important;}
+#gateway_con .lay_mypgsub dl { float: left; width: 79px; overflow: hidden; margin: 0 0 0 5px; padding: 0px; }
+#gateway_con .lay_mypgsub dd { margin: 0px; padding:3px 0 0 5px; height:14px; background:url(https://sslimage.interpark.com/_cip/bl/bl_square_dot.gif) no-repeat left 7px;}
+#gateway_con .lay_mypgsub dd a {display: block; width:100%;text-align:left;letter-spacing:-1px;_padding:0 !important;}
+#gateway_con .lay_mypgsub dd a:hover {text-decoration:underline}
+
+
+#gateway_con .gnbArea_right .login a {font-weight: bold;}
+
+#gateway_con .gnbArea_right	li.last_stConnect { padding-right: 0px; position: relative; z-index: 500; margin-top: 1px;}
+
+#gateway_con .gnbArea_right	img.stConnect { margin: 0 8px 0 2px; position: relative; top: -1px; cursor: pointer; vertical-align: top;}
+#gateway_con .gnbArea_right	.layer_stConnect	{ position:absolute; top: 10px; left: -185px; padding-top: 4px; width: 253px; }
+#gateway_con .gnbArea_right	ul.stConnect_box { clear: both; margin: 0px; border: 2px solid #F0A6A6; background: #FFFFFF; }
+#gateway_con .gnbArea_right	ul.stConnect_box li	{ float: none; width: 100%; margin: 0px; padding: 0px; background: none; text-align: center; }
+#gateway_con .gnbArea_right	ul.stConnect_box img { margin: 0px; padding: 0px; }
+#gateway_con .gnbArea_right	ul.stConnect_box li.btn	img	{ margin: 8px 0 7px 0; } /* 2017-05-30 */
+
+#gateway_con .gnbArea_right .selectLanguage {position:relative;z-index:500;cursor:pointer;}
+#gateway_con .gnbArea_right .selectLanguage a {padding:0 15px 100px 0;margin-right:1px;background:url("https://sslimage.interpark.com/_nip/bl/bl_mypage2.png") no-repeat right 0;}
+#gateway_con .gnbArea_right .selectLanguage #dllngsub {position:absolute;top:14px;right:0px;width: 69px;padding: 2px 0 3px;background: #FFFFFF; border: 2px solid #e38989; line-height: 15px;}
+#gateway_con .gnbArea_right .selectLanguage #dllngsub ul {float: none; padding: 2px 0 0 5px; }
+#gateway_con .gnbArea_right .selectLanguage #dllngsub li {width: 100%; float: none; background: none; margin: 0; padding: 0;}
+#gateway_con .gnbArea_right .selectLanguage #dllngsub li a {display: block; margin: 0px; padding:0 0 0 5px; height:15px; line-height: 15px; background: url(https://sslimage.interpark.com/_cip/bl/bl_square_dot.gif) no-repeat 1px 6px;text-align:left;letter-spacing:-1px; color: #7f7f7f;} 
+#gateway_con .gnbArea_right .selectLanguage #dllngsub li a:hover {text-decoration: underline}
+
+#gateway_con .gnbArea_left	li.first img.icon_arrow		{ vertical-align: top; margin: 1px 0 0 2px; } /* 20120917 */
+.ie7 #gateway_con	.gnbArea_left	li.first img.icon_arrow, .ie8 #gateway_con	.gnbArea_left	li.first img.icon_arrow		{ vertical-align: top; margin: 0px 0 0 2px; } /* 20120917 */

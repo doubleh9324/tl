@@ -1,0 +1,266 @@
+@charset "euc-kr";
+
+*{}
+h1,h2,h3,h4,h5,h5{}
+li{list-style:none;}
+img, fieldset{border:none;}
+img{}
+address, em, strong{}
+label,input,select,textarea{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+body,input{}
+center  a{text-decoration:none;}
+.hid{position:absolute;text-indent:-9999px;width:0;height:0;overflow:hidden;font-size:0;}
+
+/*占쏙옙嚥∽옙占쏙옙 popup add 2014-02-19*/
+#profileInfoWrap{
+	width:525px;
+	height:325px;
+	background:url("https://sslimage.interpark.com/_nip_ui/ipss/pop/body_bg.gif") repeat;
+	display:inline-block;
+}
+#profileInfoWrap .infoWrap{
+	width:505px;
+	height:306px;
+	margin:0 auto;
+	background-color:#fff;
+	margin-top:10px;
+	text-align:left;
+}
+#profileInfoWrap .infoWrap h1{
+	background-color:#f2f2f2;
+	border-bottom:1px solid #e0e0e0;
+}
+#profileInfoWrap .infoWrap h1 img{
+	margin:14px 0 11px 9px;
+}
+#profileInfoWrap .infoWrap .pic_NickName{
+	margin:17px 18px 18px 20px;
+}
+.pic_NickName .profile_Pic a{
+	float:left;
+	margin-right:3px;
+}
+.pic_NickName .stitle{
+	font-weight:bold;
+	font-size:14px;
+	color:#333;
+	padding-left:11px;
+	background:url('https://sslimage.interpark.com/_mypage_n/myProfile/redDot_Icon.gif') no-repeat 0 3px;
+	display:inline-block;
+	margin-bottom:7px;
+}
+.pic_NickName input.txtbox{
+	border:1px solid #999;
+	border-right-color:#ccc;
+	border-bottom-color:#ccc;
+	width:225px;
+	height:17px;
+	margin:0 10px 0 12px;
+	color:#333;
+	padding:5px 0 4px 10px; 
+	float:left;
+}
+.pic_NickName .nick_Name input.txtbox{
+	width:158px;
+}
+.pic_NickName .file_input_div{
+	position: relative;
+	width: 70px;
+	height: 28px;
+	overflow: hidden;
+	margin-right:3px;
+	float:left;
+}
+.pic_NickName .file_input_button{
+	width:70px;
+	height: 28px;
+	position: absolute;
+	top: 0px;
+	background:url("https://sslimage.interpark.com/_mypage_n/myProfile/NickN_ImgSearch_Btn.gif") no-repeat 0 0;
+	text-indent:-9999px;
+	border:none;
+}
+.pic_NickName .file_input_hidden{
+	width:70px;
+	height: 28px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	opacity: 0;
+
+	filter: alpha(opacity=0);
+	-ms-filter: "alpha(opacity=0)";
+	-khtml-opacity: 0;
+	-moz-opacity: 0;
+}
+.pic_NickName span.infoTxt{
+	font-size:11px;
+	letter-spacing:-1px;
+	color:#999;
+	display:block;
+	margin:8px 0 0 11px;
+}
+.pic_NickName span.infoTxt2{
+	font-size:11px;
+	letter-spacing:-1px;
+	color:#e75f59;
+	display:block;
+	margin:0 0 0 11px;
+}
+.pic_NickName span.infoTxt span{
+	letter-spacing:0;
+}
+.nick_Name{
+	margin-top:14px;
+}
+.nick_Name .byteTxt{
+	float:left;
+	width:60px;
+	margin-right:5px;
+	margin-top:6px;
+	font-size:12px;
+}
+.nick_Name input.useSel{
+	margin:0;
+	padding:0;
+	vertical-align:-5px;
+}
+.nick_Name label{
+	font-size:12px;
+	color:#777;
+	margin-left:1px;
+	margin-right:8px;
+}
+.nickButton{
+	text-align:center;
+	margin-top:9px;
+}
+.nickButton a:first-child{
+	margin-right:3px;
+}
+.overlyBtn{
+	float:left;
+	margin-right:15px;
+}
+.selWrap{
+	float:left;
+	margin-top:7px;
+}
+fieldset{border:none;margin:0;padding:0;font-size:0;}
+.hid{position:absolute;text-indent:-9999px;width:0;height:0;overflow:hidden;font-size:0;}
+/*占쏙옙嚥∽옙占쏙옙 popup end 2014-02-19*/
+
+
+/*筌�占쏙옙��占쏙옙占쎈��占� 筌�占쏙옙占� 20150123*/
+#myinfoWrap {width:180px; position:relative; z-index:0; margin:0 0 15px 0;}
+.myinfo_txt {font-size:12px; border:0;font-family: "占쏙옙占쏙옙", Dotum, Arial, sans-serif; color: #555;padding:0;}
+.dia {color:#6c70d6; font-family:"占쏙옙占쏙옙", Dotum, Arial, sans-serif; font-weight:bold;}
+.sapa {color:#4d96b0; font-family:"占쏙옙占쏙옙", Dotum, Arial, sans-serif; font-weight:bold;}
+.ga {color:#cd8634; font-family:"占쏙옙占쏙옙", Dotum, Arial, sans-serif; font-weight:bold;}
+.sel {color:#888888; font-family:"占쏙옙占쏙옙", Dotum, Arial, sans-serif; font-weight:bold;}
+.st {font-family:"占쏙옙占쏙옙", Dotum, Arial, sans-serif; font-weight:bold;}
+.gen {color:#999999; font-family:"占쏙옙占쏙옙", Dotum, Arial, sans-serif; font-weight:bold;}
+.mypage {background:url('https://sslimage.interpark.com/_mypage_n/bg/bg_mypage.gif') no-repeat; display:inline-block;}
+.mypage h3 img {margin:14px 9px 0 9px;}
+.mypage .level {text-align:center; padding-top:7px; margin:0 5px; clear:both; width:170px; word-break:break-all;}
+.mypage .level a:hover {color:#aaa; text-decoration:underline; padding-top:2px;}
+.mypage .level img {vertical-align:middle; margin-top:-2px;}
+.mypage .btn {padding:6px 0 8px 0;}
+.mypage .possess {background:url('https://sslimage.interpark.com/_mypage_n/bg/bg_mypage_area.gif') no-repeat; margin:0 9px; display:inline-block;}
+.mypage .possess ul {margin:0 8px; width:146px;}
+.mypage .possess ul li {width:146px;}
+.mypage .possess ul li img {vertical-align:middle;}
+
+/* 2017-05-29 占쎄�占� 癰�占썲��占� start */
+.mypage .grade:link,
+.mypage .grade:visited,
+.mypage .grade:hover,
+.mypage .grade:active {font-weight:bold;}
+.mypage .grade span {font-weight:bold;text-decoration:underline;}
+.mypage .grade .vvip {color:#7d65c1;}
+.mypage .grade .vip {color:#42c9cf;}
+.mypage .grade .family {color:#ff5a5e;}
+.mypage .grade .welcome {color:#aaa9a4;}
+/* 2017-05-29 占쎄�占� 癰�占썲��占� end */
+
+.line_o {background:url('https://sslimage.interpark.com/_mypage_n/bl/bl_dot.gif') repeat-x left bottom; float:left;}
+.pos_1 {float:left; width:146px; margin:6px 0 0 0; padding:0 0 5px 0;}
+.tit_Ipont {width:47px; float:left; margin:0; padding:2px 0 0 0;}
+.btn_i_q {width:13px; float:left;}
+.btn_point {width:86px; float:left; text-align:right; margin:0;}
+
+.txt_l {padding:4px 0 4px 0; float:left; width:57px; background:url('https://sslimage.interpark.com/_mypage_n/bl/bl_arrow_gray3.gif') no-repeat right 50%;}
+#ipoint_txt1 {height:13px; margin:0;}
+#ipoint_txt2 {height:13px; margin-top:3px;}
+.info_r {padding:4px 0 4px 0; float:right; width:86px; text-align:right; display:inline-block;}
+#ipoint1 {display:block; padding:0 13px 0 0; margin:0; height:12px; background:url('https://sslimage.interpark.com/_mypage_n/title/txt_p.gif') no-repeat right 2px;}
+#ipoint1 a {color: #d93f44; font-weight:bold;}
+#ipoint1 a:hover {text-decoration:underline;}
+#ipoint2 {display:block; padding:0 13px 0 0; margin-top:1px; height:12px; background:url('https://sslimage.interpark.com/_mypage_n/title/txt_p.gif') no-repeat right 2px;}
+#ipoint2 a {color: #d93f44; font-weight:bold;}
+#ipoint2 a:hover {text-decoration:underline;}
+
+.smoney {float:left; width:146px; margin:6px 0 4px 0; padding:0;}
+.tit_smoney {width:57px; float:left; margin:1px 0 0 0; background:url('https://sslimage.interpark.com/_mypage_n/bl/bl_arrow_gray3.gif') no-repeat right 3px;}
+#smoney_num {float:right; padding:0 13px 0 0; margin:0; text-align:right; background:url('https://sslimage.interpark.com/_mypage_n/title/txt_money.gif') no-repeat right 2px;}
+#smoney_num a {color:#d93f44; font-weight:bold;}
+#smoney_num a:hover {text-decoration:underline;}
+
+.heart {padding:6px 0 4px 0; width:57px; float:left; background:url('https://sslimage.interpark.com/_mypage_n/bl/bl_arrow_gray3.gif') no-repeat right 50%;}
+#heart_txt1 {height:13px; margin:0;}
+#heart_txt2 {height:13px; margin-top:3px;}
+#blue {padding:1px 13px 0 0; background:url('https://sslimage.interpark.com/_mypage_n/title/txt_heart.gif') no-repeat right 3px;}
+#blue a {color:#508dcd; font-weight:bold;}
+#blue a:hover {text-decoration:underline;}
+#red {padding:0 13px 0 0 ; margin:0; background:url('https://sslimage.interpark.com/_mypage_n/title/txt_heart.gif') no-repeat right 2px;}
+#red a {color:#d93f44; font-weight:bold;}
+#red a:hover {text-decoration:underline;}
+
+.pos_2 {float:left; width:146px; margin:6px 0 0 0; padding:0;}
+.tit_giftcard {width:55px; float:left; margin:0; padding:0;}
+.btn_g_q {width:13px; float:left;}
+
+.txt_g {padding:4px 0 4px 0; float:left; width:67px; background:url('https://sslimage.interpark.com/_mypage_n/bl/bl_arrow_gray3.gif') no-repeat right 50%;}
+#buy_txt1 {height:13px; margin:0;}
+#buy_txt2 {height:13px; margin-top:3px;}
+.buy_r {padding:4px 0 4px 0; float:right; width:79px; text-align:right; display:inline-block;}
+#buy1 {display:block; padding:0 13px 0 0; margin:0; height:12px; background:url('https://sslimage.interpark.com/_mypage_n/title/txt_giftcord.gif') no-repeat right 2px;}
+#buy1 a {color: #d93f44; font-weight:bold;}
+#buy1 a:hover {text-decoration:underline;}
+#buy2 {float:right; padding:0 13px 0 0; margin:0; text-align:right; background:url('https://sslimage.interpark.com/_mypage_n/title/txt_money.gif') no-repeat right 2px;}
+#buy2 a {color: #d93f44; font-weight:bold;}
+#buy2 a:hover {text-decoration:underline;}
+
+.bg_bottom {margin:0; height:13px; background:url('https://sslimage.interpark.com/_mypage_n/bg/bg_mypage_bottom.gif') no-repeat 0 0;}
+.off {display:none;}
+
+.layer_question_wrap {width:160px; border:#da6464 1px solid; background:#fff; position:absolute; z-index:10; top:160px; left:63px; text-align:left;}
+.layer_question_wrap .layer_content {padding:4px 4px 7px 0; display:block; width:160px;}
+.layer_question_wrap .layer_content .text {font-family:dotum; padding:3px 9px; line-height:110%; word-break:break-all;}
+.layer_question_wrap .layer_content .text .b {height:13px; background:url('https://sslimage.interpark.com/_mypage_n/icon/icon_arrow2.gif') no-repeat left 3px; color:#e25147; padding-left:7px; font-weight:bold; font-size:11px;}
+.layer_question_wrap .layer_content .text .b2 {font-size:12px; margin-left:-5px;}
+.layer_question_wrap .layer_content .text span {font-size:11px; color:#8a8a8a; padding-left:5px; margin-top:5px; display:inline-block;}
+.tit_p {width:143px; padding-left:3px; display:block;}
+
+.layer_question_wrap2 {width:270px; border:#da6464 1px solid; background:#fff; position:absolute; z-index:10; top:215px; left:76px; text-align:left; padding:10px 14px;} /* 2017-05-29 */
+.layer_question_wrap2 .layer_content2 {display:block; width:260px;}
+.layer_question_wrap2 .layer_content2 .title_txt {color:#e25147; font-weight:bold; font-size:11px; letter-spacing:-1px; padding-bottom:8px; background:url('https://sslimage.interpark.com/_mypage_n/bl/bl_dot.gif') repeat-x 0 bottom;}
+.layer_question_wrap2 .layer_content2 p {font-size:11px; padding-top:8px; color:#666666; line-height:15px; letter-spacing:-1px;}
+.layer_question_wrap2 .layer_content2 .g_b {height:13px; color:#ed2e21; font-size:11px;}
+.layer_question_wrap2 .layer_content2 .g_b2 {color:#666666; font-size:11px; padding-left:9px;}
+.layer_question_wrap2 .layer_content2 .g_b3 {color:#666666; font-size:11px;}
+.layer_question_wrap2 .layer_content2 .text span {font-size:11px; color:#8a8a8a; padding-left:5px; margin-top:5px; display:inline-block;}
+.tit_p {width:143px; padding-left:3px; display:block;}
+/*筌�占쏙옙��占쏙옙占쎈��占� 筌�占쏙옙占� 20150123 end*/
+
+/* layerpopup 151111_占쏙옙占쏙옙 */
+#layerPopupFull2 {background:url("http://openimage.interpark.com/_nip_ui/incorp_layer_bg.png") repeat; position:absolute; left:0; top:0; width:100%; height:100%; text-align:center; display:none; z-index:9999;}
+#layerPopup {margin:20px auto;}
+.accpopup {border:2px solid #e83535; width:320px; background-color:#fff; padding:20px 30px; text-align:left;}
+.acc {width:320px; margin:15px 0; color:#555; line-height:120%;}
+.acc th {background:url('http://openimage.interpark.com/_mypage_n/bl/bl_redbox.gif') no-repeat left 50%; padding:0 10px;}
+.acc th, .acc td {font:bold 15px Malgun Gothic, NanumGothic, dotum, sans-serif; color:#333; text-align:left; line-height:220%;}
+.acc_btn {width:320px; text-align:center;}
+.acc_btn img {margin:0 5px;}
+/* layerpopup 151111_占쏙옙占쏙옙 end*/

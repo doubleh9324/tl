@@ -1,0 +1,145 @@
+@CHARSET "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+*{
+	margin: 0;
+	padding: 0;
+}
+.clear{
+	clear: both;
+	
+}
+div#body{
+	width:1000px;
+	font-family: 'Nanum Gothic', sans-serif ;
+	margin-bottom: 20px;
+}
+
+div#result_title{
+	width:960px;
+	height:40px;
+	border-bottom:2px solid #d90000;
+	text-align: left;
+	line-height: 3em;
+}
+
+div#category{
+	width: 960px;
+	height:40px;
+	margin-top: 15px;
+}
+
+a#movie_cate{
+	width:200px;
+	height: 40px;
+	border:1px solid #333;
+	display: block;
+	float:left;
+	line-height: 2em;
+}
+a#musical_cate{
+	width:200px;
+	height: 40px;
+	border:1px solid #e9e9e9;
+	display: block;
+	float:left;
+	line-height: 2em;
+}
+
+a#movie_cate:HOVER, a#musical_cate:HOVER{
+	cursor:pointer;
+}
+div#result_body{
+	margin-top: 10px;
+	width: 960px;
+
+	border-top:1px solid  #ababab;
+}
+table#search_table{
+	width:100%;
+	font-size: 13px;
+	color: #333;
+
+}
+table#search_table th{
+	height:30px;
+}
+
+
+th#long_th{
+	width: 480px;
+	text-align: left;
+	padding-left:30px;
+	border-right: 1px solid #e9e9e9;
+}
+th#short_th{
+	width:150px;
+	border-right: 1px solid #e9e9e9;
+}
+th#short_th_last{
+	width:150px;
+}
+
+td#long_td{
+	border-bottom: 1px solid #e9e9e9;
+	border-right: 1px solid #e9e9e9;
+}
+
+div#info_wrap{
+	width: 480px;
+	height:150px;
+	padding: 10px 10px;
+}
+
+div#info_wrap img{
+	width: 100px;
+	height:134px;
+	float: left;
+	margin:  10px 20px 10px 10px;;
+}
+div#info_wrap a#subject{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+}
+div#info_wrap li{
+	list-style: none;
+}
+div#info_wrap  dl{
+	margin: 10px 0;
+}
+div#info_wrap  dd{
+	margin-top: 10px;
+}
+div#info_wrap  li{
+	margin: 5px 0;
+}
+
+
+td#short_td{
+	text-align: center;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+	
+}
+td#short_td_last{
+	text-align: center;
+	border-bottom: 1px solid #e9e9e9;
+}
+td#short_td_last img:HOVER {
+	cursor: pointer;
+}
+
+a#subject:HOVER{
+	text-decoration: underline;
+}
+
+span#title_subject, span#all_count{
+	color:#e05046;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+img#star{
+	margin: 3px;
+}

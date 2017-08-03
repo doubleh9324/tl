@@ -1,0 +1,536 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;}
+html, body {margin:0; padding:0;}
+iframe {display: block; height: 100%;}
+h1,h2,h3,h4,h5,h5 {}
+li {list-style:none;}
+img, fieldset {border:none; margin:0; padding:0; }
+img {}
+address, em, strong{font-style:normal; font-weight:normal;}
+label, input, select, textarea{margin:0; padding:0;}
+table {border-collapse:collapse; border-spacing:0;}
+body,input {}
+center  a, center a:link, center  a:active,  center  a:visited,center  a:hover {text-decoration:none; color:#555;}
+.blind,legend {display:block; overflow:hidden; visibility:hidden; position:absolute; top:-1000em; left:0;}
+:root legend {margin-top:-1px; font-size:0; line-height:0;}
+
+/*  Nanum Gothic  */
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+
+
+/* 151015 회원가입 v2 */
+#memjoin2Wrap * {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, Verdana, verdana, sans-serif;}
+#layerPopupFull * {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, Verdana, verdana, sans-serif;}
+
+#Tit_NewMembe {height:80px; text-align:center; background:#e83535;}
+#Tit_NewMembe h1 {width:800px; text-align:left; margin:0 auto; padding:20px 0 0 0;}
+
+#NewMemberwarp {text-align:center; margin:0; padding:0;}
+.NewMember {width:800px; text-align:left; margin:0 auto;}
+
+#necessary {margin:35px 0 0 0;}
+#necessary h2 {height:20px;}
+
+.join_mem {width:100%; overflow:auto; overflow:hidden; margin:15px 0;}
+.join_mem table {border-collapse:collapse; border-spacing:0; table-layout:fixed; border-top:1px solid #bfbfbf;}
+.join_mem th {padding-left:15px; text-align:left; font-weight:bold; font-size:13px; background-color:#f6f6f6; border-bottom:1px solid #e1e1e1;}
+.join_mem td {padding-left:20px; height:59px; font-weight:normal; font-size:12px; border-bottom:1px solid #e1e1e1;}
+.join_mem .bdb0 {border-bottom:0;}
+.join_mem td.last {height:30px; vertical-align:top;}
+.join_cont1 {width:800px;}
+
+.join_cont2 {width:800px; margin:15px 0 0 0;}
+.join_mem2 {width:100%;}
+.join_mem2 table {border-collapse:collapse; border-spacing:0; table-layout:fixed; border-top:1px solid #bfbfbf;}
+.join_mem2 th {padding-left:15px; text-align:left; font-weight:bold; font-size:13px; background-color:#f6f6f6; border-bottom:1px solid #e1e1e1;}
+.join_mem2 td {height:59px; font-weight:normal; font-size:12px; border-bottom:1px solid #e1e1e1;}
+.join_mem2 .ctable_td {vertical-align:middle;}
+.join_mem2 .ctable_td li {font-weight:bold; font-size:13px; height:35px;}
+.join_mem2 .ctable_tit {width:46px; float:left; margin:5px 0 0 0; color:#777;}
+.join_mem2 .ctable_tit2 {width:120px; float:left; color:#777;}
+.join_mem2 .ctd {height:50px; font-weight:normal; font-size:13px; color:#555;}
+.join_mem2 .ctdB {height:50px; font-weight:bold; font-size:13px; color:#555;}
+.datel {float:left; width:320px; font-weight:bold;}
+.dater {float:left; width:300px;}
+
+.join_cont3 {width:800px; margin:20px 0 0 0;  background-color:#f5f5f5;}
+.join_mem3 {padding:20px 15px 20px 0;}
+.join_mem3 table {border-collapse:collapse;}
+.join_mem3 th {text-align:left; font-weight:bold; font-size:13px; line-height:140%;}
+.join_mem3 td {padding-left:20px; font-weight:normal; font-size:12px; color:#555; line-height:120%;}
+.join_mem3 .ctable_td {vertical-align:middle;}
+.join_mem3 .ctable_td li {font-weight:bold; font-size:13px; height:30px;}
+.join_mem3 .ctable_tit {width:46px; float:left; margin:5px 0 0 0; color:#777;}
+.join_mem3 .ctable_tit2 {width:120px; float:left; color:#555;}
+.join_mem3 .ctable_tit3 {width:190px; float:left; color:#555;}
+.join_mem3 .ctd {height:50px; font-weight:normal; font-size:13px; color:#555;}
+.join_mem3 .ctdB {height:50px; font-weight:bold; font-size:12px; color:#333;}
+
+.join_mem4 {width:600px; background-color:#fff;}
+.join_mem4 table {border:1px solid #ddd; border-collapse:collapse;}
+.join_mem4 th {height:30px; text-align:center; font-weight:bold; font-size:12px; color:#555; border:1px solid #ddd;}
+.join_mem4 td {height:90px; padding:0 10px 3px 15px; font-weight:normal; font-size:12px; color:#666; line-height:120%; border:1px solid #ddd;}
+
+#necessary_Agree {margin:40px 0 0 0; padding:40px 0; border-top:2px solid #666666; border-bottom:2px solid #666666;}
+.Agree_area {height:20px;}
+.Agree_tit {display:inline;}
+.necessary_check {margin:20px 0 0 0; text-align:center; font-size:16px;}
+.agree_info {height:135px; padding:20px 0;}
+.agree_info2 {padding:0 0 20px 0;}
+.agree_titarea {display:inline-block; width:100%;}
+.agree_tit {height:23px; float:left; font-weight:bold; font-size:13px; letter-spacing:0;}
+.agree_tit2 {font-weight:bold; font-size:14px; margin:20px 0 5px 0; color:#000;}
+.agree_tit3 {height:23px; font-weight:bold; font-size:13px; letter-spacing:0;}
+.agree_box {border:1px solid #d8d8d8; width:778px; height:90px; overflow-y:scroll; padding:10px;}
+.agree_box2 {border:1px solid #d8d8d8; width:778px; height:90px; overflow-y:scroll; padding:10px; margin:10px 0;}
+.agree_box3 {border:1px solid #d8d8d8; width:798px; height:120px; overflow:hidden; margin:0 0 10px 0;}
+.agree_check {float:right; margin:5px 0 0 0;}
+.btn_agree {display:inline-block; padding:0 0 0 8px;}
+
+#selection {margin:40px 0 0 0;}
+.choice_tit {height:20px;}
+.choice_tit li {float:left;}
+.choice_box {color:#555; margin:10px 0;}
+.choice_box th {text-align:left; font-weight:bold; font-size:14px;}
+.choice_box td {text-align:left; font-weight:bold; font-size:14px;}
+
+#selectinfo {position:relative;}
+
+#clause {margin:35px 0 0 0;}
+.btn_clause {margin:50px 0 0 0; width:800px;}
+.case {float:left; margin:0 10px 50px 0;}
+.case2 {float:left; margin:0 0 50px 0;}
+.m_case1 {width:520px; float:left; margin:0 10px 50px 0;}
+.m_case2 {width:270px; float:left; margin:0;}
+.m_casebox1 {height:211px; border:1px solid #ddd; border-top:0; padding:25px 30px;}
+.m_casebox2 {height:211px; border:1px solid #ddd; border-top:0; padding:25px;}
+.m_normal {float:left; padding:35px 34px 35px 0; width:195px; height:141px; border-right:1px solid #ddd;}
+.m_sns {float:left; width:195px; padding:0 0 0 33px;}
+.sns_btn {text-align:center;}
+.sns_btn li {padding-top:5px;}
+.m_seller {width:218px;}
+.m_seller .sell1 {padding-bottom:19px; border-bottom:1px solid #ddd;}
+.m_seller .sell2 {padding-top:20px;}
+
+input.memtxt {border:1px solid #d8d8d8; color:#555; height:22px; line-height:18px; padding:3px 5px; font-size:12px;}
+input.memtxt2 {border:1px solid #d8d8d8; color:#555; height:25px; line-height:18px; padding:3px 5px; font-size:14px;}
+input.memtxt3 {border:1px solid #d8d8d8; color:#555; height:30px; line-height:18px; padding:5px; font-size:14px;}
+select {border:0;}
+select.selbox {border:1px solid #d8d8d8; height:30px; padding:0 0 0 3px; font-size:13px; color:#555;}
+select.numbox {border:1px solid #d8d8d8; height:24px; padding:0 0 0 5px; font-size:13px; font-weight:bold; color:#555;}
+input.rdo {width:16px; height:16px;}
+
+.btn_join {margin:30px 0 40px 0; text-align:center;}
+.btn_mycheck2 {text-align:center; margin:20px 0;}
+.btn_more {display:inline-block; padding:0 0 0 10px;}
+.btn_juso {display:inline-block; padding:5px 0 0 11px;}
+.titR {color:#eb0000; display:inline;}
+.titG {color:#bfbfbf; display:inline;}
+.titG2 {color:#555; display:inline; vertical-align:middle;}
+.txtR {color:#ea1313;}
+.txtR2 {color:#ec0000;}
+.txtG {font-weight:normal; font-size:12px; color:#777; line-height:130%;}
+.txtG2 {font-weight:normal; font-size:11px; color:#777; line-height:160%;}
+.txtGB {font-weight:normal; font-size:13px; color:#555; line-height:120%;}
+.txtGB2 {font-weight:bold; font-size:12px; color:#555; line-height:140%;}
+.txtGB3 {font-weight:bold; font-size:16px; color:#000;}
+.txtGB4 {font-weight:bold; font-size:12px; color:#000;}
+.txtGB5 {font-weight:bold; font-size:13px; color:#777;}
+.txtB {font-weight:bold; color:#555;}
+.txt_Gray1 {font-weight:normal; font-size:13px, sans-serif; color:#333;}
+.txt_Gray2 {font-weight:normal; font-size:13px; color:#555;}
+.txt_Gray3 {font-size:14px; color:#333;letter-spacing:-1px;}
+.txt_Gray4 {font-weight:normal; font-size:13px; color:#333; letter-spacing:-1px;}
+.linkG {font-weight:normal; font-size:13px; color:#333; text-decoration:none;}
+.linkG a:link, .linkG a:hover, .linkG a:active, .linkG a:visited {font-weight:normal; font-size:13px; color:#333; text-decoration:underline;}
+
+.txtR3 {color:#ea1313; font-weight:normal; font-size:13px; letter-spacing:-1px;}
+.mgt10 {margin-top:10px;}
+.mgt20 {margin-top:20px;}
+.mgt25 {margin-top:25px;}
+.mgt30 {margin-top:30px;}
+.mgl5 {margin-left:5px;}
+.mgl20 {margin-left:20px;}
+.mgb20 {margin-bottom:20px;}
+.mgtb20 {margin:20px 0;}
+.pd10 {padding:10px;}
+.pdl15 {padding-left:15px;}
+.pdl20 {padding-left:20px;}
+
+.vtit {vertical-align:top;}
+.vtit2 {vertical-align:top; padding:20px 0 0 0;}
+
+
+ul.regPinkB_layer {width:474px; padding:8px 0 0 10px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkB_top.gif") repeat-y left top;}
+ul.regPinkB_layer li {padding-left:7px; background:url("https://sslimage.interpark.com/imagessl/2004/global/bl_gray.gif") no-repeat left 6px; font-size:11px; color:#848484; line-height:140%; font-weight:normal;}
+.regPinkB_layer_bot {width:474px; height:9px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkB_bot.gif") repeat-y left bottom; font-size:0px; line-height:0;}
+
+ul.regPinkM_laye {width:292px; padding:8px 0 0 10px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkM_top.gif") repeat-y left top;}
+ul.regPinkM_layer li {width:100%; font-size:11px; color:#848484; line-height:140%;}
+ul.regPinkM_layer li.not {background: none;}
+.regPinkM_layer_bot	 {width:292px; height:9px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkM_bot.gif") repeat-y left bottom; font-size:0px; line-height:0;}
+
+ul.regPinkS_layer {width:222px; padding:8px 0 0 10px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkS_top.gif") repeat-y left top;}
+ul.regPinkS_layer li {width:100%; font-size:11px; color:#848484; line-height:140%;}
+ul.regPinkS_layer li.not {background: none;}
+.regPinkS_layer_bot {width:222px; height:9px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkS_bot.gif") repeat-y left bottom; font-size:0px; line-height:0;}
+
+ul.regPinkSm_layer {width:267px; padding:7px 0 0 10px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkSm_top.gif") repeat-y left top;}
+ul.regPinkSm_layer li {width:100%; font-size:11px; color:#848484; line-height:120%;}
+ul.regPinkSm_layer li.not {background: none;}
+.regPinkSm_layer_bot {width:267px; height:5px; background:url("https://sslimage.interpark.com/_nip/member/bg_regPinkSm_bot.gif") repeat-y left bottom; font-size:0px; line-height:0;}
+
+/* 약관 테이블 */
+#inpark_agreement {margin:3px 5px; color:#777; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement dl {margin:0;}
+#inpark_agreement dt {margin:0 0 10px 0; font-weight:bold; line-height:140%; font-size:11px;}
+#inpark_agreement dd {margin:0 0 5px 0; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement ul {list-style:none; margin:0; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement li {list-style:none; margin:20px 0 0 0; padding:0; font-weight:normal; line-height:140%; font-size:11px;}
+*html #inpark_agreement li {background-position:0 3px; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement ul ul {list-style:none; margin:10px 0 0 2px; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement li li {text-indent:-17px; list-style:none; margin:5px 0 0 0; padding:0px 0 0 17px; background:none;}
+#inpark_agreement li li li {text-indent:-17px; list-style:none; margin:5px 0 0 0; padding:0px 0 0 15px; background:none;}
+#inpark_agreement li li li li {text-indent:-17px; list-style:none; margin:5px 0 0 0; padding:0px 0 0 15px; background:none;}
+
+#inpark_agreement2 {margin:3px 5px; color:#777; line-height:140%; font-size:11px;}
+#inpark_agreement2 dl {margin:0;}
+#inpark_agreement2 dt {margin:0 0 10px 0; font-weight:bold; line-height:140%; font-size:11px;}
+#inpark_agreement2 dd {margin:0 0 5px 0; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement2 ul {list-style:none; margin:0; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement2 li {list-style:none; margin:15px 0 0 0; font-weight:normal; line-height:140%; font-size:11px;}
+*html #inpark_agreement2 li {background-position:0 3px; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement2 ul ul {list-style:none; margin:10px 0 0 2px; font-weight:normal; line-height:140%; font-size:11px;}
+#inpark_agreement2 li li {text-indent:-17px; list-style:none; margin:5px 0 0 0; padding:0px 0 0 17px; background:none;}
+#inpark_agreement2 li li li {text-indent:-17px; list-style:none; margin:5px 0 0 0; padding:0px 0 0 15px; background:none;}
+#inpark_agreement2 li li li li {text-indent:-17px; list-style:none; margin:5px 0 0 0; padding:0px 0 0 15px; background:none;}
+
+.f_bold {font-weight:bold;}
+.c_red {color:#FF0000;}
+.table_line {border:1px solid #d8d8d8; border-collapse:collapse; margin:0 0 15px 0; line-height:120%;}
+.table_line th {border:1px solid #d8d8d8; padding:5px; font-weight:bold; font-size:11px; color:#777;}
+.table_line td {border:1px solid #d8d8d8; padding:5px 10px; font-weight:normal; font-size:11px; color:#777;}
+
+.table_line2 {border:1px solid #d8d8d8; border-collapse:collapse; margin:15px 0; line-height:120%;}
+.table_line2 th {border:1px solid #d8d8d8; padding:5px; font-weight:bold; font-size:11px; color:#777;}
+.table_line2 td {border:1px solid #d8d8d8; padding:5px; font-weight:normal; font-size:11px; color:#777;}
+.ct {text-align:center;}
+
+/* 아이디찾기 */
+#searchwarp * {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, Verdana, verdana, sans-serif;}
+#searchwarp {margin:0; padding:0;}
+.myinfosearch {width:695px; text-align:left;}
+
+#idsearch {margin:10px;}
+#idsearch h2 {margin:0 0 20px 0;}
+/* 161021 크롬 넓이 수정 */
+.search_box {width:695px; border:1px solid #ddd; padding:30px 30px 0 30px;}
+.search_box2 {width:695px; border:1px solid #ddd; padding:30px 30px 0 30px;}
+:root .search_box {width:635px; border:1px solid #ddd; padding:30px;}
+:root .search_box2 {width:635px; border:1px solid #ddd; padding:30px;}
+
+.sltB {margin:20px 0; font:600 15px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; color:#333;}
+.search_txt {font:600 15px Malgun Gothic, NanumGothic, Nanum Gothic, dotum, sans-serif; color:#555; line-height:180%;}
+.search_id {width:100%; overflow:auto; overflow:hidden; margin-top:20px;}
+.search_id table {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.search_id tr {height:50px;}
+.search_id th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_id td {font:normal 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont {overflow:auto; overflow:hidden;}
+.search_cont table {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.search_cont tr {height:50px;}
+.search_cont th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont td {font:normal 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont td.last {height:30px;}
+.search_cont1 {height:190px; overflow:auto; overflow:hidden;}
+.search_cont1 table {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.search_cont1 tr {height:50px;}
+.search_cont1 th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont1 td {font:normal 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont1 td.last {height:30px;}
+
+.search_btn {text-align:center; margin:40px 0 0 0;}
+.btn_logpw {margin:40px 0;}
+.hr_line {border-top:1px solid #ddd;}
+
+.idslt {margin:20px 0;}
+.idslt li {font:bold 13px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; color:#555; line-height:200%;}
+.idhelp {line-height:1.3;}
+.idhelp a {text-decoration:underline;}
+
+#pwsearch {margin:10px;}
+#pwsearch h2 {margin:0 0 20px 0;}
+.search_box3 {width:695px; border:1px solid #ddd; padding:30px 30px 0 30px;}
+.search_box4 {width:695px; border:1px solid #ddd; padding:30px 100px;}
+.search_box5 {width:495px; height:300px; border:1px solid #ddd; padding:30px 100px;}
+:root .search_box3 {width:635px; border:1px solid #ddd; padding:30px;}
+:root .search_box4 {width:495px; border:1px solid #ddd; padding:30px 100px;}
+:root .search_box5 {width:495px; border:1px solid #ddd; padding:30px 100px;}
+
+.search_cont2 {width:100%; overflow:auto; overflow:hidden; margin-top:30px;}
+.search_cont2 table {border-collapse:collapse; border-spacing:0; table-layout:fixed; margin:20px 0;}
+.search_cont2 tr {height:50px;}
+.search_cont2 th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont2 td {font:normal 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+
+.search_cont3 {height:250px; overflow:auto; margin-top:40px;}
+.search_cont3 table {border-collapse:collapse; border-spacing:0; margin:20px 0;}
+.search_cont3 tr {height:50px;}
+.search_cont3 th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont3 td { font:normal 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+
+.search_cont4 {overflow:auto; overflow:hidden; margin-top:30px; text-align:left;}
+.search_cont4 table {border-collapse:collapse; border-spacing:0; margin:20px 0;}
+.search_cont4 tr {height:50px;}
+.search_cont4 th {width:140px; text-align:left; font:bold 14px Malgun Gothic, NanumGothic, Nanum Gothic, dotum, sans-serif;}
+.search_cont4 td {font:normal 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+
+/* iframe 깨짐 170403 */
+.search_cont5 {height:250px; overflow:auto;}
+.search_cont5 table {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.search_cont5 tr {height:50px;}
+.search_cont5 th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont5 td {font:normal 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.search_cont5 td.last {height:30px;}
+.search_cont5 iframe {height:35px;}
+
+.search_cont6 {overflow:auto; overflow:hidden; margin-top:20px; text-align:left;}
+.search_cont6 table {border-collapse:collapse; border-spacing:0; margin:0px 0;}
+.search_cont6 th {width:140px; text-align:left; font:bold 14px Malgun Gothic, NanumGothic, Nanum Gothic, dotum, sans-serif;}
+.search_cont6 td {font:normal 12px Malgun Gothic, NanumGothic, Nanum Gothic, dotum, sans-serif;}
+.search_cont6 td.h40 {font:normal 12px Malgun Gothic, NanumGothic, Nanum Gothic, dotum, sans-serif; height:40px;}
+.search_cont6 td.h30 {font:normal 12px Malgun Gothic, NanumGothic, Nanum Gothic, dotum, sans-serif; height:15px; padding:0 0 10px 0; color:#FF0000;}
+
+
+/* 휴면계정팝업 추가 170329 */
+.memPopup1 {width:430px; text-align:left; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.memPopup2 {width:480px; text-align:left; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.memPopup3 {width:320px; text-align:left; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.memheader {position:relative; width:100%; height:50px; background-color:#aaaaaa; padding:0; text-align:center;}
+.memheader .pop_header {padding:13px 0;}
+.memheader .bt_close {position:absolute; top:0; right:0; z-index:51; height:50px;}
+
+.memheader2 {position:relative; width:100%; padding:0; text-align:center;}
+.memheader2 .bt_close {position:absolute; top:0; right:0; z-index:51; height:50px;}
+
+
+.search_box6 {width:430px; border:1px solid #ddd; padding:30px 20px;}
+:root .search_box6 {width:388px; border:1px solid #ddd; padding:30px 20px;}
+.search_box7 {width:480px; border:1px solid #ddd; padding:30px 20px;}
+:root .search_box7 {width:438px; border:1px solid #ddd; padding:30px 20px;}
+.search_box8 {width:320px; border:1px solid #ddd; padding:30px 20px;}
+:root .search_box8 {width:278px; border:1px solid #ddd; padding:30px 20px;}
+
+.search_cont7 {overflow:auto; overflow:hidden; text-align:left;}
+.search_cont7 h2 {font:normal 18px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; line-height:1.5; text-align:center;}
+.search_cont7 table {border-collapse:collapse; border-spacing:0; margin:20px 0;}
+.search_cont7 tr {height:50px;}
+.search_cont7 th {width:30%; text-align:left; font:normal 14px Malgun Gothic, NanumGothic, Nanum Gothic, dotum, sans-serif;}
+.search_cont7 td {width:70%; font:normal 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+
+.search_cont8 {overflow:auto; overflow:hidden; text-align:left;}
+.search_cont8 h2 {font:normal 16px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; line-height:1.5; text-align:left;}
+
+.tit_red {color:#ef3e42;}
+.mem_btn {text-align:center; margin:25px 0;}
+.mem_btn2 {text-align:center; margin:25px 0 0 0;}
+
+.complete_btn {text-align:center; margin:10px 0 0 0;}
+.ad {padding:20px 0 0 0; width:695px; height:75px;}
+
+/* layrer popup */
+#layerPopupFull {background:url("https://sslimage.interpark.com/_nip_ui/incorp_layer_bg.png") repeat; position:absolute; left:0; top:0; width:100%; height:100%; text-align:center; display:none; z-index:9999;}
+.Lpopup {position:relative; margin:150px auto; width:530px; height:300px; background-color:#fff; padding:0; text-align:left; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.Lpopup .close {position:absolute; top:0; right:-50px; z-index:51; height:50px;}
+.Layerpopup {position:relative; margin:0; width:530px; height:300px; background-color:#fff; padding:0; text-align:left; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.necessaryTab {position:relative; margin:0;}
+.necessaryTab h3 {position:absolute; top:0; left:0; z-index:51; height:50px; background:url('https://sslimage.interpark.com/_nip/Newmember/tab_necessary.gif') no-repeat; cursor:pointer;}
+.necessaryTab .inputarea {position:relative; padding:70px 15px; display:none; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.necessaryTab .phone h3 {width:265px; left:0px; background-position:0 0;}
+.necessaryTab .email h3 {width:265px; left:265px; z-index:45; background-position:-265px 0;}
+.necessaryTab .email h3 a {width:265px; left:265px; z-index:45; background-position:-265px 0;}
+#phone .phone h3 {background-position:0 -50px;}
+#email .email h3 {background-position:-265px -50px;}
+#phone .phone .inputarea, #email .email .inputarea {display:block;}
+.phonearea {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left; margin:25px auto; width:430px;}
+:root .phonearea {width:440px;}
+.phonearea th {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left; height:60px;}
+.phonearea td {font-weight:normal; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left; height:60px;}
+.emailarea {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left; margin:25px auto; width:480px;}
+.emailarea th {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left; height:60px;}
+.emailarea td {font-weight:normal; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left; height:60px;}
+
+.Lpopup2 {position:relative; margin:150px auto; width:650px; height:250px; background-color:#fff; padding:0; text-align:left; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.Lpopup2 .close {position:absolute; top:0; right:-50px; z-index:51; height:50px;}
+.minor_mem {width:610px; margin:25px 25px;}
+.minor_mem table {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.minor_mem th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.minor_mem td {height:50px;}
+
+/* 동일아이디 찾기 max 10개 150520 수정 */
+.Lpopup3 {position:relative; margin:150px auto; width:500px; background-color:#fff; padding:0; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.Lpopup3 .close {position:absolute; top:0; right:-50px; z-index:51; height:50px;}
+.identical {margin:0; padding:35px 60px; width:380px; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; font-size:13px;}
+.identical_info {margin:20px 0;}
+.identical_info div {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; font-size:13px; height:25px;}
+.btn_identical {width:380px; height:30px; margin:25px 0 0 0; text-align:center;}
+.btn_identical img {margin:0 10px;}
+
+.sLpopup {position:relative; margin:150px auto; width:500px; height:300px; background-color:#fff; padding:0; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left;}
+.sLpopup .close {position:absolute; top:-10px; right:-50px; z-index:51; height:50px;}
+.red_bar {margin:0; height:10px; background-color:#e83535;}
+.Lpopup_wrap {margin:25px; width:450px; height:250px;}
+.acc_tit {height:30px;}
+.acc_btnarea {width:525px; height:70px; text-align:center; margin:30px 0;}
+.acc_btnarea p {float:left; margin-right:20px;}
+.acc_btnarea p.last {margin:0;}
+
+.sLpopup2 {position:relative; margin:150px auto; width:500px; height:360px; background-color:#fff; padding:0; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left;}
+.sLpopup2 .close {position:absolute; top:-10px; right:-50px; z-index:51; height:50px;}
+.acc_mem {width:450px; margin:15px 0 0 0;}
+.acc_mem table {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.acc_mem th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.acc_mem td {height:50px;}
+.acc_btnarea2 {width:525px; height:70px; text-align:center; margin:20px 0 30px 0;}
+.acc_btnarea2 p {float:left; margin-right:20px;}
+.acc_btnarea2 p.last {margin:0;}
+
+.acc_btnarea3 {width:525px; height:70px; text-align:center; margin:10px 0 30px 0;}
+.acc_btnarea3 p {float:left; margin-right:20px;}
+.acc_btnarea3 p.last {margin:0;}
+
+/* 주문서 공통 본인인증팝업 160704 수정 */
+.OrderLpopup {position:relative; margin:0; padding:0; width:575px; height:345px; background-color:#fff; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; text-align:left;}
+.OrderLpopup .close {position:absolute; top:21px; right:10px; z-index:51; height:14px;}
+.order_bar {margin:0; height:10px; background-color:#e83535;}
+.order_wrap {margin:25px; width:525px; height:290px; color:#333; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.order_tit {font-size:30px; font-weight:bold; letter-spacing:-1px; margin-bottom:20px; color:#333; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.order_txt {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; font-size:14px; font-weight:600; color:#333; line-height:140%;}
+.order_Rtxt {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; font-size:14px; font-weight:700; color:#eb1414; line-height:160%;}
+.btnarea {width:525px; height:70px; text-align:center; margin:20px 0;}
+.btnarea p {float:left; margin-right:20px;}
+.btnarea p.last {margin:0;}
+.order_noti li {line-height:1.4; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+
+/* 외국인 등록번호 팝업 */
+.fcheck_area {width:400px; height:200px;}
+.fcheck_area .check_fnamearea {float:left; width:400px; height:200px; background:url('https://sslimage.interpark.com/_nip/Newmember/foreugner_name_check.gif') no-repeat 0 0;}
+.fcheck_area .check_fnamearea table {margin:60px 0 0 25px;}
+.fcheck_area .check_fnamearea tr {height:35px;}
+.fcheck_area .check_fnamearea input {height:20px;}
+.fcheck_area .check_fnamearea .foreign_no {padding-top:10px;}
+.fcheck_area .check_fnamearea .btn_fok {text-align:center; margin-top:15px;}
+
+/* 휴면 회원 ID/PW 찾기 */
+.btm_area {margin:30px 0 0 0;}
+.btn_txtpw {float:right; font:normal 13px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; color:#555;}
+.btn_dorm {float:right;}
+
+/* 생년월일 수정 팝업 */
+#datewarp {width:450px; height:400px; margin:0; padding:0;}
+.date_box {float:left; width:380px; margin:12px 35px; text-align:left;}
+.date_box table {border-collapse:collapse; border-spacing:0; table-layout:fixed; margin:0; padding:0;}
+.date_box tr {height:30px;}
+.date_box td {float:left; font:bold 12px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; padding-bottom:15px;}
+input.datetxt {border:1px solid #d8d8d8; background-color:#f4f4f4; height:28px; padding:0 5px; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; color:#777; line-height:180%;}
+select.datenum {height:28px; padding:0; font:bold 13px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif; color:#333; line-height:180%; border:1px solid #ccc;}
+.btn_date {text-align:center; margin:20px 0 0 0;}
+
+/* sns가입 팝업 */
+.Lpopup4 {position:relative; margin:150px auto; width:470px; height:250px; background-color:#fff; padding:0; text-align:left; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.Lpopup4 .close {position:absolute; top:0; right:-50px; z-index:51; height:50px;}
+.nosns {width:403px; padding:35px 0 0 0; margin:0 auto;}
+.nosnsinfo {padding:25px 0; margin:0 auto; width:230px;}
+.nosnsinfo table {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.nosnsinfo th {text-align:left; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.nosnsinfo td {height:30px; font:normal 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.btn_nosns {text-align:center;}
+
+.Lpopup5 {position:relative; margin:150px auto; width:350px; height:220px; background-color:#fff; padding:0; text-align:left; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.Lpopup5 .close {position:absolute; top:0; right:-50px; z-index:51; height:50px;}
+.snslink {width:183px; padding:30px 0 0 0; margin:0 auto; text-align:center;}
+.idlink {width:250px; padding:25px 0; margin:0 auto;}
+.idlink table {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.idlink td {text-align:center; height:30px; font:normal 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+
+.Lpopup6 {position:relative; margin:150px auto; width:420px; height:250px; background-color:#fff; padding:0; text-align:center; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.Lpopup6 .close {position:absolute; top:0; right:-50px; z-index:51; height:50px;}
+.nolink {padding:40px 0 0 0;}
+.sns_txt {padding:20px 0; font-size:15px; color:#555;}
+.snsjoin {padding:40px 0;}
+
+/* 아이디 중복체크 팝업 */
+.Lpopup7 {position:relative; margin:0 auto; margin-top: 200px; width:350px; height:210px; background-color:#fff; padding:0; text-align:center; font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+.Lpopup7 .close {position:absolute; top:0; right:-50px; z-index:51; height:50px;}
+.dcheck {padding:40px 25px 30px 25px; width:300px; height:20px; color:#eb0000;}
+.dcheck ul {border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.dcheck li {text-align:center; font:bold 14px NanumGothic, Nanum Gothic, Malgun Gothic, dotum, sans-serif;}
+
+
+/* 회원가입완료 */
+#NewResultwarp * {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, Verdana, verdana, sans-serif;}
+#NewResultwarp {text-align:center; margin:0; padding:0;}
+.NewResult {width:980px; text-align:left; margin:0 auto;}
+
+#ResultInfo {margin:50px 0 0 0;}
+#ResultInfo h2 {text-align:center;}
+.Resultmyinfo {margin:20px 0 10px 0; width:978px; height:128px; border:1px solid #ddd; background-color:#f6f6f6;}
+.memberEnd_info {width:800px; overflow:hidden; padding:35px 0 0 160px; color:#333;}
+.memberEnd_info li {float:left; width:350px; height:40px;}
+.memberEnd_info .End_info div {font-size:14px; font-weight:bold;}
+.memberEnd_info .End_info .info_title {float:left; width:50px; padding:0 0 0 10px; background:url('https://sslimage.interpark.com/_nip/Newmember/dot.gif') no-repeat 0 7px;}
+.memberEnd_info .End_info .info_dot {float:left; width:15px;}
+.memberEnd_info .End_info .info_txt {width:250px;}
+
+.ResultArea1 {margin:0 15px 0 0; float:left; width:735px;}
+.ResultBox1 {margin:10px 0 0 0; width:733px; height:164px; border-collapse:collapse; border-spacing:0; table-layout:fixed; border:1px solid #ddd;}
+.ResultBox1 li {float:left; width:244px; border-right:1px solid #ddd;}
+.ResultBox1 li.last {float:left; width:243px; border-right:0;}
+
+.ResultArea2 {margin:0; float:left;}
+.ResultBox2 {margin:10px 0 0 0; width:228px; border-collapse:collapse; border-spacing:0; table-layout:fixed; border:1px solid #ddd;}
+
+.ResultArea3 {margin:30px 0 0 0; float:left; width:980px;}
+.ResultBox3 {margin:10px 0 0 0; width:978px; height:164px; border-collapse:collapse; border-spacing:0; table-layout:fixed; border:1px solid #ddd;}
+.ResultBox3 li {float:left; width:244px; border-right:1px solid #ddd;}
+.ResultBox3 li.last {width:243px; border-right:0;}
+
+/* mobile popup */
+@media all and (max-width:709px){
+  .Lpopup7{margin: 0 20px; width: auto; margin-top: 120px;}
+  .Lpopup7 .close{right: 0;}
+  .Lpopup7 h3{display: block; background-color: #e83535; text-align: left; overflow: hidden;}
+  .Lpopup7 h3 img{height: 100%;}
+  .dcheck{padding: 40px 20px; width: auto;}
+}
+
