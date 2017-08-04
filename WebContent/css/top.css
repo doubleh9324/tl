@@ -145,9 +145,9 @@ header {
 }
 #mo_recommand img{
 	
-	width: 70px;
-	height: 90px;
-	margin: 25px 5px 0px 0px;
+	width: 90px;
+	height: 120px;
+	margin: 15px 7px 0px 0px;
 }
 
 #mo_recommand h5{
@@ -198,6 +198,7 @@ header {
 #movie_drop div ul a{
    text-decoration: none;
    color: #808080;   
+   font-size: 13px;
 }
 #movie_drop div ul a:hover{
    color: #f0403c;

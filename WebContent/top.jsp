@@ -76,7 +76,7 @@ function TopgradeFunction(){
 					$("#mo_recommand").append(h5_code);
 			
 				$.each(data.movieGrade, function(key,value){
-					if(key<5){
+					if(key<4){
 						var li_code='<a href="./MovieContentAction.mo?num='+value.movie_num+'"><img src="MovieImage/'+value.image+'">'+'</a>';
 						
 						$("#mo_recommand").append(li_code);
@@ -150,7 +150,7 @@ function TopgradeFunction(){
                <li><a href="#">연 극</a></li>
                <li><a href="#">콘 서 트</a></li>
                <li><a href="#">공 연</a></li>
-               <li><a href="#">지 역</a></li>
+               <li><a href="index.jsp?center=location/LocationList.jsp">지 역</a></li>
             </ul>                     
       </div>
       <div id="movie_drop" class="jg">

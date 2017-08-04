@@ -22,6 +22,11 @@ $(document).ready(function(){
 	listMusicalFunction(0);
 	listMusicalFunction2(0);
 	
+	  var result = getCookie('popup');
+	   if (result == 'end') {
+	      $("#popup").css("display","none");
+	      }
+	
 })
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function autoChangeFuction(){
@@ -305,6 +310,50 @@ function popularMusicalFunction(){
 }
 
 
+////////////////////////////////
+
+//팝업 광고를 사용자가 이용하려고 할 경우
+function reservation(){
+   $("#popup").css("display","none");
+   window.open("./reserveMV.rs","","width=1050, height=795, toolbar=no, menubar=no, scrollbars=no, resizable=yes");
+}
+//
+
+//팝업창에서 오늘은 열지 않기 클릭시 종료 하고 쿠키를 삽입하는 함수
+function noshow(){
+   
+   setCookie( "popup", "end" , 1);
+   $("#popup").css("display","none");
+   
+}
+  
+ //셋쿠키 
+function setCookie(cname, value, expire) {
+      var todayValue = new Date();
+      // 오늘 날짜를 변수에 저장
+
+      todayValue.setDate(todayValue.getDate() + expire);
+      document.cookie = cname + "=" + encodeURI(value) + "; expires=" + todayValue.toGMTString() + "; path=/;";
+   }      
+
+
+
+ function getCookie(name) { 
+      var cookieName = name + "=";
+      var x = 0;
+      while ( x <= document.cookie.length ) { 
+         var y = (x+cookieName.length); 
+         if ( document.cookie.substring( x, y ) == cookieName) { 
+            if ((lastChrCookie=document.cookie.indexOf(";", y)) == -1) 
+               lastChrCookie = document.cookie.length;
+            return decodeURI(document.cookie.substring(y, lastChrCookie));
+         }
+         x = document.cookie.indexOf(" ", x ) + 1; 
+         if ( x == 0 )
+            break; 
+         } 
+      return "";
+   }
 </script>
 </head>
 
@@ -332,6 +381,11 @@ function popularMusicalFunction(){
 <div class="clear" ></div>
 </div>
 
+<div id="popup">
+<div onclick="reservation()"><img src="MovieImage/20140194.jpg" width="150px"><img src="MovieImage/20177181.jpg" width="150px">
+<span>티켓 사자에서 보내 드리는 시원한 여름맞이 선물! 납량특선 영화 곡성,47미터 5000원 할인 이벤트</span></div>
+<div id ="noshow" onclick="noshow()">하루 동안 이 페이지 열지않긔</div>
+</div>
 <!--------------------------------------------------------- -->
 <div id="mid">
  <div id="category">
