@@ -27,8 +27,6 @@ private static memberDAO instance;
       return con;
    }
    
-
-
       public boolean insertMember(memberBean dto){
          
          Connection con=null;
@@ -40,7 +38,6 @@ private static memberDAO instance;
          try {
             
             con = getConnection();
-            
             sql="insert into member(id,pass,gender,birth,phone,name) "
                +"values(?,?,?,?,?,?)";
             
@@ -65,16 +62,10 @@ private static memberDAO instance;
             if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
             if(con!=null)try{con.close();}catch(SQLException ex){}
          }
-         
-         
-         
          return false;
       }
 
-
-      
       /* 아이디 체크  */
-      
       
       public int idCheck(String id){ 
          Connection con = null; 
@@ -90,7 +81,6 @@ private static memberDAO instance;
             sql = "select * from member where id=? and del_flag=1";
             
             pstmt=con.prepareStatement(sql);
-                  
             pstmt.setString(1, id);
             rs = pstmt.executeQuery();
             
@@ -113,9 +103,6 @@ private static memberDAO instance;
          return check;
       }
       
-      
-      
-
       /* 로그인 할 때*/
    public int userCheck(String id, String pass) {
       
@@ -125,8 +112,6 @@ private static memberDAO instance;
       int check=-1;   //1-> 아이디 비번 맞음
                   //0->아이디 맞음 비번 틀림
                   //-1-> 아이디 틀림
-      
-      
       ResultSet rs=null;
       try {
          
@@ -165,7 +150,6 @@ private static memberDAO instance;
       
    }
 
-
    /* 회원탈퇴 메소드 ->DB삭제가 아니고 del_flag를 0으로 바꿈 */
    public int deleteMember(String id) {
       Connection con=null;
@@ -175,9 +159,7 @@ private static memberDAO instance;
       int check =0;
       try {
          
-         
          con = getConnection();
-         
          
          sql = "select * from member where id=?";
          pstmt=con.prepareStatement(sql);
@@ -186,7 +168,6 @@ private static memberDAO instance;
          rs = pstmt.executeQuery();
          
          if(rs.next()){
-            
    
                sql = "update member set del_flag=0 where id=?";
                
@@ -194,7 +175,6 @@ private static memberDAO instance;
                pstmt.setString(1, id);
          
                check = pstmt.executeUpdate();
-
             }
       } catch (Exception e) {
          System.out.println("delete 메소드에서 오류 : "+e);
@@ -204,9 +184,7 @@ private static memberDAO instance;
          if(con!=null)try{con.close();}catch(SQLException ex){}
       }
       
-      
       return check;
-      
    }
    
    
@@ -250,13 +228,11 @@ private static memberDAO instance;
          return bean;
       }
 
-
       public void updateMember(memberBean bean) {
          Connection con=null;
          PreparedStatement pstmt=null;
          String sql="";
 
-         
          try {
             con = getConnection();
 
@@ -268,7 +244,6 @@ private static memberDAO instance;
           pstmt.setString(4, bean.getId());
           pstmt.executeUpdate();
 
-       
          } catch (Exception e) {
             e.printStackTrace();
          }finally{
@@ -277,8 +252,6 @@ private static memberDAO instance;
          }
  
       }
-
-
 
    public int modifyCheckMember(String id, String pass) {
         Connection con=null;
@@ -316,10 +289,58 @@ private static memberDAO instance;
          if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
          if(con!=null)try{con.close();}catch(SQLException ex){}
       }
-        
       return check;
    }
    
+   public int updateMemberPoint(int mnum, int point) throws Exception{
+	   Connection con=null;
+       PreparedStatement pstmt=null;
+       String sql="";
+       int re = 0;
+       try{
+    	   con = getConnection();
+    	   sql = "update member set mPoint = mPoint + ? where member_num = ?";
+    	   pstmt = con.prepareStatement(sql);
+    	   pstmt.setInt(1, point);
+    	   pstmt.setInt(2, mnum);
+    	   
+    	   re = pstmt.executeUpdate();
+    	   
+    	   return re;
+    	   
+       }catch(Exception e){
+    	   e.getMessage();
+       }finally{
+           if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+           if(con!=null)try{con.close();}catch(SQLException ex){}
+       }
+       return re;
+   }
+   
+   public int getMemberPoint(int mnum) throws Exception{
+	   Connection con=null;
+       PreparedStatement pstmt=null;
+       String sql="";
+       ResultSet rs = null;
+       try{
+    	   con = getConnection();
+    	   sql = "select mPoint from member where member_num = ?";
+    	   pstmt = con.prepareStatement(sql);
+    	   pstmt.setInt(1, mnum);
+    	   
+    	   rs = pstmt.executeQuery();
+    	   System.out.println(pstmt.toString());
+    	   rs.next();
+    	   return rs.getInt(1);
+    	   
+       }catch(Exception e){
+    	   System.out.println(e.getMessage());
+       }finally{
+           if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+           if(con!=null)try{con.close();}catch(SQLException ex){}
+       }
+       return 0;
+   }
    
       
       

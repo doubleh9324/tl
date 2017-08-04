@@ -1,5 +1,6 @@
 package team.reservation.action;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +20,15 @@ public class ReservationAction implements Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		//팝업창 호출 위치에 따라 기초 설정값 받기
+		String flag = request.getParameter("flag");
+		String val = request.getParameter("val");
+		//맵으로 저장 후 전달
+		Map<String, Object> preChoice = new HashMap<>();
+		preChoice.put("flag", flag);
+		preChoice.put("val", val);
+		
 		//예매화면 띄우기
 		//상영하는 영화, 영화관, 상영시간
 		MovieDAO movieDao = new MovieDAO();
@@ -63,6 +73,7 @@ public class ReservationAction implements Action{
 	    request.setAttribute("placeList", placeList);
 	    request.setAttribute("locationList", locationList);
 	    request.setAttribute("playdayList", playdayList);
+	    request.setAttribute("preChoice", preChoice);
 	    
 	    ActionForward forward=new ActionForward();
 	    forward.setRedirect(false);

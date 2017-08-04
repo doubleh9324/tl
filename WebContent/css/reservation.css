@@ -65,7 +65,7 @@ a:hover{text-decoration: none;}
 #ticket .navi .ie7_sucks span a:hover{text-decoration:underline;}
 .ie7 #ticket .navi .ie7_sucks, .ie8 #ticket .navi .ie7_sucks{display:block;}
 
-#ticket .steps{position:relative;width:996px;background-color:#F2F0E4;/*height:530px;background-color:#d4d3c9;*/}
+#ticket .steps{position:relative;width:996px;background-color:#F2F0E4;margin-top: 20px;}
 #ticket .steps .step{position:relative;}
 #ticket .steps .step1{height:530px;background-color:#d4d3c9;}
 #ticket .steps .step2{display:none;height:530px;background-color:#d4d3c9;}
@@ -548,7 +548,7 @@ a:hover{text-decoration: none;}
 #ticket .section-seat .minimap .mini_exit.cr{top:40%;right:3px;background-position:-125px -50px;}
 #ticket .section-seat .minimap .mini_exit.cl{top:40%;left:3px;background-position:-150px -50px;}
 
-#ticket .section-seat .theater_minimap .legend{position:absolute;top:0;right:-106px;width:106px;height:100%;}
+#ticket .section-seat .theater_minimap .legend{position:absolute;top:130px;right:-106px;width:106px;height:100%;}
 #ticket .section-seat .theater_minimap .legend .btn-zoom{display:block;width:96px;height:35px;overflow:hidden;text-indent:-1000px;background:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/btn_zoom.png) no-repeat;}
 #ticket .section-seat .theater_minimap .legend .btn-zoom.on{background-position:-96px 0;}
 #ticket .section-seat .theater_minimap .legend .buttons{height:55px;}
@@ -559,10 +559,10 @@ a:hover{text-decoration: none;}
 /*#ticket .section-seat .seat-icon-desc .icon.selected {background-image:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/seat_selected.png);}
 #ticket .section-seat .seat-icon-desc .icon.reserved {background-image:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/seat_reserved.png);}
 #ticket .section-seat .seat-icon-desc .icon.notavail {background-image:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/seat_notavail.png);}*/
-#ticket .section-seat .seat-icon-desc .icon > span{position:absolute;top:0;left:0;display:block;width:15px;height:16px;padding:0;background-image:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/seat_icons_new.png);background-repeat:no-repeat;background-position:0 0;}
-#ticket .section-seat .seat-icon-desc .icon.selected > span{/*background-image:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/seat_selected.png);*/}
-#ticket .section-seat .seat-icon-desc .icon.reserved > span{background-color:#bbb;background-image:none;}
-#ticket .section-seat .seat-icon-desc .icon.notavail > span{background-color:#bbb;/*background-image:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/seat_notavail.png);*/background-position:-25px 0;}
+#ticket .section-seat .seat-icon-desc .icon > span{position:absolute;top:0;left:0;display:block;width:15px;height:16px;padding:0;/* background-image:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/seat_icons_new.png); *//* background-repeat:no-repeat; */background-position:0 0;}
+#ticket .section-seat .seat-icon-desc .icon.selected > span{border:black 3px solid; box-sizing:border-box; background-position:0 0;border-radius: 3px;}
+#ticket .section-seat .seat-icon-desc .icon.reserved > span{background-color:#bbb;		border-radius: 3px;background-position:-1000px 0;}
+#ticket .section-seat .seat-icon-desc .icon.notavail > span{background-color:#bbb;		border-radius: 3px;background-position:-25px 0;	background-image:url(http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step2/seat_icons_new2.png); background-position:-25px 0;}
 
 #ticket .section-seat .seat-type {margin-top:23px;margin-left:5px;}
 #ticket .section-seat .seat-type .radiobutton{position:relative;display:block;padding-left:19px;/*height:15px;*/color:#666;font-size:12px;margin-top:6px;}
@@ -643,10 +643,10 @@ a:hover{text-decoration: none;}
 
 /* section-complement */
 #ticket .section-complement{width:992px;}
-#ticket .section-complement .article.result{float:left;width:580px;padding:0 0 0 63px;background-color:#f2f0e5;}
+#ticket .section-complement .article.result{float:left;width:580px;padding: 100px 0 100px 190px;margin: 0px auto 0px auto;background-color:#f2f0e5;}
 #ticket .section-complement .article.result .text_complement{height:107px;line-height:107px;text-align:center;}
 #ticket .section-complement .article.result .text_complement img{vertical-align:middle;}
-#ticket .section-complement .article.result .ticket_summary_wrap{overflow:hidden;margin-bottom:24px;}
+#ticket .section-complement .article.result .ticket_summary_wrap{overflow:hidden;margin-bottom: 60px;}
 #ticket .section-complement .article.result .ticket_summary_wrap .ticket_summary{float:left;width:539px;}
 #ticket .section-complement .article.result .ticket_summary_wrap .ticket_summary .poster{float:left;width:110px;height:158px;line-height:158px;margin-right:30px;overflow:hidden;}
 #ticket .section-complement .article.result .ticket_summary_wrap .ticket_summary .poster img{visibility:hidden;width:100%;vertical-align:middle}
@@ -816,7 +816,7 @@ a:hover{text-decoration: none;}
 
 /* nano scroller - initial */
 .nano{position:relative;width:100%;height:100%;overflow:hidden;}
-.nano .content{position:absolute;overflow:scroll;top:0;right:0;bottom:0;left:0;}
+.nano .content{position:absolute;/*overflow:scroll;*/top:0;right:0;bottom:0;left:0;}
 .nano .content.scroll-y{overflow-x:hidden;}
 .nano .content:focus{outline:thin dotted;}
 .nano .content::-webkit-scrollbar{visibility:hidden;}

@@ -118,9 +118,15 @@ public class ReservationFrontController extends HttpServlet{
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
-		else if(command.equals("/getOrderReservMu.rs")){
+		}else if(command.equals("/getOrderReservMu.rs")){
 			action = new CheckedSeatInfo();
+			try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/deleteCheckedSeatInfo.rs")){
+			action = new DeleteCheckedSeatInfo();
 			try {
 				forward= action.execute(request, response);
 			} catch (Exception e) {
@@ -130,10 +136,10 @@ public class ReservationFrontController extends HttpServlet{
 		
 		
 		
-		if(forward!=null){//new ActionForward()��ü�� �����ϰ�...
-			if(forward.isRedirect()){//true->sendRedirect()���
+		if(forward!=null){
+			if(forward.isRedirect()){
 				response.sendRedirect(forward.getPath());
-			}else{ //false ->forward()���
+			}else{ 
 				RequestDispatcher view = request.getRequestDispatcher(forward.getPath());
 				view.forward(request, response);
 			}

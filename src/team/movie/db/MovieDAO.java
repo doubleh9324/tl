@@ -347,7 +347,7 @@ public class MovieDAO {
 		String sql="";
 		try{
 			con=getConnection();
-			sql="select m.movie_num, m.name , m2.grade, m.age,m2.image from movie m,movie_detail m2, playing p where m.movie_num=m2.movie_num and substring(p.nc_code,3)=m.movie_num order by 3 desc limit 0,10";
+			sql="select m.movie_num, m.name , m2.grade, m.age from movie m,movie_detail m2 where m.movie_num=m2.movie_num order by 3 desc limit 0,10";
 			pstmt=con.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			while(rs.next()){
@@ -356,7 +356,6 @@ public class MovieDAO {
 				mb.setMovie_num(rs.getString("movie_num"));
 				mb.setName(rs.getString("name"));
 				mb.setGrade(rs.getDouble("grade"));
-				mb.setImage(rs.getString("image"));
 				list.add(mb);
 			}
 			

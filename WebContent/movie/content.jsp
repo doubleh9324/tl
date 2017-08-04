@@ -116,8 +116,8 @@ function insertReviewFucntion(){
 	
 }
 
-function reservation(){
-	window.open("./reserveMV.rs","","width=1050, height=795, toolbar=no, menubar=no, scrollbars=no, resizable=yes");
+function reservation(mnum){
+	window.open("./reserveMV.rs?flag=movie&val="+mnum,"","width=1050, height=695, toolbar=no, menubar=no, scrollbars=no, resizable=no");
 }
 
 </script>
@@ -140,7 +140,7 @@ function reservation(){
 			<a href="MovieImage/${bean.image }"><img alt="" src="MovieImage/${bean.image}"></a><br>
 		<c:if test="${bean.playing==1 }">
 		
-			<input type="button" value="예매하기" id="reserve_button" onclick="reservation()">
+			<input type="button" value="예매하기" id="reserve_button" onclick="reservation(${bean.movie_num})">
 			
 		</c:if>
 		</div>

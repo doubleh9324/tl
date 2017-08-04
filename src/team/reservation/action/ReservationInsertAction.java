@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import net.sf.json.JSONObject;
+import team.member.db.memberDAO;
 import team.reservation.db.Action;
 import team.reservation.db.ActionForward;
 import team.reservation.db.ReservationBean;
@@ -31,6 +32,8 @@ public class ReservationInsertAction implements Action{
 		String seat_no = request.getParameter("seat_no");
 		String seat = request.getParameter("seat");
 		String time = request.getParameter("time");
+		int usepoint = Integer.parseInt(request.getParameter("usepoint"));
+		String payinfo = request.getParameter("payinfo");
 		
 		ReservationBean rsb = new ReservationBean();
 		ReservationDAO resDao = new ReservationDAO();
@@ -44,11 +47,16 @@ public class ReservationInsertAction implements Action{
 		rsb.setSeat(seat);
 		rsb.setPrice(price);
 		rsb.setView_date(viewdate+time+"00");
-		rsb.setMPoint((int) Math.round(price*0.05));
-		
+		int point = (int) Math.round(price*0.05);
+		rsb.setMPoint(point);
+		rsb.setPayinfo(payinfo+"_point_"+point);
+		System.out.println(payinfo);
 		//예매 정보 테이블 받아와서 필요한 정보 변환 후 내보내기
 		//굳이 이렇게 해야하는걸까
 		ReservationBean resultRsb = resDao.insertReservation(rsb);
+		memberDAO memberDao = new memberDAO();
+		memberDao.updateMemberPoint(member_num, point);
+		memberDao.updateMemberPoint(member_num, usepoint*(-1));
 		
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("resultRsb", resultRsb);

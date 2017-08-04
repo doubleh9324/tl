@@ -30,8 +30,6 @@ public class CheckedSeatInfo implements Action{
 		
 		JSONObject jsonObject = new JSONObject();
 		
-			
-		
 		//저장된 checked seat이 없으면
 		if(checked==null){
 
@@ -43,10 +41,10 @@ public class CheckedSeatInfo implements Action{
 			checkedmap.put("screen_name", screen_name);
 			checkedmap.put("viewdate", viewdate);
 			checkedmap.put("seats", seats);
-			System.out.println(pcode+ " "+mo_num +" " +screen_name+ " "+viewdate);
 			newcheckedlist.add(checkedmap);
-			application.setAttribute("checked", newcheckedlist);
 			
+			application.setAttribute("checked", newcheckedlist);
+			jsonObject.put("checkedSeats", newcheckedlist);
 			jsonObject.put("checkedFlag", "n");
 		}else{
 			//저장된 checked seat이 있으면 해당 좌석표에 해당하는 좌석만 조회 한 후 
@@ -55,11 +53,18 @@ public class CheckedSeatInfo implements Action{
 			if(seats[0].equals("0")){
 				List<Map<String, Object>> checkedSeats = new ArrayList<>();
 				//좌석을 선택해서 넘어온게 아니라 첫 조회창이므로 있는 정보들만 넘겨주기(reserved
-				jsonObject.put("checkedSeats", checked);
-				System.out.println("리스트 크기 : " +checked.size());
+				
 				for(int i=0; i<checked.size(); i++){
 					//해당 날짜시간, pcode, 영화번호, 스크린 이릅이 모두 같으면
-						
+					
+					boolean isdate = (viewdate.equals((String) checked.get(i).get("viewdate"))? true : false );
+					boolean ispcode = (pcode.equals((String) checked.get(i).get("pcode"))? true : false );
+					boolean ismo_num = (mo_num.equals((String) checked.get(i).get("mo_num"))? true : false );
+					boolean isscreen = (screen_name.equals((String) checked.get(i).get("screen_name"))? true : false );
+					System.out.println(checked.get(i).get("viewdate") +" "+ checked.get(i).get("pcode") +" "+ checked.get(i).get("mo_num") + " "+checked.get(i).get("screen_name"));
+					
+					//해당 날짜시간, pcode, 영화번호, 스크린 이릅이 모두 같으면
+					if(isdate && ispcode && ismo_num && isscreen){
 						String[] appSeats = (String[]) checked.get(i).get("seats");
 						for(int s=0; s<appSeats.length; s++){
 							Map<String, Object> map = new HashMap<>();
@@ -67,8 +72,9 @@ public class CheckedSeatInfo implements Action{
 							map.put("seat_no", appSeats[s].substring(1));
 							checkedSeats.add(map);
 						}
-						jsonObject.put("checkedSeats", checkedSeats);
+					}
 				}
+				jsonObject.put("checkedSeats", checkedSeats);
 			}else{
 				
 				System.out.println("리스트 크기 : " +checked.size());
@@ -80,7 +86,6 @@ public class CheckedSeatInfo implements Action{
 					boolean ispcode = (pcode.equals((String) checked.get(i).get("pcode"))? true : false );
 					boolean ismo_num = (mo_num.equals((String) checked.get(i).get("mo_num"))? true : false );
 					boolean isscreen = (screen_name.equals((String) checked.get(i).get("screen_name"))? true : false );
-					System.out.println(checked.get(i).get("viewdate") +" "+ checked.get(i).get("pcode") +" "+ checked.get(i).get("mo_num") + " "+checked.get(i).get("screen_name"));
 					
 					//해당 날짜시간, pcode, 영화번호, 스크린 이릅이 모두 같으면
 					if(isdate && ispcode && ismo_num && isscreen){
@@ -93,7 +98,6 @@ public class CheckedSeatInfo implements Action{
 									map.put("seat_fl", seats[s].substring(0, 1));
 									map.put("seat_no", seats[s].substring(1));
 									checkedSeats.add(map);
-									System.out.println("있음");
 									System.out.println( seats[s] + " " + appSeats[ss]);
 									break exit_for;
 								}

@@ -12,8 +12,15 @@ public class ReservationBean {
 	private String screen_name;
 	private int mPoint;
 	private int price;
+	private String payinfo;
 	
 	
+	public String getPayinfo() {
+		return payinfo;
+	}
+	public void setPayinfo(String paymentinfo) {
+		this.payinfo = paymentinfo;
+	}
 	public int getR_num() {
 		return r_num;
 	}

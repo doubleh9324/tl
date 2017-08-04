@@ -19,12 +19,12 @@
 <link rel="stylesheet" href="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/css/2017/06/CGV_YS/common.css" />
 <link rel="stylesheet" href="css/reservation.css">
 <link rel="stylesheet" href="css/reservation_step3.css">
+<link rel="stylesheet" href="css/reservation_step3_step1.css">
+<link rel="stylesheet" href="css/reservation_step3_step2.css">
+<link rel="stylesheet" href="css/reservation_tnb.css?dd">
 
-<link rel="stylesheet" href="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/css/2017/06/CGV_YS/reservation_tnb.css" />
 <link rel="stylesheet" href="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/css/2017/06/CGV_YS/reservation_popup.css" />
 <link rel="stylesheet" href="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/css/2017/06/CGV_YS/reservation_step3_special.css" />
-<link rel="stylesheet" href="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/css/2017/06/CGV_YS/reservation_step3_step1.css" />
-<link rel="stylesheet" href="http://img.cgv.co.kr/CGV_RIA/Ticket/Common/css/2017/06/CGV_YS/reservation_step3_step2.css" />
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/reservation.js"></script>
@@ -49,11 +49,10 @@ browser_Event();
 	int member_num=(int)session.getAttribute("member_num");
 	%>
 	<input type="hidden" value="<%=member_num%>" class="mnum">
-	<script type="text/javascript">
-		alert("member_num:"+<%=member_num%>);
-	
-	</script>
 <% }%>
+
+<input type="hidden" id="preFlag" value="${preChoice.flag }">
+<input type="hidden" id="preVal" value="${preChoice.val }">
 
 <a name="t"></a>
 <div id="wrap" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -62,24 +61,6 @@ browser_Event();
 	<div id="container">
 		<!-- 빠른예매 -->
 		<div id="ticket" class="ticket ko">
-			
-			<!-- 타이틀 -->
-			<div class="navi">
-				<div  class="newsletter">
-					<p><a href="#">Click here</a> if you want to receive newsletter about English subtitle movies</p>
-				</div>
-				<span class="right">
-				
-					<a class="button button-english" href="#" onmousedown="javascript:logClick('옵션/ENGLISH');" onclick="switchLanguage(); return false;"><span>ENGLISH</span></a>
-					<a class="button button-guide" href="#" onmousedown="javascript:logClick('옵션/예매가이드');" onclick="ticketPopupShow('popup_guide'); return false;"><span>예매가이드 - 레이어로 서비스 되기 때문에 가상커서를 해지(Ctrl+Shift+F12)한 후 사용합니다.</span></a>
-					<a class="button button-discount" href="#" onmousedown="javascript:logClick('옵션/제휴할인혜택');" onclick="ticketNewWindow('http://section.cgv.co.kr/discount/Special/discount/Default.aspx');return false;" title="새창열기"><span>제휴할인혜택</span></a>
-					<a class="button button-schedule" href="#" onmousedown="javascript:logClick('옵션/상영시간표');" onclick="openSchedulePopup();return false;" title="새창열기"><span>상영시간표</span></a>
-					<a class="button button-reservation-restart" href="#" onmousedown="javascript:logClick('옵션/예매다시하기');" onclick="ticketRestart(); return false;"><span>예매 다시하기</span></a>
-				
-				</span>
-				<div class="ie7_sucks" id="ie7_sucks"><span>Internet Explorer 9 이상에서 최적화된 서비스 이용이 가능합니다.</span></div>
-			</div>
-			<!-- //타이틀 -->
 			<!-- 메인컨텐츠 -->
 			<div class="steps">
 				<!-- step1 -->
@@ -95,41 +76,6 @@ browser_Event();
 						<div class="col-body">
 							<!-- 영화선택 -->
 							<div class="movie-select">
-							
-							
-							<%-- 
-								<div class="tabmenu">
-									<span class="side on"></span>
-									<a href="#" class="button menu1 selected">전체</a>
-									<span class="side on"></span>
-									<a href="#" class="button menu2">아트하우스<span class="arrow"></span></a>
-									<div class="tabmenu-selectbox MOVIECOLLAGE" style="display:none;">
-										<ul>
-											<li><a href="#" onclick="return false;">전체</a></li>
-											<li><a href="#" onclick="return false;">최신작</a></li>
-										</ul>
-									</div>
-									<span class="side"></span>
-									<a href="#" onclick="return false;" class="button menu3">특별관<span class="arrow"></span></a>
-									<div class="tabmenu-selectbox SPECIALTHEATER" style="display:none;">
-										<ul>
-											<li><a href="#" onclick="return false;">전체</a></li>
-											<li><a href="#" onclick="return false;">4DX</a></li>
-											<li><a href="#" onclick="return false;">IMAX</a></li>
-											<li><a href="#" onclick="return false;">STARIUM</a></li>
-											<li><a href="#" onclick="return false;">CINE DE CHEF</a></li>
-											<li><a href="#" onclick="return false;">GOLD CLASS</a></li>
-											<li><a href="#" onclick="return false;">Brand관</a></li>
-											<li><a href="#" onclick="return false;">Premium관</a></li>
-											<li><a href="#" onclick="return false;">CINE KIDS</a></li>
-										</ul>
-									</div>
-									<span class="side"></span>
-								</div>
-								
-								--%>
-								
-								
 								<div class="sortmenu">
 									<a href="#" onclick="sortMovieByRank();return false;" id="movieSortRankBtn" class="button btn-rank selected">예매율순</a>
 									<a href="#" onclick="sortMovieByName();return false;" id="movieSortNameBtn" class="button btn-abc">가나다순</a>
@@ -164,7 +110,6 @@ browser_Event();
 										<c:set var="index" value="${index + 1}"/>
 										
 			                    	</c:forEach>
-			                    	
 			                    	
 									</ul>
 								</div>
@@ -365,17 +310,6 @@ browser_Event();
 								</div>
 								<!-- NUMBEROFPEOPLE 섹션 -->
 								<div class="section section-screen-select">
-									<!-- UI 변경으로 삭제 
-									<div class="title">선택하신 상영관<span>/</span>시간</div>
-									-->
-									<!-- UI 변경
-									<div class="screen-time">
-										<span class="screen"><b></b></span>
-										<span class="seats seat_all"></span>
-										<span class="time"></span>
-										<span class="seats seat_remain"></span>
-									</div>
-									-->
 									<div id="user-select-info">
 										<p class="theater-info">
 											<span class="site"></span>
@@ -438,24 +372,10 @@ browser_Event();
 									<div class="mini_region"><span></span></div>
 								</div>
 								<div class="legend">
-									<div class="buttons">
-										<a class="btn-zoom" id="seat_zoom_btn" href="#" onclick="ts2SeatZoomClickListener();return false;">크게보기</a>
-									</div>
 									<div class="seat-icon-desc">
 										<span class="icon selected"><span class="icon"></span>선택</span>
 										<span class="icon reserved"><span class="icon"></span>예매완료</span>
 										<span class="icon notavail"><span class="icon"></span>선택불가</span>
-									</div>
-									<div class="seat-type">
-										<span class="radiobutton type-prime" title="최적의 영상과 사운드로 영화를 감상할 수 있는 CGV 추천좌석"><span class="icon"></span>Prime Zone</span>
-										<span class="radiobutton type-normal"><span class="icon"></span>일반석</span>
-										<span class="radiobutton type-couple" title="연인, 가족, 친구를 위한 둘만의 좌석"><span class="icon"></span>커플석</span>
-										<span class="radiobutton type-handicap"><span class="icon"></span>장애인석</span>
-										<span class="radiobutton type-sweetbox" title="국내 최대 넓이의 프리미엄 커플좌석"><span class="icon"></span>SWEETBOX</span>
-										<span class="radiobutton type-veatbox" title="음향 진동 시스템이 적용된 특별좌석"><span class="icon"></span>VEATBOX</span>
-										<span class="radiobutton type-4d" title="바람, 진동 등 오감으로 영화 관람, 4DX"><span class="icon"></span>4DX</span>
-										<span class="radiobutton type-widebox" title="일반석보다 더 넓고 편안한 좌석"><span class="icon"></span>WIDEBOX</span>
-										<span class="radiobutton type-cinekids last" title="365일 어린이 전용 상영관"><span class="icon"></span>CINEKIDS</span>
 									</div>
 								</div>
 							</div>
@@ -492,430 +412,6 @@ browser_Event();
 					
 					<div class="ticket_payment_method">
 						<a href="#" onclick="return false;" id="ticket_payment_top" class="sreader">결제시작</a>
-					
-					<div class="tpm_special tpm_special_membership" style="display: none;">
-						<div class="special_header">
-							<h3 class="title"> 멤버십</h3>
-							<span class="desc">멤버십 결제는 다른 할인수단 적용 및 결제와 중복으로 사용하실 수 없습니다.</span>
-							<a class="tpmh_btn" href="#" onclick="return false;"><span>펼치기</span></a>
-						</div>
-						<div class="special_body membership">
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// 임직원 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->	
-							<div class="row cgv_employee_payment" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CGV 임직원 결제</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 카드번호 //-->
-								<div class="card_no">
-									<div class="title">		<label for="cgv_employee_payment_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="cgv_employee_payment_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용	</span>
-										<span class="cancel">	취소		</span>
-									</a>
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">보유매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">사용매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-							</div><!-- // 임직원 결제 // -->
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// 서포터즈 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-							<div class="row cgv_supporters" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CGV 서포터즈 관람카드</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 카드번호 //-->            
-								<div class="card_no">
-									<div class="title">		<label for="cgv_supporters_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="cgv_supporters_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용</span>
-										<span class="cancel">	취소</span>
-									</a>
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">보유매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">사용매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-							</div>
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// 미소지기 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->	
-							<div class="row cgv_smiling" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CGV 미소지기</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 카드번호 //-->            
-								<div class="card_no">
-									<div class="title">		<label for="cgv_smiling_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="cgv_smiling_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용</span>
-										<span class="cancel">	취소</span>
-									</a>
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">보유매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">사용매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-							</div>
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// 잡월드 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->	
-							
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// 프리패스 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->	
-							<div class="row cgv_freepass" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CGV 프리패스카드</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 카드번호 //-->            
-								<div class="card_no">
-									<div class="title">		<label for="cgv_freepass_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="cgv_freepass_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용</span>
-										<span class="cancel">	취소</span>
-									</a>
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">보유매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">사용매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-							</div>
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// VIP 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-							
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// CJ Ent. 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-							<div class="row cj_ent_employee" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CJ Ent. 임직원 결제</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 카드번호 //-->            
-								<div class="card_no">
-									<div class="title">		<label for="cj_ent_employee_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="cj_ent_employee_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용</span>
-										<span class="cancel">	취소</span>
-									</a>
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">보유매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">사용매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-							</div>	
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// VIP Partners 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-							<div class="row partners_vip" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	Partners(VIP)</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 카드번호 //-->            
-								<div class="card_no">
-									<div class="title">		<label for="partners_vip_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="partners_vip_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용</span>
-										<span class="cancel">	취소</span>
-									</a>
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">보유매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">사용매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-							</div>
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// CJ 임원 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->		
-							<div class="row cj_vip_officer" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CJ 임원결재</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 카드번호 //-->            
-								<div class="card_no">
-									<div class="title">		<label for="cj_vip_officer_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="cj_vip_officer_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용</span>
-										<span class="cancel">	취소</span>
-									</a>
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">보유매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">사용매수</span>
-									<div class="wrap_input"><input type="text" id="cj_vip_officer_use" value="2" maxlength="50" class="type-n nohan"></div>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	적용</span>
-										<span class="cancel">	취소</span>
-									</a>
-								</div>
-							</div>
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// Prestige 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-							
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// E&M Master  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-							<div class="row enmMaster" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CJ E&amp;M Master<br>Power Creator</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 카드번호 //-->            
-								<div class="card_no">
-									<div class="title">		<label for="enmMaster_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="enmMaster_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용</span>
-										<span class="cancel">	취소</span>
-									</a>
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">보유매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">사용매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-							</div>							
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// CJ Club 결제  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-							<div class="row cjClub" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CJ Club 카드 결제</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 할인 금액 // -->
-								<div class="contents">
-									<p class="title">정상 조회 되었습니다. 아래 적용 버튼을 클릭해 주세요.</p>
-									<span class="payName">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-									<span class="btnCon"><a class="btn_toggle" href="#none"> <span class="default">	적용</span> </a></span>
-								</div>
-							</div>
-					
-							<div class="row cjClub2" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CJ Club 카드 결제2</div>
-								<div class="msg">	정상 조회되었습니다. 아래 적용 버튼을 클릭해주세요.</div>
-								<!-- // 할인 금액 // -->
-								<div class="contents">
-									<p class="title">정상 조회 되었습니다. 아래 적용 버튼을 클릭해 주세요.</p>
-									<span class="payName">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-									<span class="btnCon"><a class="btn_toggle" href="#none"> <span class="default">	적용</span> </a></span>
-								</div>
-							</div>
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// 4DX RED  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-							<div class="row 4dxRed type2" style="display: none;">
-								<div class="divider"></div>
-								<div class="title">	CGV 4DX RED CARD</div>
-								<!-- // 카드번호 //-->            
-								<div class="card_no">
-									<!-- <div class="title">		<label for="enmMaster_no">카드번호</label></div>
-									<div class="wrap_input"><input type="text" value="" id="enmMaster_no" maxlength="50" class="type-n nohan"><span></span></div>
-									<a class="btn_toggle" href="#none">
-										<span class="default">	조회/적용</span>
-										<span class="cancel">	취소</span>
-									</a> -->
-								</div>
-								<!-- // 보유 티켓 // -->
-								<div class="hold_ticket">
-									<span class="title">사용 가능 매수</span>
-									<span class="value">0매</span>
-								</div>
-								<!-- // 사용 티켓 // -->           
-								<div class="use_ticket">
-									<span class="title">적용매수</span>
-									<select class="useNum">
-										<option value="0">0</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-									</select>
-									<span class="exe">매</span>
-								</div>
-								<!-- // 할인 금액 // -->
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-								<div class="msg2">※ 일 1회 최대 2매 할인 적용가능 (청소년,어린이,우대 제외)</div>
-							</div>	
-					
-					
-						</div>	<!-- // special_body -->
-					</div>		<!-- // tpm_special -->
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					<div class="tpm_special tpm_special_vip" style="display: none;">
-						<div class="special_header">
-							<h3 class="title">VIP</h3>
-							<span class="desc">  </span>
-							<a class="tpmh_btn" href="#" onclick="return false;"><span>펼치기</span></a>
-						</div>
-						<div class="special_body vip">
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// VIP Coupon  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->    	
-							<div class="row vip_coupon">
-								<div class="divider"></div>
-								<div class="title">VIP &nbsp; 쿠폰</div>
-								<div class="table_header">
-									<div class="coupon_name">	VIP &nbsp; 쿠폰</div>
-									<div class="coupon_date">	유효기간</div>
-									<div class="coupon_state">	사용여부</div>
-								</div>
-								<div class="table_body nano has-scrollbar">
-									<ul class="content scroll-y" id="vip_coupon_list" tabindex="-1" style="right: -17px;"></ul>
-								<div class="pane pane-y" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-y" style="height: 50px;"></div></div><div class="pane pane-x" style="display: none; opacity: 1; visibility: visible;"><div class="slider slider-x" style="width: 50px;"></div></div></div>
-								<div class="result">
-									<span class="title">할인금액:</span>
-									<span class="price">0</span><span class="won">원</span>
-								</div>
-							</div>
-					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-// VIP half discount  //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->    	
-							<div class="row cgv_vip_half_discount">
-								<div class="divider"></div>
-								<div class="title">VIP &nbsp; 반값할인</div>
-								<div class="body disabled">
-									<div class="block avail_count">
-										<span class="title">사용 가능 수량</span>
-										<span class="value" id="cgv_vip_half_discount_point"><span class="num">0</span>매</span>
-									</div>
-									<div class="block avail_point">
-										<span class="title point">가용 포인트</span>
-										<span class="value" id="cgv_vip_half_discount_point">0P</span>
-									</div>
-									<div class="block apply_count">
-										<span class="title">사용매수</span>
-										<span class="ticket_type">
-										<div class="type adult disabled">
-												<span class="title">일반</span>
-												<a href="#"><span class="sreader"> 일반 </span><span>0</span><span class="sreader"> 명 </span></a>
-												<a href="#"><span class="sreader"> 일반 </span><span>1</span><span class="sreader"> 명 </span></a>
-												<a href="#"><span class="sreader"> 일반 </span><span>2</span><span class="sreader"> 명 </span></a>
-												<a href="#"><span class="sreader"> 일반 </span><span>3</span><span class="sreader"> 명 </span></a>
-												<a href="#"><span class="sreader"> 일반 </span><span>4</span><span class="sreader"> 명 </span></a>
-											</div>
-											<div class="type youth disabled">
-												<span class="title">청소년</span>
-												<a href="#"><span class="sreader"> 청소년 </span><span>0</span><span class="sreader"> 명 </span></a>
-												<a href="#"><span class="sreader"> 청소년 </span><span>1</span><span class="sreader"> 명 </span></a>
-												<a href="#"><span class="sreader"> 청소년 </span><span>2</span><span class="sreader"> 명 </span></a>
-												<a href="#"><span class="sreader"> 청소년 </span><span>3</span><span class="sreader"> 명 </span></a>
-												<a href="#"><span class="sreader"> 청소년 </span><span>4</span><span class="sreader"> 명 </span></a>
-											</div>
-										</span>
-									</div>
-					
-									<div class="block use_point">
-										<span class="title">차감 포인트</span>
-										<span class="value" id="cgv_vip_discount_point_use"><span class="num">0</span>P</span>
-									</div>
-					
-									<div class="block remain_point">
-										<span class="title">잔여 포인트</span>
-										<span class="value" id="cgv_vip_discount_point_use"><span class="num">0</span>P</span>
-									</div>
-					
-									<div class="result">
-										<span class="title">할인금액:</span>
-										<span class="price" id="cgv_vip_half_discount_price">0</span>
-										<span class="won">원</span>
-									</div>
-									<div class="guide">
-										
-										- 적용 대상: 2017년 CGV VIP, RVIP, VVIP, SVIP
-										<br>- 사용 한도: <span class="red">등급 기간 내 VIP 5매, RVIP 10매, VVIP 20매, SVIP 30매 / 일 한도 : 4매 (VIP 공통)</span>
-										<br>- 사용 조건: 일반 / IMAX / 4DX (아트하우스 포함) 관에서 상영하는 일반 2D영화와 일반관에서 상영하는 3D 영화 중 일반, 청소년으로 예매 시 적용 가능
-										<br>- 조조, 심야, 일부 특정 상영회차 이용 불가
-										<br>- 컬쳐데이, 온라인 특별 요금제 중복할인 불가
-										<br>- SWEETBOX / GOLD CLASS / CINE de CHEF / 프리미엄 / STARIUM / IMAX / 4DX / PRIVATE CINEMA 이용 불가
-										<br>- 영화 기획전, 영화제 등 특별 편성 프로그램 및 라이트톡, 시네마톡 등 톡프로그램 이용 불가
-										
-									</div>
-								</div>
-							</div><!-- cgv_vip_half_discount_price" -->
-					
-					
-						</div><!-- // special_body // -->
-					</div><!-- // tpm_special // -->
 						<h4 class="ts3_titlebar ts3_t1 non-special" style="margin-top: 40px;">
 							<span class="header">STEP 1. </span>
 							<span class="title">할인수단</span>
@@ -965,28 +461,28 @@ browser_Event();
 								<div class="tpm_box clear"></div>
 							</div>
 							<div class="tpm_row">
-								<div class="tpm_box TicketLion_point"><div>
+								<div class="tpm_box ticketlion_point"><div>
 									<h5>TicketLion 포인트</h5>
-									<div class="tpm_TicketLion_point">
+									<div class="tpm_ticketlion_point">
 										<div class="tpcop">
 											<span class="title">현재 보유 포인트:</span>
-											<span class="point point_have verdana"><span id="TicketLion_point_have"></span>P</span>
+											<span class="point point_have verdana"><span id="ticketlion_point_have"></span>P</span>
 											<span class="title title2">사용할 포인트:</span>
 											<span class="form_wrap">
-												<label for="TicketLion_point_use">사용할 TicketLion 포인트 입력</label>
-												<input id="TicketLion_point_use" type="text" value="0" maxlength="50" class="type-n nohan">
+												<label for="ticketlion_point_use">사용할 TicketLion 포인트 입력</label>
+												<input id="ticketlion_point_use" type="text" value="0" maxlength="50" class="type-n nohan">
 											</span>
 											<span class="point point_use verdana">P</span>
 											<span class="title title3">
-												<label for="TicketLion_point_all">TicketLion 포인트 모두 사용</label>
-												<input id="TicketLion_point_all" type="checkbox">
+												<label for="ticketlion_point_all">TicketLion 포인트 모두 사용</label>
+												<input id="ticketlion_point_all" type="checkbox">
 												모두사용
 											</span>
 											<div class="cop_block" onclick="askCJONEPointEnable(event);"></div>
 										</div>
 										<div class="tpcop explain">
 											
-											<span class="default">TicketLion 포인트는 <em>1,000P</em> 이상부터 <em>10P</em> 단위로 사용 가능합니다.</span>
+											<span class="default">TicketLion 포인트는 <em>1,000P</em> 이상부터 사용 가능합니다.</span>
 											
 											<span class="exception">
 												<a href="#" onclick="CJOnePointGunjaGangdong();return false;"><img src="http://img.cgv.co.kr/CGV_RIA/Ticket/image/reservation/step3/btn_info.png" alt="정보"></a>
@@ -1060,7 +556,7 @@ browser_Event();
 												<div>
 													<div class="form_wrap select phone_pd form_bg">
 														<label for="lp_phone_pd">통신사 선택</label>
-															<select id="lp_card_type">
+															<select id="lp_phone_pd_type">
 																<option selected="selected">통신사를 선택하세요</option>
 																<option pd_code="SKT" >SKT</option>
 																<option pd_code="KT" >KT</option>
@@ -1091,17 +587,21 @@ browser_Event();
 												</div>
 											</td>
 									</tr>
-									<tr class="card_owner_jumin">
+									<tr class="phone_owner_jumin">
 										<th scope="row"><span class="type_jumin">법정생년월일
-					(6자리)</span><span class="type_coporate" style="display: none;"><label for="lp_coporate">법인공용카드<br>사업자등록번호</label></span></th>
-										<td><div>
-											
-										<div class="form_wrap text card_ssn form_bg">
-												<label for="lp_card_ssn">생년월일</label>
-												<input id="lp_card_ssn" type="password" maxlength="6" class="type-n nohan">
-											</div><span class="divider">-</span><span class="password">*******</span><div class="use_coporate_card">
-												<input type="checkbox" id="lp_use_coporate_card"><label for="lp_use_coporate_card">법인공용카드 사용</label>
-											</div></div></td>
+										(6자리)</span>
+										</th>
+										<td>
+											<div>
+												
+												<div class="form_wrap text phone__ssn form_bg">
+													<label for="lp_phone_ssn">생년월일</label>
+													<input id="lp_phone_ssn" type="password" maxlength="6" class="type-n nohan">
+												</div>
+												<span class="divider">-</span>
+												<span class="password">*******</span>
+											</div>
+										</td>
 									</tr>
 									</tbody>
 								</table>
@@ -1183,126 +683,63 @@ browser_Event();
 									<tr class="card_owner_jumin">
 										<th scope="row"><span class="type_jumin">법정생년월일
 					(6자리)</span><span class="type_coporate" style="display: none;"><label for="lp_coporate">법인공용카드<br>사업자등록번호</label></span></th>
-										<td><div>
-											
-											
-											<div class="form_wrap text coporate form_bg" style="display: none;">
-					                            <label for="lp_coporate">법인공용카드 사업자등록번호 10자리 입력</label>
-					                            <input id="lp_coporate" type="text" maxlength="10" class="type-n nohan">
-					                        </div>
-											
-										<div class="form_wrap text card_ssn form_bg">
-												<label for="lp_card_ssn">생년월일</label>
-												<input id="lp_card_ssn" type="password" maxlength="6" class="type-n nohan">
-											</div><span class="divider">-</span><span class="password">*******</span><div class="use_coporate_card">
-												<input type="checkbox" id="lp_use_coporate_card"><label for="lp_use_coporate_card">법인공용카드 사용</label>
-											</div></div></td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="discount_result">
-								<div class="result_reference promo" style="display: none;">
-									<span class="left">＊카드번호와 유효기간을 입력하신 후 조회를 누르시면 할인 금액이 조회됩니다.</span>
-									<span class="right"><a class="brown btn_verify btn_toggle" id="applyPromoBtn" href="#" onclick="return false;"><span class="default">조회/적용</span><span class="cancel">사용취소</span></a></span>
-								</div>
-								<div class="discount_price promo" style="display: none;">
-									<div class="discount_price_inner">
-										<span class="title">추가할인금액:</span><span class="price">0</span><span class="won">원</span>
-									</div>
-								</div>
-							</div>
-						<div class="discount_result"><div class="result_reference"><span class="left" style="font-weight: bold; position: absolute; width: 98%;">​</span></div></div></div>
-					
-						<div class="card_explain" style="width: 100%; min-height: 0px;">
-							<ul>
-							
-								<li class="isp" style="display: none;">선택하신 카드로 결제하려면 ISP 프로그램이 필요합니다. 처음 결제하시는 경우 ISP 프로그램 설치가 진행 됩니다.</li>
-								<li class="bc" style="display: none;"><strong>BC Top 포인트</strong> 보유 고객이라면 결제 시 포인트사용 네모 박스 체크 후 보유 포인트로 영화를 결제 할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서에서 확인 할 수 있습니다.)</li>
-								<li class="bc" style="display: none;"><strong>평일(월~금) 예매 시, 월 10회/일 1회 2매까지 장당 1천원 추가 할인</strong>
-									<p>- 8,000원 이상 티켓에 한함</p>
-									<p>- 법인/기프트 카드 제외, 우대/특별관 예매 시 적용 불가</p>
-									<p>- 2017년 12월 31일까지 할인 가능</p>
-								</li>
-								<li class="yes" style="display: none;"><strong>KEB하나카드 즉시할인</strong>을 받으시려면, 선할인 신용카드 &gt; 외환카드할인을 선택하신 후 결제를 진행해주세요.</li>
-								<li class="yes" style="display: none;"><strong>하나머니</strong> 보유 고객이라면 결제 시 포인트 사용 네모 박스 체크 후 보유 포인트로 영화를 결제 할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서에서 확인 할 수 있습니다.)</li>
-								<li class="lt" style="display: none;"><strong>CGV롯데포인트 플러스카드 할인 혜택</strong>을 받으시려면, 선할인 신용카드 &gt; 롯데카드 할인을 선택하신 후 결제를 진행해주세요.</li>
-								<li class="ct" style="display: none;"><strong>CITI포인트</strong> 보유 고객이라면 결제 시 포인트 사용 네모 박스 체크 후 보유 포인트로 영화를 결제 할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서에서 확인 할 수 있습니다.)</li>
-								<li class="nh" style="display: none;"><strong>NH카드 할인혜택</strong>을 받으시려면, 즉시할인 신용카드 &gt; NH카드 할인을 선택하신 후 결제를 진행해주세요.<br><strong> (현재 페이지에서 결제 시 즉시할인 혜택이 제공되지 않습니다.)</strong> </li>
-								<li class="nh" style="display: none;"><strong>NH 채움포인트</strong> 보유고객이라면 결제 시 포인트 사용 '네모박스' 체크 후 보유 포인트로 영화를 결제할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서로 확인할 수 있습니다.)</li>
-								<li class="nh" style="display: none;"><strong>NH 채움포인트</strong> 부족 시 '네모박스' 체크 해제 후 결제 부탁 드립니다</li>
-					
-								<li class="bc" style="display: none;">1,000원 할인 또는 즉시할인 혜택 적용여부는 고객님의 실적 및 할인혜택 사용여부에 따라 적용되지 않을 수 있습니다.</li>
-								<li class="kb" style="display: none;"><strong>KB 포인트리</strong> 보유 고객이라면 결제 시 포인트사용 네모 박스 체크 후 보유 포인트로 영화를 결제 할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서에서 확인 할 수 있습니다.)</li>
-								<li class="ss" style="display: none;"><strong>CJ ONE 삼성카드 더블적립/할인 혜택</strong>을 받으시려면, 선할인 신용카드 &gt; CJ ONE 삼성카드 할인을 선택하신 후 결제를 진행해주세요.</li>
-								<li class="ss" style="display: none;"><strong>삼성보너스포인트/S클래스포인트</strong> 보유 고객이라면, 결제 시 포인트 사용 네모 박스 체크 후 보유 포인트로 영화를 결제 할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서에서 확인 할 수 있습니다.)</li>
-								<li class="sh" style="display: none;"><strong>CJ ONE 신한카드 더블적립/할인 혜택</strong>을 받으시려면, 선할인 신용카드 &gt; CJ ONE 신한카드 할인을 선택하신 후 결제를 진행해주세요.</li>
-								<li class="sh" style="display: none;"><strong>마이신한포인트</strong> 보유 고객이라면, 결제 시 포인트 사용 네모 박스 체크 후 보유 포인트로 영화를 결제 할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서에서 확인 할 수 있습니다.)<br>단, 포인트 사용 후 기존 카드 할인 적용됩니다.</li>
-								<li class="hd" style="display: none;"><strong>현대카드M포인트DAY</strong><br> 매주 금요일/토요일 5,000M포인트 사용.<br>그 외 요일은 2,000M포인트 사용.<p style="color: rgb(0, 104, 183); margin-top: 5px;">※ M포인트 사용고객은 위 현대카드M포인트 체크박스 먼저 체크해주세요~!</p></li>
-								<!--<li class="hd"><strong>현대카드M포인트</strong> 사용 시 현대 카드 M포인트 팝업이 보여집니다.</li>-->
-								<li class="sc" style="display: none;"><strong>360도 리워드포인트</strong> 보유 고객이라면 결제 시 포인트 사용 네모 박스 체크 후 보유 포인트로 영화를 결제 할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서에서 확인 할 수 있습니다.)</li>
-								<li class="hnb" style="display: none;"><strong>하나머니</strong> 보유고객이라면 결제 시 ‘하나머니 사용’ 네모박스 체크 후 보유 포인트로 영화를 결제할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서로 확인할 수 있습니다.)</li>
-								<li class="nhsale" style="display: none;">
-									최종 결제 금액 <strong>8,000원 이상</strong> 시 1천원 할인 제공<br>
-									( 최대 2매까지 적용, 일 1회, 월4회 限) 단, 조조, 청소년, 4DX, SoundX 등 특화관 제외 )</li>
-								<li class="nhsale" style="display: none;"><strong>예매일 이후 취소</strong> 진행 시, 할인횟수 한도 복원에 <strong>2~3일 소요</strong>될 수 있습니다. (관련 문의 1588 - 1600)</li>
-								<li class="nhsale" style="display: none;">일부카드(천·지·인, TAKE 5, 패밀리카드)에 한해 청구할인이 유지되며, 상세 이용기준은 NH농협카드 홈페이지 참조 요망</li>
-								<li class="nhsale" style="display: none;"><strong>NH 채움포인트</strong> 보유고객이라면 결제 시 포인트 사용 '네모박스' 체크 후 보유 포인트로 영화를 결제할 수 있습니다.<br>(사용으로 인한 영화 할인 내역은 청구서로 확인할 수 있습니다.)</li>
-								<li class="nhsale" style="display: none;"><strong>NH 채움포인트</strong> 부족 시 '네모박스' 체크 해제 후 결제 부탁 드립니다</li>
-							
-							</ul>
-						</div>
-						<div class="payment_input_exp">
-							<span>※ 신용카드 결제 가능 최소 금액은 1,000원 이상입니다.</span>
-							<span><span class="desc"><a href="#" onclick="return false;" class="btn_samsung_upoint">삼성U포인트 적립</a>&nbsp;&nbsp;<a href="#" onclick="return false;" class="btn_okcashbag">OK캐쉬백 적립</a><a class="btn_kiaRedPoint" onclick="return false;" href="#" style="margin-left: 10px;">KIA RED MEMBERS 적립</a></span>
-							<span class="option">(삼성U포인트, OK캐쉬백, KIA RED MEMBERS 포인트는 포인트 중복 적립 불가)</span></span>
-							<!--
-							<div class="buttons">
-								<a class="btn_okcashbag" href="#" onclick="return false;"><span>OK캐쉬백 번호 입력</span></a>
-								<a class="btn_samsung_upoint" href="#" onclick="return false;"><span>삼성 U포인트 번호 입력</span></a>
-							</div>
-							-->
-						</div>
-					</div>
-					<!-- 신용카드 --><!-- 계좌이체 -->
-					
-					<div class="payment_input payment_transfer" style="display: none;">
-						<div class="table_wrap transfer_wrap" id="transfer_wrap">
-								<table>
-									<tr id="input_acount_num">
-										<th scope="row"><label for="lp_card_no1">계좌번호</label></th>
-										<td>
-											<div>
-												<div class="form_wrap text acount_no form_bg">
-													<label for="lp_acount_no1">계좌번호입력</label>
-													<input id="lp_acount_no1" type="text" class="type-n nohan" style="width:110px;">
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr id="input_acount_pw">
-										<th scope="row"><label for="lp_acount_pw">비밀번호</label></th>
-										<td>
-											<div>
-												<div class="form_wrap text acount_pw form_bg">
-													<label for="lp_acount_pw">계좌 비밀번호 숫자 입력</label>
-													<input id="lp_acount_pw" type="password" maxlength="4" class="type-n nohan">
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr class="card_owner_jumin">
-										<th scope="row"><span class="type_jumin">법정생년월일
-					(6자리)</span><span class="type_coporate" style="display: none;"><label for="lp_coporate">법인공용카드<br>사업자등록번호</label></span></th>
 										<td>
 											<div>
 												<div class="form_wrap text card_ssn form_bg">
 													<label for="lp_card_ssn">생년월일</label>
 													<input id="lp_card_ssn" type="password" maxlength="6" class="type-n nohan">
 												</div>
-												<span class="divider">-</span><span class="password">*******</span>
-												<div class="use_coporate_card">
-													<input type="checkbox" id="lp_use_coporate_card"><label for="lp_use_coporate_card">법인공용카드 사용</label>
+												<span class="divider">-</span>
+												<span class="password">*******</span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="payment_input_exp">
+							<span style="font-weight:bold; color: red;"></span>
+						</div>
+					</div>
+					<!-- 신용카드 -->
+					
+					<!-- 계좌이체 -->
+					
+					<div class="payment_input payment_transfer" style="display: none;">
+						<div class="table_wrap transfer_wrap" id="transfer_wrap">
+								<table>
+									<tr id="input_acㅊount_num">
+										<th scope="row"><label for="lp_account_no1">계좌번호</label></th>
+										<td>
+											<div>
+												<div class="form_wrap text acㅊount_no form_bg">
+													<label for="lp_account_no1">계좌번호입력</label>
+													<input id="lp_account_no1" type="text" class="type-n nohan" style="width:110px;">
 												</div>
+											</div>
+										</td>
+									</tr>
+									<tr id="input_account_pw">
+										<th scope="row"><label for="lp_account_pw">비밀번호</label></th>
+										<td>
+											<div>
+												<div class="form_wrap text acount_pw form_bg">
+													<label for="lp_account_pw">계좌 비밀번호 숫자 입력</label>
+													<input id="lp_account_pw" type="password" maxlength="4" class="type-n nohan">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="account_owner_jumin">
+										<th scope="row"><span class="type_jumin">법정생년월일
+					(6자리)</span><span class="type_coporate" style="display: none;"><label for="lp_coporate">법인공용카드<br>사업자등록번호</label></span></th>
+										<td>
+											<div>
+												<div class="form_wrap text account_ssn form_bg">
+													<label for="lp_account_ssn">생년월일</label>
+													<input id="lp_account_ssn" type="password" maxlength="6" class="type-n nohan">
+												</div>
+												<span class="divider">-</span><span class="password">*******</span>
 											</div>
 										</td>
 									</tr>
@@ -1383,6 +820,7 @@ browser_Event();
 					</div>
 					<div class="ticket_payment_clear"></div>
 					</div>
+					<input type="hidden" id="paymentinfo" >
 				</div>
 				<!-- //step3 -->
 				<!-- step4 -->
@@ -1659,16 +1097,6 @@ browser_Event();
 		                            <span class="bottom"></span>
 		                            </p>
 		                        </li>
-		                        <!--
-		                        <li class="btn03">
-		                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-선택할 수 없는 영화안내</a>
-		                            <p class="infoBx">
-		                            <span class="top"></span>
-		                            <span class="middle">선택 불가능한 정보는 장애인 차별금지법에 따라 패턴 디자인을 적용하여 모든 사용자가 쉽게 구분할 수 있어요!</span>
-		                            <span class="bottom"></span>
-		                            </p>
-		                        </li>
-		                        -->
 		                        <li class="btn04">
 		                            <a href="#" onclick="return false;" class="btnVisInfo blind_txt">물음표-자주가는 CGV안내</a>
 		                            <p class="infoBx">
@@ -1849,10 +1277,6 @@ browser_Event();
 		                        <td>
 		                        
 		                            <div style="height:170px;overflow:auto;">
-		                                <!--<div class="row credit_card">
-		                                    <span class="title"></span>
-		                                    <span class="content"><span class="price">5,000</span>원 (BC카드 할인 <span class="price">3,000</span>원)</span>
-		                                </div>-->
 		                                <div class="row phone" style="display: none;">
 		                                    <span class="title">휴대폰</span>
 		                                    <span class="content"><span class="price"></span>원</span>
@@ -1869,7 +1293,14 @@ browser_Event();
 		                                    <span class="title"><label for="lp_sms_author_safe">안심결제 비밀번호</label></span>
 		                                    <span class="content"><div class="wrap_input"><input type="text" id="lp_sms_author_safe" value="" maxlength="4"></div></span>
 		                                </div>
-		                                <div class="payment_methods"><div class="row" pay-code="0010"><span class="title"></span><span class="content"><span class="price"></span>원</span></div></div>
+		                                <div class="payment_methods">
+			                                <div class="row" pay-code="0010">
+			                                <span class="title"></span>
+			                                <span class="content">
+			                                <span class="price"></span>
+			                                </span>
+			                                </div>
+		                                </div>
 		                            </div>
 		                        </td>
 		                    </tr>
@@ -1885,26 +1316,12 @@ browser_Event();
 		            <li id="theaterDescCl" style="display: none;"></li></ul>
 					
 		        </div>
-		        <div class="agreement" style="border-top: 1px solid rgb(204, 204, 204); padding-top: 15px; background: rgb(238, 238, 238); height: 80px; text-align: left; border-bottom: 1px solid rgb(204, 204, 204); padding-bottom: 15px; margin: 0px 0px 28px;">
-		        <div id="paymentAgreement" style="float: left; width: 47%; height: 100%; padding-left: 3%; border-right: 1px solid rgb(204, 204, 204);">
-		        <span class="inputModel" style=" width: 410px; min-height: 15px; margin: 0px 0px 10px;">
-		        <input class="inputModel_input" type="checkbox" style="display: inline-block; vertical-align: top; margin-top: 1px;" id="agreementAll">
-		        <label class="inputModel_label" style="width: 93%; display: inline-block; margin-left: 10px; font-weight: bold;" for="agreementAll">결제대행서비스 약관에 모두 동의</label></span>
-		        <span class="inputModel" style="display: block; width: 99%; min-height: 15px; margin-bottom: 5px; margin-left: 10px;" id="agreeMent0"><input class="inputModel_input agreeMentChk" type="checkbox" style="display: inline-block; vertical-align: top; margin-top: 1px;" id="agreeMent0val"><label class="inputModel_label" style="width: 325px; display: inline-block; margin-left: 10px;" for="agreeMent0val">전자금융거래 이용약관</label>
-		        <button class="detailView" style="background: none; text-decoration: underline; font-size: 1em; color: rgb(32, 124, 202); padding: 0px; height: 16px; vertical-align: top;">전문확인</button></span>
-		        <span class="inputModel" style="display: block; width: 99%; min-height: 15px; margin-bottom: 5px; margin-left: 10px;" id="agreeMent1"><input class="inputModel_input agreeMentChk" type="checkbox" style="display: inline-block; vertical-align: top; margin-top: 1px;" id="agreeMent1val">
-		        <label class="inputModel_label" style="width: 325px; display: inline-block; margin-left: 10px;" for="agreeMent1val">개인정보 수집 이용약관</label>
-		        <button class="detailView" style="background: none; text-decoration: underline; font-size: 1em; color: rgb(32, 124, 202); padding: 0px; height: 16px; vertical-align: top;">전문확인</button></span>
-		        <span class="inputModel" style="display: block; width: 99%; min-height: 15px; margin-bottom: 5px; margin-left: 10px;" id="agreeMent2"><input class="inputModel_input agreeMentChk" type="checkbox" style="display: inline-block; vertical-align: top; margin-top: 1px;" id="agreeMent2val">
-		        <label class="inputModel_label" style="width: 325px; display: inline-block; margin-left: 10px;" for="agreeMent2val">개인정보 제공 및 위탁 안내 약관</label>
-		        <button class="detailView" style="background: none; text-decoration: underline; font-size: 1em; color: rgb(32, 124, 202); padding: 0px; height: 16px; vertical-align: top;">전문확인</button></span></div>
-		        <div id="paymentInfoConfirm" style="float: left; width: 45%; height: 100%;">
-		        <span class="inputModel" style="display: none; width: 400px; min-height: 15px; margin: 0px 0px 7px 20px;"><input class="inputModel_input" type="checkbox" style="display: inline-block; vertical-align: top; margin-top: 1px;" id="resvPKGfirm">
-		        <label class="inputModel_label" style="width: 93%; display: inline-block; margin-left: 10px; font-weight: bold;" for="resvPKGfirm">본 영화는 동시상영 영화로 부분환불이 불가한 영화입니다.</label></span>
-		        <span class="inputModel" style="display: none; width: 400px; min-height: 15px; margin: 0px 0px 7px 20px;"><input class="inputModel_input" type="checkbox" style="display: inline-block; vertical-align: top; margin-top: 1px;" id="resvNoshowfirm">
-		        <label class="inputModel_label" style="width: 93%; display: inline-block; margin-left: 10px; font-weight: bold;" for="resvNoshowfirm">취소 기한을 확인하였으며, 이에 동의합니다.</label></span>
-		        <span class="inputModel" style="display: block; width: 420px; min-height: 15px; margin: 0px 0px 0px 20px; clear: both;"><input class="inputModel_input" type="checkbox" style="display: inline-block; vertical-align: top; margin-top: 1px;" id="resvConfirm">
-		        <label class="inputModel_label" style="width: 93%; display: inline-block; margin-left: 10px; font-weight: bold;" for="resvConfirm">상기 결제 내역을 모두 확인 했습니다</label></span></div></div>
+		        <div class="agreement" style="border-top: 1px solid rgb(204, 204, 204); padding-top: 15px; background: rgb(238, 238, 238); height:20px; text-align: left; border-bottom: 1px solid rgb(204, 204, 204); padding-bottom: 15px; margin: 0px 0px 28px;">
+			        <div id="paymentInfoConfirm" style="float: left; width: 45%; height: 100%;">
+				        <span class="inputModel" style="display: block; width: 420px; min-height: 15px; margin: 0px 0px 0px 20px; clear: both;"><input class="inputModel_input" type="checkbox" style="display: inline-block; vertical-align: top; margin-top: 1px;" id="resvConfirm">
+				        <label class="inputModel_label" style="width: 93%; display: inline-block; margin-left: 10px; font-weight: bold;" for="resvConfirm">상기 결제 내역을 모두 확인 했습니다</label></span>
+			        </div>
+		        </div>
 		    </div><!-- //bd -->
 		    <div class="ft">
 		        <a title="예매 결제하기" href="#" onclick="return false;" class="reservation"><span class="sreader">예매 결제하기</span></a>

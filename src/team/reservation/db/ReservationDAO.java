@@ -1,10 +1,8 @@
 package team.reservation.db;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -385,14 +383,11 @@ public class ReservationDAO {
 				rs = pstmt.executeQuery();
 				
 				rs.next();
-				System.out.println(rs.getString(1) + rs.getString(2));
 				String[] duration = {rs.getString(1), rs.getString(2)};
 				return duration;
 			}else if(flag.equals("all")){
-				System.out.println(value);
 				String pcode = value.substring(0, 8);
 				String movie_num = value.substring(8);
-				System.out.println(movie_num);
 				sql="select start_day, end_day from playing where nc_code = concat('mo', ?) and p_code = ?";
 				pstmt=con.prepareStatement(sql);
 				pstmt.setString(1, movie_num);
@@ -424,17 +419,18 @@ public class ReservationDAO {
 		try{
 			con=getConnection();
 			
-			//잔여석 조회할떄 지금은 상영관 자체의 좌석수를 들고온당 
-			//나중에 예매 구현하고나면 실제로 남은 잔여석을 가져오도록 수정
-			sql = "select distinct a.screen_name , b.ptime , c.capacity from seatinfo a, playtime b, place_detail c "
-					+ "where a.ping_num = b.ping_num and b.ping_num = "
-					+ "(select ping_num from playing where nc_code = concat('mo',?) and p_code = ?) and b.play_day = date_format(?,'%Y%m%d') and c.p_code = ? order by 1, 2";
+			sql = "select a.screen_name, a.ptime , a.capacity, a.capacity - coalesce(b.reserved,0) as remained "
+					+ "from v_playinfo a left join v_reserved_seatinfo b "
+					+ "on a.ping_num = b.ping_num and a.screen_name = b.screen_name and "
+					+ "a.play_day = date_format(b.view_date, '%Y-%m-%d') and a.ptime = date_format(b.view_date, '%H:%i') "
+					+ "where a.play_day = ? and a.p_code = ? and nc_code = concat('mo',?) order by 1, 2";
+			
 			pstmt=con.prepareStatement(sql);
-			pstmt.setString(1, mo_num);
-			pstmt.setString(2, pcode);
+			
 			String day = playday.substring(0, 4)+"-"+playday.substring(4,6)+"-"+playday.substring(6);
-			pstmt.setString(3, day);
-			pstmt.setString(4, pcode);
+			pstmt.setString(1, day);
+			pstmt.setString(2, pcode);
+			pstmt.setString(3, mo_num);
 			rs = pstmt.executeQuery();
 			
 			System.out.println(pstmt.toString());
@@ -445,6 +441,7 @@ public class ReservationDAO {
 					timeInfo.put("screen_name", rs.getString("screen_name"));
 					timeInfo.put("ptime", rs.getString("ptime"));
 					timeInfo.put("capacity", rs.getString("capacity"));
+					timeInfo.put("remained", rs.getString("remained"));
 				TimeInfoList.add(timeInfo);
 				}while(rs.next());
 			}
@@ -544,8 +541,8 @@ public class ReservationDAO {
 			con=getConnection();
 			
 			sql="insert into reservation "
-				+ "(member_num, ping_num, rseat_num, seat, view_date, reser_day, pay_day, screen_name, mPoint, price) "
-				+ "values ( ?,?,?,?,?,now(),now(),?,?,?)";
+					+ "(member_num, ping_num, rseat_num, seat, view_date, reser_day, pay_day, screen_name, mPoint, price, paymentinfo) "
+					+ "values ( ?,?,?,?,?,now(),now(),?,?,?,?)";
 			pstmt=con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			pstmt.setInt(1, rsb.getMember_num());
 			pstmt.setInt(2, rsb.getPing_num());
@@ -555,6 +552,7 @@ public class ReservationDAO {
 			pstmt.setString(6, rsb.getScreen_name());
 			pstmt.setInt(7, rsb.getMPoint());
 			pstmt.setInt(8,  rsb.getPrice());
+			pstmt.setString(9,  rsb.getPayinfo());
 			
 			pstmt.executeUpdate();
 			rs = pstmt.getGeneratedKeys();
@@ -592,6 +590,10 @@ public class ReservationDAO {
 				
 				nextpstmt.executeUpdate();
 			}
+
+			rsb.setR_num(renum);
+			
+			reRsb = rsb;
 
 			return reRsb;
 					
