@@ -15,7 +15,7 @@
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	/* setInterval(autoChangeFuction, 7000); */
+	setInterval(autoChangeFuction, 7000); 
 	scheduledMusicalFunction();
 	listMovieFunction(0);
 	listMovieFunction2(0);

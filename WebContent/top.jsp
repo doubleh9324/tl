@@ -11,7 +11,7 @@
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
-	gradeFunction();
+	TopgradeFunction();
    $('#search_bar2_2').click(function(){
       var search=$('#search_bar2_1').val();
       if(search==""){
@@ -62,7 +62,7 @@ $(document).ready(function(){
 })
 
 
-function gradeFunction(){
+function TopgradeFunction(){
 	var setflag=$("#setFlag").val();
 	if(setflag!='y'){
 		jQuery.ajax({
