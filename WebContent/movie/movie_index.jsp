@@ -111,7 +111,7 @@ function gradeFunction(){
 					}else if(age=="al"){age="all";}
 					
 					
-					var li_code='<li id="rank_li"><a href="./MovieContentAction.mo?num='+value.movie_num+'">'+(key+1)+'.'+'<img src="icons/grade_'+age+'.png">'+name+'</a><span>'+grade+'</span></li>';
+					var li_code='<li id="rank_li">'+(key+1)+'.'+'<img src="icons/grade_'+age+'.png"><a href="./MovieContentAction.mo?num='+value.movie_num+'">'+name+'</a><span>'+grade+'</span></li>';
 					$("#rank_ul").append(li_code);
 				});
 				
@@ -144,7 +144,7 @@ function reservFunction(){
 					var age=value.age.substring(0,2);
 					if(age=="18"){ age="18";
 					}else if(age=="al"){age="all";}
-					var li_code='<li id="rank_li"><a href="./MovieContentAction.mo?num='+value.movie_num+'">'+(key+1)+'.'+'<img src="icons/grade_'+age+'.png">'+name+'</a><span>'+value.percent+'%</span></li>';
+					var li_code='<li id="rank_li">'+(key+1)+'.'+'<img src="icons/grade_'+age+'.png"><a href="./MovieContentAction.mo?num='+value.movie_num+'">'+name+'</a><span>'+value.percent+'%</span></li>';
 					$("#rank_ul").append(li_code);
 				});
 				
@@ -198,7 +198,7 @@ function soonMovieFunction(num){
 <div id="rank_div">
 	<div id="rank">
 		<div id="rank_head">
-			<img alt="" src="icons/boxoffice.png">
+			<img id="boxoffice" alt="" src="icons/boxoffice.png">
 			<div id="category">
 			<span id="reserveOrder" onclick="reservFunction()">예매순</span>
 			<span id="bar">|</span>

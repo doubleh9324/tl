@@ -9,10 +9,9 @@
 <style type="text/css">
 .jg{font-family: 'Jeju Gothic',sans-serif;}
 </style>
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-   
+	gradeFunction();
    $('#search_bar2_2').click(function(){
       var search=$('#search_bar2_1').val();
       if(search==""){
@@ -33,27 +32,65 @@ $(document).ready(function(){
       }
    });
    
-
-  
-       $("#movie").mouseover(function(){   
-	      $("#movie_drop").stop().slideDown("fast");
-
-	      
-	      $("#movie_drop, #movie").mouseout(function(){
-	         $("#movie_drop").stop().slideUp("fast");
-	         
-	       
-	      });
-	   });   
-	
-    
+//    $("movie").mouseover(function(){
+//       $("movie_drop").slideDown("slow");
+//       $("movie").mouseout(function(){
+//          $("movie_drop").slideUp("slow");
+//       })
+//    });
    
-       
-    
-
-    
+   $("#movie,#movie_drop").mouseover(function(){   
+      $("#movie_drop").stop().slideDown("fast");
+      
+      $("#movie,#movie_drop").mouseout(function(){
+         $("#movie_drop").stop().slideUp(10);
+      });      
+   });
+   
+   $("#musical,#musical_drop").mouseover(function(){   
+      $("#musical_drop").stop().slideDown("fast");
+      
+      $("#musical,#musical_drop").mouseout(function(){
+         $("#musical_drop").stop().slideUp(10);
+      });      
+   });
+//    호버 색깔 유지하는 메서드 아직 미완성
+   $("#movie").mouseover(function(){
+      $("#movie").css("color","#f0403c");
+   })
+   
 })
 
+
+function gradeFunction(){
+	var setflag=$("#setFlag").val();
+	if(setflag!='y'){
+		jQuery.ajax({
+			type:"POST",
+			url:"./MovieOrderGradeAction.mo",
+			dataType:"JSON",
+			
+			success:function(data){
+				$("#mo_recommand").html("");
+				var h5_code="<h5>영화 <br>추천</h5>"
+					$("#mo_recommand").append(h5_code);
+			
+				$.each(data.movieGrade, function(key,value){
+					if(key<5){
+						var li_code='<a href="./MovieContentAction.mo?num='+value.movie_num+'"><img src="MovieImage/'+value.image+'">'+'</a>';
+						
+						$("#mo_recommand").append(li_code);
+					}
+					
+				});
+				
+			},
+			error: function(xhr, status, error){
+				
+			}
+		});
+	}
+}
 
 
 
@@ -65,23 +102,24 @@ $(document).ready(function(){
    String id = (String)session.getAttribute("id");
 %>
 <!-- 회원 메뉴바 -->
-   <div id="member_menu_1" >
+ <div id="member_menu_1">
       <div id="member_menu_2">
          <ul>
        <%if(id==null){ %>
-            <li><a href="#">고객센터</a></li>  
-             <li><a href="#">예매확인/취소</a></li>
+       		
+            <li><a href="index.jsp?center=board/qna_board_faq.jsp">고객센터</a></li>  
+              <li><a href="#">예매확인/취소</a></li>
             <li><a href="./MemberModify.me">마이페이지</a></li>
-            <li><a href="./MemberJoin.me">회원가입</a></li>
-             <li><a href="./MemberLogin.me">로그인</a></li>  
-              <li><a href="./MemberLogin.me">로그인</a></li>  
+              <li><a href="./MemberJoin.me">회원가입</a></li>
+            <li ><a href="./MemberLogin.me">로그인</a></li>  
        <%}else{%>
-            
-            <li><a href="#">고객센터</a></li> 
-            <li><a href="#">예매확인/취소</a></li>
-                 <li><a href="./MemberModify.me">마이페이지</a></li>
+       		
+       			<li><a href="index.jsp?center=board/qna_board_faq.jsp">고객센터</a></li> 
+   
+               <li><a href="#">예매확인/취소</a></li>
+            <li><a href="./MemberModify.me">마이페이지</a></li>
              <li><a href="./MemberLogout.me">로그아웃</a></li> 
-              <li><a><%=id %>님 환영합니다!</a></li>
+               <li><a><%=id %>님 환영합니다!</a></li>
                  
        <% }%>
          </ul>
@@ -106,17 +144,20 @@ $(document).ready(function(){
       <div id="menu_bar_2" class="jg">               
             <ul>  
                <li><a href="#">메 뉴</a></li>          
-               <li id="movie"><a href="./MovieIndex.mo">영 화</a></li>
-               <li><a href="#">뮤 지 컬</a></li>
+               <li id="movie" onclick="location.href='./MovieIndex.mo'"><a>영 화</a> </li>
+               
+               <li id="musical" onclick="location.href='./MusicalIndex.mu'"><a>뮤 지 컬</a></li>
                <li><a href="#">연 극</a></li>
                <li><a href="#">콘 서 트</a></li>
                <li><a href="#">공 연</a></li>
                <li><a href="#">지 역</a></li>
             </ul>                     
       </div>
-      <div id="movie_drop">
-           <div style="background-color: #000000;">
-            <ul >
+      <div id="movie_drop" class="jg">
+           <!-- 목록 -->
+           <div style="width:200px; height:350px; background-color: white;">
+            <p>영화</p>
+            <ul>                
                 <li> <a href="index.jsp?center=ganre.jsp&g_code=act&cate=mo">액션</a></li>
                 <li> <a href="index.jsp?center=ganre.jsp&g_code=adv&cate=mo">모험</a></li>
                 <li> <a href="index.jsp?center=ganre.jsp&g_code=ani&cate=mo">애니메이션</a></li>
@@ -124,9 +165,36 @@ $(document).ready(function(){
                 <li> <a href="index.jsp?center=ganre.jsp&g_code=doc&cate=mo">다큐멘터리</a></li>
                 <li> <a href="index.jsp?center=ganre.jsp&g_code=dra&cate=mo">드라마</a></li>
                 <li> <a href="index.jsp?center=ganre.jsp&g_code=fam&cate=mo">가족</a></li>                   
-           </ul>
+            </ul>
           </div>
-      </div> 
+          <div id="mo_recommand" style="width:449px; height:134px; background-color: white;">
+             
+             
+             
+         </div>
+         <div class="clear"></div>
+                       
+         <div style="width:449px; background-color: skyblue ;">
+             
+             
+             <!-- 이미지 -->
+             <img alt="musical" src="img/musical_1.jpg" style="width:449px">
+             
+         </div>
+      </div>
+      
+       <div id="musical_drop">
+			            <div>
+			               <ul>
+			                  <li> <a href="index.jsp?center=ganre.jsp&g_code=ori&cate=mu">오리지널/내한</a></li>
+			                  <li> <a href="index.jsp?center=ganre.jsp&g_code=lic&cate=mu">라이센스 </a></li>
+			                  <li> <a href="index.jsp?center=ganre.jsp&g_code=cre&cate=mu">창작 뮤지컬</a></li>
+			                  <li> <a href="index.jsp?center=ganre.jsp&g_code=non&cate=mu">넌버벌 공연</a></li>
+			              </ul>                
+			            </div>
+			      </div>
+   
+      
                     
    </div>
 </header>

@@ -138,7 +138,7 @@ function gradeFunction(){
 					if(name.length>12){name=name.substring(0,11)+"...";}
 					var grade=value.grade.toString();
 					if(grade.length<3){grade=grade+".0";}
-					var li_code='<li id="rank_li"><a href="./MusicalContentAction.mu?num='+value.musical_num+'">'+(key+1)+'.'+name+'</a><span>'+grade+'</span></li>';
+					var li_code='<li id="rank_li">'+(key+1)+'.<a href="./MusicalContentAction.mu?num='+value.musical_num+'">'+name+'</a><span>'+grade+'</span></li>';
 					$("#rank_ul").append(li_code);
 				});
 				

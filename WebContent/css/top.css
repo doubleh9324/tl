@@ -13,6 +13,8 @@ header {
    min-width:1000px;
 }
 
+.clear {clear: both;}
+
 
 /* 회원 메뉴바 */
 #member_menu_1{
@@ -115,12 +117,12 @@ header {
 
 /* 메뉴바 */
 #menu_bar_1{
-    top: 200px;
     width: 100%;
     height: 34px;
     background-color: white;
    background: #ff7c2c;
    margin:0 auto;
+   position:relative;
 }
 #menu_bar_2{   
     height: 34px;
@@ -131,13 +133,33 @@ header {
    margin-left: 20px;
 }
 #menu_bar_2 ul li{
-   top: 9px;
+   top: 8px;
     list-style-type: none;
     display: inline;
     position: relative;
     padding: 9px 48px 12px 48px;
 }
 #menu_bar_2 ul li:hover{
+   background: #f0403c;
+   cursor:pointer;
+}
+#mo_recommand img{
+	
+	width: 70px;
+	height: 90px;
+	margin: 25px 5px 0px 0px;
+}
+
+#mo_recommand h5{
+	float: left;
+	width: 35px;
+	height: 35px;
+	margin: 50px 0px 0px 15px;
+	text-align: left;
+}
+
+/* 호버 색깔 유지 미완성 */
+#movie_drop:hover #menu_bar_2 ul li{
    background: #f0403c;
 }
 
@@ -146,18 +168,60 @@ header {
     font-size: 16px;
     color: white;    
 }
-
-#movie_drop{
-   position: relative;
-   background-color: #000000;
+/* 드롭다운 설정 */
+#movie_drop, #musical_drop{
+   position: absolute;
    display:none;
-/*    z-index: 999; */
+   z-index: 1;
+   width: 650px;
+   height: 350px;
+   background-color: #ffffff;
+   left:32%;
+   top:34px;
+   border: 1px solid #dddddd;
 }
-#movie_drop li{
-   text-align: center;
+#movie_drop div{
+   position: absolute;
+   display:block;
+   float: left;   
+}
+#movie_drop div ul{
+   list-style-type: none;
+   
+}
+#movie_drop div ul li{
+   margin: 20px 0px 10px 0px;
+   width: 130px;
+   text-align: left;   
+   padding-left: 35px;
+}
+#movie_drop div ul a{
+   text-decoration: none;
+   color: #808080;   
+}
+#movie_drop div ul a:hover{
+   color: #f0403c;
+   font-weight: bold;
+}
+#movie_drop p{
+   text-align:left;
+   width: 130px;
+   font-size: 20px;
+   color: #f0403c;
+   border-bottom: 1px solid #ee1f1a;
+   padding:25px 0px 5px 0px;
+   margin: 0px 0px 10px 35px;
 }
 
+#movie_drop div:NTH-OF-TYPE(1) {      
+   border-right: 1px solid #dddddd;
+}
 
+#movie_drop div:NTH-OF-TYPE(2) {
+   left:201px;   
+}
 
-
-
+#movie_drop div:NTH-OF-TYPE(4) {
+   left:201px; top :134px ;   
+   border-top: 1px solid #dddddd;
+}
