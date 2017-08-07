@@ -32,7 +32,7 @@ public class LocationDAO {
 
 		try {
 			getCon();
-			String sql = "select * from location_detail where l_code LIKE '"+l_category+"%' and l_code LIKE '%"+l_category2+"'";
+			String sql = "select * from location_detail where p_code LIKE '"+l_category+"%' and p_code LIKE '%"+l_category2+"'";
 
 			pstmt = con.prepareStatement(sql);
 
