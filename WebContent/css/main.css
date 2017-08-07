@@ -303,7 +303,7 @@ li#open_day:HOVER, li#name:HOVER{
 div#popup{
    position: absolute;
    background-color:#fff;
-   top: 140px;
+   top: 200px;
    left: 25px;
    width: 439px;
    height: 330px;

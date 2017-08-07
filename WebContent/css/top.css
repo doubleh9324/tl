@@ -145,14 +145,14 @@ header {
    background: #f0403c;
    cursor:pointer;
 }
-#mo_recommand img{
+#mo_recommand img,#mu_recommand img{
 	
 	width: 90px;
 	height: 120px;
 	margin: 15px 7px 0px 0px;
 }
 
-#mo_recommand h5{
+#mo_recommand h5, #mu_recommand h5{
 	float: left;
 	width: 35px;
 	height: 35px;
@@ -185,31 +185,31 @@ header {
 	-webkit-box-shadow:#585858 0px 0px 1px; 
 	box-shadow:#585858 0px 0px 1px; 
 }
-#movie_drop div{
+#movie_drop div, #musical_drop div{
    position: absolute;
    display:block;
    float: left;   
 }
-#movie_drop div ul{
+#movie_drop div ul,#musical_drop div ul{
    list-style-type: none;
    
 }
-#movie_drop div ul li{
+#movie_drop div ul li, #musical_drop div ul li{
    margin: 20px 0px 10px 0px;
    width: 130px;
    text-align: left;   
    padding-left: 35px;
 }
-#movie_drop div ul a{
+#movie_drop div ul a,#musical_drop div ul a{
    text-decoration: none;
    color: #808080;   
    font-size: 13px;
 }
-#movie_drop div ul a:hover{
+#movie_drop div ul a:hover, #musical_drop div ul a:HOVER{
    color: #f0403c;
    font-weight: bold;
 }
-#movie_drop p{
+#movie_drop p, #musical_drop p{
    text-align:left;
    width: 130px;
    font-size: 20px;
@@ -219,15 +219,15 @@ header {
    margin: 0px 0px 10px 35px;
 }
 
-#movie_drop div:NTH-OF-TYPE(1) {      
+#movie_drop div:NTH-OF-TYPE(1),#musical_drop div:NTH-OF-TYPE(1) {      
    border-right: 1px solid #dddddd;
 }
 
-#movie_drop div:NTH-OF-TYPE(2) {
+#movie_drop div:NTH-OF-TYPE(2),#musical_drop div:NTH-OF-TYPE(2) {
    left:201px;   
 }
 
-#movie_drop div:NTH-OF-TYPE(4) {
+#movie_drop div:NTH-OF-TYPE(4),#musical_drop div:NTH-OF-TYPE(4)  {
    left:201px; top :134px ;   
    border-top: 1px solid #dddddd;
 }

@@ -12,6 +12,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	TopgradeFunction();
+	TopgradeFunction2();
    $('#search_bar2_2').click(function(){
       var search=$('#search_bar2_1').val();
       if(search==""){
@@ -88,7 +89,35 @@ function TopgradeFunction(){
 	}
 }
 
-
+function TopgradeFunction2(){
+	var setflag=$("#setFlag").val();
+	if(setflag!='y'){
+		jQuery.ajax({
+			type:"POST",
+			url:"./MusicalPopularAction.mu",
+			dataType:"JSON",
+			
+			success:function(data){
+				$("#mu_recommand").html("");
+				var h5_code="<h5>뮤지컬 <br>추천</h5>"
+					$("#mu_recommand").append(h5_code);
+			
+				$.each(data.pop_musicalList, function(key,value){
+					if(key<4){
+						var li_code='<a href="./MusicalContentAction.mu?num='+value.musical_num+'"><img src="MusicalImage/'+value.image+'">'+'</a>';
+						
+						$("#mu_recommand").append(li_code);
+					}
+					
+				});
+				
+			},
+			error: function(xhr, status, error){
+				
+			}
+		});
+	}
+}
 
 </script>
 </head>
@@ -179,16 +208,31 @@ function TopgradeFunction(){
          </div>
       </div>
       
-       <div id="musical_drop">
-			            <div>
-			               <ul>
-			                  <li> <a href="index.jsp?center=ganre.jsp&g_code=ori&cate=mu">오리지널/내한</a></li>
-			                  <li> <a href="index.jsp?center=ganre.jsp&g_code=lic&cate=mu">라이센스 </a></li>
-			                  <li> <a href="index.jsp?center=ganre.jsp&g_code=cre&cate=mu">창작 뮤지컬</a></li>
-			                  <li> <a href="index.jsp?center=ganre.jsp&g_code=non&cate=mu">넌버벌 공연</a></li>
-			              </ul>                
-			            </div>
-			      </div>
+       <div id="musical_drop" class="jg"> 
+           <div style="width:200px; height:350px; background-color: white;">
+            <p>뮤지컬</p>
+               <ul>
+                  <li> <a href="index.jsp?center=ganre.jsp&g_code=ori&cate=mu">오리지널/내한</a></li>
+                  <li> <a href="index.jsp?center=ganre.jsp&g_code=lic&cate=mu">라이센스 </a></li>
+                  <li> <a href="index.jsp?center=ganre.jsp&g_code=cre&cate=mu">창작 뮤지컬</a></li>
+                  <li> <a href="index.jsp?center=ganre.jsp&g_code=non&cate=mu">넌버벌 공연</a></li>
+              </ul>                
+            </div>
+             <div id="mu_recommand" style="width:449px; height:134px; background-color: white;">
+             
+           
+             
+             
+         </div>
+         <div class="clear"></div>
+                       
+         <div style="width:449px; background-color: skyblue ;">
+             
+             
+             <!-- 이미지  width:449px height:215.09px-->
+             <img alt="musical" src="./img/musical_1.jpg" style="width:449px">
+             
+         </div>
    
       
                     

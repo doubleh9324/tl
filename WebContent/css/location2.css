@@ -5,14 +5,14 @@
 	margin:0;
 	padding:0;
 }
-div#mid{
+center div#mid{
 	font-family:"Jeju Gothic",sans-serif;
 	color: #3a3a3a;
 }
-h1{
+center h1{
 	margin:50px;
 }
-hr{
+center hr{
 	margin-top:50px;
 	width:900px;
 }
@@ -20,18 +20,18 @@ center{
 	font-family:"Jeju Gothic",sans-serif;
 	color: #3a3a3a;
 }
-.category{
+center .category{
 	width: 120px;
 	height: 25px;
 	
 }
-.search{
+center .search{
 	width: 960px;
 	height:50px;
 	margin-top: 50px;
 	border-radius: 5px 5px 0 0;
 }
-.button{
+center .button{
 	color: #6b6b6b;
 	border: 1px solid #ccc;
 	border-radius: .2em;
@@ -41,15 +41,15 @@ center{
 		to(#f2f2f2));
 
 }
-div.detail{
+center div.detail{
 	height: 30px;
 
 }
-div.add{
+center div.add{
 	height: 30px;
 		font-size: 13px;
 }
-table a{
+center table a{
 	text-decoration: none;
 	color: #3e3e3e;
 	font-size: 13px;
@@ -62,7 +62,7 @@ table a{
 	margin-bottom: 50px;
 	padding: 70px 30px;
 }
-.tableStyle{
+center .tableStyle{
 	table-layout: fixed;
 	position: relative;
 	width: 100%;
@@ -70,13 +70,13 @@ table a{
 	border-collapse: collapse;
 	border-bottom: 1px solid #d2d2d2;
 }
-tr{
+center tr{
 	display: table-row;
 	vertical-align: inherit;
 	border-color: inherit;
 	height: 30px;
 }
-table#notice th{
+center table#notice th{
 	height: 30px;
 	text-transform : capitalize;
 	font-size: 14px;
@@ -85,11 +85,11 @@ table#notice th{
 	border-bottom: 1px solid #d2d2d2;
 	text-transform: capitalize;
 }
-table#notice td:hover{
+center table#notice td:hover{
 /* 	cursor: pointer; */
 	cursor: hand;
 }
-table#notice td{
+center table#notice td{
 	padding: 5px 0;
 	border-bottom: 1px dotted #c0c0c0;
 }
