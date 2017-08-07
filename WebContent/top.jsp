@@ -203,7 +203,7 @@ function TopgradeFunction2(){
              
              
              <!-- 이미지 -->
-             <img alt="musical" src="img/musical_1.jpg" style="width:449px">
+             <img alt="musical" src="img/taxi3.png" style="width:449px">
              
          </div>
       </div>
@@ -233,9 +233,7 @@ function TopgradeFunction2(){
              <img alt="musical" src="./img/musical_1.jpg" style="width:449px">
              
          </div>
-   
-      
-                    
+                  
    </div>
 </header>
 </body>

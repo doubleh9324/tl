@@ -18,10 +18,10 @@ header {
 
 /* 회원 메뉴바 */
 #member_menu_1{
-   width:100%;
+    width:100%;
     height: 20px;
     background-color: white;   
-    padding: 5px;   
+    padding-top: 5px;   
     border-bottom: 1px solid #c0c0c0;  
     margin:0 auto;
 }
@@ -139,7 +139,7 @@ header {
     list-style-type: none;
     display: inline;
     position: relative;
-    padding: 9px 48px 8px 48px; /* 8.7 pm 15:33 */
+    padding: 9px 48px 7px 48px; /* 8.7 pm 15:33 */
 }
 #menu_bar_2 ul li:hover{
    background: #f0403c;
@@ -158,11 +158,6 @@ header {
 	height: 35px;
 	margin: 50px 0px 0px 15px;
 	text-align: left;
-}
-
-/* 호버 색깔 유지 미완성 */
-#movie_drop:hover #menu_bar_2 ul li{
-   background: #f0403c;
 }
 
 #menu_bar_2 ul li a{
