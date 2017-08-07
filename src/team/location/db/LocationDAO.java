@@ -42,7 +42,7 @@ public class LocationDAO {
 			while (rs.next()) {
 				bean = new LocationListBean();
 				bean.setL_num(rs.getInt(1));
-				bean.setL_code(rs.getString(2));
+				bean.setP_code(rs.getString(2));
 				bean.setL_img(rs.getString(3));
 				bean.setL_name(rs.getString(4));
 				bean.setL_address(rs.getString(5));
@@ -94,7 +94,7 @@ public class LocationDAO {
 			if (rs.next()) {
 				bean = new LocationListBean();
 				bean.setL_num(rs.getInt(1));
-				bean.setL_code(rs.getString(2));
+				bean.setP_code(rs.getString(2));
 				bean.setL_img(rs.getString(3));
 				bean.setL_name(rs.getString(4));
 				bean.setL_address(rs.getString(5));
@@ -146,7 +146,7 @@ public class LocationDAO {
 
 				bean = new LocationListBean();
 				bean.setL_num(rs.getInt(1));
-				bean.setL_code(rs.getString(2));
+				bean.setP_code(rs.getString(2));
 				bean.setL_img(rs.getString(3));
 				bean.setL_name(rs.getString(4));
 				bean.setL_address(rs.getString(5));

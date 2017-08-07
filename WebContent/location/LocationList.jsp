@@ -18,8 +18,9 @@ $(document).ready(function(){
 	$("td[id^=loca]").data("flag","false");
 });
 
-function getcontents(con){
+function getcontents(con,address,p_code){
 	var nid = con;
+	
 	//console.log(nid);
 	var bflag = $("#loca"+nid).data("flag");
 	//console.log(bflag);
@@ -40,7 +41,7 @@ function getcontents(con){
 					$("#loca"+nid).after(str);
 				}else{
 					
-					str="<tr id='loc"+nid+"' align='center'><td><div id='map"+nid+"' style='width:80%; height:350px; margin:15px'></div></td></tr>";
+					str="<tr id='loc"+nid+"' align='center'><td><div id='map"+nid+"' style='width:80%; height:350px; margin:15px'></div><div class='detail'>상세주소</div><div class='add'>"+address+"</div><div><input type='button' value='예매하기' onclick='reservation("+p_code+")'></div></td></tr>";
 					$("#loca"+nid).parent().after(str);
 					
 					var mapContainer = document.getElementById('map'+nid), // 지도를 표시할 div 
@@ -96,49 +97,9 @@ function getcontents(con){
 	//console.log($("#loca"+nid).data("flag",bflag));
 			};
 
-// function doAjax(url, keyword){
-// 	jQuery.ajax({
-// 		type:"POST",
-// 		url: url,
-// 		data: "keyword="+keyword,
-// 		dataType: "JSON",
-// 		success: function(data){
-// 			console.log("Function Start");
-// 			console.log(data);
-// 			notice.empty();
-// 			console.log(data);
-// 			var total = data.total;
-// 			var str ="";
-// 			if(total == 0){
-// 				str ="<tr><td colspan='2'>NO DATA</td></tr>";
-// 				notice.append(str);
-// 			}else{
-// 				$.each(data.noticeMap, function(key, value){
-// 					var con = value.l_num;
-// 					var nid = "#nid"+value.l_num;
-// 					console.log(nid+"들어갈 아이디");
-// 					console.log(key+" : "+value)
-// 					str+="<td class='' id='nid"+value.l_num+"'>"+
-// 					"<a href='javascript:void(0)' class='map_open'>"+
-// 					value.l_name+"</a></td>";
-// 				});
-// 				notice.append(str).trigger("create");
-// 				$("td[id^=nid]").data("flag","false");
-// 				console.log($("#nid0").data("flag"));
-// 				$("#nid0").data("flag");
-// 			}
-// 		},
-// 		error : function(xhr, status, error) {
-// 			console.log("error")
-// 		    alert("에러발생");
-// 		}
-// 	});
-// }
-
-// $(document).ready(function(){
-// 	notice = $("#notice");
-// });
-// window.onload = doAjax("./LocationListController.do","");
+function reservation(p_code){
+window.open("./reserveMV.rs?flag=movie&val="+p_code,"","width=1050, height=695, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+}
 </script>
 </head>
 <body>
@@ -198,24 +159,14 @@ function getcontents(con){
 					<td  id="loca${v.l_num }" >
 						<!-- 							원래a태그 --> 
 <%-- 					<a href="LocationInfoController.do?l_num=${v.l_num}">${v.l_name }</a> --%>
-						<a href="javascript:void(0)" onclick="getcontents(${v.l_num })">${v.l_name }</a>
+						<a href="javascript:void(0)" onclick="getcontents(${v.l_num },'${v.l_address }','${v.p_code }')">${v.l_name }</a>
 					
 					</td>
 
 					
 					</tr>
 					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-
+					<input type="hidden" value="${v.p_code }" id="code${v.p_code }">
 					<input type="hidden" value="${v.l_address }" id="address${v.l_num }">
 					<input type="hidden" value="${v.l_name }" id="name${v.l_num }">
 					<c:set var="j" value="${j+1 }" />
@@ -228,12 +179,5 @@ function getcontents(con){
 	</center>
 </body>
 </html>
-
-
-
-
-
-
-
 
 

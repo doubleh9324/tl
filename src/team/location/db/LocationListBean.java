@@ -3,7 +3,7 @@ package team.location.db;
 public class LocationListBean {
 	
 	private int l_num;
-	private String l_code;
+	private String p_code;
 	private String l_img;
 	private String l_name;
 	private String l_address;
@@ -21,11 +21,11 @@ public class LocationListBean {
 	public void setL_num(int l_num) {
 		this.l_num = l_num;
 	}
-	public String getL_code() {
-		return l_code;
+	public String getP_code() {
+		return p_code;
 	}
-	public void setL_code(String l_code) {
-		this.l_code = l_code;
+	public void setP_code(String p_code) {
+		this.p_code = p_code;
 	}
 	public String getL_img() {
 		return l_img;

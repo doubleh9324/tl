@@ -5,14 +5,14 @@
 	margin:0;
 	padding:0;
 }
-center div#mid{
+div#mid{
 	font-family:"Jeju Gothic",sans-serif;
 	color: #3a3a3a;
 }
-center h1{
+h1{
 	margin:50px;
 }
-center hr{
+hr{
 	margin-top:50px;
 	width:900px;
 }
@@ -20,19 +20,18 @@ center{
 	font-family:"Jeju Gothic",sans-serif;
 	color: #3a3a3a;
 }
-center .category{
+.category{
 	width: 120px;
 	height: 25px;
 	
 }
-center .search{
+.search{
 	width: 960px;
 	height:50px;
 	margin-top: 50px;
 	border-radius: 5px 5px 0 0;
-
 }
-center .button{
+.button{
 	color: #6b6b6b;
 	border: 1px solid #ccc;
 	border-radius: .2em;
@@ -41,6 +40,14 @@ center .button{
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff),
 		to(#f2f2f2));
 
+}
+div.detail{
+	height: 30px;
+
+}
+div.add{
+	height: 30px;
+		font-size: 13px;
 }
 table a{
 	text-decoration: none;
