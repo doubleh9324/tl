@@ -108,7 +108,7 @@ function openChangeIpointPop() {
     <div class="mypage">
        <form action="./MemberModifyAction.me" method="post" id="join">
        	<input type="hidden" name="idd" value="<%=id %>">
-        <h3><img src="https://sslimage.interpark.com/_mypage_n/title/tit_mypage.gif" alt="마이페이지"></h3>
+        <h3><img src="img/MYPAGE.jpg" alt="마이페이지"></h3>
         <div class="level">
             <div class="myinfo_txt">
                 <span class="st">${bean.name }님!</span>&nbsp;안녕하세요^^)/<br>
