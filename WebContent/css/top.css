@@ -42,7 +42,7 @@ header {
 #member_menu_2 ul li a{
     text-decoration: none;
     font-size: 11px;
-    color: #333;  
+    color: #808080;  /*8.7 pm 15:33*/
     margin:0 auto;
 }
 #member_menu_2 ul li a:HOVER{
@@ -50,7 +50,7 @@ header {
    
 }
 #member_menu_2 ul li a:VISITED{
-      color: #333;   
+      color: #808080; /*8.7 pm 15:33*/   
 }
 
 /* 가운데 로고, 검색, 이미지 */
@@ -119,8 +119,10 @@ header {
 #menu_bar_1{
     width: 100%;
     height: 34px;
-    background-color: white;
-   background: #ff7c2c;
+    /* 8.7 pm 15:33 */
+    background: #fc4a1a;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FBB642, #F92A4B);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FBB642, #F92A4B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    margin:0 auto;
    position:relative;
 }
@@ -133,11 +135,11 @@ header {
    margin-left: 20px;
 }
 #menu_bar_2 ul li{
-   top: 8px;
+    top: 9px; /* 8.7 pm 15:33 */
     list-style-type: none;
     display: inline;
     position: relative;
-    padding: 9px 48px 12px 48px;
+    padding: 9px 48px 8px 48px; /* 8.7 pm 15:33 */
 }
 #menu_bar_2 ul li:hover{
    background: #f0403c;
@@ -178,7 +180,10 @@ header {
    background-color: #ffffff;
    left:32%;
    top:34px;
-   border: 1px solid #dddddd;
+   /* 8.7 pm 15:33 */
+   -moz-box-shadow:#585858 0px 0px 1px; /* 그림자 추가 */
+	-webkit-box-shadow:#585858 0px 0px 1px; 
+	box-shadow:#585858 0px 0px 1px; 
 }
 #movie_drop div{
    position: absolute;

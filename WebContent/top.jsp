@@ -32,32 +32,28 @@ $(document).ready(function(){
       }
    });
    
-//    $("movie").mouseover(function(){
-//       $("movie_drop").slideDown("slow");
-//       $("movie").mouseout(function(){
-//          $("movie_drop").slideUp("slow");
-//       })
-//    });
-   
-   $("#movie,#movie_drop").mouseover(function(){   
-      $("#movie_drop").stop().slideDown("fast");
-      
-      $("#movie,#movie_drop").mouseout(function(){
-         $("#movie_drop").stop().slideUp(10);
-      });      
-   });
-   
-   $("#musical,#musical_drop").mouseover(function(){   
-      $("#musical_drop").stop().slideDown("fast");
-      
-      $("#musical,#musical_drop").mouseout(function(){
-         $("#musical_drop").stop().slideUp(10);
-      });      
-   });
-//    호버 색깔 유지하는 메서드 아직 미완성
-   $("#movie").mouseover(function(){
-      $("#movie").css("color","#f0403c");
-   })
+   //메뉴바 제이쿼리 8.7 pm 15:33
+   //무비 드롭다운
+   $("#movie,#movie_drop").mouseover(function(){//메뉴, 드롭 다운 메뉴에 mouseover했을 때	
+		$("#movie_drop").stop().slideDown("fast"); //드롭 다운 메뉴 나오게 하고 유지
+		$("#movie").css("background-color","#f0403c"); //메뉴 '영화'색상 유지
+		
+		$("#movie,#movie_drop").mouseout(function(){ // 메뉴, 드롭 다운 메뉴 mouseout했을 때
+			$("#movie_drop").stop().slideUp(10); //드롭 다운 메뉴 올라가게 
+			$("#movie").css("background-color","rgba(0,0,0,0)"); //메뉴 '영화'색상 원상태로
+		});		
+	});
+	
+   //뮤지컬 드롭다운  8.7 pm 15:33
+	$("#musical,#musical_drop").mouseover(function(){	
+		$("#musical_drop").stop().slideDown("fast");
+		$("#musical").css("background-color","#f0403c");
+		
+		$("#musical,#musical_drop").mouseout(function(){
+			$("#musical_drop").stop().slideUp(10);
+			$("#musical").css("background-color","rgba(0,0,0,0)");
+		});		
+	});
    
 })
 
