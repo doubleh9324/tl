@@ -9,13 +9,15 @@ div#top{
 	padding:0;
 	margin:0;
 	z-index: 0;
+	position: relative;
 }
 
 div#top_frame{
-	border-top: 1px solid #ef8443;
 	height: 400px;
 	background-size: cover;
 	z-index: -1;
+	position: absolute;
+	width: 100%;
 }
 
 ul#photo_list{
