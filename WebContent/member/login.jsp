@@ -55,9 +55,7 @@ ul.loginMenu	 li {
 <script type="text/javascript">
 $(document).ready(function(){
 	$('#id').keyup(function(){
-		
-			$('#id').css("background","none");
-		
+		$('#id').css("background","none");
 	});
 	$('#pass').keyup(function(){
 		$('#pass').css("background","none");
@@ -115,6 +113,10 @@ function check_and_submit(){
 		<dl class="login_form">
 			<dt class="login_input">
 				<!-- 20130430-->
+				<div class="login_logo">
+				 <h1>Ticket
+				 <img alt="티켓사자" src="icons/lionLogo.png" width="71px" id="search_bar2_4">
+				<a class="fontColor">L</a>ion</h1></div>
 				<div class="Login_iF_120106">
 
 					<!-- 레이어 -->
@@ -149,8 +151,8 @@ function check_and_submit(){
 														<td rowspan="2">
 															<button type="button" width="91px" height="66px" onclick="check_and_submit()" style="border:0;background-color: white;">
 																<img class="btn-img"
-																	src="https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bt_login.gif"
-																	style="cursor: hand; ;" tabindex="3" >
+																	src="icons/bt_login_or.png"
+																	style="cursor: hand; ;" tabindex="3" width="100px" >
 															</button>
 														</td>
 													</tr>

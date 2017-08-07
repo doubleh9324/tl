@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* iframe용 기본 style 시작 (2012.2.1 추가) */
+
 center,
  {
   padding: 0;
@@ -219,14 +219,24 @@ dl.login_form dt.login_input {
   float: left;
   width: 415px;
   height: 300px;
-  padding: 20px 0 0 84px;
+  padding: 40px 30px 20px 40px;
   text-align: left;
-  background: url("https://sslimage.interpark.com/ticketimage/TicketImage/main/100506_main/login/bg_login_input2.gif") no-repeat 0 0;
+  border: 2px solid #e2e6eb;
+}
+
+.login_logo {
+    width: 410 px;
+    height: 310 px;
+    padding: 32 px 0 0 51 px;
+    text-align: left;
+    margin-bottom: 50px;
+    padding: 0px;
+    font-size: 23px;
 }
 
 :root dl.login_form dt.login_input {
   width: 331px;
-  height: 280px;
+  height: 300px;
 }
 
 dl.login_form dt.login_banner {
