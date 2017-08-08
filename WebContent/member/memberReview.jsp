@@ -175,7 +175,7 @@ function getReviewMusicalFunction(page_num){
 					<div class="mypage">
 						<h3>
 							<img
-								src="https://sslimage.interpark.com/_mypage_n/title/tit_mypage.gif"
+								src="img/MYPAGE.jpg"
 								alt="마이페이지">
 						</h3>
 						<div class="level">
@@ -194,8 +194,8 @@ function getReviewMusicalFunction(page_num){
 									<div class="pos_1">
 										<div class="tit_Ipont">
 											<img
-												src="https://sslimage.interpark.com/_mypage_n/title/tit_ipoint.gif"
-												alt="I-Point">
+												src="img/lpoint.jpg"
+												alt="L-Point">
 										</div>
 										<div class="info_r">
 											<div id="ipoint1">
