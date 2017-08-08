@@ -102,7 +102,7 @@ function check_and_submit(){
 		<div class="dpGnb">
 			<ul class="dpNavi">
 				<li class="home"><p>
-						<a target="_top" href="index2.jsp">LION TICKET</a>
+						<a target="_top" href="index.jsp">TICKET LION</a>
 					</p></li>
 				<li class="nor">&gt; 로그인</li>
 			</ul>

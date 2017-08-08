@@ -118,7 +118,37 @@ function TopgradeFunction2(){
 		});
 	}
 }
-
+window.channelPluginSettings = {
+  "plugin_id": "6ecf8b4f-1195-494d-81e5-2a4ddbfdb53f",
+  "user": {
+    "id": "YOUR_USER_ID",
+    "name": "YOUR_USER_NAME",
+    "mobileNumber": "YOUR_USER_MOBILE_NUMBER",
+    "meta": {
+      "CUSTOM_VALUE_1": "VALUE_1",
+      "CUSTOM_VALUE_2": "VALUE_2"
+    }
+  }
+};
+(function() {
+  var node = document.createElement('div');
+  node.id = 'ch-plugin';
+  document.body.appendChild(node);
+  var async_load = function() {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//cdn.channel.io/plugin/ch-plugin-web.js';
+    s.charset = 'UTF-8';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  };
+  if (window.attachEvent) {
+    window.attachEvent('onload', async_load);
+  } else {
+    window.addEventListener('load', async_load, false);
+  }
+})();
 </script>
 </head>
 <body>
