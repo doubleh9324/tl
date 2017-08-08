@@ -174,7 +174,7 @@
 		
 		<h2>상영영화 예매</h2>
 		
-		<button onclick="reservation();">예매하기</button>
+		<button onclick="reservationMV();">예매하기</button>
 		
 		<form action="./PlayingInsertAction.pg" method="post">
 		
@@ -320,7 +320,7 @@ function searchContent(){
 	window.open("./searchMovie.mo","","width=500, height=300, toolbar=no, menubar=no, scrollbars=no, resizable=yes");
 }
 
-function reservation(){
+function reservationMV(){
 	window.open("./reserveMV.rs","","width=1050, height=795, toolbar=no, menubar=no, scrollbars=no, resizable=yes");
 }
 

@@ -23,14 +23,14 @@ public class ReserTimeInfoSelectAction implements Action{
 		
 		//해당하는 번호로 p_code 검색
 		ReservationDAO resDao = new ReservationDAO();
-		List<Map<String, Object>> TimeInfoList = resDao.getTime(mo_num, pcode, playday);
+		List<Map<String, Object>> TimeInfoList = resDao.getTimeMo(mo_num, pcode, playday);
 		
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("TimeInfoList", TimeInfoList);
 		
 		ActionForward forward=new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./reservation/reservation.jsp");
+		forward.setPath("./reservation/reservationMV.jsp");
 		
 		response.setContentType("application/x-json; charset=utf-8");
 		response.getWriter().print(jsonObject);

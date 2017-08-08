@@ -72,6 +72,10 @@ function getReview(musical_num,p_num){
 	
 }
 
+function reservationMU(mnum){
+	window.open("./reserveMU.rs?munum="+mnum,"","width=1050, height=695, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+}
+
 function insertReviewFucntion(){
 	var movie_num=<%=request.getParameter("num")%>;
 	var nc_code="mu"+movie_num;
@@ -125,7 +129,7 @@ function insertReviewFucntion(){
 		<div id="image_div">
 			<a href="musicalImage/${bean.image }"><img alt="" src="MusicalImage/${bean.image}"></a><br>
 			<c:if test="${bean.playing==1 }">
-				<input type="button" value="예매하기" id="reserve_button">
+				<input type="button" value="예매하기" id="reserve_button" onclick="reservationMU(${bean.musical_num})">
 			</c:if>
 		</div>
 		<div id="text_div">

@@ -34,17 +34,15 @@ public class ReserSeatMapSelectAction implements Action{
 		List<Map<String, Object>> reserved = resDao.getReservedSeats(pingnum, screen_name, view_date);
 		
 		//선택된 좌석 가져오기
-		List<Map<String, Object>> checked = resDao.getCheckedSeats(pingnum, screen_name, view_date);
 		
 		JSONObject jsonObject = new JSONObject();
 		
 		jsonObject.put("seatMap", seatMap);
 		jsonObject.put("reservedSeats", reserved);
-		jsonObject.put("checkedSeats", checked);
 		
 		ActionForward forward=new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./reservation/reservation.jsp");
+		forward.setPath("./reservation/reservationMV.jsp");
 		
 		response.setContentType("application/x-json; charset=utf-8");
 		response.getWriter().print(jsonObject);

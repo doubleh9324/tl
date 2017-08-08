@@ -97,7 +97,7 @@ public class PlaceDAO {
 			if(rs.next()){
 				List<V_plcaeBean> placeList = new ArrayList<V_plcaeBean>();
 				do{
-					placeList.add(this.makePlaceFromResultSet(rs));
+					placeList.add(this.makevPlaceFromResultSet(rs));
 				}while (rs.next());
 				
 				return placeList;
@@ -114,13 +114,10 @@ public class PlaceDAO {
 		return Collections.emptyList();
 	}
 	
-	protected V_plcaeBean makePlaceFromResultSet(ResultSet rs)throws SQLException{
-		V_plcaeBean pb = new V_plcaeBean();
+	protected PlaceBean makePlaceFromResultSet(ResultSet rs)throws SQLException{
+		PlaceBean pb = new PlaceBean();
 		pb.setP_code(rs.getString("p_code"));
-		pb.setType(rs.getString("type"));
 		pb.setName(rs.getString("name"));
-		pb.setScreen_name(rs.getString("screen_name"));
-		pb.setCapacity(rs.getShort("capacity"));
 		pb.setAddress(rs.getString("address"));
 		pb.setContact_num(rs.getString("contact_num"));
 		pb.setHomepage(rs.getString("homepage"));
@@ -287,5 +284,50 @@ public class PlaceDAO {
 		return pb;
 	}
 	
+	public Object getPlayingPlace(String flag , String mnum) throws Exception {
+		Connection con= null;
+		PreparedStatement pstmt = null;
+		String sql="";
+		ResultSet rs = null;
+		List<PlaceBean> placeList = new ArrayList<>();
+		try{
+			con=getConnection();
+			
+			if(flag.equals("musical")){
+				sql="select a.* from place a, playing b where a.p_code = b.p_code and substring(b.nc_code, 3) = ?";
+				pstmt=con.prepareStatement(sql);
+				pstmt.setString(1, mnum);
+				
+				rs = pstmt.executeQuery();
+				rs.next();
+				return makePlaceFromResultSet(rs);
+			} else if(flag.equals("movie")){
+				//nc_code로 현재 상영중인 영화관 검색
+				sql="select a.* from place a, playing b where a.p_code = b.p_code and substring(b.nc_code, 3) = ?";
+				pstmt=con.prepareStatement(sql);
+				pstmt.setString(1, mnum);
+				
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()){
+					System.out.println("검색작업");
+					do{
+						placeList.add(makePlaceFromResultSet(rs));
+					}while(rs.next());
+					
+					return placeList;
+				}else{
+					return Collections.emptyList();
+				}
+			}
+			
+		}catch(Exception e){
+			System.out.println("PlaceDAO getplayingplace error : "+e);
+		}finally{
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+		return null;		
+	}
 	
 }

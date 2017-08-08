@@ -1,0 +1,375 @@
+@charset "utf-8";
+/* base */body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:1em}
+html{overflow-y:scroll;height:100%; }
+body{width:100%;height:100%;font-size:75%;  line-height:16px;}
+body,input,textarea,select,button,table{font-family:'돋움',dotum,AppleGothic,Vendara;color:#888888}
+
+ol,ul{list-style:none outside none}
+img,fieldset{border:0 none;vertical-align:middle/* cursor:pointer; */}
+em,address{font-style:normal}
+acronym{speak:normal}
+.btn{ text-align:center;}
+input,select{/*line-height: 21px;*/ letter-spacing:0; }
+button{vertical-align:middle}
+.carticle button span{display:none;visibility:hidden}
+.addr_pop button span{display:none;visibility:hidden}
+.hidden{visibility:hidden;}
+.displayN{display:none;}
+.last{border:0 none;background:none}
+input[type=radio]{width:13px;height:13px}
+input[type=text]{ border:1px solid #aaaaaa; padding:2px; }
+input[type="password"]{}
+
+/* 숨김영역 */
+.blind,caption,legend{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+hr{clear:both;border:none;border-top:1px solid #e4e4e4}
+.red{color:#e85e68}
+.org{color:#f2740f}
+.grn{color:#5eb289}
+.blu{color:#3a85c7}
+.blk{color:#3a3a3a}
+.bold{font-weight:bold!important}
+.sm{ font-size:11px;}
+.white{ color:#CCC;}
+
+a.hover:hover{ text-decoration:underline;}
+/* 영문,숫자 */
+.e{font-size:11px}
+.e a:link{font-size:11px;color:#666;text-decoration:none}
+.e a:visited{font-size:11px;color:#666;text-decoration:none}
+.e a:active{font-size:11px;color:#666;text-decoration:none}
+.e a:hover{font-size:11px;color:#666;text-decoration:none}
+/*.scroll{scrollbar-face-color:#fff;scrollbar-shadow-color:#bcbcbc;scrollbar-highlight-color:#fff;scrollbar-3dlight-color:#bcbcbc;scrollbar-darkshadow-color:#fff;scrollbar-track-color:#f6f6f6;scrollbar-arrow-color:#666}*/
+.scroll{height:145px; overflow:scroll; overflow-x:hidden;}
+.receipt_scroll  {height:485px; overflow:auto; overflow-x:hidden;}
+a:link{color:#888888;text-decoration:none}
+a:visited{color:#888888;text-decoration:none}
+a:hover{color:#888888;text-decoration:none}
+
+.btn{ margin:15px 0; height:28px; }
+.btn span{ font-weight:bold;}
+.btn span input{width:13px;height:13px; display:block; float:left; margin:5px 4px 0 0; }
+.btn div.fr{ margin-right:5px;}
+.btn a{*display:inline-block; *height:28px;}
+.tc{text-align:center}
+.fr{float:right}
+.fl{float:left}
+.tr{text-align:right}
+.more{ position:absolute; right:8px; top:6px;}
+.btn .right{ float:right; margin-top:-30px;}
+
+.org{color:#fe8800;}
+.white{ color:#FFF;}
+.yellow{ color:#ffc334;}
+
+
+/* 예매창 */
+#warp{ background:url(http://image16.hanatour.com/img/perfsale/bg_warp.gif) repeat-y; width:970px; height:635px;}
+.header{ width:710px; height:60px;}
+.header h1{float:left;}
+.gnb{float:right;}
+.gnb li{float:left; cursor:pointer; background:url(http://image16.hanatour.com/img/perfsale/img_gnb.gif) no-repeat; height:60px; width:105px; }
+.gnb li span{display: block;font-size: 11px; height: 11px; overflow-x: hidden;overflow-y: hidden;position: relative; z-index: -1;}
+
+.m01{background-position:0 0 !important;}
+.m02{background-position:-105px 0 !important;}
+.m03{background-position:-210px 0 !important;}
+.m04{background-position:-315px 0 !important;}
+.m05{background-position:-420px 0 !important;}
+
+.m01:hover,.m01.on{background-position:0 -60px !important;}
+.m02:hover,.m02.on{background-position:-105px -60px !important;}
+.m03:hover,.m03.on{background-position:-210px -60px !important;}
+.m04:hover,.m04.on{background-position:-315px -60px !important;}
+.m05:hover,.m05.on{background-position:-420px -60px !important;}
+
+.container{ float:left; width:689px; height:555px; background-color:#FFFFFF; padding:10px;}
+.container h2{ padding:4px 4px 4px 12px; background:url(http://image16.hanatour.com/img/perfsale/bg_tit.gif) repeat-x; border-bottom:1px solid #bebebe; text-align:center; }
+.container h2 span{ float:right; margin-top:3px; *float:none; }
+
+.step01{ width:265px; height:365px;  border:1px solid #bebebe; float:left; margin-bottom:20px;}
+.step02{ width:421px; height:365px;  border:1px solid #bebebe; float:left; margin-left:-1px;}
+.step03{ height:255px;  border:1px solid #bebebe;}
+.step04{ height:555px;  border:1px solid #bebebe; position:relative;}
+.step05{ height:555px;  border:1px solid #bebebe; position:relative;}
+
+
+.step01_date{ width:265px; height:365px;  border:1px solid #bebebe; border-top: 1px solid #434343; float:left; margin-bottom:20px;}
+.step01_time{ width:421px; height:365px;  border:1px solid #bebebe; border-top: 1px solid #434343; float:left; margin-left:-1px;}
+.step03_promotion{ height:255px;  border:1px solid #bebebe; border-top: 1px solid #434343; }
+.step02_receipt{ height:285px;  border:1px solid #bebebe; border-top: 1px solid #434343; }
+.step03_coupon{ height:295px;  border:1px solid #bebebe; border-top: 1px solid #434343; }
+.step03{ /*height:555px;*/  border:1px solid #bebebe; border-top: 1px solid #434343; }
+
+/* 공지사항 */
+.step01_notice{ clear:both; background-color:#f9f9f9; }
+.step01_notice h3{ float:left;}
+.step01_notice div{height:132px; overflow:auto; overflow-x:hidden; padding:10px 20px; font-size:11px; letter-spacing:-1px; line-height:18px; }
+.popup_notice div{overflow:auto; overflow-x:hidden; padding:10px 20px; font-size:11px; letter-spacing:-1px; line-height:18px; }
+
+
+/*달력*/
+.calendar{ width:248px; padding:10px;}
+.cal_selectDay{position:relative; height:15px; margin:25px 0 25px;}
+.cal_selectDay a.pre{ position:absolute; left:50px; top:7px; *left:10px;}
+.cal_selectDay a.next{ position:absolute; right:50px; top:7px; *right:10px;}
+.cal_selectDay span{ font:normal  20px Verdana; text-align:center; display:block; color:#333333; }
+.calendar table{text-align:center; border-collapse:collapse; margin:0 auto; margin-bottom:15px; width:238px; }
+.calendar table thead th{ height:25px; }
+.calendar table tbody{ padding-left:5px;}
+.calendar table tbody td{ box-sizing:border-box; border:1px solid #dcdcdc; padding:5px 0; height:20px; font:normal bold 12px 맑은 고딕; width:32px; height:20px; margin-top:-1px; margin-left:-1px; text-align:right; *text-align:center;}
+.calendar table tbody td a{ display:block; width:23px; height:20px;}
+.calendar table tbody td.select{ background-color:#fff3d8; }
+.calendar table tbody td.select a{color:#645d58; font-weight:bold;}
+.calendar table tbody td.term{ background-color:#f10f0e;}
+.calendar table tbody td.term a{color:#FFF; font-weight:bold;}
+
+
+/*회차선택*/
+.choie_select{ padding:20px 20px;}
+.choie_select em.tit{ font:bold 11px 돋움; color:#000; margin-right:10px;}
+.select_day{ margin-bottom:20px;}
+.select_day span{ padding:2px 80px 2px 20px; background-color:#f9f9f9; border:1px solid #dcdcdc; font-weight:bold; }
+.number{ width:380px; height:90px; float:left; margin-right:10px; }
+.number em{display:block; margin-bottom:7px;}
+
+.number ul{ height:50px; overflow:scroll; overflow-x:hidden;  border:1px solid #dcdcdc; padding:2px; }
+.number ul li{margin-bottom:1px; font-size:11px; padding:2px 1px 0px 8px; background:#fff; border:1px solid #dcdcdc; cursor:pointer;}
+.number ul li.on,.number ul li.on:hover{margin-bottom:1px; font-size:11px; padding:2px 1px 0px 8px; background:#f10f0e; border:1px solid #900000; font-weight:bold; color:#fff;}
+.number ul li:hover{margin-bottom:1px; font-size:11px; padding:2px 1px 0px 8px; background:#fff3d8; border:1px solid #f9c4be;}
+.number ul li.on a,.number ul li.on:hover a{ color:#FFF; *padding:2px 1px 1px 8px;}
+.number ul li:hover a{ color:#645d58;}
+.number ul li a{ display:block;  padding:2px 1px 1px 8px; *padding:0px 1px 1px 8px;}
+
+.seat{width:380px;}
+.seat em{display:block; margin-bottom:7px;}
+.seat ul{ border:1px solid #dcdcdc; padding:5px; height:85px; overflow:scroll; overflow-x:hidden; margin-bottom:15px;}
+.seat ul.hi{ height:90px;}
+.seat ul li{ font-size:11px ; background:url(http://image16.hanatour.com/img/perfsale/icon_dot.gif) no-repeat 3px 5px; padding-left:12px; margin:2px 0px 6px 5px;}
+.seat ul li strong{ margin-right:3px;}
+.buying{ float:left; margin-bottom:15px;}
+.buying em{ display:block; margin-bottom:7px;}
+.seat ul li.grade{}
+.seat ul li.grade strong{display:inline-block;width:190px;}
+.seat ul li.grade span{ margin:0 8px;display:inline-block;width:50px;}
+.seat ul li.grade input{}
+
+
+/*회차선택*/
+.disc_select{ padding:20px 20px 30px;}
+.disc_select em.tit{ font:bold 11px 돋움; color:#000; margin-right:10px;}
+.select_seat{ margin-bottom:20px; position:relative;}
+.select_seat span{ padding:8px 10px 8px 20px; display:inline-block; background-color:#fff3d8; width:510px;  }
+.select_seat span input[type="radio"]{ margin:0 3px }
+.select_seat span label{ margin:0 20px 0 1px;}
+.select_seat span label.red{ font-weight:bold; color:#ea5e69;}
+.delivery {padding:8px 10px 8px 20px; display:inline-block; *zoom:1; *display:inline; background:#fff3d8; vertical-align:top;}
+.delivery span {padding:0 !important;}
+/*.select_seat span.date{ position:absolute; left:86px; top:27px; width:531px; padding:4px;}*/
+.select_seat span date img{ margin-right:5px;}
+.select_seat span date span{ padding:0; background-color:#ee838b; font-size:11px; color:#FFFFFF; letter-spacing:-1px;}
+
+table.sale_table{ text-align:center; border-collapse:collapse; width:100%; margin-bottom:5px; }
+table.sale_table thead th{ height:28px; font-size:11px; font-weight:normal; background-color:#efefef; }
+table.sale_table tbody{ }
+table.sale_table tbody{ padding-left:5px;}
+table.sale_table tbody td{ border-bottom:1px solid #dcdcdc; padding:5px; height:15px; font:normal 11px 돋움; text-align:center; }
+table.sale_table tbody td.l{ text-align:left; padding-left:20px; font-weight:bold;}
+table.sale_table tbody td.l span{ font-weight:normal; margin:0 3px; }
+table.sale_table tbody td.select{ background-color:#7b8c93; }
+table.sale_table tbody td.select a{color:#FFF}
+
+
+/* 쿠폰선택 */
+.sale_select{ padding:20px 20px 30px;}
+.sale_select em.tit{ font:bold 11px 돋움; color:#000; margin-right:10px;}
+.select_coupon{ margin-bottom:20px;}
+.select_coupon input{ border:1px solid #dcdcdc; background-color:#f9f9f9; height:25px; width:350px; font-size:11px; font-weight:bold; color:#000000;}
+.sale_select p{ margin:15px 0 0 8px; font-size:11px;}
+
+
+/* 결과창 */
+.result{ float:right; width:260px; _width:250px; height:600px; margin-top:-55px;}
+.title{ padding:10px; padding-bottom:30px; background:url(http://image16.hanatour.com/img/perfsale/bg_result01.gif) no-repeat bottom; height:80px;}
+.title p{ background:url(http://image16.hanatour.com/img/perfsale/bg_noimg.gif) no-repeat; width:79px; height:98px; float:left; margin-right:15px;}
+.title span{display:block;}
+.title span.tit{ font:bold 12px 돋움; color:#FFFFFF;  margin-bottom:10px;}
+.title span.date{ letter-spacing:-1px; font-size:11px; }
+
+
+/*선택내역*/
+.select_infor{ padding:10px 15px; padding-bottom:40px; _padding-bottom:30px; background:url(http://image16.hanatour.com/img/perfsale/bg_result01.gif) no-repeat bottom;}
+.select_infor h3{ margin-bottom:10px;}
+.select_infor ul{}
+.select_infor ul li{ margin-bottom:3px; font-size:11px; color:#FFF; height:16px;}
+.select_infor ul li em{float:left; margin-right:8px;}
+.select_infor ul li div{ overflow:auto; overflow-x:hidden; height:45px; width:200px;  _width:170px; float:left;}
+.select_infor ul li div span{ display:block;}
+.select_infor ul li span{ }
+
+/*결제내역*/
+.pay_infor{ padding:10px 15px 5px 15px; background:url(http://image16.hanatour.com/img/perfsale/bg_result01.gif) no-repeat bottom;}
+.pay_infor .link01{ background:url(http://image16.hanatour.com/img/perfsale/bg_result02.gif) no-repeat bottom; padding-bottom:5px;}
+.pay_infor .link02{ margin-top:10px;}
+.pay_infor h3{ margin-bottom:10px;}
+.pay_infor ul{}
+.pay_infor ul li{ margin-bottom:4px; font-size:11px; color:#FFF; height:13px; *margin-bottom:0;}
+.pay_infor ul li em{float:left; margin-right:8px;}
+.pay_infor ul li div{ overflow:scroll; overflow-x:hidden; height:60px; width:200px; float:left;}
+.pay_infor ul li div span{ display:block;}
+.pay_infor ul li span{ float:right;}
+
+.t_result{ background:url(http://image16.hanatour.com/img/perfsale/bg_total.gif) no-repeat; display:block; margin:10px 0 0 10px; padding:5px 20px 10px 0; text-align:right; color:#ffc335; font:bold 18px Verdana;}
+.t_result span{ font:normal 12px 돋움; margin-left:5px; vertical-align:middle;}
+
+/* 수령방법 */
+.receipt_select{ padding:20px 20px 30px;}
+.receipt_select em.tit{ font:bold 11px 돋움; color:#000; margin:5px 10px 0 0; vertical-align:sub;}
+.receipt_select .tit_area {position:relative;}
+.receipt_select .tit_area.add_info h4 {margin-top:10px;}
+.receipt_select h4{ border-bottom:1px solid #e3e3e3; font:bold 11px 돋움; color:#000; padding-bottom:5px; margin-top:30px;}
+.receipt_select .tit_area span {display:block; position:absolute; top:-1px; left:70px; font-size:11px;}
+.receipt_select ul{ margin-top:10px; margin-left:5px; margin-bottom:25px;}
+.receipt_select .mt{ margin-top:0}
+.receipt_select ul.mb{ margin-bottom:10px;}
+.receipt_select ul li{ margin-bottom:5px;  font-size:11px;}
+.receipt_select ul li em{ width:85px;  margin-top:5px; display:block; float:left; vertical-align:middle; }
+.receipt_select ul li em.blu{ font-weight:bold;}
+.receipt_select ul li select, .receipt_select ul li a{ vertical-align:top;}
+.receipt_select ul li label{ margin:0 5px 0 2px;}
+.receipt_select ul li span{ margin-left:8px; vertical-align:bottom;}
+.receipt_select ul li span.con{ margin-left:18px;}
+.receipt_select ul li span.cont{ width:150px; text-align:right; display:inline-block;}
+.receipt_select ul li span.ticket.fst{ margin-top:8px;}
+.receipt_select ul li span.ticket{ display:block; border:1px solid #7c8c94; background-color:#f7f7f8; padding:5px 10px 2px; width:365px; margin-top:-1px; margin-left:102px;}
+.receipt_select ul li a{ margin:0 3px; }
+.receipt_select ul li.d_line{ background:url(http://image16.hanatour.com/img/perfsale/bg_dot.gif) no-repeat bottom; padding-bottom:5px;}
+.receipt_select ul li div.con{background-color:#fff3d8; padding:15px 20px 10px ; margin-left:102px; position:relative;}
+.receipt_select ul li div.con ul{ margin:0; }
+.receipt_select ul li div.con a.more{ position:absolute; top:8px; right:6px;}
+.receipt_select ul.mileage{margin-top:10px; margin-left:5px; margin-bottom:25px;}
+.receipt_select ul.mileage li{padding:5px 0; border-bottom:1px dashed #e3e3e3;}
+.receipt_select ul.mileage li .mtxt{float:right;}
+.receipt_select ul.mileage li:after{clear:both; display:block; content:"";}
+.receipt_select ul.mileage li div{margin-left:85px;}
+.receipt_select ul.mileage li div:first-child{margin-left:0;}
+.receipt_select ul.mileage li div.other{padding-right:10px; height:55px; overflow:scroll; overflow-x:hidden;}
+.receipt_select ul.mileage li.payment{margin-top:10px; border-bottom:none;}
+.receipt_select ul.mileage li.payment li{border-bottom:none;}
+.chkbox{ float:right; vertical-align:middle;}
+.chkbox label{ font-size:11px; margin-left:3px;}
+
+/* 결제방법 */
+.receipt_select .tit_payArea {position:relative;}
+.receipt_select .tit_payArea h5 {position:relative;}
+.receipt_select .tit_payArea span {display:block; position:absolute; top:-1px; left:170px; font-size:11px; letter-spacing:-1.5px;}
+
+/* 패키지 좌석지정 유의사항 */
+.caution_notice{ border:1px solid #dddddd; padding:20px; background-color:#f7f7f8; position:absolute; top:50px; width:605px; height:265px}
+.caution_notice h5{ font:bold 11px 돋움; margin:0 0 8px 8px; font-size:12px;}
+.caution_notice ul li{ margin:5px 0 ; font-size:12px; line-height:20px;}
+
+/* 주의사항 */
+.caution{height:77px; border:1px solid #dddddd; padding:12px 15px; background-color:#f7f7f8; position:absolute; bottom:35px; width:615px; overflow:auto; overflow-x:hidden;}/* 1230수정 */
+.caution h5{ font:bold 11px 돋움; margin-bottom:8px;}
+.caution ul{ margin:0;}
+.caution p{ font-size:11px;}
+.caution div.box{ padding:4px 8px 2px; border:1px solid #dddddd; background-color:#FFFFFF; margin-bottom:5px; width:300px; font:bold 11px 돋움;}
+
+/* 결제완료 */
+.success{ border:4px solid #f02e3d; width:770px; height:510px; background-color:#FFF; margin:0 auto; position:relative; top:80px; }
+.suc_tit{ background:url(http://image16.hanatour.com/img/perfsale/bg_suc.gif) repeat-x; padding:15px; margin-bottom:6px;}
+.succ{ float:left; width:285px; margin-left:15px;}
+.succ h4{ background:url(http://image16.hanatour.com/img/perfsale/bg_suc02.gif) no-repeat bottom; padding-bottom:6px;}
+.succ ul{ margin-top:10px; margin-left:10px; margin-bottom:25px;}
+.succ ul li{ margin-bottom:5px;  font-size:11px;}
+.succ ul li em{ width:80px;  display:block; float:left; vertical-align:middle; }
+.succ ul li span{ display:inline-block; width:190px; }
+.succ ul li span strong{ margin-right:3px; letter-spacing:-1px;}
+.succ ul li span strong.big{ font-size:14px;}
+.succ ul li div{ display:inline-block; width:190px; height:55px; background-color:#f6f6f8; overflow:scroll; overflow-x:hidden;}
+
+.succ ul.pay{ margin-top:10px; margin-left:10px; margin-bottom:25px;}
+.succ ul.pay li.bg{ background-color:#fff3d8; padding:3px;}
+.succ ul.pay li{ margin-bottom:3px;  font-size:11px;}
+.succ ul.pay li em{ width:85px;  display:block; float:left; vertical-align:middle; }
+.succ ul.pay li span{ display:inline-block; text-align:right; width:175px; }
+.succ ul.pay li span strong{ margin-right:3px;}
+.succ ul.pay li.total{ background-color:#5e5853; padding:5px; margin:5px 0; color:#fff;}
+.succ ul.pay li.total em{ vertical-align:middle; margin-top:5px;}
+.succ ul.pay li.total span{ color:#ffc334;}
+.succ ul.pay li.total strong{font:normal  20px Verdana; font-weight:bold;}
+.banner{margin-left:15px;}
+
+.txt_pay {padding:5px 0 0; letter-spacing:-1px;}
+
+/* 팝업관련 */
+.popup{border:1px solid #292929; position:relative;}
+.popup h1{}
+.popup h1.tit{ background:url(http://image16.hanatour.com/img/perfsale/bg_pop.gif) no-repeat right; height:18px; padding:8px 20px 5px 8px; color:#ffffff}
+.popup a.cls{ position:absolute; top:8px; right:5px;}
+.popup div.cont{ padding:10px;}
+.popup div.cont p{ display:block; margin-bottom:8px}
+.popup div.cashbox em{ font-weight:bold;}
+.popup div.cashbox{ border:1px solid #CCC;  margin: 8px 0; padding:12px 15px; background-color:#f7f7f7; }
+.popup div.cashbox select{ margin-bottom:5px;}
+.popup div.cinfor{ border:1px solid #939393; padding:15px; margin:10px 0; margin-bottom:20px;}
+.popup div.cinfor h3{ padding-left:15px; margin-bottom:5px;}
+.popup div.cinfor ul{}
+.popup div.cinfor ul li{ padding:3px 2px;}
+.popup div.addres{ background-color:#f2f1ef; padding:5px;  border: 1px solid #CCCCCC;}
+.popup div.addres p,.popup div.addres ul{ background-color: #fff; overflow: scroll; overflow-x:hidden; padding:7px 0; height:100px;}
+.popup div.addres ul li em{ margin:0 7px; color:#000; }
+.popup div.addres span{ display: block; padding: 1px 0 1px 5px; line-height:15px;}
+.popup div.id_chk{ text-align:center; padding-bottom:20px;}
+.popup div.id_chk p {line-height: 18px;padding: 5px 0;}
+.popup div.id_chk p span{ font-weight:bold; color:orange; padding-left:5px;}
+.popup div hr{ border:none; border-bottom: 1px dotted #7f7f7f;margin: 5px 0 10px 0; position: relative; visibility: visible; width: 370px;}
+.use_cash{ height:30px; padding:12px 3px 0px 3px; margin-bottom:5px; background-color:#fff3d8;}
+.use_cash li{ float:left; margin-left:20px;}
+.use_cash li em{ font:bold 11px 돋움; color:#000; margin-right:15px;}
+.use_cash li span{  text-align:right;}
+.use_cash li span input{ vertical-align:middle; height:13px;}
+.use_cashback{ padding:20px 2px 10px; margin-bottom:5px; background-color:#fff3d8;}
+.use_cashback li{margin-left:20px; margin-bottom:5px;}
+.use_cashback li em{ font:bold 11px 돋움; color:#000; margin-right:15px; margin-bottom:3px; display:block;}
+.use_cashback li span{ padding-left:15px; display:block;}
+.use_cashback li span input{ vertical-align:middle; height:13px; margin-bottom:5px;}
+.pop_notice{}
+.pop_notice ul{ margin-top:5px;}
+.pop_notice ul li{ background:url(http://image16.hanatour.com/img/perfsale/icon_bullet.gif) no-repeat 3px 5px; padding-left:10px; font:normal 11px 돋움; margin-bottom:5px;}
+
+/* 좌석배치 */
+.seat_arrange{height: 635px; width: 970px; background-color:#ffffff;}
+.f_header{ position:absolute; top:0; left:0; background:url(http://image16.hanatour.com/img/perfsale/bg_seat.gif) repeat-x; width:746px; height:33px;}
+.f_header ul{ padding:6px 0;}
+.f_header ul li{ float:left; margin:0 12px 0 25px;}
+
+.sub_tit{ border:1px solid #a6252b; background-color:#ef4e55; padding:4px 17px; font-size:11px; margin:20px 0 5px; display:inline-block; font-weight:bold; color:#FFF; }
+
+/*모바일티켓*/
+.mticket{border:1px solid #ddd;padding:10px 10px 0 10px;font-size:11px;margin:10px 0;}
+.mticket h5{margin-bottom:5px;}
+.mticket ul{margin:0;}
+
+/* 1230 */
+.tbl_commission {width:100%; border-top:1px solid #666; border-spacing:0; border-collapse:collapse;}
+.tbl_commission thead th {border-bottom:1px solid #d3d3d3; background-color:#f1e5c5; color:#666; font-size:11px; font-weight:bold; line-height:13px;}
+.tbl_commission tbody td {border-bottom:1px solid #d3d3d3; background-color:#fff; color:#888; font-size:11px; text-align:center;}
+.tbl_commission tbody td.bdrL {border-left:1px solid #d3d3d3;}
+.tbl_commission tbody td.tl {padding-left:22px; text-align:left;}
+.tbl_commission tbody td em {color:#ea4955;}
+
+/* 20160414 */
+.popup2 {position:absolute; left:0px; top:0px; border:1px solid #645d58;}
+.popup2 .pu_tit {width:100%; height:30px; border-bottom:1px solid #900000; background:#e82432 url(http://image16.hanatour.com/img/perfsale/bg_pop_tit.gif) no-repeat 0 100%;}
+.popup2 .pu_tit h1 {padding:0 0 0 16px; color:#fff; font-size:12px; font-weight:bold; line-height:30px;}
+.popup2 .pu_cont {padding:33px 23px 12px 23px; background-color:#fff;}
+.popup2 .pu_cont .txt {height:156px; color:#666; font-size:12px; line-height:18px; overflow:auto; overflow-x:hidden;}
+.popup2 .pu_cont .agree {position:relative; margin:26px 0 13px 0; padding:10px 0 11px 21px; border:1px solid #ddd; line-height:18px;}
+.popup2 .pu_cont .agree h2 {color:#666; font-size:12px; font-weight:bold;}
+.popup2 .pu_cont .agree p {color:#a9a9a9; font-size:11px;}
+.popup2 .pu_cont .agree p.ck {position:absolute; right:0; bottom:11px; width:55px;}
+.popup2 .pu_cont .agree p.ck label {color:#666; font-size:12px; font-weight:bold; vertical-align:middle;}
+.popup2 .pu_cont .agree p.ck input {vertical-align:middle;}

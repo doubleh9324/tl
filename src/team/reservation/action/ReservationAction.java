@@ -77,7 +77,7 @@ public class ReservationAction implements Action{
 	    
 	    ActionForward forward=new ActionForward();
 	    forward.setRedirect(false);
-	    forward.setPath("reservation/reservation.jsp");
+	    forward.setPath("reservation/reservationMV.jsp");
 	   
 		return forward;
 	}

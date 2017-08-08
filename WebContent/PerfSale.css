@@ -1,0 +1,36 @@
+    .s0 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat0.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s1 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat1.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s2 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat2.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s3 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat3.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s4 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat4.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s5 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat5.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s6 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat6.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s7 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat7.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s8 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat8.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s9 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat9.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s10 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat10.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s11 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat11.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s12 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat12.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s13 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat13.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s14 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat14.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s15 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat15.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s16 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat16.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s17 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat17.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s18 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat18.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s19 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat19.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s20 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat20.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s21 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat21.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s22 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat22.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s23 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat23.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .s24 {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat24.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .son {position:absolute; background:url('http://image16.hanatour.com/img/htmlseat/ic_seat_on.gif') no-repeat; height:12px;width:11px; z-index:10;}
+    .seatGroup {position:absolute; z-index:1;} /*티켓예매시사용*/                
+    .bx_seatbg .seatarea .bx_con1 { position: relative; left: 0px; top: 15px; z-index: 0; overflow:auto; width:680; height:585px; background:#fff url('http://image16.hanatour.com/img/htmlseat/bx2_seat2.jpg') no-repeat left bottom; }
+    .raffer { position: absolute; left: 30px; top: 0px; z-index: 0; overflow:visible; }
+    .csblkInfo { position:absolute; font-size:12px; color:#ffffff; border:#2080D0 solid 1px; background-color:#FF6600; top:0px; left:0px; z-index:12; padding:5px; }
+    .bxdmap { font-size:12px; }
+    .bx_seatbg .seatarea {float:left; width:746px;  background:#fff;}
+    .bx_seatbg .seatarea, .bx_seatbg .seatinfo{ margin-top:20px;} 
+    :root * {filter: progid:DXImageTransform.Microsoft.Matrix(enabled='false') !important;}
+    .bigmapdiv {position:absolute; }
+    .seatMap { position:absolute; }

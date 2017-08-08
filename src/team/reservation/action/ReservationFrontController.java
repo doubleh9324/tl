@@ -22,7 +22,6 @@ public class ReservationFrontController extends HttpServlet{
 		doProcess(request, response);
 	}
 
-
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
@@ -127,6 +126,20 @@ public class ReservationFrontController extends HttpServlet{
 			}
 		}else if(command.equals("/deleteCheckedSeatInfo.rs")){
 			action = new DeleteCheckedSeatInfo();
+			try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/reserveMU.rs")){
+			action = new ReservationMuAction();
+			try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/getTimeSeat.rs")){
+			action = new getTimeSeat();
 			try {
 				forward= action.execute(request, response);
 			} catch (Exception e) {

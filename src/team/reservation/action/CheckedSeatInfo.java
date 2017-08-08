@@ -144,7 +144,7 @@ public class CheckedSeatInfo implements Action{
 		
 		ActionForward forward=new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("./reservation/reservation.jsp");
+		forward.setPath("./reservation/reservationMV.jsp");
 		
 		response.setContentType("application/x-json; charset=utf-8");
 		response.getWriter().print(jsonObject);

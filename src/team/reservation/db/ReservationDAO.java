@@ -409,7 +409,7 @@ public class ReservationDAO {
 	return null;
 	}
 	
-	public List<Map<String, Object>> getTime(String mo_num, String pcode, String playday) throws Exception{
+	public List<Map<String, Object>> getTimeMo(String mo_num, String pcode, String playday) throws Exception{
 		Connection con= null;
 		PreparedStatement pstmt = null;
 		String sql="";
@@ -646,43 +646,6 @@ public class ReservationDAO {
 	return null;
 	}
 	
-	public List<Map<String, Object>> getCheckedSeats(int pingnum, String screen_name, String viewdate) throws Exception{
-		Connection con= null;
-		PreparedStatement pstmt = null;
-		String sql="";
-		ResultSet rs = null;
-		List<Map<String, Object>> ckedseatList = new ArrayList<>();
-		
-		try{
-			con=getConnection();
-			
-			sql="select seat from checked_seat where ping_num = ? and screen_name = ? and view_date = ? ";
-			pstmt=con.prepareStatement(sql);
-			pstmt.setInt(1, pingnum);
-			pstmt.setString(2, screen_name);
-			pstmt.setString(3, viewdate);
-			rs = pstmt.executeQuery();
-			System.out.println(pstmt.toString());
-			if(rs.next()){
-				do{
-					Map<String, Object> resultmap = new HashMap<>();
-					String seat = rs.getString("seat");
-					resultmap.put("seat_fl", seat.substring(0,1));
-					resultmap.put("seat_no", seat.substring(1));
-					ckedseatList.add(resultmap);
-				}while(rs.next());
-			}
-			
-			return ckedseatList;
-					
-		}catch(Exception e){
-			System.out.println("ReserDAO checkedseat error : "+e);
-		}finally{
-			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
-			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
-		}
-	return null;
-	}
 	
 	public List<MovieBean> getOrderReservMo(){
 		ArrayList<MovieBean> reservList = new ArrayList<MovieBean>();
@@ -717,5 +680,48 @@ public class ReservationDAO {
 	return reservList;
 	}
 	
+	public List<Map<String, Object>> getTimeMu(String mu_num, String date) throws Exception{
+		Connection con= null;
+		PreparedStatement pstmt = null;
+		String sql="";
+		ResultSet rs = null;
+		List<Map<String, Object>> TimeseatInfoList = new ArrayList<>();
+		
+		try{
+			con=getConnection();
+			
+			sql = "select a.*, a.capacity - coalesce(b.reserved,0) as remained "
+					+ "from (select * from v_playmusicalinfo where substring(nc_code, 3) = ? and play_day = ?) a "
+					+ "left join v_reserved_seatinfo b on a.play_day = date_format(b.view_date, '%Y-%m-%d') and a.ping_num = b.ping_num";
+			
+			pstmt=con.prepareStatement(sql);
+			
+			pstmt.setString(1, mu_num);
+			pstmt.setString(2, date);
+			rs = pstmt.executeQuery();
+			
+			System.out.println(pstmt.toString());
+			
+			if(rs.next()){
+				do{
+					Map<String, Object> timeseatInfo = new HashMap<>();
+					timeseatInfo.put("ping_num", rs.getString("ping_num"));
+					timeseatInfo.put("p_code", rs.getString("p_code"));
+					timeseatInfo.put("ptime", rs.getString("ptime"));
+					timeseatInfo.put("seatclass", rs.getString("seatclass"));
+					timeseatInfo.put("capacity", rs.getString("capacity"));
+					timeseatInfo.put("remained", rs.getString("remained"));
+				TimeseatInfoList.add(timeseatInfo);
+				}while(rs.next());
+			}
+			return TimeseatInfoList;
+		}catch(Exception e){
+			System.out.println("ReserDAO getTimeInfoMu error : "+e);
+		}finally{
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+	return null;
+	}
 	
 }
