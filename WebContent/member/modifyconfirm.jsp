@@ -74,7 +74,7 @@
 					<div class="mypage">
 						<h3>
 							<img
-								src="https://sslimage.interpark.com/_mypage_n/title/tit_mypage.gif"
+								src="img/MYPAGE.jpg"
 								alt="마이페이지">
 						</h3>
 						<div class="level">
@@ -93,7 +93,7 @@
 									<div class="pos_1">
 										<div class="tit_Ipont">
 											<img
-												src="https://sslimage.interpark.com/_mypage_n/title/tit_ipoint.gif"
+												src="img/lpoint.jpg"
 												alt="I-Point">
 										</div>
 										<div class="info_r">

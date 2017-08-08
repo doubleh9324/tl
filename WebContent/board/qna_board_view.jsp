@@ -83,6 +83,11 @@
                 </tbody>
             </table>
         </div>
+        
+        
+        
+        
+        
      <c:choose>
       <c:when test="${bb.re_state == '1'}">
         <div class="tbl_content_bx " id="recontent">
@@ -115,29 +120,96 @@
                   </table>
                </div>
       </div>
-      </c:when>
-      <c:when test="${bb.re_state != 0}">
-      <!-- re_state값이 0이면 답변 없음. -->
-      </c:when>
-   </c:choose>                 
+      
+                        
       <div class="btn_zone">
-               <a href="index.jsp?center=board/qna_board_write.jsp" id="btnremyHistoryCancel" class="">
-                   <img src="board/images/write.png" alt="다시 문의하기" width="16px"> 다시 문의하기
-               </a> 
+                
                <a href="index.jsp?center=board/qna_board_list.jsp" id="btnmyHistoryList">
                   	<img src="board/images/list.png" alt="목록" width="20px"> 목록
-               </a>               
+               </a>       
+               
+               <a href="index.jsp?center=board/qna_board_write.jsp" id="btnremyHistoryCancel" class="">
+                   <img src="board/images/write.png" alt="다시 문의하기" width="16px"> 다시 문의하기
+               </a>
+                       
+<%-- 				<a href="./Gomodify.bo?q_num=${bb.q_num} " id="btnremyHistoryCancel" class=""> --%>
+<!-- 					<img src="board/images/write.png" alt="수정" width="16px">수정 -->
+<!-- 				</a> -->
+
+
+	  </div>  
+      
+      
+      </c:when>
+      
+      
+      <c:when test="${bb.re_state == '0'}">
+      <!-- re_state값이 0이면 답변 없음. -->
+      				
+      				
+      			      <div class="btn_zone">
+
+               <a href="index.jsp?center=board/qna_board_list.jsp" id="btnmyHistoryList">
+                  	<img src="board/images/list.png" alt="목록" width="20px"> 목록
+               </a>       
+               
+               
+                       
 				<a href="./Gomodify.bo?q_num=${bb.q_num} " id="btnremyHistoryCancel" class="">
 					<img src="board/images/write.png" alt="수정" width="16px">수정
 				</a>
-	  </div>   
+
+
+	  </div>  	
+      				
+      				
+      				
+      				
+      
+      
+      
+      </c:when>
+   </c:choose> 
+   
+   
+   
+   
+                   
+<!--       <div class="btn_zone"> -->
+<!--                <a href="index.jsp?center=board/qna_board_write.jsp" id="btnremyHistoryCancel" class=""> -->
+<!--                    <img src="board/images/write.png" alt="다시 문의하기" width="16px"> 다시 문의하기 -->
+<!--                </a>  -->
+<!--                <a href="index.jsp?center=board/qna_board_list.jsp" id="btnmyHistoryList"> -->
+<!--                   	<img src="board/images/list.png" alt="목록" width="20px"> 목록 -->
+<!--                </a>        -->
+               
+               
+                       
+<%-- 				<a href="./Gomodify.bo?q_num=${bb.q_num} " id="btnremyHistoryCancel" class=""> --%>
+<!-- 					<img src="board/images/write.png" alt="수정" width="16px">수정 -->
+<!-- 				</a> -->
+
+
+<!-- 	  </div>    -->
+
+
+
     </div><!-- tbl_content_bx 끝 -->
 </div><!-- 문의내역 끝 -->
 
-        <div id="footer" class="game_help_footer">
-            <div class="footer">
-			</div>
-        </div>
+
+
+
+
+
+<!--         <div id="footer" class="game_help_footer"> -->
+<!--             <div class="footer"> -->
+<!-- 			</div> -->
+<!--         </div> -->
+
+
+
+
     </div>
 </body>
 </html>

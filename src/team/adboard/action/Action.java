@@ -5,14 +5,8 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-public interface Action {//Ŭ������ ����� ���� Ʋ
-	
-	//Ư�� Ŭ���̾�Ʈ�� ��û�� �����ϰ� �װ������ ActionForword Ŭ���� Ÿ������ ��ȯ
+public interface Action {
 	
 	public ActionForward execute(HttpServletRequest request , HttpServletResponse response) throws Exception;
-	
-	//�߻� �޼ҵ� 
-	
-	
 	
 }

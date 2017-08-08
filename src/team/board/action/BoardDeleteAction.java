@@ -26,7 +26,7 @@ public class BoardDeleteAction extends HttpServlet implements Action{
          PrintWriter out = response.getWriter();
          out.println("<script>");
          out.println("alert('delete complete');");
-         out.println("location.href='./board/qna_board_list.jsp'");      
+         out.println("location.href='index.jsp?center=board/qna_board_list.jsp'");      
          out.println("</script>");
          
       }else{

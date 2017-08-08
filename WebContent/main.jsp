@@ -15,7 +15,7 @@
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	setInterval(autoChangeFuction, 7000); 
+	/* setInterval(autoChangeFuction, 7000);  */
 	scheduledMusicalFunction();
 	listMovieFunction(0);
 	listMovieFunction2(0);
@@ -382,9 +382,8 @@ function setCookie(cname, value, expire) {
 </div>
 
 <div id="popup">
-<div onclick="reservation()"><img src="MovieImage/20140194.jpg" width="150px"><img src="MovieImage/20177181.jpg" width="150px">
-<span>티켓 사자에서 보내 드리는 시원한 여름맞이 선물! 납량특선 영화 곡성,47미터 5000원 할인 이벤트</span></div>
-<div id ="noshow" onclick="noshow()">하루 동안 이 페이지 열지않긔</div>
+<div onclick="reservation()"><img src="img/popup1.jpg" id="pop1"><img src="img/popup2.jpg"></div>
+<div id ="noshow" onclick="noshow()">이 글을 클릭하시면 하루동안 보이지 않습니다</div>
 </div>
 <!--------------------------------------------------------- -->
 <div id="mid">

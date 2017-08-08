@@ -41,7 +41,7 @@ function getcontents(con,address,p_code){
 					$("#loca"+nid).after(str);
 				}else{
 					
-					str="<tr id='loc"+nid+"' align='center'><td><div id='map"+nid+"' style='width:80%; height:350px; margin:15px'></div><div class='detail'>상세주소</div><div class='add'>"+address+"</div><div><input type='button' value='예매하기' onclick='reservation("+p_code+")'></div></td></tr>";
+					str="<tr id='loc"+nid+"' align='left'><td colspan='2'><div id='map"+nid+"' style='width:100%; height:350px; margin:10px 0'></div><div class='detail'>상세주소</div><div class='add'>"+address+"</div><div><input type='button' class='button' value='예매하기' onclick='reservation("+p_code+")'></div></td></tr>";
 					$("#loca"+nid).parent().after(str);
 					
 					var mapContainer = document.getElementById('map'+nid), // 지도를 표시할 div 
@@ -130,7 +130,7 @@ window.open("./reserveMV.rs?flag=movie&val="+p_code,"","width=1050, height=695, 
 								<option value="ks">경상</option>
 								<option value="kw">강원</option>
 								<option value="jj">제주</option>
-						</select> <select style="font-family:'Jeju Gothic',sans-serif; color:#3a3a3a" class="category" name="l_category2">
+								</select> <select style="font-family:'Jeju Gothic',sans-serif; color:#3a3a3a" class="category" name="l_category2">
 								<option value="">장소</option>
 								<option value="lc">롯데시네마</option>
 								<option value="mg">메가박스</option>
@@ -150,7 +150,7 @@ window.open("./reserveMV.rs?flag=movie&val="+p_code,"","width=1050, height=695, 
 
 				<c:set var="j" value="0" />
 				<c:forEach var="v" items="${v}">
-						<tr id="lo${v.l_num }" align="center">
+						<tr id="lo${v.l_num }" align="left">
 					<!-- 						<td> -->
 					<%-- 							<a href="LocationInfoController.do?l_num=${v.l_num}"> --%>
 					<%-- 								<img alt="" src="../img/${v.l_img}" width="200" height="180"> --%>
@@ -160,6 +160,10 @@ window.open("./reserveMV.rs?flag=movie&val="+p_code,"","width=1050, height=695, 
 						<!-- 							원래a태그 --> 
 <%-- 					<a href="LocationInfoController.do?l_num=${v.l_num}">${v.l_name }</a> --%>
 						<a href="javascript:void(0)" onclick="getcontents(${v.l_num },'${v.l_address }','${v.p_code }')">${v.l_name }</a>
+					
+					</td>
+					<td class="address" id="loc${v.l_num }">
+											<a href="javascript:void(0)" onclick="getcontents(${v.l_num },'${v.l_address }','${v.p_code }')">${v.l_address }</a>
 					
 					</td>
 
