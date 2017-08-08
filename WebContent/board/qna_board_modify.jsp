@@ -114,9 +114,9 @@ $(document).ready(function Selected(){
                </div>                       
                <div class="btn_zone">
                    <span id="bt_inquiry">
-                     <img src="board/images/write.png" width="16px" >문의하기
+                     <img src="board/images/write.png" width="16px" >수정하기
                   </span>                   
-                   <a href="qna_board_list.jsp" id="bt_inquiry_cancel">
+                   <a href="index.jsp?center=board/qna_board_list.jsp" id="bt_inquiry_cancel">
                         <img src="board/images/cancel3.png" width="16px">취소
                    </a>
                </div>               

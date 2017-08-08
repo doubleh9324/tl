@@ -10,6 +10,7 @@
 <title>티켓사자 - Ticket Lion</title>
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
+// top 버큰에 대한 함수. 
     $(function() {
         $(window).scroll(function() {
             if ($(this).scrollTop() > 500) {
@@ -29,7 +30,7 @@
 </script>
 
 <style type="text/css">
-
+/* 탑버튼 css */
 a#MOVE_TOP_BTN {
     position: fixed;
     right: 24px;
@@ -42,6 +43,7 @@ a#MOVE_TOP_BTN {
 </head>
 <body>
 
+<!-- top버튼 -->
 <a id="MOVE_TOP_BTN" href="#"><img src="img/top_btn1.png" width="56px" ></a>
 
 <c:set var="center" value="${param.center }"/>
