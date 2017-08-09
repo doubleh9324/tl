@@ -6,17 +6,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>티켓사자 - Ticket Lion</title>
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
+// top 버큰에 대한 함수. 
     $(function() {
-//         $(window).scroll(function() {
-//             if ($(this).scrollTop() > 500) {
-                $('#MOVE_TOP_BTN').fadeIn();
-//             } else {
-//                 $('#MOVE_TOP_BTN').fadeOut();
-//             }
-//         });
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+                $('#MOVE_TOP_BTN').show();
+            } else {
+                $('#MOVE_TOP_BTN').hide();
+            }
+        });
         
         $("#MOVE_TOP_BTN").click(function() {
             $('html, body').animate({
@@ -28,11 +30,11 @@
 </script>
 
 <style type="text/css">
-
+/* 탑버튼 css */
 a#MOVE_TOP_BTN {
     position: fixed;
-    right: 18%;
-    bottom: 50%;
+    right: 24px;
+    bottom: 94px;
     display: none;
     z-index: 999;
 }
@@ -41,7 +43,8 @@ a#MOVE_TOP_BTN {
 </head>
 <body>
 
-<a id="MOVE_TOP_BTN" href="#"><img src="img/top_btn.png" width="35px" ></a>
+<!-- top버튼 -->
+<a id="MOVE_TOP_BTN" href="#"><img src="img/top_btn1.png" width="56px" ></a>
 
 <c:set var="center" value="${param.center }"/>
 
@@ -49,18 +52,18 @@ a#MOVE_TOP_BTN {
 
 
 <c:if test="${center==null }">
-   <c:set var="center" value="main.jsp"/>
+	<c:set var="center" value="main.jsp"/>
 
 
 </c:if>
-      <jsp:include page="top.jsp"></jsp:include>
-      
-<center>    
-      <jsp:include page="${center}"/>
+		<jsp:include page="top.jsp"></jsp:include>
+		
+<center>	 
+		<jsp:include page="${center}"/>
 
 </center>
 
-      <jsp:include page="bottom.jsp"></jsp:include>
-   
+		<jsp:include page="bottom.jsp"></jsp:include>
+	
 </body>
 </html>

@@ -27,7 +27,7 @@ header {
 }
 #member_menu_2{
     height: 20px;
-    width: 950px;
+    width: 980px;
     margin:0 auto;    
 }
 #member_menu_2 ul{
@@ -55,18 +55,15 @@ header {
 
 /* 가운데 로고, 검색, 이미지 */
 #search_bar{      
-    width: 1000px;
-    height: 100px;
-    display: inline-block;
-    position: relative;
-    padding: 0 auto;
+    width: 100%;
+    display:inline-block;
+    padding-bottom: 20px;
 }
-/* 로고 */
 #search_bar1{
-   position:absolute;
    display:inline-block;
-   left:30px;
-   top:20px;
+   margin-right: 50px;
+   margin-left: 50px; /*가로 위치 조정 값*/
+   font-size: 17px;
 
 }
 #search_bar1:HOVER{
@@ -75,42 +72,36 @@ header {
 .fontColor{
    color: #ff7c2c;   
 }
-/* 검색 상자 */
+
 #search_bar2{
-   position: absolute;
-   display: inline-block;
-   width: 400px;
+   display:inline-block;
+   width: 300px;
+   height: 30px;
    border: 1px solid #ff7c2c;
    background: #fffff;
    align-content: center;
-   left: 260px;
-   top: 35px;
+   
 }
-/* 검색어 텍스트 넣는 곳 */
 #search_bar2_1{
    /* 11 0 0 9 */
-   position:relative;
-   left: -43px;
-   bottom: 2px;
-    margin: 7px 0 0 0px;
+    margin: 7px 0 0 9px;
     padding:0;
-    width: 290px;
-    height: 30px;
+    width: 300px;
+    height: 20px;
     outline: 0;
     border: 0;
     background-color: transparent;
     color: #000;
     font-weight: 500;
     font-size: 15px;
-/*     line-height: 20px; */
+    line-height: 20px;
 }
-#search_bar2_2{ /* 서치(돋보기) 아이콘 */
-    position: absolute;
+#search_bar2_2{
+   top:9px;
+   left:-9px;
+   position: relative;
     overflow: visible;
-    width: 32px;
-    left:625px;
-    top:40px; 
-    
+    width: 32px; 
 }
 #search_bar2_2:HOVER{
    cursor: pointer;
@@ -118,10 +109,10 @@ header {
 #search_bar3{
    
 }
-#search_bar2_3{ /* 배너 */
-   position: absolute;
-   top:10px;
-   left:700px;
+#search_bar2_3{
+   position: relative;
+   top:15px;
+   left:30px;
 }
 
 /* 메뉴바 */
@@ -130,10 +121,10 @@ header {
     height: 34px;
     /* 8.7 pm 15:33 */
     background: #fc4a1a;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #FBB642, #F92A4B);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #FBB642, #F92A4B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin:0 auto;
-    position:relative;
+	background: -webkit-linear-gradient(to right, #FBB642, #F92A4B);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FBB642, #F92A4B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   margin:0 auto;
+   position:relative;
 }
 #menu_bar_2{   
     height: 34px;
@@ -155,18 +146,18 @@ header {
    cursor:pointer;
 }
 #mo_recommand img,#mu_recommand img{
-   
-   width: 90px;
-   height: 120px;
-   margin: 15px 7px 0px 0px;
+	
+	width: 90px;
+	height: 120px;
+	margin: 15px 7px 0px 0px;
 }
 
 #mo_recommand h5, #mu_recommand h5{
-   float: left;
-   width: 35px;
-   height: 35px;
-   margin: 50px 0px 0px 15px;
-   text-align: left;
+	float: left;
+	width: 35px;
+	height: 35px;
+	margin: 50px 0px 0px 15px;
+	text-align: left;
 }
 
 #menu_bar_2 ul li a{
@@ -182,12 +173,12 @@ header {
    width: 650px;
    height: 350px;
    background-color: #ffffff;
-   left:32.15%; /* 32.15붙여야 맞음 */
+   left:32%;
    top:34px;
    /* 8.7 pm 15:33 */
    -moz-box-shadow:#585858 0px 0px 1px; /* 그림자 추가 */
-   -webkit-box-shadow:#585858 0px 0px 1px; 
-   box-shadow:#585858 0px 0px 1px; 
+	-webkit-box-shadow:#585858 0px 0px 1px; 
+	box-shadow:#585858 0px 0px 1px; 
 }
 #movie_drop div, #musical_drop div{
    position: absolute;
