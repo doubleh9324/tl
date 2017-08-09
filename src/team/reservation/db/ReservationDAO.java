@@ -733,7 +733,8 @@ public class ReservationDAO {
 			
 			sql = "select a.*, a.capacity - coalesce(b.reserved,0) as remained "
 					+ "from (select * from v_playmusicalinfo where substring(nc_code, 3) = ? and play_day = ?) a "
-					+ "left join v_reserved_seatinfo b on a.play_day = date_format(b.view_date, '%Y-%m-%d') and a.ping_num = b.ping_num";
+					+ "left join v_reserved_seatinfo b on a.play_day = date_format(b.view_date, '%Y-%m-%d') and a.ping_num = b.ping_num"
+					+ "order by 5";
 			
 			pstmt=con.prepareStatement(sql);
 			

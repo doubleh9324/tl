@@ -196,28 +196,6 @@ browser_Event();
                                     <span id="spanPromotionSeat"></span>
                                 </div>
                                 <div id="divPromotionList" class="scroll">
-                                
-                                <div classbyte="" style="display: block;">
-                                <table id="tblPromotionGroup1" border="0" cellpadding="0" summary="선택한 좌석등급에 사용할 수 있는 할인 목록" cellspacing="0" class="sale_table" grpno="1" grpseq="0" seatname="젤리클석 기본할인" cusselseatcnt="1">
-                                <caption>할인리스트</caption>
-	                                <colgroup>
-	                                <col width="55%">
-	                                <col width="15%">
-	                                <col width="20%">
-	                                <col width="10%">
-	                                </colgroup>
-	                                <thead>
-		                                <tr>
-			                                <th scope="col" style="text-align:left;padding-left:10px;">가격 선택</th>
-			                                <th scope="col">판매금액</th>
-			                                <th scope="col">매수</th>
-			                                <th scope="col">설명</th>
-		                                </tr>
-	                                </thead>
-	                                <tbody>
-	                                </tbody>
-                                </table>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -248,10 +226,18 @@ browser_Event();
                             <div class="select_seat" style="margin-bottom:10px;">
                                 <em class="tit">수령방법선택</em> 
                                 <div class="delivery">
-                                    <span id="deliveryPos"></span>
-                                    <span id="enblocDate" class="date" style="display:none;"><img src="http://image16.hanatour.com/img/perfsale/tit_01.gif" alt="일괄배송"><em>&nbsp;</em></span>
+                                    <span id="deliveryPos">
+	                	                <input type="radio" name="rdoDelivery" checked="true" id="rdoDeliveryBase" value="direct" price="0" onclick="DeliveryMethodChange(this);">
+	                                	<label for="rdoDeliveryBase">현장수령</label>
+	                                	<input type="radio" name="rdoDelivery" id="rdoDelivery8" value="delivery" price="2500" onclick="DeliveryMethodChange(this);">
+	                                	<label class="red" for="rdoDelivery8">일반우편배송(2,500원)</label>
+                                    </span>
+                                    <span id="enblocDate" class="date" style="display:none;">
+                                    <img src="http://image16.hanatour.com/img/perfsale/tit_01.gif" alt="일괄배송">
+                                    <em>&nbsp;</em>
+                                    </span>
                                 </div>
-                                <div id="divTip_NoMobile" style="padding:27px 0 0 0;">* 티켓은 묶음배송이 불가합니다.<br>* 배송 받으신 티켓 분실시 재발권 및 관람이 불가합니다.</div>
+                                <div id="divTip_NoMobile" style="padding:27px 0 0 0; display:none;">* 티켓은 묶음배송이 불가합니다.<br>* 배송 받으신 티켓 분실시 재발권 및 관람이 불가합니다.</div>
                                 <div id="divTip_Mobile">&nbsp;<br>* 모바일티켓(MMS문자)은 현물 티켓 대신 현장에서 모바일티켓을 제시하여 즉시 입장이 가능합니다.</div>
                             </div>
                             <!-- //수령방법 -->
@@ -278,7 +264,7 @@ browser_Event();
                             </div>
                             <!-- //주문자확인 정보 -->
                             <!-- 배송지 정보 -->
-                            <div id="step04_DeliveryInfo">
+                            <div id="step04_DeliveryInfo" style="display:none;">
                                 <div class="tit_area add_info">
                                 <h4>배송지정보</h4>
                                 <span>배송 받으시는 분의 휴대폰으로 배송시 전화를 드릴 수 있으니 정확한 입력 부탁드립니다.</span>
@@ -311,7 +297,7 @@ browser_Event();
                             </div>
                             <!-- //배송지 정보 -->
                             <!-- 모바일티켓 정보 -->
-                            <div id="step04_MobileInfo" class="mticket">
+                            <div id="step04_MobileInfo" class="mticket" style="display:none;">
                                 <h5>모바일티켓(MMS문자) 이용안내</h5>
                                 <ul>
                                     <li>* 티켓예매를 완료하시면 모바일로 MMS문자를 수신하실 수 있습니다.</li>
@@ -457,16 +443,16 @@ browser_Event();
                                     <a class="dcursor" onclick="ChoiceSeat();"><img src="http://image16.hanatour.com/img/perfsale/btn_next04.gif" alt="다음단계"></a>
                                 </div>
                                 <div id="StepCtrlBtn03" style="display:none;">
-                                    <a class="dcursor" onclick="fdc_GoPrevStep(jcSTEP1);"><img src="http://image16.hanatour.com/img/perfsale/btn_prev.gif" alt="이전단계"></a>
-                                    <a class="dcursor" onclick="fdc_PromotionEnd();"><img src="http://image16.hanatour.com/img/perfsale/btn_next02.gif" alt="다음단계"></a>
+                                    <a class="dcursor" onclick="GoPrevStep(event);"><img src="http://image16.hanatour.com/img/perfsale/btn_prev.gif" alt="이전단계"></a>
+                                    <a class="dcursor" onclick="PromotionEnd();"><img src="http://image16.hanatour.com/img/perfsale/btn_next02.gif" alt="다음단계"></a>
                                 </div>
                                 <div id="StepCtrlBtn04" style="display:none;">
-                                    <a class="dcursor" onclick="fdc_GoPrevStep(jcSTEP3);"><img src="http://image16.hanatour.com/img/perfsale/btn_prev.gif" alt="이전단계"></a>
-                                    <a class="dcursor" onclick="fdc_DeliveryEnd();"><img src="http://image16.hanatour.com/img/perfsale/btn_next02.gif" alt="다음단계"></a>
+                                    <a class="dcursor" onclick="GoPrevStep(event);"><img src="http://image16.hanatour.com/img/perfsale/btn_prev.gif" alt="이전단계"></a>
+                                    <a class="dcursor" onclick="DeliveryEnd();"><img src="http://image16.hanatour.com/img/perfsale/btn_next02.gif" alt="다음단계"></a>
                                 </div>
                                 <div id="StepCtrlBtn05" style="display:none;">
-                                    <a class="dcursor" onclick="fdc_GoPrevStep(jcSTEP4);"><img src="http://image16.hanatour.com/img/perfsale/btn_prev.gif" alt="이전단계"></a>
-                                    <a class="dcursor" onclick="fdc_PrePayCheck();"><img id="imgPayEnd" src="http://image16.hanatour.com/img/perfsale/btn_succ.gif" alt="결제하기"></a>
+                                    <a class="dcursor" onclick="GoPrevStep(event);"><img src="http://image16.hanatour.com/img/perfsale/btn_prev.gif" alt="이전단계"></a>
+                                    <a class="dcursor" onclick="PrePayCheck();"><img id="imgPayEnd" src="http://image16.hanatour.com/img/perfsale/btn_succ.gif" alt="결제하기"></a>
                                 </div>
                             </div>
                         </div>

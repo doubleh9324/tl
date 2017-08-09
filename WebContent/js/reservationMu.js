@@ -2226,7 +2226,7 @@ function selectDay(event){
         	var rcount = 1;
     		$.each(data.timeseatList, function(key, value){
     			ping_num = value.ping_num;
-    			ptime = value.ptime;
+    			//ptime = value.ptime;
     			
             	if(data.timeseatList.length/3 == 1){
             		classOn = "on";
@@ -2237,6 +2237,8 @@ function selectDay(event){
             	seats += "<li><strng>"+value.seatclass+"석 </strong>"+comma(value.price)+"원 (잔여:<span class='red'>"+value.remained+"석</span>)</li>";
     			//새로운 회차일 때 마다 추가하기
     			if(i%3 == 0){
+    			ptime = "["+rcount+"회] "+value.ptime;
+    			
     			round += "<li id=round"+rcount+" timeoption=''"+" idhall=''"+" seatviewmode=''"+" saleclose='"+date
     				+"' cancelclose='"+event.currentTarget.id+" "+value.ptime+"' limitcussalecnt= ''"
     				+" limittimesalecnt=''"+" timeinfo='"+value.ptime+"' class='"+classOn+"'>["+rcount+"회] "+value.ptime+"</li>";
@@ -2360,7 +2362,6 @@ function calendars(){
  */
  
 function ChoiceSeat(){
-	window.alert("다음단계");
 	
 	$("#header").css("display", "none");
 	$("#ContentsArea").css("display", "none");
@@ -2394,8 +2395,9 @@ $(document).on("click","#ulTime > li", function(){
 	var count = -1;
 	var seats = "";
 	
-	var round = $(this).attr("id").substring(8,9);
+	var round = thisId.substring(5,6);
 	var i=0;
+	
 	
 	$.each(timeseat, function(key, value){
 		if((round-1)*3 <= i && i<((round-1)*3+3)){
@@ -2409,6 +2411,9 @@ $(document).on("click","#ulTime > li", function(){
 	
 	//좌석 선택 상단바 select box 지정하기
 	$("option["+$(this).attr("id")+"]").attr("selected", "true");
+	
+	//선택내역 시간 표시
+	$("#tk_time").html($(this).text());
 });
 
 /*===============================================================================================
@@ -2736,6 +2741,25 @@ function closeseat(){
 	$("#ContentsArea").css("display", "block");
 	$("#StateBoard").css("display", "block");
 	$("#header").css("display", "block");
+	
+	$(".gnb li").removeClass("on");
+	$(".gnb li.m01").addClass("on");
+	$("#step01").css("display", "block");
+	$("#step03").css("display", "none");
+	$("#StepCtrlBtn01").css("display", "block");
+	$("#StepCtrlBtn03").css("display", "none");
+	
+	//선택내역, 결제내역 초기화
+	$("#tk_count").text("");
+	$("#tk_seat").empty().append("<p>좌석 지정 회차입니다</p>");
+	
+	$("#liSelSeat").empty();
+	
+	$(".pay_infor .tk_price > span").text("0");
+	$(".pay_infor .tk_charge > span").text("0");
+	
+	$(".pay_infor .tk_sumplus > span").text("0");
+	$(".t_result").text("0");
 }
 
 /*===================================================================================
@@ -2780,12 +2804,15 @@ function ChoiceEnd(){
 		var tksize = $("#liSelSeat > p").size();
 		$("#tk_count").text(tksize+"매");
 		//선택내역의 좌석 지정
-		$("#tk_seat").empty().append($("#liSelSeat").clone());
+		$("#tk_seat").empty().append($("#liSelSeat > p").clone());
 		//결제내역의 금액 지정
 		var price = 0;
 		var v = "";
 		var r = "";
 		var s = "";
+		var vn=1;
+		var rn =1;
+		var sn = 1;
 		$("#tk_seat p").each(function(){
 			var grade = $(this).attr("grade");
 			
@@ -2797,61 +2824,70 @@ function ChoiceEnd(){
 					v = "<input type='radio' name='rdoPromotionSeat' value='VIP석' " +
 							"classbyte='' onclick='PromotionView(this);'><label>VIP석</label>";
 					price += 143000;
+					do{PromotionCraete(grade); vn=-3}while(vn>1);
 					break;
 				case "R석":
 					r = "<input type='radio' name='rdoPromotionSeat' value='R석' " +
 					"classbyte='' onclick='PromotionView(this);'><label>R석</label>";
 					price += 133000;
+					do{PromotionCraete(grade); rn=-2}while(rn>1);
 					break;
 				case "S석":
 					s = "<input type='radio' name='rdoPromotionSeat' value='S석' " +
 					"classbyte='' onclick='PromotionView(this);'><labal>S석</label>";
 					price += 111000;
+					do{PromotionCraete(grade); sn=-1}while(sn>1);
 					break;
 			}
+			
 		});
 		
-		$("#spanPromotionSeat").append(v+r+s);
+		$("#spanPromotionSeat").empty().append(v+r+s).trigger("create");
 		//제일 앞에 있는 값 selected 해놓기
 		$("input[name='rdoPromotionSeat']:eq(0)").attr("checked", "ture");
-		PromotionView($("#spanPromotionSeat > input:eq(0)"));
+		
+		var re = (vn < rn) ? "V" : ((rn < sn) ? "R" : "S" );
+		$("#PromotionGroup"+re).parent().css("display", "block");
 				
 		$(".pay_infor .tk_price > span").text(comma(price));
 		$(".pay_infor .tk_charge > span").text(comma(1000*tksize));
 		
 		$(".pay_infor .tk_sumplus > span").text(comma(1000*tksize+price));
 		$(".t_result").text(comma(1000*tksize+price));
+		
+		
 	}
 }
 
-/*===================================================================================
- * 등급별로 가격선택 테이블 만들기
- */
-function PromotionView(obj){
+function PromotionCraete(grade){
 	
-	var grade = $(obj).val();
 	var price = 0;
-	
+	var g = "";
 	switch(grade){
 	case "VIP석":
+		g = "V";
 		price = 143000;
 		break;
 	case "R석":
+		g = "R";
 		price = 133000;
 		break;
 	case "S석":
+		g = "S";
 		price = 111000;
 		break;
 	}
-	var tknum = $("#liSelSeat > p[grade='"+grade+"']").size()/2;
+	
+	
+	var tknum = $("#liSelSeat > p[grade='"+grade+"']").size();
 	//해당하는 좌석 등급의 가격선택 테이블 보이기
 	var tknumop = "";
 	for(var tk=0; tk <= tknum; tk++){
 		tknumop += "<option value='"+tk+"'>"+tk+"매</option>";
 	}
-	var str = " <div classbyte=''>"+
-               "<table id='tblPromotionGroup1' border='0' cellpadding='0' summary='선택한 좌석등급에 사용할 수 있는 할인 목록' cellspacing='0' class='sale_table' grpno='1' grpseq='0' cusselseatcnt='1'>"+
-               "<caption>할인리스트</caption>"+
+	var str = " <div classbyte='' style='display:none;'>"+
+				    "<table id='PromotionGroup"+g+"' border='0' cellpadding='0' summary='선택한 좌석등급에 사용할 수 있는 할인 목록' cellspacing='0' class='sale_table' grpno='1' grpseq='0' cusselseatcnt='1'>"+
+				    "<caption>할인리스트</caption>"+
                     "<colgroup><col width='55%'><col width='15%'><col width='20%'><col width='10%'></colgroup>"+
                		"<thead><tr>"+
                             "<th scope='col' style='text-align:left;padding-left:10px;'>가격 선택</th>"+
@@ -2860,8 +2896,97 @@ function PromotionView(obj){
                             "<th scope='col'>설명</th>"+
                         "</tr>"+
                     "</thead><tr><td class>일반 정가<br></td>"+"<td>"+comma(price)+"</td>"+
-		    "<td>"+"<select id='selPromotion0' amount='0' onchange='PreCheckPromotion('0','0','0','T','F',1,1,this);'>"+
-			    tknumop+"</select>"+"</td>"+"<td>&nbsp;</td></tr></tbody></table>";
+		    "<td>"+"<select name='selPromotion' amount='0'>"+
+			    tknumop+"</select>"+"</td>"+"<td>&nbsp;</td></tr></tbody></table></div>";
 	
-	$("#tblPromotionGroup1 tbody").append(str);
+	$("#divPromotionList").append(str);
+}
+
+/*===================================================================================
+ * 등급별로 가격선택 테이블 만들기
+ */
+function PromotionView(obj){
+	
+	var grade = $(obj).val();
+	switch(grade){
+	case "VIP석":
+		grade = "V";
+		break;
+	case "R석":
+		grade = "R";
+		break;
+	case "S석":
+		grade = "S";
+		break;
+	}
+	
+	$("#divPromotionList > div").css("display", "none");
+	$("#PromotionGroup"+grade).parent().css("display", "block");
+}
+
+/*===================================================================================
+ * 등급별로 가격선택 테이블 만들기
+ */
+function GoPrevStep(event){
+	
+	//누른 곳 현재 단계
+	var id = $(event.currentTarget).parent().attr("id");
+	var step3 = id.match(/03/g);
+	var step4 = id.match(/04/g);
+	
+	if(step3!= null){
+		//현재가 3단계, 좌석 선택으로 돌아가기
+		$(".gnb li").removeClass("on");
+		$(".gnb li.m03").addClass("on");
+		$("#header").css("display", "none");
+		$("#ContentsArea").css("display", "none");
+		$("#StepCtrlBtn03").css("display", "none");
+		$("#StateBoard").css("display", "none");
+		$("#SeatFlashArea").css("display", "block");
+		
+		
+	}
+}
+
+/*===================================================================================
+ * 할인 선택 완료
+ */
+function PromotionEnd(){
+	//매수 선택 확인 할 것
+	var isTkchoiced = false;
+	var sum = 0;
+	$("select[name='selPromotion'] > option:selected").each(function(){
+		sum += $(this).attr("value")*1;
+	});
+	
+	if(sum == $("#liSelSeat > p").size()){
+		window.alert("통과");
+		
+		$(".gnb li").removeClass("on");
+		$(".gnb li.m04").addClass("on");
+		$("#step03").css("display", "none");
+		$("#step04").css("display", "block");
+		$("#StepCtrlBtn03").css("display", "none");
+		$("#StepCtrlBtn04").css("display", "block");
+	}else{
+		window.alert("매수를 선택해주세요");
+	}
+}
+
+/*===================================================================================
+ * 수령방법선택
+ */
+function DeliveryMethodChange(obj){
+	var method = $(obj).attr("value");
+	
+	if(method == "direct"){
+		
+	}else if(method == "delivery"){
+		$("#step04_DeliveryInfo").css("display", "block");
+		var delprice = $(obj).attr("price")*1;
+		$(".pay_infor .tk_deli > span").text(comma(delprice));
+		var price = uncomma($(".pay_infor .tk_sumplus > span").text())*1;
+		$(".pay_infor .tk_sumplus > span").text(comma(price+delprice ));
+		$(".t_result").text(comma(price+delprice ));
+	}
 }
