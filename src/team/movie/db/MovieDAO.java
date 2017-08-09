@@ -81,7 +81,7 @@ public class MovieDAO {
 	}
 	
 	
-	public List playingMoviesPick4(int count){
+	public List playingMoviesPick4(){
 		 ArrayList movieList= new ArrayList();
 		
 		Connection con=null;
@@ -92,9 +92,8 @@ public class MovieDAO {
 			con=getConnection();
 			
 			sql="select m1.movie_num, m1.name, m1.open_day, m2.image from movie m1,movie_detail m2 where m1.movie_num=m2.movie_num "
-					+ "and curdate()<=date_add(m1.open_day, interval 1 month) and curdate()>=m1.open_day and m2.image != 'default-image.jpg' order by 3 limit ?,4";
+					+ "and curdate()<=date_add(m1.open_day, interval 1 month) and curdate()>=m1.open_day and m2.image != 'default-image.jpg' order by 3";
 			pstmt=con.prepareStatement(sql);
-			pstmt.setInt(1, count);
 			rs=pstmt.executeQuery();
 			while(rs.next()){
 				MovieBean mb= new MovieBean();
@@ -152,7 +151,7 @@ public class MovieDAO {
 		return Collections.emptyList();
 	}
 	
-	public List<MovieBean> getSoonMovies(int count){
+	public List<MovieBean> getSoonMovies(){
 		ArrayList<MovieBean> soonList= new ArrayList<MovieBean>();
 		Connection con=null;
 		PreparedStatement pstmt=null;
@@ -161,9 +160,8 @@ public class MovieDAO {
 		
 		try{
 			con=getConnection();
-			sql="select m.movie_num, m2.image, m.open_day from movie m , movie_detail m2 where m.movie_num=m2.movie_num and open_day> curdate() and m2.image!='default-image.jpg' order by 3 limit ?,4";
+			sql="select m.movie_num, m2.image, m.open_day from movie m , movie_detail m2 where m.movie_num=m2.movie_num and open_day> curdate() and m2.image!='default-image.jpg'";
 			pstmt=con.prepareStatement(sql);
-			pstmt.setInt(1, count);
 			rs=pstmt.executeQuery();
 			if(rs.next()){
 				do{

@@ -82,7 +82,7 @@ public class MusicalDAO {
 		return length;
 	}
 	///////////////////////////////////////////////////////////////////////////
-	public Vector<MusicalBean> playingMusicalsPick4(int count){ //占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 占쎈쐻占쎈짗占쎌굲占쎌넅 
+	public Vector<MusicalBean> playingMusicalsPick4(){ //占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 占쎈쐻占쎈짗占쎌굲占쎌넅 
 		Vector<MusicalBean> v= new Vector<MusicalBean>();
 		Connection con=null;
 		PreparedStatement pstmt = null;
@@ -90,9 +90,8 @@ public class MusicalDAO {
 		String sql="";
 		try{
 			con=getConnection();
-			sql="select m1.musical_num, m1.name, m2.image, m1.open_day, m1.close_day from musical m1,musical_detail m2 where m1.musical_num=m2.musical_num and curdate()<=m1.close_day and curdate()>=m1.open_day order by 4 limit ?,4";
+			sql="select m1.musical_num, m1.name, m2.image, m1.open_day, m1.close_day from musical m1,musical_detail m2 where m1.musical_num=m2.musical_num and curdate()<=m1.close_day and curdate()>=m1.open_day order by 4";
 			pstmt=con.prepareStatement(sql);
-			pstmt.setInt(1, count);
 			rs=pstmt.executeQuery();
 			while(rs.next()){
 				MusicalBean mb= new MusicalBean();

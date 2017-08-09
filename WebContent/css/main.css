@@ -69,7 +69,7 @@ div#mid{
 }
 div#category{
 	width: 960px;
-	height: 420px;
+	/* height: 420px; */
 }
 div#subject{
 	width: 960px;
@@ -91,6 +91,15 @@ div#subject_center{
 	float:left;
 
 
+}
+
+div#subject_center div{
+	width:150px;
+	height: 60px;
+	
+	color: #6f6f6f;
+	font-size: 30px;
+	margin-top:25px;
 }
 
 
@@ -117,8 +126,8 @@ div#subject_right{
 img#content{
 	width:225px;
 	height: 340px;
-	margin-left:2px;
-	margin-right:2px;
+	margin-left:5px;
+	margin-right:5px;
 	
 }
 
@@ -128,24 +137,68 @@ img#content:HOVER{
 
 
 
-img#prev_button{
-	width:20px;
-	height: 30px;
-	margin-top: 150px;
+div#contents_mo, div#contents_mu{
+	width: 940px;
+	height: 360px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+
+ul.contents_mo, ul.contents_mu{
+	width: 100%;
+	height: 350px;
+	position: absolute;
+	top:0;
+	left:0;
+	
+}
+
+ul.contents_mo li, ul.contents_mu li{
 	float: left;
-	
-	
-}
-img#next_button{
-	width:20px;
-	height: 30px;
-	margin-top: 150px;
-	float: right;
-
+	list-style: none;
+	position: relative;
 }
 
-img#next_button:HOVER, img#prev_button:HOVER {
-	cursor:pointer;
+div#content_body{
+	width:100%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+div#btn{
+	position: absolute;
+	top: 800px;
+	width: 980px;
+	z-index: 3;
+	
+}
+
+div#btn_2{
+	position: absolute;
+	top: 1250px;
+	width: 980px;
+	z-index: 3;
+}
+
+div#btn img,div#btn_2 img{
+		position: absolute;
+	
+}
+div#btn img,div#btn_2 img:HOVER{
+	cursor: pointer;
+	
+}
+
+img#next_btn_mo, img#next_btn_mu{
+	left:100%;
+}
+
+
+div#btn_div{
+	width: 1000px;
+	margin: 0 auto;
 }
 
 

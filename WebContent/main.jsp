@@ -14,12 +14,12 @@
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-	/* setInterval(autoChangeFuction, 7000);  */
-	scheduledMusicalFunction();
-	listMovieFunction(0);
+$(document).ready(function(){ //이 페이지를 실행하면...
+	setInterval(autoChangeFuction, 7000);  //7초마다 배너가 바뀌는 메서드 실행
+	scheduledMusicalFunction();  //개봉예정인 뮤지컬을 출력하는 메서드
+	listMovieFunction(); //개봉일을 기준으로 현재 상영 중인 영화4개씩 출력하는 메서드
 	listMovieFunction2(0);
-	listMusicalFunction(0);
+	listMusicalFunction(); //개막일을 기준으로 현재 상영 중인 뮤지컬 4개씩 출력하는 메서드
 	listMusicalFunction2(0);
 	
 	  var result = getCookie('popup');
@@ -29,7 +29,7 @@ $(document).ready(function(){
 	
 })
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function autoChangeFuction(){
+function autoChangeFuction(){  //curr_num을 파라미터로 changeImageFunction()메서드 실행
 	var curr_num = Number($('#curr_num').val());
 	if(curr_num==13){ curr_num=1;}
 	changeImageFunction(curr_num);
@@ -68,39 +68,216 @@ function changeImageFunction(num){  // 작은 사진을 클릭하면 배너의 �
 	$('#top').append(changeTag);
 	
 }
+//////////////////////////////////////////////////////////////
+//버튼눌렀을 때 애니메이션
+function nextChangeFunction(cate){
+	var cate_name = cate;
+	if(cate_name=="mo"){
+		var num = Number($("#curr_num_mo").val());
+		var last_num=Number($("#last_num_mo").val());
+		
+		if(num==$("#last_num_mo").val()){
+			
+			 for(var i=0;i<last_num;i=i+1){
+				var change_left=Number($("#"+i+"_ori_left_mo").val())+(1080*(num-1));
+				$("#"+i+"_ori_left_mo").val(change_left);
+				$("#contents_mo_"+i).animate({
+					left: change_left+"px"
+				});
+				
+				
+				
+			}		 
+			$("#curr_num_mo").val(1);
+			 return false;
+			
+		}
+	
+		
+		for(var j=0;j<last_num;j=j+1){
+			var change_left=Number($("#"+j+"_ori_left_mo").val())-1080;
+			$("#"+j+"_ori_left_mo").val(change_left); 
+			$("#contents_mo_"+j).animate({
+				left: change_left+"px"
+			});
+		 	
+		};
+		
+ 	/* 	for(var i=0;i<num;i=i+1){
+			  
+			var last_left=Number($("#"+(last_num-(i+1))+"_ori_left_mo").val())+1080;
+			$("#"+i+"_ori_left_mo").val(last_left);
+			$("#contents_mo_"+i).css("left",last_left+"px");
+ 		
+		}
+		    */
 
+		$("#curr_num_mo").val(num+1); 
+		
+	}else if(cate_name=="mu"){
+		var num = Number($("#curr_num_mu").val());
+		if(num==$("#last_num_mu").val()){
+			var last_num=Number($("#last_num_mu").val());
+			 for(var i=0;i<last_num;i=i+1){
+				var change_left=Number($("#"+i+"_ori_left_mu").val())+(1080*(num-1));
+				
+				$("#contents_mu_"+i).animate({
+					left: change_left+"px"
+				});
+				$("#"+i+"_ori_left_mu").val(change_left);
+				
+				
+			}
+			var last_num=Number($("#last_num_mu").val());
+		 
+			
+			$("#curr_num_mu").val(1);
+			 return false;
+			
+		}
+		
+		
+		var last_num=Number($("#last_num_mu").val());
+		for(var j=0;j<last_num;j=j+1){
+			var change_left=Number($("#"+j+"_ori_left_mu").val())-1080;
+		
+			$("#contents_mu_"+j).animate({
+				left: change_left+"px"
+			});
+			$("#"+j+"_ori_left_mu").val(change_left);
+		}
+			 
+		$("#curr_num_mu").val(num+1);
+		
+	}
+	
+
+}
+
+
+function prevChangeFunction(cate){
+	
+	var cate_name = cate;
+	if(cate_name=="mo"){
+
+	
+		var num = Number($("#curr_num_mo").val());
+		if(num==1){
+			
+			var l_num=Number($("#last_num_mo").val());
+			
+			for(var j=0;j<l_num;j=j+1){
+				var change_left=Number($("#"+j+"_ori_left_mo").val())-(1080*(l_num-1));
+				$("#"+j+"_ori_left_mo").val(change_left);
+
+				$("#contents_mo_"+j).animate({
+					left: change_left+"px"
+				});
+			}
+				 
+			
+			$("#curr_num_mo").val(l_num);
+			 return false;
+		}
+		
+	
+		
+		var last_num=Number($("#last_num_mo").val());
+		for(var j=0;j<last_num;j=j+1){
+			var change_left=Number($("#"+j+"_ori_left_mo").val())+1080;
+			$("#contents_mo_"+j).animate({
+				left: change_left+"px"
+			});
+			$("#"+j+"_ori_left_mo").val(change_left);
+		}
+		
+		$("#curr_num_mo").val(num-1);
+		
+		
+
+		
+		
+	}else if(cate_name=="mu"){
+	
+		 
+		var num = Number($("#curr_num_mu").val());
+		
+		if(num==1){
+			var l_num=Number($("#last_num_mu").val());
+			
+			for(var j=0;j<l_num;j=j+1){
+				var change_left=Number($("#"+j+"_ori_left_mu").val())-(1080*(l_num-1));
+			
+				$("#contents_mu_"+j).animate({
+					left: change_left+"px"
+				});
+				$("#"+j+"_ori_left_mu").val(change_left);
+			}
+			$("#curr_num_mu").val(l_num);
+			 return false;
+		}
+		
+		var last_num=Number($("#last_num_mu").val());
+		for(var j=0;j<last_num;j=j+1){
+			var change_left=Number($("#"+j+"_ori_left_mu").val())+1080;
+			$("#contents_mu_"+j).animate({
+				left: change_left+"px"
+			});
+			$("#"+j+"_ori_left_mu").val(change_left);
+		}
+		
+		$("#curr_num_mu").val(num-1);
+		
+	
+	}
+	
+	
+}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function listMovieFunction(num){
+function listMovieFunction(){  //개봉일을 기준으로 현재 상영 중인 영화4개씩 출력하는 메서드
 	var setflag=$("#setFlag").val();
-	var num2 =Number(num);
 	if(setflag!='y'){
 		jQuery.ajax({
 			type:"POST",
-			url:"./MoviePlaying4Action.mo?count="+num2,
+			url:"./MoviePlaying4Action.mo",
 			dataType:"JSON",
 			
 			success:function(data){
-				document.getElementById("contents_mo").innerHTML="";
+				var count =0;
+				var count2 =0;
+				
 				$.each(data.movieLength, function(key,value){
-					if(num2>0){
-						$('#contents_mo').append('<img id="prev_button" src="icons/button_prev.jpg" onclick="listMovieFunction('+Number(num2-1)+')">');
+					
+					var page_count=Math.floor(value.length/4);
+					if(page_count==1){
+						$("#next_btn_mo").css("display","none");
 					}
-				});	
-				$.each(data.movieList, function(key,value){
+					$("#contents_mo").append("<input type='hidden' value='"+page_count+"' id='last_num_mo' class='last_num'>")
 					
-						$('#contents_mo').append('<img id="content" src="MovieImage/'+value.image+'" onclick="location.href='+"'"+'./MovieContentAction.mo?num='+value.movie_num+"'"+'">');			
 					
+					while(count<page_count){
+						var left = 1080*(count);
+							
+							$("#contents_mo").append("<ul class='contents_mo' id='contents_mo_"+count+"'"+" style='left:"+left+"px;'></ul>");
+							$("#contents_mo").append("<input type='hidden' value='"+1080*count+"' id='"+count+"_ori_left_mo'>")
+							
+						
+						count=count+1;
+					}
 				});
-				$.each(data.movieLength, function(key,value){
-					if(num2<=value.length-5){
-						$('#contents_mo').append('<img id="next_button" src="icons/button_next.jpg" onclick="listMovieFunction('+Number(num2+1)+')">');
+				var check=1;
+				$.each(data.movieList, function(key,value){
+					check=key+1;
+						
+							$('#contents_mo_'+count2).append('<li><img id="content" src="MovieImage/'+value.image+'" onclick="location.href='+"'"+'./MovieContentAction.mo?num='+value.movie_num+"'"+'"></li>');			
+	
+					if(check%4==0){
+						count2=count2+1;
 					}
-				});		
-				
-				
-				
-				
-				
+					check=check+1;
+				});
+			
+				 
 			},
 			error: function(xhr, status, error){
 				
@@ -186,33 +363,51 @@ $(function() {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-function listMusicalFunction(num){
+function listMusicalFunction(){
 	var setflag=$("#setFlag").val();
-	var num2 =Number(num);
 	if(setflag!='y'){
 		jQuery.ajax({
 			type:"POST",
-			url:"./MusicalPlaying4Action.mu?count="+num2,
+			url:"./MusicalPlaying4Action.mu",
 			dataType:"JSON",
 			
 			success:function(data){
-				document.getElementById("contents_mu").innerHTML="";
-				$.each(data.musicalLength, function(key,value){
-					if(num2>0){
-						$('#contents_mu').append('<img id="prev_button" src="icons/button_prev.jpg" onclick="listMusicalFunction('+Number(num2-1)+')">');
-					}
-				});	
-				$.each(data.musicalList, function(key,value){
-					
-						$('#contents_mu').append('<img id="content" src="MusicalImage/'+value.image+'" onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'">');			
-					
-				});
-				$.each(data.musicalLength, function(key,value){
-					if(num2<=value.length-5){
-						$('#contents_mu').append('<img id="next_button" src="icons/button_next.jpg" onclick="listMusicalFunction('+Number(num2+1)+')">');
-					}
-				});		
+				var count =0;
+				var count2 =0;
 				
+				$.each(data.musicalLength, function(key,value){
+					
+					var page_count=Math.floor(value.length/4);
+					if(page_count==1){
+						$("#next_btn_mu").css("display","none");
+					}
+					
+					$("#contents_mu").append("<input type='hidden' value='"+page_count+"' id='last_num_mu' class='last_num'>")
+					
+					
+					while(count<page_count){
+						var left = 1080*(count);
+							
+							$("#contents_mu").append("<ul class='contents_mu' id='contents_mu_"+count+"'"+" style='left:"+left+"px;'></ul>");
+							$("#contents_mu").append("<input type='hidden' value='"+1080*count+"' id='"+count+"_ori_left_mu'>")
+							
+						
+						count=count+1;
+					}
+				});
+				var check=1;
+				$.each(data.musicalList, function(key,value){
+					check=key+1;
+						
+							$('#contents_mu_'+count2).append('<li><img id="content" src="MusicalImage/'+value.image+'" onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'"></li>');			
+	
+					if(check%4==0){
+						count2=count2+1;
+					}
+					check=check+1;
+				});
+			
+				 
 			},
 			error: function(xhr, status, error){
 				
@@ -394,9 +589,17 @@ function setCookie(cname, value, expire) {
   	<div id="subject_right"></div>
   </div>
   <div class="clear"></div>
- <div id="contents_mo">
- 	
  </div>
+  <div id="content_body">
+ 	<div id="contents_mo">
+ 		<input type="hidden" value="1" id="curr_num_mo" class="curr_num">
+ 	</div>
+ 	 <div id="btn">
+		 	<img src="icons/button_prev.jpg" id="prev_btn_mo" onclick="prevChangeFunction('mo')"  style="display: block;">
+		 	<img src="icons/button_next.jpg" id="next_btn_mo" onclick="nextChangeFunction('mo')" style="display: block;">
+	 </div>
+ 	
+ 	
  </div>
  
  
@@ -407,10 +610,19 @@ function setCookie(cname, value, expire) {
   	<div id="subject_right"></div>
   </div>
   <div class="clear"></div>
- <div id="contents_mu">
+ </div>
+  <div id="content_body">
+ 	<div id="contents_mu">
+ 		<input type="hidden" value="1" id="curr_num_mu" class="curr_num">
+ 	</div>
+ 	 <div id="btn_2">
+		 	<img src="icons/button_prev.jpg" id="prev_btn_mu"  onclick="prevChangeFunction('mu')"  style="display: block;">
+		 	<img src="icons/button_next.jpg" id="next_btn_mu" onclick="nextChangeFunction('mu')" style="display: block;">
+	 </div>
+ 	
  	
  </div>
- </div>
+ 
  
  <div id="category_week">
   <div id="subject">

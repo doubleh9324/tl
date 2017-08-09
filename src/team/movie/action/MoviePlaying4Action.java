@@ -16,13 +16,12 @@ public class MoviePlaying4Action implements Action{
 	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		ActionForward forward =new ActionForward();
-		int count = Integer.parseInt(request.getParameter("count"));
 		
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsona = new JSONArray();
 		
 		MovieDAO dao = new MovieDAO();
-		List movieList = dao.playingMoviesPick4(count);
+		List movieList = dao.playingMoviesPick4();
 		List movieLength = dao.playingMoviesHasPick4Length();
 		
 		jsonObject.put("setFlag", "y");

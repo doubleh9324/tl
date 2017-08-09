@@ -16,13 +16,12 @@ public class MovieSoonAction implements Action {
 	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		ActionForward forward =new ActionForward();
-		int count = Integer.parseInt(request.getParameter("count"));
 		
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsona = new JSONArray();
 		
 		MovieDAO dao = new MovieDAO();
-		List soonList = dao.getSoonMovies(count);
+		List soonList = dao.getSoonMovies();
 		List soonLength = dao.getSoonMoviesLength();
 		
 		jsonObject.put("setFlag", "y");

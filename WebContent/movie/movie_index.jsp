@@ -15,7 +15,7 @@ $(document).ready(function(){
 	reservFunction();
 	setInterval(autoChangeFuction, 7000);
 	
-	soonMovieFunction(0);
+	soonMovieFunction();
 	
 	adBanner();
 	
@@ -156,33 +156,51 @@ function reservFunction(){
 	}
 }
 ////////////////////////////////////////////////////////////////////
-function soonMovieFunction(num){
+function soonMovieFunction(){
 	var setflag=$("#setFlag").val();
-	var num2 =Number(num);
 	if(setflag!='y'){
 		jQuery.ajax({
 			type:"POST",
-			url:"./MovieSoonAction.mo?count="+num2,
+			url:"./MovieSoonAction.mo",
 			dataType:"JSON",
 			
 			success:function(data){
-				document.getElementById("contents_mo").innerHTML="";
-				$.each(data.soonLength, function(key,value){
-					if(num2>0){
-						$('#contents_mo').append('<img id="prev_button" src="icons/button_prev.jpg" onclick="soonMovieFunction('+Number(num2-1)+')">');
-					}
-				});	
-				$.each(data.soonList, function(key,value){
-					
-						$('#contents_mo').append('<img id="content" src="MovieImage/'+value.image+'" onclick="location.href='+"'"+'./MovieContentAction.mo?num='+value.movie_num+"'"+'">');			
-					
-				});
-				$.each(data.soonLength, function(key,value){
-					if(num2<=value.length-5){
-						$('#contents_mo').append('<img id="next_button" src="icons/button_next.jpg" onclick="soonMovieFunction('+Number(num2+1)+')">');
-					}
-				});		
+				var count =0;
+				var count2 =0;
 				
+				$.each(data.soonLength, function(key,value){
+					
+					var page_count=Math.floor(value.length/4)+(value.length%4==0?0:1);
+					if(page_count==1){
+						$("#prev_btn").css("display","none");
+						$("#next_btn").css("display","none");
+					}
+					$("#contents").append("<input type='hidden' value='"+page_count+"' id='last_num' class='last_num'>")
+					
+					
+					while(count<page_count){
+						var left = 1080*(count);
+							
+							$("#contents").append("<ul class='contents' id='contents_"+count+"'"+" style='left:"+left+"px;'></ul>");
+							$("#contents").append("<input type='hidden' value='"+1080*count+"' id='"+count+"_ori_left'>")
+							
+						
+						count=count+1;
+					}
+				});
+				var check=1;
+				$.each(data.soonList, function(key,value){
+					check=key+1;
+						
+							$('#contents_'+count2).append('<li><img id="content" src="MovieImage/'+value.image+'" onclick="location.href='+"'"+'./MovieContentAction.mo?num='+value.movie_num+"'"+'"></li>');			
+	
+					if(check%4==0){
+						count2=count2+1;
+					}
+					check=check+1;
+				});
+			
+				 
 			},
 			error: function(xhr, status, error){
 				
@@ -190,6 +208,100 @@ function soonMovieFunction(num){
 			}
 		});
 	}
+	
+}
+
+//////////////////////////////////////////////////////////////
+//버튼눌렀을 때 애니메이션
+function nextChangeFunction(cate){
+	
+		var num = Number($("#curr_num").val());
+		var last_num=Number($("#last_num").val());
+		
+		if(num==$("#last_num_mo").val()){
+			var last_num=Number($("#last_num_mo").val());
+			 for(var i=0;i<last_num;i=i+1){
+				var change_left=Number($("#"+i+"_ori_left_mo").val())+(1080*(num-1));
+				
+				$("#contents_mo_"+i).animate({
+					left: change_left+"px"
+				});
+				$("#"+i+"_ori_left_mo").val(change_left);
+				
+				
+			}
+		 
+			$("#curr_num_mo").val(1);
+			 return false;
+			
+		}
+		
+		for(var j=0;j<last_num;j=j+1){
+			var change_left=Number($("#"+j+"_ori_left").val())-1080;
+		
+			$("#contents_"+j).animate({
+				left: change_left+"px"
+			});
+			$("#"+j+"_ori_left").val(change_left);
+		}
+			 
+		
+		$("#curr_num").val(num+1);
+	/* 	
+		if(Number($('#curr_num').val())>1){ 
+			
+			$('#prev_btn').css("display","block");
+		}
+		if($('#curr_num').val()==$("#last_num").val()){ 
+			$('#next_btn').css("display","none");
+		} */
+	
+	
+
+}
+
+
+function prevChangeFunction(){
+
+		/* if(Number($('#curr_num').val())>1){ 
+			$('#next_btn').css("display","block");
+		} */
+		
+		var num = Number($("#curr_num").val());
+		var last_num=Number($("#last_num").val());
+		
+		if(num==1){
+			var l_num=Number($("#last_num_mo").val());
+			
+			for(var j=0;j<l_num;j=j+1){
+				var change_left=Number($("#"+j+"_ori_left_mo").val())-(1080*(l_num-1));
+			
+				$("#contents_mo_"+j).animate({
+					left: change_left+"px"
+				});
+				$("#"+j+"_ori_left_mo").val(change_left);
+			}
+			$("#curr_num_mo").val(l_num);
+			 return false;
+		}
+			
+		
+		for(var j=0;j<last_num;j=j+1){
+			var change_left=Number($("#"+j+"_ori_left").val())+1080;
+			$("#contents_"+j).animate({
+				left: change_left+"px"
+			});
+			$("#"+j+"_ori_left").val(change_left);
+		}
+		
+		$("#curr_num").val(num-1);
+		
+		
+/* 		if(Number($('#curr_num').val())==1){ 
+			$('#prev_btn').css("display","none");
+		} */
+		
+	
 	
 }
 </script>
@@ -224,10 +336,19 @@ function soonMovieFunction(num){
 	  	<div id="subject_right"></div>
 	  </div>
 	  <div class="clear"></div>
-	 <div id="contents_mo">
-	 	
+	 
 	 </div>
+	 <div id="content_body">
+ 	<div id="contents">
+ 		<input type="hidden" value="1" id="curr_num" class="curr_num">
+ 	</div>
+ 	 <div id="btn">
+		 	<img src="icons/button_prev.jpg" id="prev_btn" onclick="prevChangeFunction()"  style="display: block;">
+		 	<img src="icons/button_next.jpg" id="next_btn" onclick="nextChangeFunction()" style="display: block;">
 	 </div>
+ 	
+ 	
+ </div>
 </div>
 	
 	

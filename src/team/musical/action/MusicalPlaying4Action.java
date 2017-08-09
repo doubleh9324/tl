@@ -15,13 +15,12 @@ public class MusicalPlaying4Action implements Action{
 	public ActionForward excute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
 		ActionForward forward =new ActionForward();
-		int count = Integer.parseInt(request.getParameter("count"));
 		
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsona = new JSONArray();
 		
 		MusicalDAO dao = new MusicalDAO();
-		List musicalList = dao.playingMusicalsPick4(count);
+		List musicalList = dao.playingMusicalsPick4();
 		List musicalLength = dao.playingMusicalsPick4Length();
 		
 		jsonObject.put("setFlag", "y");
