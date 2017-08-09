@@ -195,7 +195,30 @@ browser_Event();
                                     <em class="tit">좌석등급</em> 
                                     <span id="spanPromotionSeat"></span>
                                 </div>
-                                <div id="divPromotionList" class="scroll"></div>
+                                <div id="divPromotionList" class="scroll">
+                                
+                                <div classbyte="" style="display: block;">
+                                <table id="tblPromotionGroup1" border="0" cellpadding="0" summary="선택한 좌석등급에 사용할 수 있는 할인 목록" cellspacing="0" class="sale_table" grpno="1" grpseq="0" seatname="젤리클석 기본할인" cusselseatcnt="1">
+                                <caption>할인리스트</caption>
+	                                <colgroup>
+	                                <col width="55%">
+	                                <col width="15%">
+	                                <col width="20%">
+	                                <col width="10%">
+	                                </colgroup>
+	                                <thead>
+		                                <tr>
+			                                <th scope="col" style="text-align:left;padding-left:10px;">가격 선택</th>
+			                                <th scope="col">판매금액</th>
+			                                <th scope="col">매수</th>
+			                                <th scope="col">설명</th>
+		                                </tr>
+	                                </thead>
+	                                <tbody>
+	                                </tbody>
+                                </table>
+                                </div>
+                                </div>
                             </div>
                         </div>
                         <!-- //할인선택 -->
@@ -484,7 +507,8 @@ browser_Event();
             <div class="bx_top"></div>
             <div id="divGuide" class="bx_con1">
                 <div id="divContainer" class="raffer" style="width: 750px; height: 585px; background-image: url(&quot;http://image16.hanatour.com/Upload/Hall/4000/4700/0482e9c14-f294-43cf-b65f-387f2c3d0fcd.jpg&quot;); background-repeat: no-repeat; background-position: 0px 0px;">
-                    <div id="divSeatArray"><div style="TOP: 188px; LEFT: 98px" id="t500018" class="s13" name="tk" value="500018"></div>
+                    <div id="divSeatArray">
+                    	<div style="TOP: 188px; LEFT: 98px" id="t500018" class="s13" name="tk" value="500018"></div>
 					</div>
                 </div>
             </div>
@@ -503,7 +527,19 @@ browser_Event();
                 <p><img src="http://image16.hanatour.com/img/htmlseat/tit2_minimap2.gif" alt="좌석 등급 및 가격" class="tit"></p>
                 <ul>
                     <li class="list_no"><img src="http://image16.hanatour.com/img/htmlseat/bx3_minimap1.jpg" alt=""></li>
-                    <li id="liLegend" class="bx3_wbg bx3_wbg2"><p class="txt"><img src="http://image16.hanatour.com/img/htmlseat/ic_seat6.gif" alt="">R석 50,000원</p><p class="txt"><img src="http://image16.hanatour.com/img/htmlseat/ic_seat8.gif" alt="">S석 30,000원</p><p class="txt"><img src="http://image16.hanatour.com/img/htmlseat/ic_seat4.gif" alt="">A석 10,000원</p><p class="txt"><img src="http://image16.hanatour.com/img/htmlseat/ic_seat13.gif" alt="">판매 완료</p></li><li class="list_no"><img src="http://image16.hanatour.com/img/htmlseat/bx3_minimap3.jpg" alt=""></li>
+                    <li id="liLegend" class="bx3_wbg bx3_wbg2">
+	                    <p class="txt">
+	                    <img src="http://image16.hanatour.com/img/htmlseat/ic_seat1.gif" alt="">VIP석 143,000원</p>
+	                    <p class="txt">
+	                    <img src="http://image16.hanatour.com/img/htmlseat/ic_seat6.gif" alt="">R석 132,000원</p>
+	                    <p class="txt">
+	                    <img src="http://image16.hanatour.com/img/htmlseat/ic_seat8.gif" alt="">S석 111,000원</p>
+	                    <p class="txt">
+	                    <img src="http://image16.hanatour.com/img/htmlseat/ic_seat13.gif" alt="">판매 완료</p>
+                    </li>
+                    <li class="list_no">
+                    	<img src="http://image16.hanatour.com/img/htmlseat/bx3_minimap3.jpg" alt="">
+                    </li>
                 </ul>
                 <!--  //좌석 등급/가격 -->
                 <!--  선택좌석 -->

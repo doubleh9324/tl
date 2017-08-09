@@ -2176,6 +2176,7 @@ function getInputDayLabel(date) {
  * 날짜 선택
  */
 var timeseat ;
+var ping_num =0;
 
 function selectDay(event){
 	
@@ -2207,7 +2208,7 @@ function selectDay(event){
 	var classOn = "";
 	var i=1;
 	var seats = "";
-	var ping_num =0;
+	var ptime;
 	var selectround = "";
 	
 	jQuery.ajax({
@@ -2225,6 +2226,7 @@ function selectDay(event){
         	var rcount = 1;
     		$.each(data.timeseatList, function(key, value){
     			ping_num = value.ping_num;
+    			ptime = value.ptime;
     			
             	if(data.timeseatList.length/3 == 1){
             		classOn = "on";
@@ -2235,32 +2237,31 @@ function selectDay(event){
             	seats += "<li><strng>"+value.seatclass+"석 </strong>"+comma(value.price)+"원 (잔여:<span class='red'>"+value.remained+"석</span>)</li>";
     			//새로운 회차일 때 마다 추가하기
     			if(i%3 == 0){
-    			round += "<li id=id=round"+rcount+" timeoption=''"+" idhall=''"+" seatviewmode=''"+" saleclose='"+date
-    				+"' cancelclose='"+event.currentTarget.id+value.ptime+"' limitcussalecnt= ''"
+    			round += "<li id=round"+rcount+" timeoption=''"+" idhall=''"+" seatviewmode=''"+" saleclose='"+date
+    				+"' cancelclose='"+event.currentTarget.id+" "+value.ptime+"' limitcussalecnt= ''"
     				+" limittimesalecnt=''"+" timeinfo='"+value.ptime+"' class='"+classOn+"'>["+rcount+"회] "+value.ptime+"</li>";
-    			selectround += "<option id=round"+rcount+" timeoption=''"+" idhall=''"+" seatviewmode=''"+" saleclose='"+date
-				+"' cancelclose='"+event.currentTarget.id+value.ptime+"' limitcussalecnt= ''"
+    			selectround += "<option id=rounds"+rcount+" timeoption=''"+" idhall=''"+" seatviewmode=''"+" saleclose='"+date
+				+"' cancelclose='"+event.currentTarget.id+" "+value.ptime+"' limitcussalecnt= ''"
 				+" limittimesalecnt=''"+" timeinfo='"+value.ptime+"' class='"+classOn+"'>["+rcount+"회] "+value.ptime+"</option>";
     			rcount++;
     			}
     			i++;
     		});
-    		
+    		//좌석선택 상단바에 select box 회차 추가
+        	$("#selFlashTime").append(selectround);
+        	
     		if(data.timeseatList.length/3 == 1){
             	//잔여석
             	$("#ulSeatSpace").empty();
             	$("#ulSeatSpace").append(seats);
+            	
+            	$("#rounds1").attr("selected", "true");
+            	$("#tk_time").html(ptime);
         	}
         	
     		//회차
     		$("#ulTime").empty();
         	$("#ulTime").append(round);
-        	
-        	//좌석선택 상단바에 select box 회차 추가
-        	$("#selFlashTime").append(selectround);
-        	
-    		//선택내역의 시간 지정하기
-    		$("#tk_time").text($("#ping"+ping_num).text());
         	
         },
         complete : function(data) {
@@ -2365,6 +2366,10 @@ function ChoiceSeat(){
 	$("#ContentsArea").css("display", "none");
 	$("#StateBoard").css("display", "none");
 	$("#SeatFlashArea").css("display", "block");
+	
+	//좌석표 뿌리기
+	getMap();
+	
 }
 
 function outMap(){
@@ -2406,3 +2411,457 @@ $(document).on("click","#ulTime > li", function(){
 	$("option["+$(this).attr("id")+"]").attr("selected", "true");
 });
 
+/*===============================================================================================
+ * 좌석표 뿌리기
+ */
+
+function getMap(){
+	
+	//우선은 1층만하자
+	var left = 11;
+	var top = 12;
+	var seats = "";
+	
+	var pxLeft;
+	var pxTop;
+	
+	var firstTop = 188;
+	var firstLeft = 10;
+	
+	var ABlockRowSeatNum = [5,6,7,8,9,10,11,12,13,13,13,13,13,13,13,13,13,13];
+	var BBlockRowSeatNum = [12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12];
+	var CBlockRowSeatNum = [12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12];
+	var DBlockRowSeatNum = [12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12];
+	var EBlockRowSeatNum = [5,6,7,8,9,10,11,12,13,13,13,13,13,13,13,13,13,13];
+	
+	var rowcount =1;
+	var seatnum = 1;
+	//A블럭, 열 구분없이 번호로 좌석 지정
+	pxTop = firstTop;
+	
+	for(var i=0; i<ABlockRowSeatNum.length; i++){
+		
+		//좌석 갯수가 13개가 아니면 차이 수 만큼 left 계산해서 내보내기
+		if(ABlockRowSeatNum[i] < 13){
+			pxLeft = firstLeft + left*(13-ABlockRowSeatNum[i]);
+		}else{
+			pxLeft = firstLeft;
+		}
+		
+		for(var a=0; a<ABlockRowSeatNum[i]; a++){
+			if(seatnum < 10){
+				seatnum = "00"+seatnum.toString();
+			}else if(10<= seatnum && seatnum <100){
+				seatnum = "0"+seatnum.toString();
+			}
+			
+			seats += "<div style='TOP: "+ pxTop +"px; LEFT:"+ pxLeft +"px' id='' class='s13 act' name='tk' value='A' row='"+rowcount+"' title='1층 A구역 "+seatnum+"번'></div>";
+			pxLeft += left;
+			seatnum = seatnum*1;
+			seatnum++;
+		}
+		pxTop += top;
+		rowcount++;
+	}
+
+	
+	//B구역
+	rowcount =1;
+	firstLeft = pxLeft+left;
+	pxTop = firstTop;
+	seatnum = 1;
+	for(var i=0; i<BBlockRowSeatNum.length; i++){
+		
+		//좌석 갯수가 13개가 아니면 차이 수 만큼 left 계산해서 내보내기
+		if(BBlockRowSeatNum[i] < 12){
+			pxLeft = firstLeft + left*(12-BBlockRowSeatNum[i]);
+		}else{
+			pxLeft = firstLeft;
+		}
+		
+		for(var a=0; a<BBlockRowSeatNum[i]; a++){
+			if(seatnum < 10){
+				seatnum = "00"+seatnum.toString();
+			}else if(10<= seatnum && seatnum <100){
+				seatnum = "0"+seatnum.toString();
+			}
+			seats += "<div style='TOP: "+ pxTop +"px; LEFT:"+ pxLeft +"px' id='' class='s13 act' name='tk' value='B' row='"+rowcount+"' title='1층 B구역 "+seatnum+"번'></div>";
+			pxLeft += left;
+			seatnum = seatnum*1;
+			seatnum++;
+		}
+		pxTop += top;
+		rowcount++;
+	}
+	
+	//C구역
+	rowcount =1;
+	firstLeft = pxLeft+left;
+	pxTop = firstTop;
+	seatnum = 1;
+	for(var i=0; i<CBlockRowSeatNum.length; i++){
+		
+		//좌석 갯수가 13개가 아니면 차이 수 만큼 left 계산해서 내보내기
+		if(CBlockRowSeatNum[i] < 12){
+			pxLeft = firstLeft + left*(12-CBlockRowSeatNum[i]);
+		}else{
+			pxLeft = firstLeft;
+		}
+		
+		for(var a=0; a<CBlockRowSeatNum[i]; a++){
+			if(seatnum < 10){
+				seatnum = "00"+seatnum.toString();
+			}else if(10<= seatnum && seatnum <100){
+				seatnum = "0"+seatnum.toString();
+			}
+			seats += "<div style='TOP: "+ pxTop +"px; LEFT:"+ pxLeft +"px' id='' class='s13 act' name='tk' value='C' row='"+rowcount+"' title='1층 C구역 "+seatnum+"번'></div>";
+			pxLeft += left;
+			seatnum = seatnum*1;
+			seatnum++;
+		}
+		pxTop += top;
+		rowcount++;
+	}
+	
+	//D구역
+	rowcount =1;
+	firstLeft = pxLeft+left;
+	pxTop = firstTop;
+	seatnum = 1;
+	for(var i=0; i<DBlockRowSeatNum.length; i++){
+		
+		//좌석 갯수가 13개가 아니면 차이 수 만큼 left 계산해서 내보내기
+		if(DBlockRowSeatNum[i] < 12){
+			pxLeft = firstLeft + left*(12-DBlockRowSeatNum[i]);
+		}else{
+			pxLeft = firstLeft;
+		}
+		
+		for(var a=0; a<DBlockRowSeatNum[i]; a++){
+			if(seatnum < 10){
+				seatnum = "00"+seatnum.toString();
+			}else if(10<= seatnum && seatnum <100){
+				seatnum = "0"+seatnum.toString();
+			}
+			seats += "<div style='TOP: "+ pxTop +"px; LEFT:"+ pxLeft +"px' id='' class='s13 act' name='tk' value='D' row='"+rowcount+"' title='1층 D구역 "+seatnum+"번'></div>";
+			pxLeft += left;
+			seatnum = seatnum*1;
+			seatnum++;
+		}
+		pxTop += top;
+		rowcount++;
+	}
+	
+	//E구역
+	rowcount =1;
+	firstLeft = pxLeft+left;
+	pxTop = firstTop;
+	seatnum = 1;
+	for(var i=0; i<EBlockRowSeatNum.length; i++){
+		
+		//좌석 갯수가 13개가 아니면 차이 수 만큼 left 계산해서 내보내기
+		if(EBlockRowSeatNum[i] < 13){
+			pxLeft = firstLeft;
+		}else{
+			pxLeft = firstLeft;
+		}
+		
+		for(var a=0; a<EBlockRowSeatNum[i]; a++){
+			if(seatnum < 10){
+				seatnum = "00"+seatnum.toString();
+			}else if(10<= seatnum && seatnum <100){
+				seatnum = "0"+seatnum.toString();
+			}
+			seats += "<div style='TOP: "+ pxTop +"px; LEFT:"+ pxLeft +"px' id='' class='s13 act' name='tk' value='E' row='"+rowcount+"' title='1층 E구역 "+seatnum+"번'></div>";
+			pxLeft += left;
+			seatnum = seatnum*1;
+			seatnum++;
+		}
+		pxTop += top;
+		rowcount++;
+	}
+	
+	$("#divSeatArray").empty();
+	$("#divSeatArray").append(seats);
+	
+	
+	//좌석표 뿌린 후 가로 순서대로 id지정
+	var t=1;
+	for(var r=1; r<=18; r++){
+		$("div[row='"+r+"']").each(function(){
+			//첫번째 열의 left값을 가져와서 첫 좌석의 번호 찾기
+			if(t==1){
+				t = ($(this).attr("style").substring(17,19)*1 - 10)/11 + 1;
+			}
+			$(this).attr("id", makeSeatId('1',r,t));
+			t++;
+		});
+		t=1;
+	}
+	
+	//좌석 등급별 클래스 지정
+	var vip = ['10010014', '10010049'];
+	
+	for(var v=1; v<=14; v++){
+		for(var s=14; s<=49; s++){
+			if(v<10){
+				$("#100"+v+"00"+s).removeClass("s13");
+				$("#100"+v+"00"+s).addClass("s1").attr("grade", "VIP");
+				
+			}else{
+				$("#10"+v+"00"+s).removeClass("s13");
+				$("#10"+v+"00"+s).addClass("s1").attr("grade", "VIP");;
+			}
+		}
+	}
+	
+	var aR = [[1,3,12,13], [1,3,50,51],
+	         [4,5,10,13], [4,5,50,53],
+	         [6,7,6,13], [6,7,50,57],
+	         [8,14,4,13], [8,14,50,57],
+	         [15,16,4,57],
+	         [17,18,4,45]];
+
+	for(var a=0; a<aR.length; a++){
+		var StartRow = aR[a][0];
+		var EndRow = aR[a][1];
+		var StartSeat = aR[a][2];
+		var EndSeat = aR[a][3];
+	
+		for(var r = StartRow; r<=EndRow; r++){
+			
+			for(var s=StartSeat; s<=EndSeat; s++){
+				var id = makeSeatId(1,r,s);
+					$("#"+id).removeClass("s13");
+					$("#"+id).addClass("s6").attr("grade", "R");;
+			}
+		}
+	}
+	
+	//S석
+	$(".s13").removeClass("s13").addClass("s8").attr("grade", "S");
+	
+	//예매 불가능한 좌석 매핑
+	getReservedSeat();
+	
+}
+
+function makeSeatId(floor, row, seat){
+	
+	//아이디는 층수(1) + 열수(3) + 좌석수(4)로 총 8자리
+	var id = "";
+	var zero = "";
+	var f = floor.toString();
+	var r = row.toString();
+	var s = seat.toString();
+	
+	if(r.length < 3){
+		for(var z=0; z<3-r.length; z++){
+			zero += "0";
+		}
+	}
+	id=f+zero+r;
+	zero="";
+	if(s.length < 4){
+		for(var z=0; z<4-s.length; z++){
+			zero +="0";
+		}
+	}
+	id += zero+s;
+	return id;
+}
+
+/*==================================================================================
+ * 예매 불가능한 좌석 매핑하기
+ */
+
+function getReservedSeat(){
+	
+	var viewdate = $("#selFlashTime option:selected").attr("cancelclose");
+	
+	jQuery.ajax({
+        type:"POST",
+        url:"./getReservedSeat.rs",
+        async : false,
+        data:"ping_num="+ping_num+"&viewdate="+viewdate,
+        dataType:"JSON",
+        success : function(data) {
+        	//data.reservedSeats
+        	
+        	$.each(data.reservedSeats, function(key, value){
+        		$("#"+value.seat_id).attr("class", "s13").attr("title","");
+        	});
+        },
+        complete : function(data) {
+        },
+        error : function(xhr, status, error) {
+              alert("getReservedSeat 에러발생");
+        }
+ 	 });
+}
+
+
+/*=================================================================================
+ * 좌석 선택
+ */
+$(document).on("click","div.act", function(){
+	
+	var chseat = "";
+	var id = $(this).attr("id");
+	var block = $(this).attr("value");
+	var grade = $(this).attr("grade");
+	var seat = $(this).attr("title");
+	
+	chseat = "<p id='"+id+block+"' class='txt2' name='cseat' grade='"+grade+"석'>"+seat+"</p>";
+	
+	//이미 son클래스를 가지고 있다면 선택을 취소
+	if($(this).hasClass("son")){
+		$(this).attr("class", $(this).attr("oldclass"));
+		$("#"+id+block).remove();
+		
+	}else{
+		//이전의 클래스 값 oldclass로 저장
+		$(this).attr("oldclass", $(this).attr("class")).attr("class", "son act");
+		$("#liSelSeat").append(chseat);
+	}
+});
+
+/*===================================================================================
+ * 좌석선택 > 이전화면
+ */
+
+function closeseat(){
+	//좌석 해제하고 뒤로가자
+	$("#SeatFlashArea").css("display", "none");
+	$("#ContentsArea").css("display", "block");
+	$("#StateBoard").css("display", "block");
+	$("#header").css("display", "block");
+}
+
+/*===================================================================================
+ * 좌석선택 > 좌석 다시선택
+ */
+function ChoiceReset(){
+	
+	//좌석표 다시 불러오기
+	getMap();
+	
+	//선택한 좌석 비우기
+	$("#liSelSeat").empty();
+}
+
+/*===================================================================================
+ * 좌석선택 > 좌석선택 완료
+ */
+function ChoiceEnd(){
+	var isChoiced = false;
+	$("div.act").each(function(){
+		if($(this).hasClass("son")){
+			isChoiced = true;
+			return false;
+		}
+	});
+	
+	if(!isChoiced){
+		window.alert("좌석을 선택해 주세요");
+	}else{
+		$(".gnb li").removeClass("on");
+		$(".gnb li.m03").addClass("on");
+		$("#header").css("display", "block");
+		$("#ContentsArea").css("display", "block");
+		$("#step01").css("display", "none");
+		$("#step03").css("display", "block");
+		$("#StepCtrlBtn01").css("display", "none");
+		$("#StepCtrlBtn03").css("display", "block");
+		$("#StateBoard").css("display", "block");
+		$("#SeatFlashArea").css("display", "none");
+		
+		//선택내역의 매수 지정
+		var tksize = $("#liSelSeat > p").size();
+		$("#tk_count").text(tksize+"매");
+		//선택내역의 좌석 지정
+		$("#tk_seat").empty().append($("#liSelSeat").clone());
+		//결제내역의 금액 지정
+		var price = 0;
+		var v = "";
+		var r = "";
+		var s = "";
+		$("#tk_seat p").each(function(){
+			var grade = $(this).attr("grade");
+			
+			//선택한 좌석 중 존재하는 등급에 따라 가격정하고
+			//할인선택의 좌석 등급에 등급 라디오 버튼 만들기
+			
+			switch(grade){
+				case "VIP석":
+					v = "<input type='radio' name='rdoPromotionSeat' value='VIP석' " +
+							"classbyte='' onclick='PromotionView(this);'><label>VIP석</label>";
+					price += 143000;
+					break;
+				case "R석":
+					r = "<input type='radio' name='rdoPromotionSeat' value='R석' " +
+					"classbyte='' onclick='PromotionView(this);'><label>R석</label>";
+					price += 133000;
+					break;
+				case "S석":
+					s = "<input type='radio' name='rdoPromotionSeat' value='S석' " +
+					"classbyte='' onclick='PromotionView(this);'><labal>S석</label>";
+					price += 111000;
+					break;
+			}
+		});
+		
+		$("#spanPromotionSeat").append(v+r+s);
+		//제일 앞에 있는 값 selected 해놓기
+		$("input[name='rdoPromotionSeat']:eq(0)").attr("checked", "ture");
+		PromotionView($("#spanPromotionSeat > input:eq(0)"));
+				
+		$(".pay_infor .tk_price > span").text(comma(price));
+		$(".pay_infor .tk_charge > span").text(comma(1000*tksize));
+		
+		$(".pay_infor .tk_sumplus > span").text(comma(1000*tksize+price));
+		$(".t_result").text(comma(1000*tksize+price));
+	}
+}
+
+/*===================================================================================
+ * 등급별로 가격선택 테이블 만들기
+ */
+function PromotionView(obj){
+	
+	var grade = $(obj).val();
+	var price = 0;
+	
+	switch(grade){
+	case "VIP석":
+		price = 143000;
+		break;
+	case "R석":
+		price = 133000;
+		break;
+	case "S석":
+		price = 111000;
+		break;
+	}
+	var tknum = $("#liSelSeat > p[grade='"+grade+"']").size()/2;
+	//해당하는 좌석 등급의 가격선택 테이블 보이기
+	var tknumop = "";
+	for(var tk=0; tk <= tknum; tk++){
+		tknumop += "<option value='"+tk+"'>"+tk+"매</option>";
+	}
+	var str = " <div classbyte=''>"+
+               "<table id='tblPromotionGroup1' border='0' cellpadding='0' summary='선택한 좌석등급에 사용할 수 있는 할인 목록' cellspacing='0' class='sale_table' grpno='1' grpseq='0' cusselseatcnt='1'>"+
+               "<caption>할인리스트</caption>"+
+                    "<colgroup><col width='55%'><col width='15%'><col width='20%'><col width='10%'></colgroup>"+
+               		"<thead><tr>"+
+                            "<th scope='col' style='text-align:left;padding-left:10px;'>가격 선택</th>"+
+                            "<th scope='col'>판매금액</th>"+
+                            "<th scope='col'>매수</th>"+
+                            "<th scope='col'>설명</th>"+
+                        "</tr>"+
+                    "</thead><tr><td class>일반 정가<br></td>"+"<td>"+comma(price)+"</td>"+
+		    "<td>"+"<select id='selPromotion0' amount='0' onchange='PreCheckPromotion('0','0','0','T','F',1,1,this);'>"+
+			    tknumop+"</select>"+"</td>"+"<td>&nbsp;</td></tr></tbody></table>";
+	
+	$("#tblPromotionGroup1 tbody").append(str);
+}

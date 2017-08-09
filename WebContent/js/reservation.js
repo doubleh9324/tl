@@ -2093,7 +2093,7 @@ function checkPaymentInfo(){
 		var phonenum = $("#lp_phone_no1").val() + $("#lp_phone_no2").val() + $("#lp_phone_no3").val();
 		var phonessn = $("#lp_phone_ssn").val();
 		
-		var paymentinfo = "phone"+name+"_"+phonepd+"_"+phonenum+"_"+phonessn;
+		var paymentinfo = "phone_"+name+"_"+phonepd+"_"+phonenum+"_"+phonessn;
 		
 		if(name==null || phonepd==null || phonenum==null || phonessn==null){
 			window.alert("휴대폰 정보를 정확하게 입력해주세요.");

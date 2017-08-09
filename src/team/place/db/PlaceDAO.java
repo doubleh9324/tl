@@ -300,6 +300,7 @@ public class PlaceDAO {
 				
 				rs = pstmt.executeQuery();
 				rs.next();
+				System.out.println(pstmt.toString());
 				return makePlaceFromResultSet(rs);
 			} else if(flag.equals("movie")){
 				//nc_code로 현재 상영중인 영화관 검색

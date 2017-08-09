@@ -646,6 +646,47 @@ public class ReservationDAO {
 	return null;
 	}
 	
+	public List<Map<String, Object>> getReservedSeats(int pingnum, String viewdate) throws Exception{
+		Connection con= null;
+		PreparedStatement pstmt = null;
+		String sql="";
+		ResultSet rs = null;
+		List<Map<String, Object>> rvedseatList = new ArrayList<>();
+		
+		try{
+			con=getConnection();
+			
+			sql="select seat from reserved_seat where ping_num = ? and view_date = ?";
+			pstmt=con.prepareStatement(sql);
+			pstmt.setInt(1, pingnum);
+			pstmt.setString(2, viewdate);
+			rs = pstmt.executeQuery();
+			
+			System.out.println(pstmt.toString());
+			if(rs.next()){
+				do{
+					Map<String, Object> resultmap = new HashMap<>();
+					String seat = rs.getString("seat");
+					resultmap.put("seat_id", seat.substring(0,8));
+					resultmap.put("seat_Bl", seat.substring(8));
+					
+					System.out.println(seat.substring(0,8) + " " + seat.substring(8));
+					rvedseatList.add(resultmap);
+				}while(rs.next());
+			}
+			
+			
+			return rvedseatList;
+					
+		}catch(Exception e){
+			System.out.println("ReserDAO reservedseat error : "+e);
+		}finally{
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+	return null;
+	}
+	
 	
 	public List<MovieBean> getOrderReservMo(){
 		ArrayList<MovieBean> reservList = new ArrayList<MovieBean>();
