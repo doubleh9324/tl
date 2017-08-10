@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css); 
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css); 
+
+h1 {
+    padding: 7px 0 0 5px;
+    height: 31px;
+    font-size: 1px;
+}
+
+body {
+    margin: 0 0 0 10px;
+    padding: 0;
+    background-image: url(https://sslimage.interpark.com/_mypage/bg_pop_common.gif);
+    background-repeat: repeat-x;
+    background-color: #9DBBF1;
+    text-align: left;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.box_pop {
+    padding: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: url(http://openimage.interpark.com/_mypage/bit_popbox03.gif) no-repeat left bottom;
+}
+
+.box_popup {
+/*     float: left; */
+    background: url(http://openimage.interpark.com/_mypage/bit_popbox02.gif) no-repeat right top #FFFFFF;
+}
+
+.content{
+	
+    font-size: 14px;
+    font-family: 'Jeju Gothic';
+}
+}

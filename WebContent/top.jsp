@@ -163,7 +163,7 @@ window.channelPluginSettings = {
        <%if(id==null){ %>
        		
             <li><a href="index.jsp?center=board/qna_board_faq.jsp">고객센터</a></li>  
-              <li><a href="#">예매확인/취소</a></li>
+              <li><a href="./MemberReservation.me">예매확인/취소</a></li>
             <li><a href="./MemberModify.me">마이페이지</a></li>
               <li><a href="./MemberJoin.me">회원가입</a></li>
             <li ><a href="./MemberLogin.me">로그인</a></li>  
@@ -171,7 +171,7 @@ window.channelPluginSettings = {
        		
        			<li><a href="index.jsp?center=board/qna_board_faq.jsp">고객센터</a></li> 
    
-               <li><a href="#">예매확인/취소</a></li>
+               <li><a href="./MemberReservation.me">예매확인/취소</a></li>
             <li><a href="./MemberModify.me">마이페이지</a></li>
              <li><a href="./MemberLogout.me">로그아웃</a></li> 
                <li><a><%=id %>님 환영합니다!</a></li>

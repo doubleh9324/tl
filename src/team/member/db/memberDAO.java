@@ -6,10 +6,16 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+
+import team.location.db.LocationListBean;
+import team.reservation.db.ReservationBean;
 
 public class memberDAO {
    
@@ -343,5 +349,266 @@ private static memberDAO instance;
    }
    
       
+   public int getMnum(String id){
+	    Connection con=null;
+	    PreparedStatement pstmt=null;
+	    String sql="";
+	    ResultSet rs=null;
+	    
+	    try{
+	        con = getConnection();
+	        sql = "select member_num from member where id=?";
+	        pstmt = con.prepareStatement(sql);
+	        pstmt.setString(1, id);
+	        rs=pstmt.executeQuery();
+	    	
+	        rs.next();
+	        return rs.getInt(1);
+	        
+	    }catch(Exception e){
+	    	System.out.println("err");
+	    }finally{
+	        if(rs!=null)try{rs.close();}catch(SQLException ex){}
+	        if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+	        if(con!=null)try{con.close();}catch(SQLException ex){}	
+	    }
+	    return 0;
+  }
+  
+  
+  
+//영화 예매 내역 가져오기 
+  
+  
+  
+  
+public ArrayList<ReservationBean> getReservation(int mnum, String day, String option) {
+   Connection con=null;
+   PreparedStatement pstmt=null;
+   String sql="";
+   ResultSet rs=null;
+   ReservationBean bean=null;
+   ArrayList<ReservationBean> list = new ArrayList<>();
+   
+   
+   
+   try {
+      con = getConnection();
       
+      if(option.equals("B")){
+      sql = "select * from	reservation where member_num=? and reser_day like concat(?,'%')";
+      pstmt = con.prepareStatement(sql);
+      pstmt.setInt(1, mnum);
+      pstmt.setString(2, day);
+      rs=pstmt.executeQuery();
+      System.out.println(pstmt.toString());
+      
+      }else if(option.equals("P")){
+          String sql1 = "select * from	reservation where member_num=? and view_date like concat(?,'%')";
+          PreparedStatement pstmt1 = con.prepareStatement(sql1);
+          pstmt1.setInt(1, mnum);
+          pstmt1.setString(2, day);
+          rs=pstmt1.executeQuery();
+      }
+      
+      
+      if(rs.next()){
+   	   
+   	  do{
+             bean = new ReservationBean();
+             bean.setR_num(rs.getInt("r_num"));
+             bean.setMember_num(rs.getInt("member_num"));
+             bean.setPing_num(rs.getInt("ping_num"));
+             bean.setReseat_num(rs.getString("rseat_num")); 
+             bean.setSeat(rs.getString("seat"));
+             bean.setView_date(rs.getString("view_date"));
+             bean.setReser_day(rs.getString("reser_day"));
+             bean.setPay_day(rs.getString("pay_day"));
+             bean.setScreen_name(rs.getString("screen_name"));
+             bean.setMPoint(rs.getInt("mPoint"));
+             bean.setPrice(rs.getInt("price"));
+  
+   		  list.add(bean);
+   	  }while(rs.next());
+   	  	return list;
+
+      }
+
+   } catch (Exception e) {
+      System.out.println("getReservation 메소드에서 오류 : "+e);
+      
+   }finally{
+      if(rs!=null)try{rs.close();}catch(SQLException ex){}
+      if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+      if(con!=null)try{con.close();}catch(SQLException ex){}
+   }
+   return list;
 }
+
+
+
+public void ReserveDelete(String id, String r_num) {
+   Connection con=null;
+   String sql="";
+   String sql1="";
+   PreparedStatement pstmt=null;
+   PreparedStatement pstmt1=null;
+
+   try {
+      
+      
+   	
+      con = getConnection();
+      
+      sql1 = "update member set mPoint = mPoint - (select mPoint from reservation where r_num=? ) where id = ?";
+      pstmt = con.prepareStatement(sql1);
+      pstmt.setString(1, r_num);
+      pstmt.setString(2, id);
+      
+      pstmt.executeUpdate();
+      
+      
+      sql = "delete from reservation where r_num=?";
+     
+      pstmt1=con.prepareStatement(sql);
+      pstmt1.setString(1, r_num);
+      
+      pstmt1.executeUpdate();
+      
+
+   } catch (Exception e) {
+      System.out.println("Reservedelete 메소드에서 오류 : "+e);
+   }finally{
+
+      if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+      if(con!=null)try{con.close();}catch(SQLException ex){}
+   }
+
+}
+
+
+
+public Map<String, Object> getReservationConfirm(String r_num) {
+   Connection con=null;
+   PreparedStatement pstmt=null;
+   String sql="";
+   ResultSet rs=null;
+   ReservationBean bean=null;
+   Map<String, Object> map = new HashMap<>();
+   
+   
+   
+   try {
+      con = getConnection();
+      sql = "select b.*, a.name, d.image, d.movie_num, e.name as pname, e.p_code from movie a, reservation b, playing c, movie_detail d, place e "
+      		+ "where b.ping_num = c.ping_num and substring(c.nc_code,3) = a.movie_num and c.p_code = e.p_code and a.movie_num = d.movie_num"
+      		+ " and r_num=?";
+      pstmt = con.prepareStatement(sql);
+      pstmt.setString(1, r_num);
+      rs=pstmt.executeQuery();
+
+      if(rs.next()){
+   	   
+             bean = new ReservationBean();
+             bean.setMember_num(rs.getInt("member_num"));
+             bean.setPing_num(rs.getInt("ping_num"));
+             bean.setReseat_num(rs.getString("rseat_num")); 
+             bean.setSeat(rs.getString("seat"));
+             bean.setView_date(rs.getString("view_date"));
+             bean.setReser_day(rs.getString("reser_day"));
+             bean.setPay_day(rs.getString("pay_day"));
+             bean.setScreen_name(rs.getString("screen_name"));
+             bean.setMPoint(rs.getInt("mPoint"));
+             bean.setPrice(rs.getInt("price"));
+             bean.setPayinfo(rs.getString("payinfo"));
+             
+             String pname = null;
+             String p_code = rs.getString("p_code");
+             String payinfo = rs.getString("payinfo");
+             String payway = null;
+         
+             System.out.println(p_code.substring(6));
+             if(p_code.substring(6).equals("lc")){
+           	  pname = rs.getString("pname") + " 롯데시네마";
+             }else if(p_code.substring(6).equals("mg")){
+           	  pname = rs.getString("pname") + " 메가박스";
+             }else if(p_code.substring(6).equals("cg")){
+           	  pname = rs.getString("pname") + " cgv";
+           	  System.out.println(pname);
+             }
+             String a[] = payinfo.split("_");
+             System.out.println(p_code.substring(6));
+             if(a[0].equals("card")){
+           	  payway = "신용카드";
+             }else if(a[0].equals("transfer")){
+           	  payway = "계좌이체";
+             }else if(a[0].equals("phone")){
+           	  payway = "휴대폰결제";
+           	  System.out.println(payway);
+             }  
+             
+             map.put("name", rs.getString("name"));
+             map.put("image", rs.getString("image"));
+             map.put("movie_num", rs.getInt("movie_num"));
+             map.put("pname", pname);
+             map.put("p_code", rs.getString("p_code"));
+             map.put("payway", payway);
+
+   		  map.put("rbean", bean);
+   	
+   		  
+   	 
+   	  	return map;
+
+      }
+
+   } catch (Exception e) {
+      System.out.println("getReservationConfirm 메소드에서 오류 : "+e);
+      
+   }finally{
+      if(rs!=null)try{rs.close();}catch(SQLException ex){}
+      if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+      if(con!=null)try{con.close();}catch(SQLException ex){}
+   }
+   return map;
+
+}
+
+
+
+public LocationListBean getReserveMvLoc(String pname) {
+	   Connection con=null;
+	    PreparedStatement pstmt=null;
+	    String sql="";
+	    ResultSet rs=null;
+	    LocationListBean bean = null;
+	    
+	    try{
+	    	con = getConnection();
+	    	sql = "select * from location_detail where l_name=?";
+	    	pstmt = con.prepareStatement(sql);
+	    	pstmt.setString(1, pname);
+	    	rs = pstmt.executeQuery();
+	    	
+	    	if(rs.next()) {
+	    	bean = new LocationListBean();
+			bean.setL_num(rs.getInt(1));
+			bean.setP_code(rs.getString(2));
+			bean.setL_img(rs.getString(3));
+			bean.setL_name(rs.getString(4));
+			bean.setL_address(rs.getString(5));
+	    }
+	    	
+	    }catch(Exception err){
+	    	System.out.println("getReserveMvLoc 메소드에서 오류 : "+err);
+	    }finally{
+	        if(rs!=null)try{rs.close();}catch(SQLException ex){}
+	        if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+	        if(con!=null)try{con.close();}catch(SQLException ex){}
+	    }
+	return bean;
+}
+     
+     
+}
+

@@ -132,7 +132,74 @@ public class MemberFrontController extends HttpServlet {
 	            e.printStackTrace();
 	            System.out.println("getMemberPoint: "+e);
 	         }
-	     }
+	     }else if(command.equals("/MemberReservation.me")){
+	         action = new MemberReservation();
+	         
+	         try {
+	            forward = action.execute(req, resp);
+	            
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	            System.out.println("MemberReservation에서 오류 발생 : "+e);
+	         }
+			
+	     }else if(command.equals("/MemberReservationMv.me")){
+	         action = new MemberReservationMv();
+	         
+	         try {
+	            forward = action.execute(req, resp);
+	            
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	            System.out.println("MemberReservation에서 오류 발생 : "+e);
+	         }
+			
+	     }else if(command.equals("/ReserveDelete.me")){
+				forward = new ActionForward();
+				forward.setRedirect(false);	
+				forward.setPath("./member/reserveDelete_pop.jsp");
+				
+			}else if(command.equals("/ReserveDeleteCheck.me")){
+	         action = new ReserveDeleteCheck();
+	         
+	         try {
+	            forward = action.execute(req, resp);
+	            
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	            System.out.println("ReserveDeleteCheck에서 오류 : "+e);
+	         }
+			
+	     }else if(command.equals("/ReserveConfirm.me")){
+				action = new ReserveConfirm();
+
+				try {
+					forward = action.execute(req, resp);
+
+				} catch (Exception e) {
+					e.printStackTrace();
+					System.out.println("ReserveConfirm에서 오류 발생 : " + e);
+				}
+				
+				
+			}else if(command.equals("/ReserveConfirmLoc.me")){
+				action = new ReserveConfirmLoc();
+
+				try {
+					forward = action.execute(req, resp);
+
+				} catch (Exception e) {
+					e.printStackTrace();
+					System.out.println("ReserveConfirmLoc에서 오류 발생 : " + e);
+				}
+				
+				
+			}else if(command.equals("/LocationInfoController.me")){
+				forward = new ActionForward();
+				forward.setRedirect(false);	
+				forward.setPath("./member/LocationInfo.jsp");
+				
+			}
 		
 		
 		if(forward != null) {

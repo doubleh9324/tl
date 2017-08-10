@@ -1,0 +1,189 @@
+@CHARSET "UTF-8";
+
+p {
+	margin: 0;
+	border: 0;
+	font-family: "arial, dotum", Dotum, Arial, sans-serif;
+	font-size: 12px;
+}
+
+div {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	color: #33333b;
+
+}
+
+img {
+	padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "arial, dotum", Dotum, Arial, sans-serif;
+    font-size: 12px;
+    color: #33333b;
+}
+
+.title {
+    line-height: 25px;
+}
+
+.select {
+    font-family: "돋움", "Arial", "Verdana";
+    border-style: none;
+    color: #636363;
+}
+
+.Rlist {
+    margin-top: 15px;
+}
+
+.Rlist .tab {
+    height: 28px;
+    background: url(http://openimage.interpark.com/ticketimage/TicketImage/reserve/template/100927/bit_play_tab_01.gif) repeat-x;
+}
+
+.Rlist .tab .select {
+    float: right;
+    font-size: 12px;
+    letter-spacing: -1px;
+    padding-right: 10px;
+    overflow: hidden;
+    width: 280px;
+    text-align: right;
+}
+
+.Rlist td {
+    border-bottom: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+}
+
+.Rlist th, .Rlist td {
+    padding: 10px 0;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12px;
+    font-family: arial, malgun Gothic, dotum;
+    font-weight: normal;
+    color: #33333b;
+    line-height: 16px;
+}
+
+.Rlist th {
+    border-bottom: 1px solid #bababa;
+    background: #f9f9f9 url(http://ticketimage.interpark.com/TicketImage/event/100913_my/bg_bar4.gif) no-repeat right 10px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.mp_contents {
+    position: relative;
+    float: right;
+    width: 765px;
+}
+
+.mp_contents select {
+    border: 1px solid #ddd;
+}
+
+.mp_contents .tab {
+    clear: both;
+    display: inline-block;
+    width: 765px;
+    margin-top: 15px;
+}
+
+.mp_contents .tab li img {
+    vertical-align: top;
+    font-size: 0;
+}
+
+.mp_contents h3 {
+    position: relative;
+    height: 25px;
+    margin-top: 20px;
+    padding-left: 12px;
+    background: url(http://ticketimage.interpark.com/TicketImage/event/100913_my/bul_03.gif) no-repeat left 4px;
+}
+
+:root .timeSelect .all {
+    width: 745px;
+}
+
+:root .timeSelect .box {
+    width: 723px;
+    height: 22px;
+}
+
+.timeSelect .all {
+    border-top: 2px solid #da6464;
+    padding: 10px;
+    color: #666;
+    position: relative;
+    display: inline-block;
+}
+
+.timeSelect .box {
+    background: #f9f9f9;
+    border: 1px solid #dedede;
+    padding: 25px 20px 16px 20px;
+}
+
+.timeSelect .box .date p {
+    margin-left: 15px;
+}
+
+.timeSelect .box .title {
+    background: url(http://ticketimage.interpark.com/TicketImage/event/100913_my/bg_linedot.gif) no-repeat 87px top;
+    width: 105px;
+    float: left;
+}
+
+.timeSelect .box .period p, .timeSelect .box .date p {
+    background: url(http://ticketimage.interpark.com/TicketImage/event/100913_my/ico_b2.gif) no-repeat left 3px;
+    padding: 0 10px;
+    float: left;
+    font-size: 11px;
+    color: #666;
+}
+
+.timeSelect .right {
+    position: absolute;
+    right: 10px;
+    font-size: 11px;
+}
+
+.txtRed {
+    color: #de7776 !important;
+}
+
+.txtguide {
+    padding: 15px;
+    line-height: 20px;
+}
+
+.txt11 {
+    font: 11px "돋움";
+    line-height: 15px;
+}
+
+.txtDefault {
+    color: #666;
+}
+
+.period li {
+	float: left;
+	margin: -4px 2px;
+	
+}
+.date li {
+	float: left;
+	margin: -5px 2px;	
+}
+.tab li {
+	float: left;
+	margin: 0 1px;	
+}
