@@ -218,7 +218,7 @@ function getReviewMusicalFunction(page_num){
 				<div class="ml_box">
 				<h3><img src="https://sslimage.interpark.com/_mypage_n/ml_list_buying.gif" alt="예약내역"></h3>
 				<ul class="list">
-					<li><a href="#">예약조회</a></li>
+					<li><a href="./MemberReservation.me">예약조회</a></li>
 		
 					<li><a href="#">예약취소</a></li>
 				</ul>
