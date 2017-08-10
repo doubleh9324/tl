@@ -52,7 +52,7 @@ center  a, center a:link, center  a:active,  center  a:visited,center  a:hover {
 #memjoin2Wrap * {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, Verdana, verdana, sans-serif;}
 #layerPopupFull * {font-family:NanumGothic, Nanum Gothic, Malgun Gothic, dotum, Verdana, verdana, sans-serif;}
 
-#Tit_NewMembe {height:80px; text-align:center; background:#e83535;}
+#Tit_NewMembe {height:80px; text-align:center; background:#F38432;}
 #Tit_NewMembe h1 {width:800px; text-align:left; margin:0 auto; padding:20px 0 0 0;}
 
 #NewMemberwarp {text-align:center; margin:0; padding:0;}
@@ -149,6 +149,8 @@ select {border:0;}
 select.selbox {border:1px solid #d8d8d8; height:30px; padding:0 0 0 3px; font-size:13px; color:#555;}
 select.numbox {border:1px solid #d8d8d8; height:24px; padding:0 0 0 5px; font-size:13px; font-weight:bold; color:#555;}
 input.rdo {width:16px; height:16px;}
+input.cbox{width:16px; height:16px;}
+div.chbox{margin-bottom:9px;}
 
 .btn_join {margin:30px 0 40px 0; text-align:center;}
 .btn_mycheck2 {text-align:center; margin:20px 0;}
@@ -534,3 +536,22 @@ select.datenum {height:28px; padding:0; font:bold 13px NanumGothic, Nanum Gothic
   .dcheck{padding: 40px 20px; width: auto;}
 }
 
+/* 버튼 */
+center .button{
+	color: #6b6b6b;
+	border: 1px solid #ccc;
+	border-radius: .2em;
+	padding: .25em .8em;
+	margin: 10px 0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff),
+		to(#f2f2f2));
+}
+.button{
+		color: #6b6b6b;
+	border: 1px solid #ccc;
+	border-radius: .2em;
+	padding: .3em .9em;
+	margin: 10px 0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff),
+		to(#f2f2f2));
+}

@@ -6,6 +6,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,43 +34,45 @@ private static memberDAO instance;
       return con;
    }
    
-      public boolean insertMember(memberBean dto){
-         
-         Connection con=null;
-         String sql="";
-         PreparedStatement pstmt=null;
-         
-         int result = 0;
-         
-         try {
-            
-            con = getConnection();
-            sql="insert into member(id,pass,gender,birth,phone,name) "
-               +"values(?,?,?,?,?,?)";
-            
-            pstmt = con.prepareStatement(sql);
-            pstmt.setString(1,dto.getId()); 
-            pstmt.setString(2,dto.getPass()); 
-            pstmt.setInt(3,dto.getGender()); 
-            pstmt.setString(4, dto.getBirth());
-            pstmt.setString(5, dto.getPhone());
-            pstmt.setString(6, dto.getName());
-            
-            result = pstmt.executeUpdate();
-            
-            if(result !=0){
-               return true;
-            }
-            
-         } catch (Exception e) {
-            e.printStackTrace();
-         }finally{
-         
-            if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
-            if(con!=null)try{con.close();}catch(SQLException ex){}
-         }
-         return false;
-      }
+   public int insertMember(memberBean dto){
+       
+       Connection con=null;
+       String sql="";
+       PreparedStatement pstmt=null;
+       ResultSet rs = null;
+       
+       try {
+          
+          con = getConnection();
+          sql="insert into member(id,pass,gender,birth,phone,name) "
+             +"values(?,?,?,?,?,?)";
+          
+          pstmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+          pstmt.setString(1,dto.getId()); 
+          pstmt.setString(2,dto.getPass()); 
+          pstmt.setInt(3,dto.getGender()); 
+          pstmt.setString(4, dto.getBirth());
+          pstmt.setString(5, dto.getPhone());
+          pstmt.setString(6, dto.getName());
+          
+          pstmt.executeUpdate();
+          rs = pstmt.getGeneratedKeys();
+          
+          if(rs.next()){
+             return rs.getInt(1);
+          }else{
+          	return 0;
+          }
+          
+       } catch (Exception e) {
+          e.printStackTrace();
+       }finally{
+       
+          if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+          if(con!=null)try{con.close();}catch(SQLException ex){}
+       }
+       return 0;
+    }
 
       /* 아이디 체크  */
       
@@ -609,6 +612,35 @@ public LocationListBean getReserveMvLoc(String pname) {
 	return bean;
 }
      
+public int insertAddress(Map<String, Object> address){
+	   Connection con=null;
+    PreparedStatement pstmt=null;
+    String sql="";
+    ResultSet rs = null;
+    int result = 0;
+    try{
+ 	   con = getConnection();
+ 	   sql = "insert into member_address (member_num, post_code, address, add_detail, default_flag) values (?,?,?,?,?) ";
+ 	   pstmt = con.prepareStatement(sql);
+ 	   pstmt.setInt(1, (int) address.get("member_num"));
+ 	   pstmt.setString(2,  (String) address.get("post_code")); 
+ 	   pstmt.setString(3, (String) address.get("address")); 
+ 	   pstmt.setString(4, (String) address.get("add_detail")); 
+ 	   pstmt.setString(5, (String) address.get("default_flag")); 
+ 	   
+ 	   result = pstmt.executeUpdate();
+ 	   System.out.println(pstmt.toString());
+ 	   return result;
+ 	   
+    }catch(Exception e){
+ 	   System.out.println(e.getMessage());
+    }finally{
+        if(pstmt!=null)try{pstmt.close();}catch(SQLException ex){}
+        if(con!=null)try{con.close();}catch(SQLException ex){}
+    }
+    return 0;
+}
+
      
 }
 

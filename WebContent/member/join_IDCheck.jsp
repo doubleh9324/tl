@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
+<link rel="stylesheet" href="../css/join.css" />
 <script type="text/javascript">
 
    function result() {
@@ -57,14 +57,14 @@
          out.println("사용 가능한 아이디입니다.");
       %>
          <%--사용가능한 아이디이면 사용 버튼 눌러서 부모창(join.jsp)의 id입력란에 사용가능한 ID값 나타내기  --%>
-    	 <input type="button" value="사용" onclick="result()"/>
+    	 <input type="button" class="button" value="사용" onclick="result()"/>
    <%
       }
    %>
 
    <form action="join_IDCheck.jsp" method="post" name="njoin">
-      아이디 : <input type="text" name="userid" value="<%=id%>">
-      <input type="submit" value="중복확인">
+      아이디 : <input type="text" class="memtxt" name="userid" value="<%=id%>">
+      <input type="submit" class="button" value="중복확인">
    </form>
 
 </body>
