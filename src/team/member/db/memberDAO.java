@@ -439,8 +439,8 @@ private static memberDAO instance;
 	      con = getConnection();
 	      
 	      if(option.equals("B")){
-	      sql = "select a.* from reservation a, playing b where a.member_num=? and a.reser_day like concat(?,'%') "
-	      		+ "and a.ping_num = b.ping_num and b.nc_code like concat('mo','%')";
+	      sql = "select * from reservation where member_num=? and reser_day like concat(?,'%') ";
+
 	      pstmt = con.prepareStatement(sql);
 	      pstmt.setInt(1, mnum);
 	      pstmt.setString(2, day);
