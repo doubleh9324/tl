@@ -496,7 +496,7 @@ public class ReservationDAO {
 	return null;
 	}
 	
-	public int getPingnum(String pcode, String mo_num) throws Exception{
+	public int getPingnum(String pcode, String mnum, String flag) throws Exception{
 		Connection con= null;
 		PreparedStatement pstmt = null;
 		String sql="";
@@ -506,10 +506,15 @@ public class ReservationDAO {
 		try{
 			con=getConnection();
 			
-			sql="select ping_num from playing where p_code = ? and nc_code = concat('mo',?) ";
+			if(flag == "mo"){
+				sql="select ping_num from playing where p_code = ? and nc_code = concat('mo',?) ";
+			}else if(flag == "mu"){
+				sql="select ping_num from playing where p_code = ? and nc_code = concat('mu',?) ";
+			}
+			
 			pstmt=con.prepareStatement(sql);
 			pstmt.setString(1, pcode);
-			pstmt.setString(2,mo_num);
+			pstmt.setString(2,mnum);
 			rs = pstmt.executeQuery();
 
 			if(rs.next()){
@@ -526,22 +531,18 @@ public class ReservationDAO {
 	return 0;
 	}
 	
-	public ReservationBean insertReservation(ReservationBean rsb) throws Exception{
+	public int insertReservation(ReservationBean rsb) throws Exception{
 		Connection con= null;
 		PreparedStatement pstmt = null;
-		PreparedStatement nextpstmt = null;
 		String sql="";
-		String nextSql = "";
 		ResultSet rs = null;
-		ReservationBean reRsb = new ReservationBean();
 		int renum = 0;
-		
 		
 		try{
 			con=getConnection();
 			
 			sql="insert into reservation "
-					+ "(member_num, ping_num, rseat_num, seat, view_date, reser_day, pay_day, screen_name, mPoint, price, paymentinfo) "
+					+ "(member_num, ping_num, rseat_num, seat, view_date, reser_day, pay_day, screen_name, mPoint, price, payinfo) "
 					+ "values ( ?,?,?,?,?,now(),now(),?,?,?,?)";
 			pstmt=con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			pstmt.setInt(1, rsb.getMember_num());
@@ -557,9 +558,35 @@ public class ReservationDAO {
 			pstmt.executeUpdate();
 			rs = pstmt.getGeneratedKeys();
 			
+			System.out.println(pstmt.toString());
+			
 			if(rs.next()){
 				renum = rs.getInt(1);
+				return renum;
 			}
+			
+		}catch(Exception e){
+			System.out.println("ReserDAO insertReservation error : "+e);
+		}finally{
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+	return 0;
+	}
+	
+	public ReservationBean insertReservedSeat(ReservationBean rsb) throws Exception{
+		Connection con= null;
+		PreparedStatement pstmt = null;
+		PreparedStatement nextpstmt = null;
+		String sql="";
+		String nextSql = "";
+		ResultSet rs = null;
+		ReservationBean reRsb = new ReservationBean();
+		int renum = 0;
+		
+		
+		try{
+			con=getConnection();
 			
 			int i=0;
 			int result=0;
@@ -596,6 +623,7 @@ public class ReservationDAO {
 			reRsb = rsb;
 
 			return reRsb;
+			
 					
 		}catch(Exception e){
 			System.out.println("ReserDAO insertReservation error : "+e);
@@ -605,6 +633,48 @@ public class ReservationDAO {
 			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
 		}
 	return null;
+	}
+	
+	public int insertReservedSeat(ReservationBean rsb, String grade) throws Exception{
+		Connection con= null;
+		PreparedStatement pstmt = null;
+		String sql="";
+		int re = 0;
+		
+		
+		try{
+			con=getConnection();
+			
+			int rseatnum = Integer.parseInt(rsb.getReseat_num());
+			//몇명을 예매했는지 count 구해오기
+
+			String[] seats = rsb.getSeat().split(" ");
+			String[] grades = grade.split(" ");
+			for(int s=0; s<rseatnum; s++){
+				
+				sql = "insert into reserved_seat (r_num, ping_num, screen_name, seatgrade, seat, view_date)"+
+						"values (?,?,?,?,?,?)";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setInt(1, rsb.getR_num());
+				pstmt.setInt(2, rsb.getPing_num());
+				pstmt.setString(3, rsb.getScreen_name());
+				pstmt.setString(4, grades[s]);
+				pstmt.setString(5, seats[s]);
+				pstmt.setString(6, rsb.getView_date());
+				
+				re = pstmt.executeUpdate();
+			}
+
+			return re;
+			
+					
+		}catch(Exception e){
+			System.out.println("ReserDAO insertReservesSeat Mu error : "+e);
+		}finally{
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+	return 0;
 	}
 	
 	public List<Map<String, Object>> getReservedSeats(int pingnum, String screen_name, String viewdate) throws Exception{
@@ -731,11 +801,13 @@ public class ReservationDAO {
 		try{
 			con=getConnection();
 			
-			sql = "select a.*, a.capacity - coalesce(b.reserved,0) as remained "
+			sql = "select distinct a.*, a.capacity - coalesce(b.reserved,0) as remained "
 					+ "from (select * from v_playmusicalinfo where substring(nc_code, 3) = ? and play_day = ?) a "
-					+ "left join v_reserved_seatinfo b on a.play_day = date_format(b.view_date, '%Y-%m-%d') and a.ping_num = b.ping_num"
-					+ "order by 5";
+					+ "left join v_reserved_seatinfo b on b.view_date = concat(a.play_day, ' ', a.ptime, ':00') and a.ping_num = b.ping_num "
+					+ "and a.seatclass = b.seatgrade order by 7,8,field(seatclass, 'VIP', 'R', 'S')";
 			
+			
+
 			pstmt=con.prepareStatement(sql);
 			
 			pstmt.setString(1, mu_num);

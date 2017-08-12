@@ -31,7 +31,6 @@ public class MemberFrontController extends HttpServlet {
 			forward = new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("index.jsp?center=member/join.jsp");
-			
 		
 		}else if(command.equals("/MemberJoinAction.me")){
 			action = new MemberJoinAction();
@@ -84,14 +83,14 @@ public class MemberFrontController extends HttpServlet {
 	            System.out.println("MemberMail :"+e);
 	            e.printStackTrace();
 	         }
-	    }else if(command.equals("/MemberModify.me")){
+		}else if(command.equals("/MemberModify.me")){
 	        action = new MemberModify();
 	        try {
 	           forward=action.execute(req, resp);
 	        } catch (Exception e) {
 	           e.printStackTrace();
 	        }
-	     }else if(command.equals("/MemberModifyGo.me")){
+		}else if(command.equals("/MemberModifyGo.me")){
 	         action = new MemberModifyGo();
 	         try {
 	            forward=action.execute(req, resp);
@@ -133,22 +132,17 @@ public class MemberFrontController extends HttpServlet {
 	            System.out.println("getMemberPoint: "+e);
 	         }
 	     }else if(command.equals("/MemberReservation.me")){
-	         action = new MemberReservation();
+	        // action = new MemberReservation();
+	    	 forward = new ActionForward();
+		      forward.setRedirect(false);
+		      forward.setPath("index.jsp?center=member/reserveCheck.jsp");
 	         
-	         try {
-	            forward = action.execute(req, resp);
-	            
-	         } catch (Exception e) {
-	            e.printStackTrace();
-	            System.out.println("MemberReservation에서 오류 발생 : "+e);
-	         }
 			
 	     }else if(command.equals("/MemberReservationMv.me")){
 	         action = new MemberReservationMv();
 	         
 	         try {
 	            forward = action.execute(req, resp);
-	            
 	         } catch (Exception e) {
 	            e.printStackTrace();
 	            System.out.println("MemberReservation에서 오류 발생 : "+e);
@@ -159,9 +153,9 @@ public class MemberFrontController extends HttpServlet {
 				forward.setRedirect(false);	
 				forward.setPath("./member/reserveDelete_pop.jsp");
 				
-			}else if(command.equals("/ReserveDeleteCheck.me")){
-	         action = new ReserveDeleteCheck();
-	         
+	     }else if(command.equals("/ReserveDeleteCheck.me")){
+         action = new ReserveDeleteCheck();
+         
 	         try {
 	            forward = action.execute(req, resp);
 	            
@@ -180,26 +174,29 @@ public class MemberFrontController extends HttpServlet {
 					e.printStackTrace();
 					System.out.println("ReserveConfirm에서 오류 발생 : " + e);
 				}
-				
-				
-			}else if(command.equals("/ReserveConfirmLoc.me")){
-				action = new ReserveConfirmLoc();
+		}else if(command.equals("/ReserveConfirmLoc.me")){
+			action = new ReserveConfirmLoc();
 
-				try {
-					forward = action.execute(req, resp);
+			try {
+				forward = action.execute(req, resp);
 
-				} catch (Exception e) {
-					e.printStackTrace();
-					System.out.println("ReserveConfirmLoc에서 오류 발생 : " + e);
-				}
-				
-				
-			}else if(command.equals("/LocationInfoController.me")){
-				forward = new ActionForward();
-				forward.setRedirect(false);	
-				forward.setPath("./member/LocationInfo.jsp");
-				
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.out.println("ReserveConfirmLoc에서 오류 발생 : " + e);
 			}
+		}else if(command.equals("/LocationInfoController.me")){
+			forward = new ActionForward();
+			forward.setRedirect(false);	
+			forward.setPath("./member/LocationInfo.jsp");
+			
+		}else if(command.equals("/insertAddress.me")){
+			action = new insertAddress();
+			try {
+				forward= action.execute(req, resp);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		
 		
 		if(forward != null) {

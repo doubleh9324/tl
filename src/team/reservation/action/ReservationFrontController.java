@@ -145,8 +145,36 @@ public class ReservationFrontController extends HttpServlet{
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if(command.equals("/getReservedSeat.rs")){
-			action = new getReservedSeats();
+		}else if(command.equals("/getReservedSeatMu.rs")){
+			action = new getReservedSeatsMu();
+			try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/getReservedSeatMv.rs")){
+			action = new getReservedSeatsMv();
+			try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/getLatestAddress.rs")){
+			action = new getLatestAddress();
+			try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/getDefaultAddress.rs")){
+			action = new getDefaultAddress();
+			try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/makeMuReservation.rs")){
+			action = new MuReservationInsertAction();
 			try {
 				forward= action.execute(request, response);
 			} catch (Exception e) {

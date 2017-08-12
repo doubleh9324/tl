@@ -17,6 +17,7 @@ public class getReservedSeats implements Action{
 		
 		//pcode, mo_num, screenname 가져오기
 		int ping_num = Integer.parseInt(request.getParameter("ping_num"));
+		//영화의 경우에만 필요
 		String screen_name = request.getParameter("screen_name");
 		String view_date = request.getParameter("viewdate")+"00";
 		

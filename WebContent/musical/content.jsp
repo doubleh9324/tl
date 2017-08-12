@@ -73,7 +73,7 @@ function getReview(musical_num,p_num){
 }
 
 function reservationMU(mnum){
-	window.open("./reserveMU.rs?munum="+mnum,"","width=1050, height=695, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+	window.open("./reserveMU.rs?munum="+mnum+"&mnum="+<%=session.getAttribute("member_num")%>,"","width=988, height=635, toolbar=no, menubar=no, scrollbars=no, resizable=no");
 }
 
 function insertReviewFucntion(){

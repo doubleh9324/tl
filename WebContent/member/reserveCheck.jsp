@@ -8,6 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="//code.jquery.com/jquery.min.js"></script>
 
 
 <style>
@@ -26,22 +27,8 @@ scrollbar-shadow-color:#C3C3C3;
 <script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ua/ec.js"></script>
 <script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5QCJFLB"></script>
-<script src="https://connect.facebook.net/signals/config/135611513637810?v=2.7.18" async=""></script>
-<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
 <script language="javascript" src="http://ticketimage.interpark.com/js/interpark_pcid.js"></script>
 
-<script language="javascript" src="js/Egs.js"></script>
-<script language="javascript" src="js/block.js"></script>
-<script language="javascript" src="js/MyIPoint.js"></script>
-<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="js/SearchAutoComplete.js"></script>
-<script type="text/javascript" src="js/BookAPI.js"></script>
-<script language="javascript" src="js/prototype_1_7_2.js"></script>
-<script type="text/javascript" src="js/TPBanner_2015.js"></script>
-<script type="text/javascript" src="js/MainShoppingBar.js"></script>
-<script language="javascript" src="js/layerEffect.js"></script>
-<script type="text/javascript" src="js/AddTPFooter.js"></script>
-<script type="text/javascript" src="js/Cancel.js"></script>
 
 <script type="text/javascript">
 	jQuery.noConflict();
@@ -319,18 +306,6 @@ function openChangeIpointPop() {
 					배송받으신 티켓이 취소일 이전까지 인터파크 본사로 접수된 이후에 취소가능합니다. <a href="http://ticket.interpark.com/TiKi/Info/BookingGuide.asp?Url=guide_05.html"><span class="txtU">[상세보기]</span></a></p>
 			</div>
 
-
-			<!-- //예매확인취소 리스트 -->
-			
-			<script language="javascript">
-				var cnt = "0"
-				document.getElementById("TotalCnt").innerHTML = "* 모든 내역을 합쳐 <strong class='txtRed'>"+ cnt +"건</strong>의 예매내역이 있습니다.";
-			</script>
-
-	<!-- HTTP 로깅코드 START -->
-	<script type="text/javascript" src="/cancel/inc/block.js"></script>
-	
-	<!-- HTTP 로깅코드 END -->
 
 					</div>		
 			

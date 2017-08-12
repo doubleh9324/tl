@@ -32,9 +32,9 @@ var Browser = {
 		var step4 = step.match(/step4/g);
 		
 		if(step3 != null || step4 != null){
-			return removeLocalInfo();
+			removeLocalInfo();
 		}
-	
+		return '??';
 	 });
 	} 
 
@@ -50,7 +50,7 @@ function removeLocalInfo(){
 	jQuery.ajax({
         type:"POST",
         url:"./deleteCheckedSeatInfo.rs",
-        data:"pcode="+pcode+"&mo_num="+mo_num+"&screen_name="+screen_name+"&viewdate="+viewdate+"&seat="+seat,
+        data:"pcode="+pcode+"&m_num="+mo_num+"&screen_name="+screen_name+"&viewdate="+viewdate+"&seat="+seat,
         dataType:"JSON",
         success : function(data) {
         },
@@ -1248,7 +1248,7 @@ function OnTnbRightClick(){
 		        type:"POST",
 		        url:"./checkedSeat.rs",
 		        async : false,
-		        data:"pcode="+pcode+"&mo_num="+mo_num+"&screen_name="+screen_name+"&viewdate="+viewdate+"&seat="+seat,
+		        data:"pcode="+pcode+"&m_num="+mo_num+"&screen_name="+screen_name+"&viewdate="+viewdate+"&seat="+seat+"&flag=mo",
 		        dataType:"JSON",
 		        success : function(data) {
 		        	//data.checkFlag == n 이면 통과 아니면 다시 선택
@@ -1656,7 +1656,7 @@ function getSeatMap(pcode){
     	        type:"POST",
     	        url:"./checkedSeat.rs",
     	        async : false,
-    	        data:"pcode="+pcode+"&mo_num="+mo_num+"&screen_name="+screen_name+"&viewdate="+viewdate+"&seat="+"0",
+    	        data:"pcode="+pcode+"&m_num="+mo_num+"&screen_name="+screen_name+"&viewdate="+viewdate+"&seat=0&flag=mo",
     	        dataType:"JSON",
     	        success : function(data) {
     	        	//data.checkFlag == n 이면 통과 아니면 다시 선택

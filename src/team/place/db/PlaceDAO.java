@@ -273,7 +273,7 @@ public class PlaceDAO {
 		return Collections.emptyList();		
 	}
 	
-	protected V_plcaeBean makevPlaceFromResultSet(ResultSet rs)throws SQLException{
+	protected V_plcaeBean makevPlaceFromResultSet(ResultSet rs) throws SQLException{
 		V_plcaeBean pb = new V_plcaeBean();
 		pb.setP_code(rs.getString("p_code"));
 		pb.setType(rs.getString("type"));

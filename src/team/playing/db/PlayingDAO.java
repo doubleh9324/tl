@@ -3,9 +3,13 @@ package team.playing.db;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -258,5 +262,62 @@ public class PlayingDAO {
 		return 0;
 	}
 	
-
+	public Object getPlayingInfo(String flag, String mnum) throws Exception{
+		Connection con= null;
+		PreparedStatement pstmt = null;
+		String sql="";
+		ResultSet rs = null;
+		List<Map<String, Object>> playingList = new ArrayList<>();
+		try{
+			con=getConnection();
+			
+			if(flag.equals("musical")){
+				sql="select distinct ping_num, p_code, nc_code, screen_name, seatclass from v_playmusicalinfo where substring(nc_code, 3) = ?";
+				pstmt=con.prepareStatement(sql);
+				pstmt.setString(1, mnum);
+				
+				rs = pstmt.executeQuery();
+				rs.next();
+				System.out.println(pstmt.toString());
+				return makePlayingFromResultSet(rs);
+			}else if(flag.equals("movie")){
+				//nc_code로 현재 상영중인 영화관 검색
+				sql="select a.* from place a, playing b where a.p_code = b.p_code and substring(b.nc_code, 3) = ?";
+				pstmt=con.prepareStatement(sql);
+				pstmt.setString(1, mnum);
+				
+				rs = pstmt.executeQuery();
+				System.out.println(pstmt.toString());
+				if(rs.next()){
+					System.out.println("검색작업");
+					do{
+						playingList.add(makePlayingFromResultSet(rs));
+					}while(rs.next());
+					
+					return playingList;
+				}else{
+					return Collections.emptyList();
+				}
+			}
+		}catch(Exception e){
+			System.out.println("PlayingDAO getPlayingInfo error : "+e);
+		}finally{
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+		return 0;
+	}
+	
+	protected Map<String, Object> makePlayingFromResultSet(ResultSet rs) throws SQLException{
+		
+		Map<String, Object> resultMap = new HashMap<String, Object>();
+		
+		resultMap.put("ping_num", rs.getInt("ping_num"));
+		resultMap.put("p_code", rs.getInt("ping_num"));
+		resultMap.put("nc_code",rs.getString("nc_code"));
+		resultMap.put("screen_name",rs.getString("screen_name"));
+		resultMap.put("seatclass",rs.getString("seatclass"));
+		
+		return resultMap;
+	}
 }

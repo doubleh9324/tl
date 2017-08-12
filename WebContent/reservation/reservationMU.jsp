@@ -26,14 +26,15 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/reservationMu.js"></script>
+<script type="text/javascript" src="js/post_code.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script for="window" event="onunload" language="javascript">
 browser_Event();
 </script>
 
-
 </head>
 
-<body>
+<body onBeforeUnload="removeLocalInfo();">
 <% 
 	String id= (String)session.getAttribute("id");
 	
@@ -53,6 +54,12 @@ browser_Event();
 <div>
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NTMwNjQ3OTNkZCGym67a+L9N/u3OWe+AcE6fbNuPGNdmXcl5Op+Nmtcj">
 <input type="hidden" id="munum" value="${musical.musical_num }">
+<input type="hidden" id="mname" value="${member.name }">
+<input type="hidden" id="phone" value="${member.phone }">
+<input type="hidden" id="id" value="${member.id }">
+<input type="hidden" id="pingnum" value="${playing.ping_num }">
+<input type="hidden" id="pcode" value="${place.p_code }">
+
 </div>
 
         <div id="progressBar" style="width: 300px; display: none; position: absolute; left: 345.747px; top: 297.955px; z-index: 2000;" class="ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="10" intervalid=""><div class="ui-progressbar-value ui-widget-header ui-corner-left" style="width: 10%;"></div></div>
@@ -71,7 +78,7 @@ browser_Event();
             <div id="all" style="display: block;">
                 <!--상단메뉴 -->
                 <div id="header" class="header">
-                    <h1><img src="http://image16.hanatour.com/img/perfsale/h1_tit.gif" alt="hanatour.com"></h1>
+                    <h1><img style="width: 185px; background: white;" alt="logo" src="img/logo6.png"></h1>
                     <ul class="gnb">
                         <li class="m01 on"><span>관람일/회차</span></li>
                         <li class="m02"><span>좌석선택</span></li>
@@ -93,9 +100,9 @@ browser_Event();
                             <img id="imgTodaySale" src="http://image16.hanatour.com/img/perfsale/btn_day_reserv.gif" alt="당일예매" style="display:none;">
                             </p>
                             <div class="cal_selectDay">
-                            <a class="pre dcursor" onclick="fdc_CtrlStep(jcSTEP1_1);" title="이전달">
+                            <a class="pre dcursor" onclick="movePrevMonth();" title="이전달">
                             <img src="http://image16.hanatour.com/img/perfsale/btn_pre.gif" alt="이전달">
-                            </a><a class="next dcursor" onclick="fdc_CtrlStep(jcSTEP1_2);" title="다음달">
+                            </a><a class="next dcursor" onclick="moveNextMonth();" title="다음달">
                             <img src="http://image16.hanatour.com/img/perfsale/btn_next.gif" alt="다음달">
                             </a>
                             <span>2017. 08</span></div>
@@ -205,7 +212,7 @@ browser_Event();
                             <h2><img src="http://image16.hanatour.com/img/perfsale/h2_tit04.gif" alt="쿠폰선택"></h2>
                             <div class="sale_select">
                                 <div class="select_coupon tr">
-                                    <a class="dcursor" onclick="fdc_PopupCouponRegister();"><img src="http://image16.hanatour.com/img/perfsale/btn_coupon.gif" alt="쿠폰등록"></a>
+                                    <a class="dcursor" onclick="PopupCouponRegister();"><img src="http://image16.hanatour.com/img/perfsale/btn_coupon.gif" alt="쿠폰등록"></a>
                                 </div>
                                 <div id="divCouponList" class="scroll"></div>
                                 <p>
@@ -273,9 +280,10 @@ browser_Event();
                                     <li><em>받으시는분</em>
                                         <input id="deliveryUserName" type="text" style="width: 110px;" maxlength="50" class="imekor">
                                         <span>
-                                            <input id="deliveryInfoType0" name="deliveryInfoType" type="radio" value="0" onclick="fdc_DisplayUserInfo(this);"><label>주문자정보와동일</label>
-                                            <input id="deliveryInfoType1" name="deliveryInfoType" type="radio" value="1" onclick="fdc_DisplayUserInfo(this);"><label>최근배송지<a id="btnRecentAddress"><img src="http://image16.hanatour.com/img/perfsale/btn_more.gif" alt="더보기"></a></label>
-                                            <input id="deliveryInfoType2" name="deliveryInfoType" type="radio" value="2" onclick="fdc_DisplayUserInfo(this);"><label>새로입력</label>
+                                            <input id="deliveryInfoType0" name="deliveryInfoType" type="radio" value="0" onclick="DisplayUserInfo(this);"><label>주문자정보와동일</label>
+                                            <input id="deliveryInfoType1" name="deliveryInfoType" type="radio" value="1" onclick="DisplayUserInfo(this);"><label>최근배송지</label>
+                                            <input id="deliveryInfoType2" name="deliveryInfoType" type="radio" value="2" onclick="DisplayUserInfo(this);"><label>새로입력</label>
+                                            <input id="newDelivery" type="hidden" value="n">
                                         </span></li>
                                     <li><em>휴대폰/전화</em>
                                         <input id="deliveryMobile1" type="text" style="width: 30px;" maxlength="3" class="imedisable">
@@ -285,10 +293,9 @@ browser_Event();
                                         <input id="deliveryMobile3" type="text" style="width: 50px;" maxlength="4" class="imedisable">
                                     </li>
                                     <li><em>주소</em>
-                                        <input id="deliveryZipCode1" type="text" style="width: 30px;" maxlength="3" class="imedisable"> - 
-                                        <input id="deliveryZipCode2" type="text" style="width: 30px;" maxlength="3" class="imedisable">
+                                        <input id="deliveryZipCode" type="text" style="width: 30px;" maxlength="6" class="imedisable">
                                         <input id="deliveryAddress1" type="text" style="width: 250px;" maxlength="200" class="imekor">
-                                        <a id="btnSearchAddress"><img src="http://image16.hanatour.com/img/perfsale/btn_zip.gif" alt="우편번호검색"></a> 
+                                        <a id="btnSearchAddress" onclick="sample4_execDaumPostcode();DisplayUserInfo(this);"><img src="http://image16.hanatour.com/img/perfsale/btn_zip.gif" alt="우편번호검색"></a> 
                                     </li>
                                     <li id="lideliveryAddress2"><em>상세주소</em>
                                         <input id="deliveryAddress2" type="text" style="width: 300px;" maxlength="100" class="imekor">
@@ -328,27 +335,51 @@ browser_Event();
                         <div class="receipt_select">
                             <!-- 결제수단 & 결제방법선택 -->
                             <div class="receipt_scroll">
-                                <h4 class="mt">하나투어 마일리지</h4>
+                                <h4 class="mt">TicketLion Point</h4>
                                 <ul class="mb mileage">
                                     <!-- 마일리지선택 -->
-                                    <li><em>보유 마일리지</em> 
+                                    <li><em>보유 L-Point</em> 
                                         <span id="spanSelfMileage">
+                                        <input id="txtMileageUse1" type="text" style="width: 120px;" onchange="PointUseChange(this);">
                                         </span>
-                                        <a id="imgMileageUse1" class="dcursor" onclick="fdc_MileageUse(this);"><img src="http://image16.hanatour.com/img/perfsale/btn_use02.gif" alt="사용하기"></a>
-                                        <a class="dcursor" style="display:none;" onclick="fdc_MileageCertify(1);"><img src="http://image16.hanatour.com/img/perfsale/btn_confirm01.gif" alt="본인인증"></a>
-                                        <a class="dcursor" onclick="fdc_MileageCertify(2);"><img src="http://image16.hanatour.com/img/perfsale/btn_confirm02.gif" alt="타인추가인증"></a>
-                                        <span id="spanMileageTxt1" class="mtxt">총 <strong class="red">0</strong> 마일리지 사용가능</span>
-                                    </li>
-                                    <li><em>타인 마일리지</em>
-                                        <div id="divOtherMileage" class="other">
-                                            <p style="padding-left: 7px; padding-top: 5px;">타인의 마일리지를 사용하실려면 <strong class="blu">타인추가인증</strong> 버튼을 클릭해 주세요.</p>
-                                        </div>
+                                        <a id="imgMileageUse1" class="dcursor" onclick="PointUseChange(this);"><img src="http://image16.hanatour.com/img/perfsale/btn_use02.gif" alt="사용하기"></a>
+                                        <span id="spanMileageTxt1" class="mtxt">총 <strong class="red">${member.mPoint }</strong> point 사용가능</span>
                                     </li>
                                     <!-- //마일리지선택 -->
                                     <!-- 결제방법선택 -->
                                     <li class="payment"><em class="red bold">결제방법선택</em>
                                         <div class="con">
-                                            <ul id="paymethodPos"></ul>
+                                            <ul id="paymethodPos">
+	                                            <li idcode="2">※ 크롬 브라우저의 ActivX 사용 제한으로 인해 신용카드 결제가 불가 합니다. 
+		                                            <a class="dcursor" onclick="fdc_PopupInstallment();" style="display:none;">
+		                                            <img src="http://image16.hanatour.com/img/perfsale/btn_infor01.gif" alt="무이자할부안내">
+		                                            </a>
+	                                            </li>
+	                                            <li idcode="22">
+		                                            <input type="radio" name="rdoPays" id="rdoPays22" value="22" onclick="fdc_PayMethodChange(this);" checked="checked">무통장 입금 
+		                                            <select id="selBank">
+			                                            <option value="-1">입급은행을 입력하세요</option>
+			                                            <option value="4777">기업은행</option>
+			                                            <option value="4778">국민은행</option>
+			                                            <option value="4780">신한은행</option>
+			                                            <option value="4781">하나은행</option>
+			                                            <option value="4782">수협</option>
+			                                            <option value="4783">농협중앙회</option>
+			                                            <option value="21274">우리은행</option>
+			                                            <option value="21275">우체국</option>
+			                                            <option value="21276">부산은행</option>
+			                                            <option value="21277">제일은행</option>
+			                                            <option value="21278">광주은행</option>
+			                                            <option value="24718">한국시티은행</option>
+			                                            <option value="24719">경남은행</option>
+			                                            <option value="24720">대구은행</option>
+		                                            </select>
+		                                            
+		                                            <a id="imgCashReceipt1" class="dcursor" onclick="fdc_PopupCashReceiptSet();" disabled="disabled">
+		                                            <img src="http://image16.hanatour.com/img/perfsale/btn_infor02.gif" alt="현금영수증발행신청">
+		                                            </a>
+	                                            </li>
+                                            </ul>
                                             <a href="#" class="more" style="display:none;"><img src="http://image16.hanatour.com/img/perfsale/btn_infor03.gif" alt="신용카드 및 무통장입급안내"></a>
                                         </div>
                                         <div class="txt_pay">
@@ -366,6 +397,23 @@ browser_Event();
                                     </div>
                                     
                                     <span id="lblCancelTimeInfo">
+                                 	   <div class="box"><em>취소 가능 일시 : </em><span class="red"></span></div>
+                                 	   <table border="0" cellpadding="0" cellspacing="0" summary="티켓 취소마감시간 및 수수료 안내" class="tbl_commission">
+	                                 	   <colgroup>
+		                                 	   <col width="33.5%">
+		                                 	   <col width="33.5%">
+		                                 	   <col width="*">
+	                                 	   </colgroup>
+	                                 	   <thead>
+		                                 	   <tr>
+		                                 	   <th scope="col">내용</th>
+		                                 	   <th scope="col">취소일</th>
+		                                 	   <th scope="col">취소수수료</th>
+		                                 	   </tr>
+	                                 	   </thead>
+	                                 	   <tbody>
+	                                 	   </tbody>
+                                 	   </table>
                                     </span>
                                     <p>
                                         
@@ -376,8 +424,8 @@ browser_Event();
                                 </div>                                
                             </div>
                             <span class="chkbox">
-                                    <input id="cbxCancelFeeAgree" type="checkbox"><label>취소수수료 및 예매 특별 약관을 읽었으며, 이에 동의합니다. <a href="javascript:fdc_PopupSaleSpecialAgree()">[상세보기]</a></label> 
-                                    <input id="cbxTermAgree" type="checkbox"><label>제3자 정보제공 내용에 동의합니다. <a href="javascript:fdc_PopupTermAgree()">[상세보기]</a></label>
+                                    <input id="cbxCancelFeeAgree" type="checkbox"><label>취소수수료 및 예매 특별 약관을 읽었으며, 이에 동의합니다.</label> 
+                                    <input id="cbxTermAgree" type="checkbox"><label>제3자 정보제공 내용에 동의합니다.</label>
                             </span>
                             <!-- //취소수수료 안내 및 약관동의 -->
                         </div>
@@ -394,7 +442,7 @@ browser_Event();
 	                        <img src="MusicalImage/${musical.image }" width="79" height="98" alt=""></p>
 	                        <span id="ptitle" class="tit"><a title="${musical.name })">${musical.name }</a></span>
 	                        <span class="date">${musical.open_day } ~ ${musical.close_day }</span>
-	                        <span id="ptheatername" class="date"><a title="${place.name }">${place.name }</a></span>
+	                        <span id="ptheatername" class="date" p_code="${place.p_code }" screen_name="${playing.screen_name }"><a title="${place.name } ${playing.screen_name }">${place.name } ${playing.screen_name }</a></span>
 	                        <input id="hiddenGenreId" type="hidden" value="">
 	                        <input id="hiddenDisplayRemainSeat" type="hidden" value="0">
                         </div>
@@ -426,13 +474,12 @@ browser_Event();
                             </div>
                             <div class="link02">
                                 <ul>
-                                    <li class="tk_disc"><em><img src="http://image16.hanatour.com/img/perfsale/r_tit09.gif" alt="할인금액"></em><span>0</span></li>
+                                    <li class="tk_disc"><em><img src="http://image16.hanatour.com/img/perfsale/r_tit09.gif" alt="할인금액"></em><p></p><span>0</span></li>
                                     <li class="tk_coupon"><em><img src="http://image16.hanatour.com/img/perfsale/r_tit10.gif" alt="쿠폰/예매권"></em><span>0</span></li>
-                                    <li class="tk_mileage"><em><img src="http://image16.hanatour.com/img/perfsale/r_tit11.gif" alt="마일리지"></em><span>0</span></li>
                                     <li class="tk_otherpays"><em><img src="http://image16.hanatour.com/img/perfsale/r_tit12.gif" alt="기타결제"></em><span>0</span></li>
                                     <li><em><img src="http://image16.hanatour.com/img/perfsale/r_titblank.gif" alt=""></em><span>&nbsp;</span></li>
                                     <li><em><img src="http://image16.hanatour.com/img/perfsale/r_titblank.gif" alt=""></em><span>&nbsp;</span></li>
-                                    <li class="tk_summinus"><em><img src="http://image16.hanatour.com/img/perfsale/r_tit15.gif" alt="총할인금액"></em><span>0</span></li>
+                                    <li class="tk_summinus"><em><img src="http://image16.hanatour.com/img/perfsale/r_tit15.gif" alt="총할인금액"></em><p></p><span>0</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -468,13 +515,13 @@ browser_Event();
                             <li>
                                 <em><img src="http://image16.hanatour.com/img/perfsale/h3_tit_seat01.gif" alt="관람일변경"></em> 
                                 <span>
-                                    <select id="selFlashDateAll" onchange="fdc_selFlashDateAllChange(this.value);" style="width: 200px;"><option selected="">날짜선택</option></select>
+                                    <select id="selFlashDateAll" onchange="selFlashDateAllChange(this.value);" style="width: 200px;"><option selected="">날짜선택</option></select>
                                 </span>
                             </li>
                             <li>
                                 <em><img src="http://image16.hanatour.com/img/perfsale/h3_tit_seat02.gif" alt="회차변경"></em> 
                                 <span>
-                                    <select id="selFlashTime" onchange="fdc_SelFlashTimeChange(this.value);" style="width: 200px;">
+                                    <select id="selFlashTime" onchange="SelFlashTimeChange(this.value);" style="width: 200px;">
                                     <option selected="" value="0">회차 선택</option>
                                     </select>
                                 </span>
@@ -573,6 +620,7 @@ browser_Event();
                 </div>
             </div>
             <!-- //제 2 단계 : 좌석선택 (좌석플래시) -->
+            
             <!-- 결과페이지 -->
             <div id="SuccessBoard" style="display: none;">
                 <div class="success">
@@ -614,13 +662,12 @@ browser_Event();
                                 <li class="bg"><em><strong>(+)금액</strong></em><span><strong id="sp_sumplus">&nbsp;</strong></span></li>
                                 <li><em>할인금액</em><span id="sp_disc">&nbsp;</span></li>
                                 <li><em>쿠폰/예매권</em><span id="sp_coupon">&nbsp;</span></li>
-                                <li><em>마일리지</em><span id="sp_mileage">&nbsp;</span></li>
                                 <li><em>기타결제</em><span id="sp_otherpays">&nbsp;</span></li>
                                 <li><em>&nbsp;</em><span>&nbsp;</span></li>
                                 <li><em>&nbsp;</em><span>&nbsp;</span></li>
                                 <li class="bg"><em><strong>(-)금액</strong></em><span><strong id="sp_sumninus">&nbsp;</strong></span></li>
                                 <li class="total"><em>총 결제금액</em><span><strong id="sp_result">&nbsp;</strong> 원</span></li>
-                                <li><em>결제수단</em><span id="sp_payinfo">&nbsp;</span></li>
+                                <li><em>결제수단</em><span id="sp_payinfo">무통장입금</span></li>
                                 <li id="bank_accbank" style="display:none;"><em>입금계좌/은행</em><span id="sp_bank_accbank">&nbsp;</span></li>
                                 <li id="bank_amttime" style="display:none;"><em>입금금액/마감</em><span id="sp_bank_amttime">&nbsp;</span></li>
                             </ul>

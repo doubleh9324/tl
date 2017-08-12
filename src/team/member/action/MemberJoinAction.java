@@ -70,9 +70,5 @@ public class MemberJoinAction implements Action {
 	      forward.setRedirect(false);
 	      return null;
    }
-   
-   
-   
-   
 
 }
