@@ -151,7 +151,7 @@ public class MusicalDAO {
 		String sql="";
 		try{
 			con=getConnection();
-			sql="select m1.musical_num,m1.name, m2.image,m2.grade from musical m1, musical_detail m2  where m1.musical_num = m2.musical_num order by 4 desc limit 0,10";
+			sql="select m1.musical_num,m1.name, m2.image,m2.grade from musical m1, musical_detail m2, playing p where m1.musical_num = m2.musical_num and substring(p.nc_code,3) = m1.musical_num order by 4 desc limit 0,10";
 			pstmt =con.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			while(rs.next()){
@@ -540,4 +540,67 @@ public class MusicalDAO {
 		return v;
 	}
 	
+	/* soon */
+	public List getSoonMusicalsLength(){
+		ArrayList length= new ArrayList();
+		Connection con=null;
+		PreparedStatement pstmt = null;
+		ResultSet rs=null;
+		String sql="";
+		try{
+			con=getConnection();
+			sql="select count(*) from musical m1, musical_detail m2 where m1.musical_num = m2.musical_num and m1.open_day>curdate()  and  m2.image != 'default-image.jpg'";
+			pstmt=con.prepareStatement(sql);
+			rs=pstmt.executeQuery();
+			if(rs.next()){
+				length.add("{length:"+rs.getString(1)+"}");
+			}
+		}catch(Exception e){
+			System.out.println("getSoonMusicalsLength占쎈퓠占쎄퐣 占쎌궎�몴占�: "+e);
+			
+		}finally{
+			if(rs!=null){try{rs.close();}catch(Exception e){e.printStackTrace();}}
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+		return length;
+	}
+	
+	public List<MusicalBean> getSoonMusicals(int count){
+		ArrayList<MusicalBean> soonList= new ArrayList<MusicalBean>();
+		Connection con=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		String sql="";
+		
+		try{
+			con=getConnection();
+			sql="select m.musical_num, m2.image, m.open_day, m.name, m.open_day from musical m , musical_detail m2 where m.musical_num=m2.musical_num and open_day> curdate() and m2.image!='default-image.jpg' order by 3 limit ?,4";
+			pstmt=con.prepareStatement(sql);
+			pstmt.setInt(1, count);
+			rs=pstmt.executeQuery();
+			if(rs.next()){
+				do{
+					MusicalBean mb = new MusicalBean();
+					mb.setMusical_num(rs.getString("musical_num"));
+					mb.setImage(rs.getString("image"));
+					mb.setName(rs.getString("name"));
+					mb.setOpen_day(rs.getString("open_day"));					
+					soonList.add(mb);
+				}while(rs.next());
+				return soonList;
+			}else{
+				return Collections.emptyList();
+			}
+			
+		}catch(Exception e){
+			System.out.println("getSoonMusicals占쎈퓠占쎄퐣 占쎌궎�몴占�: "+e);
+		}finally{
+			if(rs!=null){try{rs.close();}catch(Exception e){e.printStackTrace();}}
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+		
+		return Collections.emptyList();
+	}
 }

@@ -16,16 +16,20 @@ public class MusicalBean {
 	private String ganre;
 	private double grade;
 	private String playing;
+	private double percent;
 	
+	public double getPercent() {
+		return percent;
+	}
+	public void setPercent(double percent) {
+		this.percent = percent;
+	}
 	public String getPlaying() {
 		return playing;
 	}
 	public void setPlaying(String playing) {
 		this.playing = playing;
 	}
-
-	
-	
 	public String getMusical_num() {
 		return musical_num;
 	}

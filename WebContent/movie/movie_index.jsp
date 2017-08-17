@@ -4,13 +4,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="css/movie_index.css">
-<style type="text/css">
-
-</style>
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-
 	imageFunction(0);
 	reservFunction();
 	setInterval(autoChangeFuction, 7000);
@@ -168,26 +164,24 @@ function soonMovieFunction(){
 				var count =0;
 				var count2 =0;
 				
-				$.each(data.soonLength, function(key,value){
-					
-					var page_count=Math.floor(value.length/4)+(value.length%4==0?0:1);
-					if(page_count==1){
-						$("#prev_btn").css("display","none");
-						$("#next_btn").css("display","none");
-					}
-					$("#contents").append("<input type='hidden' value='"+page_count+"' id='last_num' class='last_num'>")
-					
-					
-					while(count<page_count){
-						var left = 1080*(count);
-							
-							$("#contents").append("<ul class='contents' id='contents_"+count+"'"+" style='left:"+left+"px;'></ul>");
-							$("#contents").append("<input type='hidden' value='"+1080*count+"' id='"+count+"_ori_left'>")
-							
+				var page_count=Math.floor(data.soonList.length/4);
+				
+				if(page_count==0){page_count=1}
+				if(page_count==1){
+					$("#prev_btn").css("display","none");
+					$("#next_btn").css("display","none");
+				}
+				$("#contents").append("<input type='hidden' value='"+page_count+"' id='last_num' class='last_num'>")
+				
+				while(count<page_count){
+					var left = 1080*(count);
 						
-						count=count+1;
-					}
-				});
+						$("#contents").append("<ul class='contents' id='contents_"+count+"'"+" style='left:"+left+"px;'></ul>");
+						$("#contents").append("<input type='hidden' value='"+1080*count+"' id='"+count+"_ori_left'>")
+					
+					count=count+1;
+				}
+				
 				var check=1;
 				$.each(data.soonList, function(key,value){
 					check=key+1;
@@ -213,25 +207,25 @@ function soonMovieFunction(){
 
 //////////////////////////////////////////////////////////////
 //버튼눌렀을 때 애니메이션
-function nextChangeFunction(cate){
+function nextChangeFunction(){
 	
-		var num = Number($("#curr_num").val());
+		var num = Number($("#curr_num_2").val());
 		var last_num=Number($("#last_num").val());
 		
-		if(num==$("#last_num_mo").val()){
-			var last_num=Number($("#last_num_mo").val());
+		if(num==$("#last_num").val()){
+			var last_num=Number($("#last_num").val());
 			 for(var i=0;i<last_num;i=i+1){
-				var change_left=Number($("#"+i+"_ori_left_mo").val())+(1080*(num-1));
+				var change_left=Number($("#"+i+"_ori_left").val())+(1080*(num-1));
 				
-				$("#contents_mo_"+i).animate({
+				$("#contents_"+i).animate({
 					left: change_left+"px"
 				});
-				$("#"+i+"_ori_left_mo").val(change_left);
+				$("#"+i+"_ori_left").val(change_left);
 				
 				
 			}
 		 
-			$("#curr_num_mo").val(1);
+			$("#curr_num_2").val(1);
 			 return false;
 			
 		}
@@ -246,63 +240,43 @@ function nextChangeFunction(cate){
 		}
 			 
 		
-		$("#curr_num").val(num+1);
-	/* 	
-		if(Number($('#curr_num').val())>1){ 
-			
-			$('#prev_btn').css("display","block");
-		}
-		if($('#curr_num').val()==$("#last_num").val()){ 
-			$('#next_btn').css("display","none");
-		} */
-	
-	
+		$("#curr_num_2").val(num+1);
 
 }
 
 
 function prevChangeFunction(){
 
-		/* if(Number($('#curr_num').val())>1){ 
-			$('#next_btn').css("display","block");
-		} */
+	var num = Number($("#curr_num_2").val());
+	var last_num=Number($("#last_num").val());
+	
+	if(num==1){
+		var l_num=Number($("#last_num").val());
 		
-		var num = Number($("#curr_num").val());
-		var last_num=Number($("#last_num").val());
+		for(var j=0;j<l_num;j=j+1){
+			var change_left=Number($("#"+j+"_ori_left").val())-(1080*(l_num-1));
 		
-		if(num==1){
-			var l_num=Number($("#last_num_mo").val());
-			
-			for(var j=0;j<l_num;j=j+1){
-				var change_left=Number($("#"+j+"_ori_left_mo").val())-(1080*(l_num-1));
-			
-				$("#contents_mo_"+j).animate({
-					left: change_left+"px"
-				});
-				$("#"+j+"_ori_left_mo").val(change_left);
-			}
-			$("#curr_num_mo").val(l_num);
-			 return false;
-		}
-			
-		
-		for(var j=0;j<last_num;j=j+1){
-			var change_left=Number($("#"+j+"_ori_left").val())+1080;
 			$("#contents_"+j).animate({
 				left: change_left+"px"
 			});
 			$("#"+j+"_ori_left").val(change_left);
 		}
-		
-		$("#curr_num").val(num-1);
-		
-		
-/* 		if(Number($('#curr_num').val())==1){ 
-			$('#prev_btn').css("display","none");
-		} */
+		$("#curr_num_2").val(l_num);
+		 return false;
+	}
 		
 	
+	for(var j=0;j<last_num;j=j+1){
+		var change_left=Number($("#"+j+"_ori_left").val())+1080;
+		$("#contents_"+j).animate({
+			left: change_left+"px"
+		});
+		$("#"+j+"_ori_left").val(change_left);
+	}
 	
+	$("#curr_num_2").val(num-1);
+	
+
 }
 </script>
 </head>

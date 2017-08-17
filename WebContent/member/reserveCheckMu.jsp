@@ -179,7 +179,8 @@ function openChangeIpointPop() {
 			<ul>
 				<li class="line_o">
 					<div class="pos_1">
-						<div class="tit_Ipont"><img src="https://sslimage.interpark.com/_mypage_n/title/tit_ipoint.gif" alt="I-Point"></div>
+						<div class="tit_Ipont">
+						</div>
 						<div class="info_r">
 							<div id="ipoint1"><a href="#">${bean.mPoint }</a></div>
 						</div>

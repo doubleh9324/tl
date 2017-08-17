@@ -100,6 +100,20 @@ public class MusicalFrontController extends HttpServlet{
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}else if(command.equals("/MusicalSoonAction.mu")){
+			action = new MusicalSoonAction();
+			try {
+				forward= action.excute(req, resp);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/MusicalPlaying4Action2.mu")){
+			action = new MusicalPlaying4Action2();
+			try {
+				forward= action.excute(req, resp);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		

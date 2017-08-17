@@ -1,5 +1,321 @@
 @CHARSET "UTF-8";
 @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css); 
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* s: 랭킹 */
+
+#rank{
+/* 	border: solid red 1px; */
+	width:960px;
+	height:250px;
+}
+
+#rank_title{
+	
+	width:170px;
+	height: 35px;
+	
+	font-weight: 200;
+    font-size: 30px;
+    color: #3a3a3a;
+    
+	margin-top:25px;
+	float: left;
+	
+	
+}
+
+#rank_head{
+	width:300px;
+	height: 27px;
+	
+	color: #6f6f6f;
+	
+	font-size: 17px;
+	margin-top:35px;
+	float: left;
+	cursor: pointer;
+	
+}
+
+
+
+
+
+#rank_img{
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	
+}
+
+#rank_hr{
+	width:960px;
+	border-top: solid 1px #c0c0c0;
+	
+	float: left;
+	margin-bottom: 20px;
+}
+
+span#bar{
+	margin-right: 5px;
+	margin-left: 5px;
+	
+}
+
+#rank_box{
+	
+	width:960px;
+	height:235px;
+	float:left;
+	
+}
+
+#rank_box a{
+	width:140px;
+	height:200px;
+	float:left;
+	
+	color: #6f6f6f;
+	font-size: 13px;
+	margin-top:10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+
+
+
+p{
+	margin-top: 10px;
+	font-family:  "Nanum Gothic","Malgun Gothic";  
+	font-weight: bolder;
+	
+}
+
+.rank_img{
+	border: solid 1px #cfcfcf;
+}
+
+/* e: 랭킹 */
+
+/* S: 티켓오픈 */
+#open{
+	
+	width:470px;
+	height:260px;
+	font-weight: 200;
+    font-size: 21px;
+    color: #3a3a3a;
+    padding-left:20px;
+    float: left;   
+}
+
+#open_title{
+	width:150px;
+	height:25px;
+	float: left;
+	
+}
+
+#open_box{
+	width:470px;
+    height:208px;
+    background-image: url("../img/TicketOpenBanner.png"); 
+    margin-top: 10px;
+    border: solid 1px #cfcfcf;
+    font-size: 10px;
+}
+
+.open_img{
+	width:50px;
+    height:20px;
+    margin-top: 42px;
+    margin-left:170px;
+    float: left;
+    cursor: pointer;
+	
+}
+
+#open_info{
+	font-family:  "Nanum Gothic","Malgun Gothic";   
+	font-weight: bold; 
+	width: 210px;
+	height:20px;
+	font-size:13px;
+	float: left;
+}
+
+
+
+#open_hr{
+	width:470px;
+	
+}
+
+#open li a{
+	height:17px;
+}
+
+#open li a:HOVER{
+	color: #ff7d52;
+	text-decoration: none;
+	font-weight: lighter;
+}
+
+#open a:LINK{
+	font-weight:normal;
+	color: #6f6f6f;
+	font-weight: lighter;
+}
+
+#open a:VISITED{
+	color: #6f6f6f;
+	font-weight: lighter;
+}
+
+
+/* e: 티켓오픈 끝*/
+
+/* s : 뉴스 인터뷰 */
+
+#news {
+	
+	width:470px;
+	height:260px;
+	font-weight: 200;
+    font-size: 21px;
+    color: #3a3a3a;
+    padding-right:20px;
+    float: right;   
+}
+
+#news_title{
+	
+	width:220px;
+	height:25px;
+	float: left;
+	
+}
+
+#news_box{
+	width:470px;
+    height:208px;
+    font-family:  "Nanum Gothic","Malgun Gothic";  
+    margin-top: 10px;
+    border: solid 1px #cfcfcf;
+    background-image: url("../img/news.png");
+}
+
+#news_img{
+	float: right;
+	margin-top: 5px;
+	cursor: pointer;
+	
+}
+
+
+.news_list1{
+	padding-left: 25px;
+	width:300px;
+	margin: 40px 10px 40px;
+	font-size:20px;
+	font-weight: bolder;
+	color:#ff7d52;
+	float: left;
+	font-weight: 100;
+	
+}
+
+.news_list2{
+	padding-left: 25px;
+	width:300px;
+	margin: 0 10px 50px;
+	font-size:15px;	
+	color:#3a3a3a;
+	float: left;
+}
+
+.news_list2 sapn{
+	font-size:18px;	
+}
+
+
+
+/*
+.news_list2 li a{
+	width:220px;
+	line-height: 25px;
+	text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal !important;
+    display: block;
+    color:#3a3a3a;
+}
+
+.news_list2 li a:HOVER{
+	text-decoration: underline;
+}
+
+*/
+
+/* e : 뉴스 인터뷰 끝*/
+
+
+/* S: 이 주의 상영작 */
+
+div#category_week{
+	width: 980px;
+	height: 980px;
+	
+}
+
+div#weekBox1{
+	border:solid 1px #cfcfcf;
+	width: 960px;
+	height: 330px;
+	margin-bottom: 20px;
+	
+}
+
+div#weekBox2{
+	
+/* 	border: solid 1px #cfcfcf; */
+	width: 980x;
+	height: 340px;
+	margin-bottom: 20px;
+	
+}
+
+div#weekBox3{
+	
+	width: 960px;
+	height: 150px;
+	padding-right: 1px;
+	
+}
+
+.week_smallbox{
+	float:left;
+}
+
+
+img#content_w{
+	width:225px;
+	height: 340px;
+	margin-left:9px;
+	margin-right:8px;
+	border: solid 1px #cfcfcf;
+	
+}
+
+
+img#content_w:HOVER{
+	cursor: pointer;
+}
+
+/* E: 이 주의 상영작*/
 
 .clear{
 	clear: both;
@@ -183,12 +499,14 @@ div#btn_2{
 }
 
 div#btn img,div#btn_2 img{
-		position: absolute;
-	
+	position: absolute;
+
 }
 div#btn img,div#btn_2 img:HOVER{
 	cursor: pointer;
-	
+}
+div#btn img, div#btn_2 img{
+	top: 560px;
 }
 
 img#next_btn_mo, img#next_btn_mu{

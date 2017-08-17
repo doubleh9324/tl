@@ -673,5 +673,43 @@ public class MovieDAO {
 	       return movieList;
 	   }
 	   
+	   /* soon2 */
+		public List<MovieBean> getSoonMovies2(int count){
+			ArrayList<MovieBean> soonList= new ArrayList<MovieBean>();
+			Connection con=null;
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			String sql="";
+			
+			try{
+				con=getConnection();
+				sql="select m2.image, m.open_day, m.name, m.open_day from movie m , movie_detail m2 where m.movie_num=m2.movie_num and open_day> curdate() and m2.image!='default-image.jpg' order by 3 limit ?,4";
+				pstmt=con.prepareStatement(sql);
+				pstmt.setInt(1, count);
+				rs=pstmt.executeQuery();
+				if(rs.next()){
+					do{
+						MovieBean mb = new MovieBean();
+						
+						mb.setImage(rs.getString("image"));
+						mb.setName(rs.getString("name"));
+						mb.setOpen_day(rs.getString("open_day"));
+						soonList.add(mb);
+					}while(rs.next());
+					return soonList;
+				}else{
+					return Collections.emptyList();
+				}
+				
+			}catch(Exception e){
+				System.out.println("getSoonMovies2�뿉�꽌 �뿉�윭: "+e);
+			}finally{
+				if(rs!=null){try{rs.close();}catch(Exception e){e.printStackTrace();}}
+				if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+				if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+			}
+			
+			return Collections.emptyList();
+		}
 	
 }

@@ -198,6 +198,56 @@ public class CheckedSeatInfo implements Action{
 				application.setAttribute("checked", checked);
 				System.out.println("추가");
 				
+				
+				if(flag.equals("mo")){
+					Map<String, Object> newmap = new HashMap<>();
+					for(int s=0; s<seats.length; s++){
+						newmap.put("seat_fl", seats[s].substring(0, 1));
+						newmap.put("seat_no", seats[s].substring(1));
+						checkedSeats.add(newmap);
+					}
+				}else if(flag.equals("mu")){
+					Map<String, Object> newmap = new HashMap<>();
+					for(int s=0; s<seats.length; s++){
+						newmap.put("seat_bl", seats[s].substring(8, 9));
+						newmap.put("seat_no", seats[s].substring(0, 8));
+						checkedSeats.add(newmap);
+					}
+				}
+				
+				
+				jsonObject.put("checkedFlag", "n");
+				System.out.println(checkedSeats.size() + " 돌려줄 리스트 크기3 n");
+				jsonObject.put("checkedSeats", checkedSeats);
+				
+				for(int t=0; t<checkedSeats.size(); t++){
+					System.out.println(t +": "+checkedSeats.get(t).get("seat_no"));
+				}
+
+			}else{
+				jsonObject.put("checkedFlag", "y");
+				System.out.println(checkedSeats.size() + " 돌려줄 리스트 크기3 y");
+				jsonObject.put("checkedSeats", checkedSeats);
+				
+				for(int t=0; t<checkedSeats.size(); t++){
+					System.out.println(t +": "+checkedSeats.get(t).get("seat_no"));
+				}
+			}
+		}
+		
+			/*
+			if(isDupl == "n"){
+				//조회를 마쳤으나 일치하는 정보가 없으므로 새로운 선택 목록에 추가
+				Map<String, Object> addmap = new HashMap<>();
+				addmap.put("pcode", pcode);
+				addmap.put("m_num", m_num);
+				addmap.put("screen_name", screen_name);
+				addmap.put("viewdate", viewdate);
+				addmap.put("seats", seats);
+				checked.add(addmap);
+				application.setAttribute("checked", checked);
+				System.out.println("추가");
+				
 				Map<String, Object> newmap = new HashMap<>();
 				for(int s=0; s<seats.length; s++){
 					newmap.put("seat_bl", seats[s].substring(8, 9));
@@ -222,11 +272,10 @@ public class CheckedSeatInfo implements Action{
 					System.out.println(t +": "+checkedSeats.get(t).get("seat_no"));
 				}
 			}
-
-			
-
 		}
 	
+	*/
+			
 		ActionForward forward=new ActionForward();
 	    forward.setRedirect(false); 
 	     

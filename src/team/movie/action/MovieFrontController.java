@@ -125,6 +125,20 @@ public class MovieFrontController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}else if(command.equals("/MovieSoonAction2.mo")){
+			action = new MovieSoonAction2();
+			try {
+				forward= action.excute(req, resp);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}		
+		}else if(command.equals("/MoviePlaying4Action2.mo")){
+			action = new MoviePlaying4Action2();
+			try {
+				forward= action.excute(req, resp);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		if(forward!=null){

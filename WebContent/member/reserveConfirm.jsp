@@ -28,85 +28,48 @@ scrollbar-shadow-color:#C3C3C3;
 <script type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ua/ec.js"></script>
 <script type="text/javascript" async="" src="http://www.google-analytics.com/analytics.js"></script>
 <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5QCJFLB"></script>
-<script src="https://connect.facebook.net/signals/config/135611513637810?v=2.7.18" async=""></script>
-<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
 <script language="javascript" src="http://ticketimage.interpark.com/js/interpark_pcid.js"></script>
-
-<script language="javascript" src="js/Egs.js"></script>
-<script language="javascript" src="js/block.js"></script>
-<script language="javascript" src="js/MyIPoint.js"></script>
-<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="js/SearchAutoComplete.js"></script>
-<script type="text/javascript" src="js/BookAPI.js"></script>
-<script language="javascript" src="js/prototype_1_7_2.js"></script>
-<script type="text/javascript" src="js/TPBanner_2015.js"></script>
-<script type="text/javascript" src="js/MainShoppingBar.js"></script>
-<script language="javascript" src="js/layerEffect.js"></script>
-<script type="text/javascript" src="js/AddTPFooter.js"></script>
-<script type="text/javascript" src="js/Cancel.js"></script>
 
 <script type="text/javascript">
 	jQuery.noConflict();
 	var j$ = jQuery;
 	
-	
 	function check_and_submit(){
 		if(document.rs.BYear.value==""){
 			alert("년도를 선택해주세요.");
-			
 			document.rs.BYear.foucus();
 		}
-
 		if(document.rs.BMonth.value==""){
 			alert("월을 선택해주세요");
 			document.rs.BMonth.foucus();
-			
 		}else{
 			document.rs.submit();
-			
 		}
-		
 	}
 	
 	function deletePop(r_num){
-		
-		
 		window.open("./ReserveDelete.me?r_num="+r_num, "", "width=450, height=200");
-		
 	}
-	
-	
 	
 </script>
 
 
-
-
-
 <link rel="stylesheet" href="css/join.css" />
-
 <link rel="stylesheet" href="css/mypage_new_ssl.css" />
 <link rel="stylesheet" href="css/mypage_ssl.css" />
 <link rel="stylesheet" href="css/mypage.css" />
-
 <link rel="stylesheet" href="css/reserve.css" />
 <link rel="stylesheet" href="css/reserveconfirm.css" />
 <link rel="stylesheet" href="css/common.css" />
 
-
 </head>
 
-
 <%
-
 	//세션값 가져오기
    String id=(String)session.getAttribute("id");
 	String pass=(String)session.getAttribute("pass");
 	String r_num = request.getParameter("r_num");
    //세션값이 없으면  ./MemberLogin.me
-  
-   
-
 %> 
 
 <body>
@@ -208,7 +171,7 @@ function openChangeIpointPop() {
  
 			<!-- menu left S -->
 			<div class="ml_box">
-				<h3><img src="https://sslimage.interpark.com/_mypage_n/ml_list_buying.gif" alt="예약내역"></h3>
+				<h3><img src="img/MYPAGE.jpg" alt="예약내역"></h3>
 				<ul class="list">
 					<li><a href="./MemberReservation.me">예약조회</a></li>
 		
@@ -219,7 +182,7 @@ function openChangeIpointPop() {
 				<h3><img src="https://sslimage.interpark.com/_mypage_n/ml_list_review.gif" alt="기타"></h3>
 				<ul class="list">
 					<li><a href="./ReviewGetFromMember.rv?name=${mbean.name}&mPoint=${mbean.mPoint}">리뷰</a></li>
-					<li><a href="#">서비스게시판</a></li>
+					<li><a href="index.jsp?center=board/qna_board_list.jsp">내 문의 내역</a></li>
 					
 				</ul>
 

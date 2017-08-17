@@ -7,7 +7,8 @@
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	imageFunction(0)
+	reservFunction();
+	imageFunction(0);
 	setInterval(autoChangeFuction, 7000);
 	getMuscialByGradeFunction();
 	adBanner();
@@ -15,8 +16,6 @@ $(document).ready(function(){
 	$("#ad_banner").click(function(){
 		var ad_m_num = $("#ad_m_num").val();
 		location.href="./MovieContentAction.mo?num="+ad_m_num;
-		
-		
 	});
 	
 	$('#picture').click(function(){
@@ -28,7 +27,6 @@ function autoChangeFuction(){
 	var next_num = Number($('#next_num').val());
 	if(next_num==4){ next_num=0;}
 	imageFunction(next_num);
-	
 }
 
 function imageFunction(num){  
@@ -43,7 +41,6 @@ function imageFunction(num){
 	$("#picture").append('<input type="hidden" id="curr_num" value='+m_num[num]+'>');
 	getImageInfoFunction(m_num[img_num]);
 }
-
 
 function getImageInfoFunction(m_num){
 	var setflag=$("#setFlag").val();
@@ -63,8 +60,6 @@ function getImageInfoFunction(m_num){
 				
 			},
 			error: function(xhr, status, error){
-				
-			
 			}
 		});
 	}
@@ -88,7 +83,6 @@ function getMuscialByGradeFunction(){
 					 			+'<img src="MusicalImage/'+value.image+'" onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'"><br>'
 					 			+'<span onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'">'+name+'</span></div>';
 					 $(".ori_con").prepend(ori_code);	
-					
 				 }else if(value.g_code=='lic'){
 					 var lic_code='<div id="lic_object">'
 				 			+'<img src="MusicalImage/'+value.image+'" onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'"><br>'
@@ -99,23 +93,15 @@ function getMuscialByGradeFunction(){
 				 			+'<img src="MusicalImage/'+value.image+'" onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'"><br>'
 				 			+'<span onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'">'+name+'</span></div>';
 					 $(".non_con").prepend(non_code);
-
 				 }else{
 					 var cre_code='<div id="cre_object">'
 				 			+'<img src="MusicalImage/'+value.image+'" onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'"><br>'
 				 			+'<span onclick="location.href='+"'"+'./MusicalContentAction.mu?num='+value.musical_num+"'"+'">'+name+'</span></div>';
 					 $(".cre_con").prepend(cre_code);
-
 				 }
 			 });
-			
-
-
-
 			},
 			error: function(xhr, status, error){
-				
-			
 			}
 		});
 	}
@@ -151,6 +137,36 @@ function gradeFunction(){
 }
 
 ////////////////////////////////////////////////////////
+function reservFunction(){
+	var setflag=$("#setFlag").val();
+	if(setflag!='y'){
+		jQuery.ajax({
+			type:"POST",
+			url:"./getOrderReservMu.rs",
+			dataType:"JSON",
+			
+			success:function(data){
+				$("#rank_ul").html("");
+				$("#gradeOrder").css("text-decoration","none")
+				$("#reserveOrder").css("text-decoration","underline")
+				
+				$.each(data.reservList, function(key,value){
+					var name = value.name;
+					if(name.length>12){name=name.substring(0,11)+"...";}
+			
+					var li_code='<li id="rank_li">'+(key+1)+'.'+'<a href="./MusicalContentAction.mu?num='+value.musical_num+'">'+name+'</a><span>'+value.percent+'%</span></li>';
+					$("#rank_ul").append(li_code);
+				});
+				
+			},
+			error: function(xhr, status, error){
+				
+			}
+		});
+	}
+}
+
+////////////////////////////////////////////////////////
 
 function adBanner(){
 	var random = Math.floor(Math.random() * 5);
@@ -158,9 +174,6 @@ function adBanner(){
 	$("#ad_banner").append('<img src="icons/ad_'+random+'.jpg"><input type="hidden" id="ad_m_num" value="'+random_m_num[random]+'">');
 }
 /////////////////////////////////////////////////////
-
-
-
 
 </script>
 </head>
@@ -174,16 +187,6 @@ function adBanner(){
 			</div>
 			
 			<ul id="rank_ul">
-				<li id="rank_li">1.1234</li>
-				<li id="rank_li">2.1234</li>
-				<li id="rank_li">3.1234</li>
-				<li id="rank_li">4.1234</li>
-				<li id="rank_li">5.1234</li>
-				<li id="rank_li">6.1234</li>
-				<li id="rank_li">7.1234</li>
-				<li id="rank_li">8.1234</li>
-				<li id="rank_li">9.1234</li>
-				<li id="rank_li">10.1234</li>
 			</ul>
 			
 		</div>
@@ -204,7 +207,6 @@ function adBanner(){
 		</div>
 	</div>
 
-
 <div id="lic_div">
 	<div id="mu_ganre">라이센스 공연</div>
 	<div class="clear"></div>
@@ -213,7 +215,6 @@ function adBanner(){
 		<div class="clear"></div>
 	</div>	
 </div>
-
 
 	<div id="non_div">
 		<div id="mu_ganre">넌버벌 공연</div>

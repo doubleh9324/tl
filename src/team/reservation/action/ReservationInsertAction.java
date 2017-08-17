@@ -61,7 +61,7 @@ public class ReservationInsertAction implements Action{
 		memberDao.updateMemberPoint(member_num, usepoint*(-1));
 		
 		JSONObject jsonObject = new JSONObject();
-		//jsonObject.put("resultRsb", resultRsb);
+		jsonObject.put("resultRsb", rsb);
 		
 		ActionForward forward=new ActionForward();
 		forward.setRedirect(false);

@@ -29,30 +29,19 @@ scrollbar-shadow-color:#C3C3C3;
 <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5QCJFLB"></script>
 <script language="javascript" src="http://ticketimage.interpark.com/js/interpark_pcid.js"></script>
 
-
 <script type="text/javascript">
 	jQuery.noConflict();
 	var j$ = jQuery;
 </script>
 
-
-
-
-
 <link rel="stylesheet" href="css/join.css" />
-
 <link rel="stylesheet" href="css/mypage_new_ssl.css" />
 <link rel="stylesheet" href="css/mypage_ssl.css" />
 <link rel="stylesheet" href="css/mypage.css" />
-
-
 <link rel="stylesheet" href="css/reserve.css" />
-
 <link rel="stylesheet" href="css/common.css" />
 
-
 </head>
-
 
 <%
 
@@ -62,22 +51,15 @@ scrollbar-shadow-color:#C3C3C3;
 	String r_num = request.getParameter("r_num");
 	
    //세션값이 없으면  ./MemberLogin.me
-  
-   
 
 %> 
 
 <body>
 
-<style>
-body {}
-</style>
-<!-- //Header -->
 
 <!-- Navigation -->
 <script type="text/javascript">
 	var navigation = "> 마이페이지";
-	
 	var lastSlash = document.URL.lastIndexOf("/");
 		
 	if (document.URL.substring(lastSlash).indexOf("memberjoin.do?_method=upMemberFront") != -1){
@@ -105,12 +87,6 @@ body {}
 
 	<!-- ###Start of 980### -->
 	<div class="IP_cont_980">
-		
-
-
-
-
-
 		<div class="MPleft_area">
 
 
@@ -145,7 +121,7 @@ function openChangeIpointPop() {
     <div class="mypage">
        <form action="./MemberModifyAction.me" method="post" id="join">
        	<input type="hidden" name="idd" value="<%=id %>">
-        <h3><img src="https://sslimage.interpark.com/_mypage_n/title/tit_mypage.gif" alt="마이페이지"></h3>
+       	<h3><img src="img/MYPAGE.jpg" alt="기타"></h3>
         <div class="level">
             <div class="myinfo_txt">
                 <span class="st">${bean.name }님!</span>&nbsp;안녕하세요^^)/<br>
@@ -158,7 +134,9 @@ function openChangeIpointPop() {
 			<ul>
 				<li class="line_o">
 					<div class="pos_1">
-						<div class="tit_Ipont"><img src="https://sslimage.interpark.com/_mypage_n/title/tit_ipoint.gif" alt="I-Point"></div>
+						<div class="tit_Ipont">
+						<img src="img/lpoint.jpg" alt="L-Point">
+						</div>
 						<div class="info_r">
 							<div id="ipoint1"><a href="#">${bean.mPoint }</a></div>
 						</div>
@@ -180,18 +158,15 @@ function openChangeIpointPop() {
 		
 					<li><a href="#">예약취소</a></li>
 				</ul>
-				
 	
+				
 				<h3><img src="https://sslimage.interpark.com/_mypage_n/ml_list_review.gif" alt="기타"></h3>
 				<ul class="list">
 					<li><a href="./ReviewGetFromMember.rv?name=${bean.name}&mPoint=${bean.mPoint}">리뷰</a></li>
-					<li><a href="#">서비스게시판</a></li>
-					
+					<li><a href="index.jsp?center=board/qna_board_list.jsp">내 문의 내역</a></li>
 				</ul>
 
 			</div>
-		
-			
 		</div>
 
 	<!--menu left E  -->
@@ -308,29 +283,8 @@ function openChangeIpointPop() {
 
 
 					</div>		
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 	</div>
-
-
 </div><!-- //INTERPARK -->
-
-
 
 <!-- 모디파이체크 modifyCheck -->
 
@@ -345,7 +299,4 @@ function openChangeIpointPop() {
 	</script>
 
 </body>
-
-
-
 </html>

@@ -5,7 +5,6 @@
 	margin:0;
 	padding:0;
 }
-
 .clear{
 	clear: both;
 }
@@ -16,32 +15,26 @@ div#rank_div{
     font-family: 'Nanum Gothic', sans-serif ;
     font-weight: bold;
 }
-
 div#rank{
 	width:300px;
 	height:590px;
 	float:left;
 	margin: 10px 10px 0px 10px;
 }
-
 div#picture{
 	height:590px;
 	width:680px;	
 	float:right;
-
 	margin: 10px 0px 0px 0px;
-
 }
 div#picture:HOVER{
 	cursor: pointer;
 	opacity:0.9;
 }
-
 div#rank_head{
 	width:300px;
 	height:150px;
 	background-color: #383838;
-	
 }
 div#rank_head img#boxoffice{
 	margin-top:50px;
@@ -67,22 +60,17 @@ ul#rank_ul{
 	width:300px;
 	height:440px;
 }
-
-
 li#rank_li{
-	height: 42px;
+	height: 40px;
 	list-style: none;
-
 	line-height: 28px;
 	text-align: left;
 	font-size: 14px;
 	margin: 3px 3px;
 	padding: 0 5px;
 }
-
 li#rank_li span{
 	float:right;
-	
 }
 li#rank_li:HOVER{
 	border: 3px solid orange;
@@ -92,25 +80,20 @@ li#rank_li:HOVER{
 	margin:0;
 	line-height: 22px;
 }
-
 li#rank_li:HOVER img{
 	padding: 0;
 }
 li#rank_li a{
 	text-decoration: none;
 	color: #333;
-	
 }
 li#rank_li img{
 	width: 20px;
 	height: 20px;
 	padding:3px 0 0 0;
-	
 }
 
-
 /*////////////////////////////////////////////////////////  */
-
 div#info{
 	margin-left: 20px;
 	margin-top:530px;
@@ -118,7 +101,6 @@ div#info{
 	text-align: left;
 	font-family: 'Jeju Gothic', serif; 
 }
-
 span#subject{
 	color: #f8f8f8;
 	font-size: 30px;
@@ -140,7 +122,6 @@ div#mid_category{
 div#mid_subject{
 	width: 960px;
 	height: 80px;
-
 }
 div#subject_left{
 	width:280px;
@@ -155,40 +136,30 @@ div#subject_center{
 	height: 80px;
 	display:inline-block;
 	float:left;
-
-
 }
 div#subject_center div{
 	width:150px;
 	height: 60px;
-	
 	color: #6f6f6f;
 	font-size: 30px;
 	margin-top:25px;
-
 }
-
 div#subject_right{
 	width:280px;
 	height: 80px;
 	margin-top: 1px;
 	background-image: url("../icons/subject_right.jpg");
 	display:inline-block;
-	
 }
-
 img#content{
 	width:225px;
 	height: 340px;
 	margin-left:5px;
 	margin-right:5px;
-	
 }
-
 img#content:HOVER{
 	cursor: pointer;
 }
-
 div#contents{
 	width: 940px;
 	height: 360px;
@@ -196,47 +167,35 @@ div#contents{
 	position: relative;
 	overflow: hidden;
 }
-
-
 ul.contents{
 	width: 100%;
 	height: 350px;
 	position: absolute;
 	top:0;
 	left:0;
-	
 }
-
 ul.contents li{
 	float: left;
 	list-style: none;
 	position: relative;
 }
-
 div#content_body{
 	width:100%;
 	margin: 0 auto;
 	text-align: left;
 }
-
 div#btn{
 	position: absolute;
 	top: 1000px;
 	width: 980px;
 	z-index: 3;
-	
 }
-
-
 div#btn img{
-		position: absolute;
-	
+	position: absolute;
 }
 div#btn img{
 	cursor: pointer;
-	
 }
-
 img#next_btn{
 	left:100%;
 }
@@ -246,7 +205,6 @@ div#btn_div{
 	width: 1000px;
 	margin: 0 auto;
 }
-
 /*//////////////////////////////////////////////  */
 div#ad_banner{
 	width:980px;
@@ -256,7 +214,6 @@ div#ad_banner{
 div#ad_banner img{
 	width:960px;
 }
-
 div#ad_banner:HOVER {
 	cursor: pointer;
 }

@@ -35,65 +35,37 @@ scrollbar-shadow-color:#C3C3C3;
 	jQuery.noConflict();
 	var j$ = jQuery;
 	
-	
 	function check_and_submit(){
 		if(document.rs.BYear.value==""){
 			alert("년도를 선택해주세요.");
 			
 			document.rs.BYear.focus();
 		}
-
 		else if(document.rs.BMonth.value==""){
 			alert("월을 선택해주세요");
 			document.rs.BMonth.focus();
-			
 		}else{
 			document.rs.submit();
-			
 		}
-		
 	}
-	
 	function deletePop(r_num){
-		
-		
 		window.open("./ReserveDelete.me?r_num="+r_num, "", "width=450, height=200");
-		
 	}
-
-	
-	
 </script>
 
-
-
-
-
 <link rel="stylesheet" href="css/join.css" />
-
 <link rel="stylesheet" href="css/mypage_new_ssl.css" />
 <link rel="stylesheet" href="css/mypage_ssl.css" />
 <link rel="stylesheet" href="css/mypage.css" />
-
-
 <link rel="stylesheet" href="css/reserve.css" />
-
 <link rel="stylesheet" href="css/common.css" />
-
-
 </head>
-
-
 <%
-
 	//세션값 가져오기
    String id=(String)session.getAttribute("id");
 	String pass=(String)session.getAttribute("pass");
 	String r_num = request.getParameter("r_num");
    //세션값이 없으면  ./MemberLogin.me
-  
-   
-
 %> 
 
 <body>
@@ -103,7 +75,6 @@ scrollbar-shadow-color:#C3C3C3;
 <!-- Navigation -->
 <script type="text/javascript">
 	var navigation = "> 마이페이지";
-	
 	var lastSlash = document.URL.lastIndexOf("/");
 		
 	if (document.URL.substring(lastSlash).indexOf("memberjoin.do?_method=upMemberFront") != -1){
@@ -166,7 +137,7 @@ function openChangeIpointPop() {
     <div class="mypage">
        <form action="./MemberModifyAction.me" method="post" id="join">
        	<input type="hidden" name="idd" value="<%=id %>">
-        <h3><img src="https://sslimage.interpark.com/_mypage_n/title/tit_mypage.gif" alt="마이페이지"></h3>
+       	<h3><img src="img/MYPAGE.jpg" alt="기타"></h3>
         <div class="level">
             <div class="myinfo_txt">
                 <span class="st">${bean.name }님!</span>&nbsp;안녕하세요^^)/<br>
@@ -179,7 +150,9 @@ function openChangeIpointPop() {
 			<ul>
 				<li class="line_o">
 					<div class="pos_1">
-						<div class="tit_Ipont"><img src="https://sslimage.interpark.com/_mypage_n/title/tit_ipoint.gif" alt="I-Point"></div>
+						<div class="tit_Ipont">
+						<img src="img/lpoint.jpg" alt="L-Point">
+						</div>
 						<div class="info_r">
 							<div id="ipoint1"><a href="#">${bean.mPoint }</a></div>
 						</div>
@@ -206,23 +179,16 @@ function openChangeIpointPop() {
 				<h3><img src="https://sslimage.interpark.com/_mypage_n/ml_list_review.gif" alt="기타"></h3>
 				<ul class="list">
 					<li><a href="./ReviewGetFromMember.rv?name=${bean.name}&mPoint=${bean.mPoint}">리뷰</a></li>
-					<li><a href="#">서비스게시판</a></li>
-					
+					<li><a href="index.jsp?center=board/qna_board_list.jsp">내 문의 내역</a></li>
 				</ul>
 
 			</div>
-		
-			
 		</div>
 
 	<!--menu left E  -->
-
 	<!-- 예매확인 -->
 
-
 	<div class="mp_contents">
-
-		
 			<!-- 예매확인취소 리스트 -->
 			<div class="timeSelect">
 				<h3><img src="http://ticketimage.interpark.com/TicketImage/event/100913_my/ttl_reserveinfo.gif" alt="예매내역 확인·취소"></h3>
@@ -331,21 +297,11 @@ function openChangeIpointPop() {
 				<p class="txt11 txtDefault">&nbsp;&nbsp;&nbsp;&nbsp;티켓이 배송된 이후에는 인터넷 취소가 안되며,
 					배송받으신 티켓이 취소일 이전까지 인터파크 본사로 접수된 이후에 취소가능합니다. <a href="http://ticket.interpark.com/TiKi/Info/BookingGuide.asp?Url=guide_05.html"><span class="txtU">[상세보기]</span></a></p>
 			</div>
-
-
-
 					</div>		
 			
 	</div>
 
 
 </div><!-- //INTERPARK -->
-
-
-
-
 </body>
-
-
-
 </html>

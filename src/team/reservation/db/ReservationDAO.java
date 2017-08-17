@@ -15,6 +15,7 @@ import javax.sql.DataSource;
 import com.mysql.jdbc.Statement;
 
 import team.movie.db.MovieBean;
+import team.musical.db.MusicalBean;
 
 public class ReservationDAO {
 	//여러가지 테이블을 건드려서 따로 만들긴 했는데 원래 DAO로 돌려놔야할지 고려할 것
@@ -419,18 +420,17 @@ public class ReservationDAO {
 		try{
 			con=getConnection();
 			
-			sql = "select a.screen_name, a.ptime , a.capacity, a.capacity - coalesce(b.reserved,0) as remained "
-					+ "from v_playinfo a left join v_reserved_seatinfo b "
-					+ "on a.ping_num = b.ping_num and a.screen_name = b.screen_name and "
-					+ "a.play_day = date_format(b.view_date, '%Y-%m-%d') and a.ptime = date_format(b.view_date, '%H:%i') "
-					+ "where a.play_day = ? and a.p_code = ? and nc_code = concat('mo',?) order by 1, 2";
+			sql = " select distinct a.*, a.capacity - coalesce(b.reserved,0) as remained "
+					+"from (select * from v_playinfo where substring(nc_code, 3) = ? and play_day = ?) a "
+					+"left join v_reserved_seatinfo b on b.view_date = concat(a.play_day, ' ', a.ptime, ':00') "
+					+"and a.ping_num = b.ping_num and a.screen_name = b.screen_name "
+					+"order by play_day, screen_name, ptime";
 			
 			pstmt=con.prepareStatement(sql);
 			
 			String day = playday.substring(0, 4)+"-"+playday.substring(4,6)+"-"+playday.substring(6);
-			pstmt.setString(1, day);
-			pstmt.setString(2, pcode);
-			pstmt.setString(3, mo_num);
+			pstmt.setString(1, mo_num);
+			pstmt.setString(2, day);
 			rs = pstmt.executeQuery();
 			
 			System.out.println(pstmt.toString());
@@ -577,13 +577,8 @@ public class ReservationDAO {
 	public ReservationBean insertReservedSeat(ReservationBean rsb) throws Exception{
 		Connection con= null;
 		PreparedStatement pstmt = null;
-		PreparedStatement nextpstmt = null;
 		String sql="";
-		String nextSql = "";
-		ResultSet rs = null;
 		ReservationBean reRsb = new ReservationBean();
-		int renum = 0;
-		
 		
 		try{
 			con=getConnection();
@@ -605,31 +600,28 @@ public class ReservationDAO {
 			String[] seats = rsb.getSeat().split(" ");
 			
 			for(int s=0; s<result; s++){
-				nextpstmt = null;
-				nextSql = "insert into reserved_seat (r_num, ping_num, screen_name, seat, view_date)"+
+				pstmt = null;
+				sql = "insert into reserved_seat (r_num, ping_num, screen_name, seat, view_date)"+
 						"values (?,?,?,?,?)";
-				nextpstmt = con.prepareStatement(nextSql);
-				nextpstmt.setInt(1, renum);
-				nextpstmt.setInt(2, rsb.getPing_num());
-				nextpstmt.setString(3, rsb.getScreen_name());
-				nextpstmt.setString(4, seats[s]);
-				nextpstmt.setString(5, rsb.getView_date());
+				pstmt = con.prepareStatement(sql);
+				pstmt.setInt(1, rsb.getR_num());
+				pstmt.setInt(2, rsb.getPing_num());
+				pstmt.setString(3, rsb.getScreen_name());
+				pstmt.setString(4, seats[s]);
+				pstmt.setString(5, rsb.getView_date());
 				
-				nextpstmt.executeUpdate();
+				pstmt.executeUpdate();
 			}
-
-			rsb.setR_num(renum);
-			
+			System.out.println(pstmt.toString());
 			reRsb = rsb;
 
 			return reRsb;
 			
 					
 		}catch(Exception e){
-			System.out.println("ReserDAO insertReservation error : "+e);
+			System.out.println("ReserDAO reservedseat  error : "+e);
 		}finally{
 			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
-			if(nextpstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
 			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
 		}
 	return null;
@@ -669,7 +661,7 @@ public class ReservationDAO {
 			
 					
 		}catch(Exception e){
-			System.out.println("ReserDAO insertReservesSeat Mu error : "+e);
+			System.out.println("ReserDAO reservedseat  Mu error : "+e);
 		}finally{
 			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
 			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
@@ -765,11 +757,14 @@ public class ReservationDAO {
 		ResultSet rs = null;
 		try{
 			con =getConnection();
-			String sql="select distinct m.name, round((select count(m.movie_num)/(select count(*) from reservation)*100 from dual),1) as percent, m.age, m.movie_num"+
-						" from reservation r, playing p, movie m"+
-						" where r.ping_num  = p.ping_num"+
-						" and substring(p.nc_code,3) = m.movie_num"+
-						" group by m.movie_num order by 2 desc limit 0,10";
+			String sql="select m.name,"+
+					   " round((select count(m.movie_num)/"+
+					   "(select count(*) from reservation r, playing p, movie m where r.ping_num=p.ping_num"+
+					   " and substring(p.nc_code,3) = m.movie_num)*100 from dual),1) as percent, m.age, m.movie_num"+
+					   " from reservation r, playing p, movie m"+
+					   " where r.ping_num  = p.ping_num"+
+					   " and substring(p.nc_code,3) = m.movie_num"+
+					   " group by m.movie_num order by 2 desc limit 0,10";
 			pstmt= con.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			while(rs.next()){
@@ -783,6 +778,42 @@ public class ReservationDAO {
 			}
 		}catch(Exception e){
 			System.out.println("getOrderReservMo  error : "+e);
+		}finally{
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+	return reservList;
+	}
+	
+	public List<MusicalBean> getOrderReservMu(){
+		ArrayList<MusicalBean> reservList = new ArrayList<MusicalBean>();
+		Connection con = null;
+		PreparedStatement pstmt =null;
+		ResultSet rs = null;
+		try{
+			con =getConnection();
+			String sql="select m.name, "+
+						"round((select count(m.musical_num)/"+
+						"(select count(*) from reservation r, playing p, musical m where r.ping_num=p.ping_num"+
+						" and substring(p.nc_code,3) = m.musical_num)*100 from dual),1) as percent, m.age, m.musical_num"+
+						" from reservation r, playing p, musical m"+
+						" where r.ping_num  = p.ping_num"+
+						" and substring(p.nc_code,3) = m.musical_num"+
+						" group by m.musical_num order by 2 desc limit 0,10";
+			pstmt= con.prepareStatement(sql);
+			rs=pstmt.executeQuery();
+			while(rs.next()){
+				MusicalBean mb = new MusicalBean();
+				
+				mb.setName(rs.getString(1));
+				mb.setPercent(rs.getDouble(2));
+				mb.setAge(rs.getString("age"));
+				mb.setMusical_num(rs.getString("musical_num"));
+				reservList.add(mb);
+			}
+		}catch(Exception e){
+			System.out.println("getOrderReservMu  error : "+e);
 		}finally{
 			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
 			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
@@ -838,4 +869,40 @@ public class ReservationDAO {
 	return null;
 	}
 	
+/* s : main rank */
+	
+	public List<MovieBean> getOrderReservMo2(){
+		ArrayList<MovieBean> reservList = new ArrayList<MovieBean>();
+		Connection con = null;
+		PreparedStatement pstmt =null;
+		ResultSet rs = null;
+		try{
+			con =getConnection();
+			String sql="select distinct m.name, round((select count(m.movie_num)/(select count(*) from reservation)*100 from dual),1) as percent, m.age, m.movie_num"+
+						" from reservation r, playing p, movie m"+
+						" where r.ping_num  = p.ping_num"+
+						" and substring(p.nc_code,3) = m.movie_num"+
+						" group by m.movie_num order by 2 desc limit 0,6";
+			pstmt= con.prepareStatement(sql);
+			rs=pstmt.executeQuery();
+			while(rs.next()){
+				MovieBean mb = new MovieBean();
+				
+				mb.setName(rs.getString(1));
+				mb.setPercent(rs.getDouble(2));
+				mb.setAge(rs.getString("age"));
+				mb.setMovie_num(rs.getString("movie_num"));
+				reservList.add(mb);
+			}
+		}catch(Exception e){
+			System.out.println("getOrderReservMo  error : "+e);
+		}finally{
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(pstmt!=null){try{pstmt.close();}catch(Exception e){e.printStackTrace();}}
+			if(con!=null){try{con.close();}catch(Exception e){e.printStackTrace();}}
+		}
+	return reservList;
+	}
+	
+	/* e : main rank */
 }

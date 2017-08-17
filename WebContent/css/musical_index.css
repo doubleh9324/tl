@@ -56,7 +56,7 @@ div#category{
 div#category span{
 	margin: 0px 15px 0px 15px;
 }
-span#gradeOrder:HOVER{
+span#gradeOrder:HOVER, span#reserveOrder:HOVER{
 	cursor:pointer;
 }
 ul#rank_ul{
@@ -67,7 +67,7 @@ ul#rank_ul{
 
 
 li#rank_li{
-	height: 42px;
+	height: 40px;
 	list-style: none;
 
 	line-height: 28px;

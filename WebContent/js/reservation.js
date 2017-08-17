@@ -34,7 +34,6 @@ var Browser = {
 		if(step3 != null || step4 != null){
 			removeLocalInfo();
 		}
-		return '??';
 	 });
 	} 
 
@@ -1031,11 +1030,11 @@ function setTime(){
 		        		
 		        		preScreen=value.screen_name;
 		        		
-		        		timeStr = "<li data-index='"+i+"' data-remain_seat='"+value.capacity+"' play_start_tm='"+value.ptime.replace(':','')+
+		        		timeStr = "<li data-index='"+i+"' data-remain_seat='"+value.remained+"' play_start_tm='"+value.ptime.replace(':','')+
 						"' screen='"+value.screen_name + "'play_num='"+playnum+"' class >"+
 							"<a class='button' href='#' onclick='screenTimeClickListener(event);return false;'>"+
 								"<span class='time'><span>"+value.ptime+"</span></span>"+
-								"<span class='count'>"+value.capacity+"석</span>"+
+								"<span class='count'>"+value.remained+"석</span>"+
 								"<div class='sreader'>종료시간</div>"+
 								"<span class='sreader mod'></span>"+
 							"</a>"+
@@ -1043,11 +1042,11 @@ function setTime(){
 			playnum++;
 			i++;
 	        		}else {
-	        			timeStr += "<li data-index='"+i+"' data-remain_seat='"+value.capacity+"' play_start_tm='"+value.ptime.replace(':','')+
+	        			timeStr += "<li data-index='"+i+"' data-remain_seat='"+value.remained+"' play_start_tm='"+value.ptime.replace(':','')+
 		        					"' screen='"+value.screen_name + "'play_num='"+playnum+"' class >"+
 		        						"<a class='button' href='#' onclick='screenTimeClickListener(event);return false;'>"+
 		        							"<span class='time'><span>"+value.ptime+"</span></span>"+
-		        							"<span class='count'>"+value.capacity+"석</span>"+
+		        							"<span class='count'>"+value.remained+"석</span>"+
 		        							"<div class='sreader'>종료시간</div>"+
 		        							"<span class='sreader mod'></span>"+
 		        						"</a>"+

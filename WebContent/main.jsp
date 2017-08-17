@@ -7,7 +7,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/main.css?4">
 <link rel="stylesheet" href="css/slidebanner.css">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.banner.js"></script>
@@ -85,14 +85,10 @@ function nextChangeFunction(cate){
 					left: change_left+"px"
 				});
 				
-				
-				
 			}		 
 			$("#curr_num_mo").val(1);
 			 return false;
-			
 		}
-	
 		
 		for(var j=0;j<last_num;j=j+1){
 			var change_left=Number($("#"+j+"_ori_left_mo").val())-1080;
@@ -136,7 +132,6 @@ function nextChangeFunction(cate){
 			
 		}
 		
-		
 		var last_num=Number($("#last_num_mu").val());
 		for(var j=0;j<last_num;j=j+1){
 			var change_left=Number($("#"+j+"_ori_left_mu").val())-1080;
@@ -150,16 +145,13 @@ function nextChangeFunction(cate){
 		$("#curr_num_mu").val(num+1);
 		
 	}
-	
 
 }
-
 
 function prevChangeFunction(cate){
 	
 	var cate_name = cate;
 	if(cate_name=="mo"){
-
 	
 		var num = Number($("#curr_num_mo").val());
 		if(num==1){
@@ -175,12 +167,9 @@ function prevChangeFunction(cate){
 				});
 			}
 				 
-			
 			$("#curr_num_mo").val(l_num);
 			 return false;
 		}
-		
-	
 		
 		var last_num=Number($("#last_num_mo").val());
 		for(var j=0;j<last_num;j=j+1){
@@ -193,13 +182,8 @@ function prevChangeFunction(cate){
 		
 		$("#curr_num_mo").val(num-1);
 		
-		
-
-		
-		
 	}else if(cate_name=="mu"){
 	
-		 
 		var num = Number($("#curr_num_mu").val());
 		
 		if(num==1){
@@ -246,25 +230,23 @@ function listMovieFunction(){  //개봉일을 기준으로 현재 상영 중인 
 				var count =0;
 				var count2 =0;
 				
-				$.each(data.movieLength, function(key,value){
-					
-					var page_count=Math.floor(value.length/4);
+					var page_count=Math.floor(data.movieList.length/4);
+					if(page_count==0){page_count=1}
 					if(page_count==1){
+						$("#prev_btn_mo").css("display","none");
 						$("#next_btn_mo").css("display","none");
 					}
 					$("#contents_mo").append("<input type='hidden' value='"+page_count+"' id='last_num_mo' class='last_num'>")
-					
 					
 					while(count<page_count){
 						var left = 1080*(count);
 							
 							$("#contents_mo").append("<ul class='contents_mo' id='contents_mo_"+count+"'"+" style='left:"+left+"px;'></ul>");
 							$("#contents_mo").append("<input type='hidden' value='"+1080*count+"' id='"+count+"_ori_left_mo'>")
-							
 						
 						count=count+1;
 					}
-				});
+			
 				var check=1;
 				$.each(data.movieList, function(key,value){
 					check=key+1;
@@ -276,12 +258,10 @@ function listMovieFunction(){  //개봉일을 기준으로 현재 상영 중인 
 					}
 					check=check+1;
 				});
-			
 				 
 			},
 			error: function(xhr, status, error){
 				
-			
 			}
 		});
 	}
@@ -290,7 +270,6 @@ function listMovieFunction(){  //개봉일을 기준으로 현재 상영 중인 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* S:이주의 상영작 */
-
 
 function listMovieFunction2(num){
 	var setflag=$("#setFlag").val();
@@ -314,9 +293,6 @@ function listMovieFunction2(num){
 	}
 	
 }
-
-
-
 
 function listMusicalFunction2(num){
 	var setflag=$("#setFlag").val();
@@ -355,7 +331,6 @@ $(function() {
 		//롤링 시간 타임 (1000 = 1초)
 		/*isBtnType:"li"*///라벨(버튼 타입) - 여기는 안쓰임
 		});
-
 		
 	});
 /* E:이주의 상영작 */
@@ -374,27 +349,25 @@ function listMusicalFunction(){
 			success:function(data){
 				var count =0;
 				var count2 =0;
+				var page_count=Math.floor(data.musicalList.length/4);
 				
-				$.each(data.musicalLength, function(key,value){
-					
-					var page_count=Math.floor(value.length/4);
-					if(page_count==1){
-						$("#next_btn_mu").css("display","none");
-					}
-					
-					$("#contents_mu").append("<input type='hidden' value='"+page_count+"' id='last_num_mu' class='last_num'>")
-					
-					
-					while(count<page_count){
-						var left = 1080*(count);
-							
-							$("#contents_mu").append("<ul class='contents_mu' id='contents_mu_"+count+"'"+" style='left:"+left+"px;'></ul>");
-							$("#contents_mu").append("<input type='hidden' value='"+1080*count+"' id='"+count+"_ori_left_mu'>")
-							
+				if(page_count==0){page_count=1}
+				if(page_count==1){
+					$("#next_btn_mu").css("display","none");
+				}
+				
+				$("#contents_mu").append("<input type='hidden' value='"+page_count+"' id='last_num_mu' class='last_num'>")
+				
+				
+				while(count<page_count){
+					var left = 1080*(count);
 						
-						count=count+1;
-					}
-				});
+						$("#contents_mu").append("<ul class='contents_mu' id='contents_mu_"+count+"'"+" style='left:"+left+"px;'></ul>");
+						$("#contents_mu").append("<input type='hidden' value='"+1080*count+"' id='"+count+"_ori_left_mu'>")
+						
+					count=count+1;
+				}
+				
 				var check=1;
 				$.each(data.musicalList, function(key,value){
 					check=key+1;
@@ -406,11 +379,9 @@ function listMusicalFunction(){
 					}
 					check=check+1;
 				});
-			
 				 
 			},
 			error: function(xhr, status, error){
-				
 			
 			}
 		});
@@ -582,6 +553,44 @@ function setCookie(cname, value, expire) {
 </div>
 <!--------------------------------------------------------- -->
 <div id="mid">
+
+<!-- s: 메인 추가 랭킹, 뉴스, 오픈 -->
+ <div id="rank">
+  <div id="rank_title">RANKING</div>  
+  <jsp:include page="rank.jsp"/>    
+ </div>
+ 
+ <div id="open">
+  <div id="open_title">TICKET OPEN</div>
+  <div class="clear"></div>
+  
+  <jsp:include page="t_open.jsp"/>
+ </div>
+
+
+ <div id="news">
+  <div id="news_title">NEWS & INTERVIEW</div>
+  <div id="news_img"><img src="img/rankingMore.gif"></div>
+  <div class="clear"></div>
+  <div id="news_box">
+  <a href="#">
+  	<div class="news_list1">
+  	  [ 이주의 인터뷰 - '서편제' 이소연 ]
+  	</div>
+  	<div class="clear"></div>
+  	<div class="news_list2">
+  	올해 여름 뮤지컬계에서 가장 뜨거운 배우이자<br>
+	   이 시대의 미래지향적인 소리꾼 이소연. <br><br>
+	   <sapn>"소리꾼으로서 올 것이 왔구나 했죠."</sapn>
+	 </div>
+	 </a>
+  </div>
+  
+ </div>
+ <div class="clear"></div>
+
+<!-- e: 메인 추가 랭킹, 뉴스, 오픈 -->
+
  <div id="category">
   <div id="subject">
   	<div id="subject_left"></div>
@@ -665,10 +674,7 @@ function setCookie(cname, value, expire) {
 		<div class="clear" ></div>	
 			<ul id="sche_mu_content" >
 				
-				
 			</ul>
-			
-			
 		<div class="clear"></div>	
 		</div>
 	</div>

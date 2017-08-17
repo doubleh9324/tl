@@ -10,7 +10,7 @@
 <title>티켓사자 - Ticket Lion</title>
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
-// top 버큰에 대한 함수. 
+// top 버튼에 대한 함수. 
     $(function() {
         $(window).scroll(function() {
             if ($(this).scrollTop() > 500) {
