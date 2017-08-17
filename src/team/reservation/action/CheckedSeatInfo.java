@@ -94,6 +94,11 @@ public class CheckedSeatInfo implements Action{
 			for(int t=0; t<checkedSeats.size(); t++){
 				System.out.println(t +": "+checkedSeats.get(t).get("seat_no"));
 			}
+		}else if(checked == null && seats[0].equals("0")){
+			//저장된 리스트도 없고 첫 좌석창 조회인 경우
+			
+			jsonObject.put("checkedFlag", "f");
+
 		}else if(checked != null && !seats[0].equals("0")){
 			
 			System.out.println("리스트 크기 : " +checked.size());

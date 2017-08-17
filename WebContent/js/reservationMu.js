@@ -833,7 +833,10 @@ function checkSelectedSeat(){
         success : function(data) {
         	//data.checkFlag == n 이면 통과 아니면 다시 선택
         	
-        	if(data.checkedFlag == "y"){
+        	if(data.checkedFlag == "f"){
+        		returnFlag =  "f";
+        		//첫 좌석창 조회, 예매중인 좌석도 없음
+        	}else if(data.checkedFlag == "y"){
         		returnFlag =  "y";
         		
         		window.alert("이미 선택된 좌석입니다.");
@@ -845,23 +848,24 @@ function checkSelectedSeat(){
         		//선택중인 좌석 표시하기
         	}else if(data.checkedFlag == "n"){
         		returnFlag =  "n";
+        		
+        		if(data.checkedSeats.length>0){
+            		$.each(data.checkedSeats, function(key, value){
+            			
+                		var seat_bl = value.seat_bl;
+                		var seat_no = value.seat_no;
+                		$("#divSeatArray div").each(function(i){
+                			if($(this).attr("id") == seat_no){
+                				//예약되어있는 좌석의 class를 가져와서 act 클래스 빼주고  title 제거
+                				if($(this).hasClass("act")){
+                					$(this).removeClass("act").attr("title", "").addClass("s13");
+                				}
+                			}
+                		});
+                	});
+            	}
         	}
-        	//TODO
-        	if(data.checkedSeats.length>0){
-        		$.each(data.checkedSeats, function(key, value){
-        			
-            		var seat_bl = value.seat_bl;
-            		var seat_no = value.seat_no;
-            		$("#divSeatArray div").each(function(i){
-            			if($(this).attr("id") == seat_no){
-            				//예약되어있는 좌석의 class를 가져와서 act 클래스 빼주고  title 제거
-            				if($(this).hasClass("act")){
-            					$(this).removeClass("act").attr("title", "").addClass("s13");
-            				}
-            			}
-            		});
-            	});
-        	}
+        	
 
         },
         complete : function(data) {
@@ -1324,9 +1328,7 @@ function PointUseChange(obj){
 		use = price;
 		$("#txtMileageUse1").val(use);
 	}
-	$(".tk_disc p").text("-");
 	$(".tk_disc span").text(comma(use));
-	$(".tk_summinus p").text("-");
 	$(".tk_summinus span").text(comma(use));
 	
 	//최종 금액에 적용
@@ -1481,6 +1483,8 @@ function selFlashDateAllChange(dateStr){
 function SelFlashTimeChange(roundid){
 	//선택한 날짜에  on 클래스 추가해주기
 	if(roundid != 0){
+		//선택한 좌석이 있다면 없애기
+		$("#liSelSeat").empty();
 		//첫 페이지의 선택 내용 수정
 		$("#ulTime li").removeClass("on");
 		$("#"+roundid).addClass("on");
