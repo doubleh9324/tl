@@ -90,9 +90,9 @@ $(document).ready(function(){
 	
 	if(flag == "movie"){
 		//영화 상세정보 페이지에서 호출 한 경우
-		
 		//select설정
 		$(".movie-list li[movie_num='"+val+"']").addClass("selected");
+		
 		
 		//해당하는 상영관 p_code 목록 받아오기, 지역 목록 set
 		jQuery.ajax({
@@ -218,10 +218,128 @@ $(document).ready(function(){
 	              alert("에러발생");
 	        }
 	 	 });
-	}else if(flag == "location"){
+	}else if(flag == "place"){
 		//상영관 검색에서 호출 한 경우
-	}
-	
+		
+			$(".theater-area-list > ul > li.selected").addClass("selected");
+			$(".area_theater_list > ul > li.selected").addClass("selected");
+			
+			$("#"+val).parent().addClass("selected");
+			$("#"+val).parents("li").addClass("selected");
+			//극장 글자 block, 극장이름 띄우기
+			$(".theater > div").css("display", "block");
+			//극장선택 글씨 none
+			$("div[class='placeholder'][title='극장선택'] ").css("display","none");
+			//극장이름 띄우기
+			$(".theater .ellipsis-line1").text($("#"+val).text());
+			
+			var pcode = $("#"+val).parent().attr("p_code");
+			
+			// 상영관 선택시 그 상영관에서 상영하는 영화가 있는 날만 띄우기
+			// 상영관 기준으로 날짜 가져오기
+			
+			//앞의 영화, 상영관이 선택되었는지 여부 selected된 li가 있으면 ture 반환
+			var isSelectedMovie = false;
+			var isSelectedDate = false ; 
+			
+			$(".date-list > ul > div > li").each(function(i){
+				if($(this).hasClass("selected"))
+					isSelectedDate = true;
+			});
+			
+			$(".movie-list > ul > li").each(function(i){
+				if($(this).hasClass("selected"))
+					isSelectedMovie = true;
+			});
+			
+			jQuery.ajax({
+		        type:"POST",
+		        url:"./getPlayingDate.rs",
+		        data:"val="+pcode+"&flag="+"theater",
+		        dataType:"JSON",
+		        success : function(data) {
+		        	
+		        	//날짜 지정
+		        	var duration = data.duration;
+		        	
+		        	if(duration[0] == "n"){
+		        		//상영 일자가 존재하지 않을 경우 모든 날짜에 dimmed 추가
+		        		$(".date-list > ul > div > li").addClass("dimmed");
+		        	}else{
+			        	var sindex = $(".date-list > ul > div > li[date="+duration[0].replace(/-/g, '')+"]").attr("data-index");
+			        	var eindex = $(".date-list > ul > div > li[date="+duration[1].replace(/-/g, '')+"]").attr("data-index");
+			        	
+			        	//시작일자가 오늘 날짜보다 이전이면 
+			        	if(typeof sindex=="undefined"){
+			        		sindex = 0;
+			        	}
+			        	
+			    		//전체날짜를 dimmed하고
+			    		$(".date-list > ul > div > li").addClass("dimmed");
+			    		
+			    		//해당하는 인덱스사이의 값은 dimmed 제거
+			    		for(var d=sindex; d<=eindex; d++){
+			    			$(".date-list > ul > div > li[data-index="+d+"]").removeClass("dimmed");
+			    		}
+		        	}
+		        	
+		        },
+		        complete : function(data) {
+		        },
+		        error : function(xhr, status, error) {
+		              alert("에러발생");
+		        }
+		 	 });
+				
+			//해당 상영관 기준으로 영화 목록 가져오기
+			jQuery.ajax({
+		        type:"POST",
+		        url:"./getPlayingMonum.rs",
+		        async : false,
+		        data:"val="+pcode+"&flag="+"theater",
+		        dataType:"JSON",
+		        success : function(mdata) {
+		        	//해당 날짜에 상영하는 영화 번호 리스트를 받아오면
+		    		//전체 영화 중 해당하지 않는 영화 li에 dimmed 추가
+			    	var mocount = $(".movie-list > ul > li").length;
+			    	
+			    	//현재 존재하는 movie_num 배열로 저장
+			    	var m = [];
+			    	$(".movie-list > ul > li").each(function(i) {
+						  m[i] = $(this).attr('movie_num');
+					});
+			    	//모든 영화를 비활성화 시킨 후
+			    	$(".movie-list > ul > li").addClass("dimmed");
+			    	
+			    	
+			    	$.each(mdata.monumList, function(key, value){
+			    		if($("li[movie_num="+value.movie_num+"]").hasClass("dimmed")){
+			    			$("li[movie_num="+value.movie_num+"]").removeClass("dimmed");
+			    			console.log("if");
+						}else{
+							//$("li[movie_num="+value.movie_num+"]").addClass("dimmed");
+						}
+			    	});
+			    	
+			    	
+			    	//순서 재정리하기
+			    	for(var j=0; j<=mocount; j++){
+		    			var moUl =  $(".movie-list > ul");
+		    			var movie_num = "";
+		    			$(".movie-list > ul > li[class!='dimmed']").each(function(i){
+		    		 		movie_num = $(this).attr("movie_num");
+		    		 		moUl.prepend($("li[movie_num="+movie_num+"]"));
+		    		 	});		    	
+			    	}
+		        },
+		        complete : function(data) {
+		              // 통신이 실패했어도 완료가 되었을 때 이 함수를 타게 된다.
+		        },
+		        error : function(xhr, status, error) {
+		              alert("getPlayingMonum date 에러발생");
+		        }
+		 	 });
+		}
 });
 
 //TODO

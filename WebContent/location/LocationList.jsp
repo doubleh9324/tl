@@ -41,7 +41,7 @@ function getcontents(con,address,p_code){
 					$("#loca"+nid).after(str);
 				}else{
 					
-					str="<tr id='loc"+nid+"' align='left'><td colspan='2'><div id='map"+nid+"' style='width:100%; height:350px; margin:10px 0'></div><div class='detail'>상세주소</div><div class='add'>"+address+"</div><div><input type='button' class='button' value='예매하기' onclick='reservation("+p_code+")'></div></td></tr>";
+					str="<tr id='loc"+nid+"' align='left'><td colspan='2'><div id='map"+nid+"' style='width:100%; height:350px; margin:10px 0'></div><div class='detail'>상세주소</div><div class='add'>"+address+"</div><div pcode='"+p_code+"'><input type='button' class='button' value='예매하기' onclick='reservation(event)'></div></td></tr>";
 					$("#loca"+nid).parent().after(str);
 					
 					var mapContainer = document.getElementById('map'+nid), // 지도를 표시할 div 
@@ -97,8 +97,15 @@ function getcontents(con,address,p_code){
 	//console.log($("#loca"+nid).data("flag",bflag));
 			};
 
-function reservation(p_code){
-window.open("./reserveMV.rs?flag=movie&val="+p_code,"","width=1050, height=695, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+function reservation(event){
+	
+	var pcode = $(event.currentTarget).parent().attr("pcode");
+	
+	if(pcode.substring(5)=="ad"){
+		window.alert("공연장 별 예매는 지원하지 않습니다.");
+	}else{
+		window.open("./reserveMV.rs?flag=place&val="+pcode,"","width=1050, height=695, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+	}
 }
 </script>
 </head>
